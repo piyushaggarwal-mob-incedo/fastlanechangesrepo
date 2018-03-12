@@ -1,0 +1,190 @@
+{
+    "id": "9c55d847-dffb-4325-9491-9e3bab197e6f",
+    "settings": {},
+    "view": "AC History 01",
+    "type": "AC History 01",
+    "blockName": "history01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 1070
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 28,
+                   "xAxis": 96,
+                   "width": 255,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "clearWatchlist",
+                   "text": "CLEAR HISTORY",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "removeAll"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 111,
+                   "leftMargin": 4.9,
+                   "rightMargin": 4.9,
+                   "fontSize": 40,
+                   "height": 55
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "letterSpacing": 4.5,
+                   "text": "WATCH HISTORY",
+                   "type": "label",
+                   "textColor": "#008EE0",
+                   "fontWeight": "Semibold",
+                   "key": "pageTitle"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 166,
+                   "xAxis": 85,
+                   "width": 1750,
+                   "height": 2
+                   }
+                   },
+                   "backgroundColor": "#808080",
+                   "type": "separatorView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "trayPadding": 10,
+                   "leftMargin": 4.9,
+                   "yAxis": 183,
+                   "rightMargin": 2.67,
+                   "itemHeight": 118,
+                   "itemWidth": 1730,
+                   "height": 757
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 210,
+                                  "height": 118
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "thumbnailImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 210,
+                                  "height": 118
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "badgeImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 35,
+                                  "xAxis": 84,
+                                  "width": 42,
+                                  "height": 47
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "playImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 1,
+                                  "xAxis": 230,
+                                  "width": 730,
+                                  "fontSize": 25,
+                                  "height": 34
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "SemiBold",
+                                  "key": "titleLabel"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 35,
+                                  "xAxis": 230,
+                                  "width": 730,
+                                  "fontSize": 23,
+                                  "height": 74
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 2,
+                                  "textAlignment": "left",
+                                  "lineHeight": 36,
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "key": "descriptionLabel"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 9,
+                                  "xAxis": 1080,
+                                  "width": 650,
+                                  "fontSize": 30,
+                                  "height": 95
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "right",
+                                  "lineHeight": 36,
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "key": "watchedTime"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 110,
+                                  "xAxis": 0,
+                                  "width": 210,
+                                  "height": 8
+                                  }
+                                  },
+                                  "progressColor": "008EE0",
+                                  "unprogressColor": "0A151C",
+                                  "type": "progressView",
+                                  "key": "progressView"
+                                  }
+                                  ],
+                   "itemClickAction": "lectureDetailPage",
+                   "type": "tableView",
+                   "key": "tableView"
+                   }
+                   ]
+}

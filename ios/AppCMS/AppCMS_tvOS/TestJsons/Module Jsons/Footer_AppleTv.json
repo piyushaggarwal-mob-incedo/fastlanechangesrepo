@@ -1,0 +1,40 @@
+{
+    "id": "83b81805-da32-4637-949b-453b9347862a",
+    "settings": {},
+    "view": "AC Footer 02",
+    "type": "AC Footer 02",
+    "layout": {
+        "appletv": {
+            "leftMargin": 0,
+            "bottomMargin": 0,
+            "width": 1920,
+            "height": 200
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "rightMargin": 2.3,
+                   "topMargin": 36,
+                   "width": 249,
+                   "height": 140
+                   }
+                   },
+                   "type": "image",
+                   "key": "footerLogoImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "bottomMargin": 0,
+                   "height": 200
+                   }
+                   },
+                   "type": "image",
+                   "key": "footerBackgroundImage"
+                   }
+                   ]
+}

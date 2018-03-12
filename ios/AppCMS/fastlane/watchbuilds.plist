@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>JobBuildId</key>
+	<string>82</string>
+	<key>appBuildNumber</key>
+	<string>47</string>
+	<key>bundleIdentifier</key>
+	<string>com.viewlift.testplatform</string>
+	<key>password</key>
+	<string>Alexa@123</string>
+	<key>posturl</key>
+	<string>http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status</string>
+	<key>username</key>
+	<string>piyushaggarwal.incedo@gmail.com</string>
+</dict>
+</plist>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Container View Controller tvOS-->
+        <scene sceneID="COl-XA-HLk">
+            <objects>
+                <viewController storyboardIdentifier="AppContainerViewController_tvOS" id="YbH-mB-KpU" customClass="AppContainerViewController_tvOS" customModule="LaxSportsNet" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOu-Kv-nXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494" y="-1569"/>
+        </scene>
+        <!--Center View Controller tvOS-->
+        <scene sceneID="lt8-Fg-voE">
+            <objects>
+                <viewController storyboardIdentifier="CenterViewController_tvOS" id="ksX-ua-RpJ" customClass="CenterViewController_tvOS" customModule="LaxSportsNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wGk-r6-M7z"/>
+                        <viewControllerLayoutGuide type="bottom" id="L72-AE-pqy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MYX-zL-ITo">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SF0-Bn-QQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="-716"/>
+        </scene>
+        <!--Loading Splash View Controller tvOS-->
+        <scene sceneID="U9e-hK-DNj">
+            <objects>
+                <viewController storyboardIdentifier="LoadingSplashViewController_tvOS" id="PWf-cD-3E3" customClass="LoadingSplashViewController_tvOS" customModule="LaxSportsNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ky-JI-cls"/>
+                        <viewControllerLayoutGuide type="bottom" id="2nr-d6-GtG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2BP-u5-zIj">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="HN7-DB-4FR">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLw-XM-Yjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494" y="176"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash.png" width="16" height="16"/>
+    </resources>
+</document>

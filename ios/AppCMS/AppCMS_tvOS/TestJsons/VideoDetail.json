@@ -1,0 +1,280 @@
+{
+    "moduleList": [
+                   {
+                   "id": "380c46ea-da72-4aa5-a9e3-796476fa9e97",
+                   "settings": {},
+                   "view": "AC Masthead 01",
+                   "type": "AC Masthead 01",
+                   "layout": {},
+                   "components": []
+                   },
+                   {
+                   "id": "782c5497-6f68-415b-badf-b3e9cffe4c77",
+                   "settings": {},
+                   "view": "AC VideoPlayerWithInfo 01",
+                   "type": "AC VideoPlayerWithInfo 01",
+                   "layout": {
+                   "mobile": {
+                   "yAxis": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "height": 683
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 0,
+                                  "leftMargin": 0,
+                                  "rightMargin": 0,
+                                  "height": 138
+                                  }
+                                  },
+                                  "components": [
+                                                 {
+                                                 "layout": {
+                                                 "mobile": {
+                                                 "yAxis": 36,
+                                                 "xAxis": 95,
+                                                 "maximumWidth": 1130,
+                                                 "fontSize": 53,
+                                                 "height": 73
+                                                 }
+                                                 },
+                                                 "opacity" : 1,
+                                                 "fontFamily": "OpenSans",
+                                                 "numberOfLines": 1,
+                                                 "textAlignment": "left",
+                                                 "type": "label",
+                                                 "textColor": "#ffffff",
+                                                 "fontWeight": "Bold",
+                                                 "key": "videoTitle"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "mobile": {
+                                                 "yAxis": 51,
+                                                 "width": 590,
+                                                 "rightMargin": 4.68,
+                                                 "fontSize": 26,
+                                                 "height": 36
+                                                 }
+                                                 },
+                                                 "opacity" : 0.5,
+                                                 "fontFamily": "OpenSans",
+                                                 "numberOfLines": 1,
+                                                 "textAlignment": "right",
+                                                 "type": "label",
+                                                 "textColor": "#ffffff",
+                                                 "fontWeight": "Semibold",
+                                                 "key": "videoSubTitle"
+                                                 }
+                                                 ],
+                                  "textAlignment": "left",
+                                  "type": "headerView",
+                                  "key": "videoDetailHeader"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 196,
+                                  "xAxis": 982,
+                                  "width": 843,
+                                  "height": 473
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "videoImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 196,
+                                  "xAxis": 982,
+                                  "width": 843,
+                                  "height": 473
+                                  }
+                                  },
+                                  "action": "watchVideo",
+                                  "type": "button",
+                                  "key": "playButton"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 606,
+                                  "xAxis": 95,
+                                  "width": 255,
+                                  "height": 60,
+                                  "fontSize": 18
+                                  }
+                                  },
+                                  "borderColor": "ffffff",
+                                  "fontFamily": "OpenSans",
+                                  "borderWidth": 4,
+                                  "action": "watchTrailer",
+                                  "text": "WATCH TRAILER",
+                                  "type": "button",
+                                  "textColor": "ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "watchTrailer"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "fontSizeKey": 23,
+                                  "yAxis": 409,
+                                  "xAxis": 95,
+                                  "width": 768,
+                                  "height": 170,
+                                  "fontSizeValue": 23
+                                  }
+                                  },
+                                  "fontFamilyKey": "OpenSans-Extrabold",
+                                  "fontFamilyValue": "OpenSans",
+                                  "type": "castView",
+                                  "textColor": "#ffffff",
+                                  "key": "castView"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 188,
+                                  "xAxis": 95,
+                                  "width": 768,
+                                  "fontSize": 23,
+                                  "height": 180
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "videoDescriptionText"
+                                  }
+                                  ]
+                   },
+                   {
+                   "id": "5ad11d90-0cff-47d2-a709-43e021e1e176",
+                   "settings": {
+                   "loop": true,
+                   "infoHover": true,
+                   "thumbnailType": "landscape"
+                   },
+                   "view": "AC Tray 01",
+                   "type": "AC Tray 01",
+                   "layout": {
+                   "mobile": {
+                   "yAxis": 0,
+                   "height": 270,
+                   "leftMargin": 4.68,
+                   "rightMargin": 0
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "fontWeight": "Semibold",
+                                  "textColor": "#008EE0",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 0,
+                                  "height": 55,
+                                  "rightMargin": 2.67,
+                                  "fontSize": 40,
+                                  "leftMargin": 0
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "trayTitle"
+                                  },
+                                  {
+                                  "backgroundColor": "#808080",
+                                  "layout": {
+                                  "mobile": {
+                                  "yAxis": 60,
+                                  "height": 1,
+                                  "rightMargin": 1.73,
+                                  "leftMargin": 0
+                                  }
+                                  },
+                                  "type": "separatorView"
+                                  },
+                                  {
+                                  "layout": {
+                                  "mobile": {
+                                  "bottomMargin": 4,
+                                  "gridHeight": 143,
+                                  "rightMargin": 2.67,
+                                  "gridWidth": 255,
+                                  "leftMargin": 0,
+                                  "trayPadding": 40,
+                                  "topMargin": 12
+                                  }
+                                  },
+                                  "cornerRadius": 0,
+                                  "supportPagination": false,
+                                  "trayClickAction": "lectureDetailPage",
+                                  "components": [
+                                                 {
+                                                 "layout": {
+                                                 "mobile": {
+                                                 "yAxis": 0,
+                                                 "height": 143,
+                                                 "width": 255,
+                                                 "xAxis": 0
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "thumbnailImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "mobile": {
+                                                 "yAxis": 0,
+                                                 "height": 22,
+                                                 "rightMargin": 0,
+                                                 "width": 80
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "badgeImage"
+                                                 },
+                                                 {
+                                                 "fontWeight": "Semibold",
+                                                 "textColor": "#ffffff",
+                                                 "textAlignment": "left",
+                                                 "layout": {
+                                                 "mobile": {
+                                                 "yAxis": 150,
+                                                 "height": 34,
+                                                 "rightMargin": 0,
+                                                 "fontSize": 25,
+                                                 "leftMargin": 0
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "type": "label",
+                                                 "key": "thumbnailTitle"
+                                                 }
+                                                 ],
+                                  "type": "collectionGrid",
+                                  "key": "collectionGrid",
+                                  "isHorizontalScroll": true
+                                  }
+                                  ]
+                   },
+                   {
+                   "id": "6bc6ff4c-9dfd-493e-964c-1e4d97721b28",
+                   "settings": {},
+                   "view": "AC Footer 01",
+                   "type": "AC Footer 01",
+                   "layout": {},
+                   "components": []
+                   }
+                   ],
+    "version": "0.185.0"
+}

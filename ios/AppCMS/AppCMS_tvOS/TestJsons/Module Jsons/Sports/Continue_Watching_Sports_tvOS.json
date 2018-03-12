@@ -1,0 +1,99 @@
+{
+    "id": "73bb0938-8eec-4551-9e29-b55a51128f7e",
+    "settings": {
+        "thumbnailType": "landscape"
+    },
+    "view": "AC ContinueWatching 02",
+    "type": "AC ContinueWatching 02",
+    "blockName": "continueWatching02",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "height": 384
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "leftMargin": 2.08,
+                   "rightMargin": 0,
+                   "fontSize": 36,
+                   "height": 44
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "fontWeight": "Bold",
+                   "textStyle": "default",
+                   "key": "trayTitle"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "gridHeight": 312,
+                   "trayPadding": 50,
+                   "leftMargin": 2.08,
+                   "topMargin": 19.27,
+                   "rightMargin": 2.67,
+                   "bottomMargin": 0,
+                   "gridWidth": 380
+                   }
+                   },
+                   "trayClickAction": "lectureDetailPage",
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 380,
+                                  "height": 214
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "thumbnailImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 380,
+                                  "height": 214
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "badgeImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "bottomMargin": 7.5,
+                                  "leftMargin": 0,
+                                  "rightMargin": 0,
+                                  "fontSize": 24,
+                                  "height": 65
+                                  }
+                                  },
+                                  "fontFamily": "Lato",
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "numberOfLines": 2,
+                                  "key": "thumbnailTitle"
+                                  }
+                                  ],
+                   "isHorizontalScroll": true,
+                   "type": "collectionGrid",
+                   "supportPagination": false,
+                   "key": "collectionGrid",
+                   "cornerRadius": 0
+                   }
+                   ]
+}

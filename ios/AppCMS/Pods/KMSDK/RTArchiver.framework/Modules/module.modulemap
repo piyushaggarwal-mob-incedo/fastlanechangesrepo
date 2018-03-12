@@ -1,0 +1,11 @@
+framework module RTArchiver {
+  umbrella header "RTArchiver-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RTArchiver.Swift {
+    header "RTArchiver-Swift.h"
+    requires objc
+}

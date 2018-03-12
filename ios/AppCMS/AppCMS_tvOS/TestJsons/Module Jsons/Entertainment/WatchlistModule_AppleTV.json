@@ -1,0 +1,242 @@
+{
+    "moduleList": [
+                   {
+                   "id": "b2c3a34b-8f0b-4da9-9cd3-b7ba482eb4b7",
+                   "settings": {
+                   "searchThumbnailType": "landscape"
+                   },
+                   "view": "AC Masthead 01",
+                   "type": "AC Masthead 01",
+                   "blockName": "masthead01",
+                   "layout": {},
+                   "components": []
+                   },
+                   {
+                   "id": "29d2cd08-1f4c-4cd6-92bb-407ceffb7431",
+                   "settings": {
+                   "columns": {
+                   "tablet": 4,
+                   "desktop": 6,
+                   "mobile": 3,
+                   "ott": 6
+                   }
+                   },
+                   "view": "AC Watchlist 01",
+                   "type": "AC Watchlist 01",
+                   "blockName": "watchlist01",
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "xAxis": 0,
+                   "width": 1920,
+                   "height": 940
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 28,
+                                  "xAxis": 96,
+                                  "width": 255,
+                                  "fontSize": 18,
+                                  "height": 60
+                                  }
+                                  },
+                                  "borderColor": "ffffff",
+                                  "fontFamily": "OpenSans",
+                                  "borderWidth": 4,
+                                  "action": "clearWatchlist",
+                                  "text": "CLEAR WATCHLIST",
+                                  "type": "button",
+                                  "textColor": "ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "removeAll"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 111,
+                                  "leftMargin": 4.9,
+                                  "rightMargin": 4.9,
+                                  "fontSize": 40,
+                                  "height": 55
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "letterSpacing": 4.5,
+                                  "text": "WATCHLIST",
+                                  "type": "label",
+                                  "textColor": "#008EE0",
+                                  "fontWeight": "Semibold",
+                                  "key": "pageTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 166,
+                                  "xAxis": 85,
+                                  "width": 1750,
+                                  "height": 2
+                                  }
+                                  },
+                                  "backgroundColor": "#808080",
+                                  "type": "separatorView"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "trayPadding": 10,
+                                  "leftMargin": 4.9,
+                                  "yAxis": 183,
+                                  "rightMargin": 2.67,
+                                  "itemHeight": 118,
+                                  "itemWidth": 1730,
+                                  "height": 757
+                                  }
+                                  },
+                                  "components": [
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 0,
+                                                 "xAxis": 0,
+                                                 "width": 210,
+                                                 "height": 118
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "thumbnailImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 0,
+                                                 "xAxis": 0,
+                                                 "width": 210,
+                                                 "height": 118
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "badgeImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 35,
+                                                 "xAxis": 84,
+                                                 "width": 42,
+                                                 "height": 47
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "playImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 1,
+                                                 "xAxis": 230,
+                                                 "width": 730,
+                                                 "fontSize": 25,
+                                                 "height": 34
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "textAlignment": "left",
+                                                 "type": "label",
+                                                 "textColor": "#ffffff",
+                                                 "fontWeight": "SemiBold",
+                                                 "key": "titleLabel"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 35,
+                                                 "xAxis": 230,
+                                                 "width": 730,
+                                                 "fontSize": 23,
+                                                 "height": 74
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "numberOfLines": 2,
+                                                 "textAlignment": "left",
+                                                 "lineHeight": 36,
+                                                 "type": "label",
+                                                 "textColor": "#ffffff",
+                                                 "key": "descriptionLabel"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 30,
+                                                 "xAxis": 1520,
+                                                 "width": 210,
+                                                 "fontSize": 18,
+                                                 "height": 60
+                                                 }
+                                                 },
+                                                 "borderColor": "ffffff",
+                                                 "fontFamily": "OpenSans",
+                                                 "borderWidth": 4,
+                                                 "action": "deleteItem",
+                                                 "text": "REMOVE",
+                                                 "type": "button",
+                                                 "textColor": "ffffff",
+                                                 "fontWeight": "Semibold",
+                                                 "key": "deleteItemButton"
+                                                 }
+                                                 ],
+                                  "itemClickAction": "lectureDetailPage",
+                                  "type": "tableView",
+                                  "key": "tableView"
+                                  }
+                                  ]
+                   },
+                   {
+                   "id": "161587a4-0756-424b-a108-088e86dc5a24",
+                   "settings": {},
+                   "view": "AC Footer 02",
+                   "type": "AC Footer 02",
+                   "blockName": "footer02",
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 0,
+                   "bottomMargin": 0,
+                   "width": 1920,
+                   "height": 200
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 54,
+                                  "rightMargin": 2.3,
+                                  "width": 249,
+                                  "height": 70
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "footerLogoImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "leftMargin": 0,
+                                  "rightMargin": 0,
+                                  "bottomMargin": 0,
+                                  "height": 200
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "footerBackgroundImage"
+                                  }
+                                  ]
+                   }
+                   ],
+    "version": "0.0.2"
+}

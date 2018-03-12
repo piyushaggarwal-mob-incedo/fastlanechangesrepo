@@ -1,0 +1,70 @@
+{
+    "id": "782c5497-6f68-415b-badf-b3e9cffe4c77",
+    "settings": {
+        "isZoomSupported": true
+    },
+    "view": "AC StandaloneVideoPlayer 01",
+    "type": "AC StandaloneVideoPlayer 01",
+    "layout": {
+        "appletv": {
+            "xAxis": 0,
+            "width": 1920,
+            "leftMargin": 0,
+            "height": 1080
+        }
+    },
+    "layout_focusable": {
+        "appletv": {
+            "yAxis": 0,
+            "width": 1920,
+            "xAxis": 0,
+            "height": 950,
+            "playerYAxis": 50,
+            "playerWidth": 1551,
+            "playerXAxis": 185,
+            "playerHeight": 872
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "bottomMargin": 0
+                   }
+                   },
+                   "type": "image",
+                   "key": "movieImageView"
+                   }
+                   ],
+    "components_focusable": [
+                             {
+                             "layout": {
+                             "appletv": {
+                             "yAxis": 49,
+                             "xAxis": 185,
+                             "width": 1551,
+                             "height": 872
+                             }
+                             },
+                             "type": "image",
+                             "key": "movieImageView"
+                             },
+                             {
+                             "layout": {
+                             "appletv": {
+                             "yAxis": 35,
+                             "xAxis": 171,
+                             "width": 1580,
+                             "height": 900
+                             }
+                             },
+                             "type": "image",
+                             "key": "focusHighlightImage"
+                             }
+                             ]
+}
+
+

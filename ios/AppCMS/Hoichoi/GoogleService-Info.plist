@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TRACKING_ID</key>
+	<string>GTM-NBRPMGQ</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>525148171038-da7vav95ripsg807mp1i985rv91hf2eu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.525148171038-da7vav95ripsg807mp1i985rv91hf2eu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBvyAmJoC_AbKzo5xfgfCnySQhN6q4t6Y8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>525148171038</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.svf.mawja</string>
+	<key>PROJECT_ID</key>
+	<string>hoichoi-1c6af</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hoichoi-1c6af.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:525148171038:ios:3cc7490f6670d46e</string>
+	<key>DATABASE_URL</key>
+	<string>https://hoichoi-1c6af.firebaseio.com</string>
+</dict>
+</plist>

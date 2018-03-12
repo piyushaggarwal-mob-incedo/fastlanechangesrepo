@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppSecretKey</key>
+	<string>KA2KFKAoo217JxGX7wrHid9KRJSbQIG9bL1FeGH7</string>
+	<key>Apptentive AppId</key>
+	<string>1327004273</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-JUKINVIDEO-9f748a171021</string>
+	<key>Apptentive AppSignature</key>
+	<string>e8152bd332b164397499de07d114456c</string>
+	<key>Apptentive Key</key>
+	<string>46d70c9ba2cdea676a5eb505115ea79a217fc3f341f0fe1a60d8659b0de5e38e</string>
+	<key>SiteId</key>
+	<string>d0ec348d-db2b-4ae8-b52e-0f18b3dddc7d</string>
+	<key>TemplateType</key>
+	<string>ENTERTAINMENT</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+</dict>
+</plist>

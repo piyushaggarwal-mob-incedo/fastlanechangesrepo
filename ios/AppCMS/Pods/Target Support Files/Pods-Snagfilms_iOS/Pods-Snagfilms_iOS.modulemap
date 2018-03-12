@@ -1,0 +1,6 @@
+framework module Pods_Snagfilms_iOS {
+  umbrella header "Pods-Snagfilms_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

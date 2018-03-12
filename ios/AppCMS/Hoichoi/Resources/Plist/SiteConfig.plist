@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SiteId</key>
+	<string>7fa0ea9a-9799-4417-99f5-cbb5343c551d</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>Apptentive Key</key>
+	<string>dfde9505539f2dc1d24700c09fb096b5280ed4cbed0828084540ada79a2b00f7</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-HOICHOI-0ed96174ddd7</string>
+	<key>Apptentive AppSignature</key>
+	<string>5192dfba45312d08e701de97fc4f982d</string>
+	<key>Apptentive AppId</key>
+	<string>1188755540</string>
+	<key>AppFlyer Key</key>
+	<string>5qcxTGtWfXSo746pkCDawf</string>
+	<key>AppFlyer APPID</key>
+	<string>1188755540</string>
+	<key>GoogleClientId</key>
+	<string>525148171038-da7vav95ripsg807mp1i985rv91hf2eu.apps.googleusercontent.com</string>
+	<key>AppSecretKey</key>
+	<string>vdTAMerEdh8t5t7xtUAa199qBKQuFLXb5cuG93ZF</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<false/>
+	<key>TemplateType</key>
+	<string>Entertainment</string>
+	<key>CachedAPIToken</key>
+	<string>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzaXRlIjoiaG9pY2hvaXR2IiwiaWQiOiI0Njg0YjJiZjc2YzQyZWZkMzJiODQ1OWFmZmY1Zjg1YWQ1YTE5ZTE2Y2I2MzhmZTFhYmE3NGIyNDYxNzVjMTlkIiwidXNlcklkIjoiNDY4NGIyYmY3NmM0MmVmZDMyYjg0NTlhZmZmNWY4NWFkNWExOWUxNmNiNjM4ZmUxYWJhNzRiMjQ2MTc1YzE5ZCIsImlwYWRkcmVzcyI6IjI2MDA6MTcwMDoxOTYwOjMzYjA6MTA2MTo4YmI4OmNhODpiNzQwIiwiaXBhZGRyZXNzZXMiOiIyNjAwOjE3MDA6MTk2MDozM2IwOjEwNjE6OGJiODpjYTg6Yjc0MCwgMzQuMjAzLjE4OC4xNjMsIDU0LjI0MC4xNDQuNjUiLCJ1c2VybmFtZSI6ImFub255bW91cyIsImNvdW50cnlDb2RlIjoiVVMiLCJwcm92aWRlciI6InZpZXdsaWZ0IiwiaWF0IjoxNTExMjMwOTQwLCJleHAiOjE1NDI3NjY5NDB9.0eeLtDZtzgPqM2zJA6JzVrvfZ5mmY1yKaV2Wr_Of9V4</string>
+	<key>UrbanAirshipProdMasterKey</key>
+	<string>4qiw5pNUSuaw5HfAfVf-AQ</string>
+	<key>UrbanAirshipDevMasterKey</key>
+	<string>9NvLFbMITeuJtb-AqrwOpw</string>
+	<key>UrbanAirshipChurnTagAvailable</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,75 @@
+{
+    "id": "d17537c4-41a3-4295-a1df-7aa3d659903b",
+    "settings": {
+        "loop": true,
+        "columns": {},
+        "thumbnailType": "landscape",
+        "infoHover": false
+    },
+    "view": "AC Carousel 01",
+    "type": "AC Carousel 01",
+    "blockName": "carousel01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "leftMargin": 0,
+            "xAxis": 0,
+            "rightMargin": 0,
+            "height": 527
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "xAxis": 0,
+                   "width": 866,
+                   "height": 487
+                   }
+                   },
+                   "trayClickAction": "lectureDetailPage",
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "leftMargin": 0,
+                                  "topMargin": 0,
+                                  "rightMargin": 0,
+                                  "bottomMargin": 0
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "carouselImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "leftMargin": 0,
+                                  "topMargin": 0,
+                                  "rightMargin": 0,
+                                  "bottomMargin": 0
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "carouselBadgeImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 866,
+                                  "height": 487
+                                  }
+                                  },
+                                  "type": "carouselItem",
+                                  "key": "carouselItem"
+                                  }
+                                  ],
+                   "type": "carousel",
+                   "key": "carousel"
+                   }
+                   ]
+}
+

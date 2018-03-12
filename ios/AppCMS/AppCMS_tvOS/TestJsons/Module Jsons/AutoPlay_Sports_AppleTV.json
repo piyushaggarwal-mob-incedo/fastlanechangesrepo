@@ -1,0 +1,195 @@
+{
+    "id": "782c5497-6f68-415b-badf-b3e9cffe4c77",
+    "settings": {},
+    "view": "AC AutoPlay 01",
+    "type": "AC AutoPlay 01",
+    "layout": {
+        "appletv": {
+            "topMargin": 0,
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "bottomMargin": 0
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "bottomMargin": 0
+                   }
+                   },
+                   "type": "image",
+                   "key": "backgroundImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "bottomMargin": 0
+                   }
+                   },
+                   "type": "image",
+                   "key": "lightOverlayView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 42.77,
+                   "leftMargin": 52.60,
+                   "width": 291,
+                   "height": 163
+                   }
+                   },
+                   "type": "image",
+                   "key": "videoImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 35,
+                   "leftMargin": 54,
+                   "width": 270,
+                   "height": 400
+                   }
+                   },
+                   "type": "image",
+                   "key": "nextBadgeImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 43.6,
+                   "leftMargin": 0,
+                   "width": 960,
+                   "fontSize": 23,
+                   "height": 36
+                   }
+                   },
+                   "opacity": 0.5,
+                   "text": "JUST FINISHED",
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "letterSpacing": 4.3,
+                   "key": "justFinished"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 47,
+                   "leftMargin": 2,
+                   "width": 920,
+                   "fontSize": 53,
+                   "height": 150
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 2,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "fontWeight": "Semibold",
+                   "key": "previousMovieName"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 36,
+                   "leftMargin": 70,
+                   "width": 561,
+                   "fontSize": 38,
+                   "height": 52
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "fontWeight": "Semibold",
+                   "key": "nextMovieName"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 41.3,
+                   "leftMargin": 70,
+                   "width": 497,
+                   "fontSize": 23,
+                   "height": 180
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 5,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "lineHeight": 36,
+                   "key": "movieDescription"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 65,
+                   "topMargin": 62.5,
+                   "width": 250,
+                   "height": 60,
+                   "fontSize": 18
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "Lato",
+                   "borderWidth": 4,
+                   "action": "cancelCountdown",
+                   "text": "CANCEL COUNTDOWN",
+                   "selectedStateText":"BACK",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "cancelCountdown"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 26,
+                   "leftMargin": 67,
+                   "width": 160,
+                   "fontSize": 26,
+                   "height": 36
+                   }
+                   },
+                   "opacity": 0.5,
+                   "text": "UP NEXT",
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "letterSpacing": 4.3,
+                   "lineHeight": 36,
+                   "key": "upnextLabel"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 25,
+                   "leftMargin": 76,
+                   "width": 63,
+                   "height": 63
+                   }
+                   },
+                   "fontSize": 26,
+                   "timerValue": 10,
+                   "showsCountdown" : true,
+                   "textAlignment": "center",
+                   "fontFamily": "Lato",
+                   "opacity": 0.5,
+                   "type": "rotatingLoaderView",
+                   "key": "upnextLoader"
+                   }
+                   ]
+}
+
+

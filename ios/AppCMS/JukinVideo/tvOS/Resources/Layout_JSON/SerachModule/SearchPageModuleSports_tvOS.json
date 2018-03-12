@@ -1,0 +1,122 @@
+ [
+  {
+  "id": "73bb0938-8eec-4551-9e29-b55a51128f7e",
+  "settings": {
+  "thumbnailType": "landscape"
+  },
+  "view": "AC Tray 03",
+  "type": "AC Tray 03",
+  "blockName": "tray03",
+  "layout": {
+  "appletv": {
+  "yAxis": 0,
+  "leftMargin": 0,
+  "rightMargin": 0,
+  "height": 672
+  }
+  },
+  "components": [
+                 {
+                 "layout": {
+                 "appletv": {
+                 "yAxis": 0,
+                 "leftMargin": 2.08,
+                 "rightMargin": 0,
+                 "fontSize": 36,
+                 "height": 44
+                 }
+                 },
+                 "fontFamily": "Lato",
+                 "numberOfLines": 1,
+                 "textAlignment": "left",
+                 "type": "label",
+                 "fontWeight": "Bold",
+                 "textStyle": "default",
+                 "key": "trayTitle"
+                 },
+                 {
+                 "layout": {
+                 "appletv": {
+                 "gridHeight": 312,
+                 "trayPadding": 40,
+                 "leftMargin": 2.08,
+                 "topMargin": 19.27,
+                 "rightMargin": 2.67,
+                 "height": 672,
+                 "gridWidth": 380
+                 }
+                 },
+                 "trayClickAction": "lectureDetailPage",
+                 "components": [
+                                {
+                                "layout": {
+                                "appletv": {
+                                "yAxis": 0,
+                                "xAxis": 0,
+                                "width": 380,
+                                "height": 214
+                                }
+                                },
+                                "type": "image",
+                                "key": "thumbnailImage"
+                                },
+                                {
+                                "layout": {
+                                "appletv": {
+                                "yAxis": 0,
+                                "xAxis": 0,
+                                "width": 380,
+                                "height": 214
+                                }
+                                },
+                                "type": "image",
+                                "key": "badgeImage"
+                                },
+                                {
+                                "layout": {
+                                "appletv": {
+                                "topMargin": 59.12,
+                                "leftMargin": 0,
+                                "rightMargin": 0,
+                                "fontSize": 18,
+                                "height": 30
+                                }
+                                },
+                                "fontFamily": "Lato",
+                                "textAlignment": "left",
+                                "type": "label",
+                                "textColor": "#ffffff",
+                                "hugsContent": true,
+                                "backgroundColor": "#000000",
+                                "backgroundColorAlpha": 0.56,
+                                "text": "And the sport",
+                                "numberOfLines": 1,
+                                "key": "durationBadgeLabel"
+                                },
+                                {
+                                "layout": {
+                                "appletv": {
+                                "bottomMargin": 2.9,
+                                "leftMargin": 0,
+                                "rightMargin": 0,
+                                "fontSize": 24,
+                                "height": 58
+                                }
+                                },
+                                "fontFamily": "Lato",
+                                "textAlignment": "left",
+                                "type": "label",
+                                "textColor": "#ffffff",
+                                "numberOfLines": 2,
+                                "key": "thumbnailTitle"
+                                }
+                                ],
+                 "isHorizontalScroll": false,
+                 "type": "collectionGrid",
+                 "supportPagination": false,
+                 "key": "collectionGrid",
+                 "cornerRadius": 0
+                 }
+                 ]
+  }
+  ]

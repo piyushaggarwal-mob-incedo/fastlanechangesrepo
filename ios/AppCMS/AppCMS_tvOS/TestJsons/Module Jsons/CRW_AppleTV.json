@@ -1,0 +1,130 @@
+[{
+    "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+    "settings": {
+        "duration": 2.0,
+        "animates": true
+ },
+    "view": "AC ContentRating 01",
+    "type": "AC ContentRating 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 1.6,
+                   "topMargin": 3.1,
+                   "width": 255,
+                   "height": 60,
+                   "fontSize": 18
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "backButton",
+                   "text": "BACK",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "backButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 39.81,
+                   "leftMargin": 45.84,
+                   "width": 160,
+                   "fontSize": 32,
+                   "height": 44
+                   }
+                   },
+                   "text": "WARNING",
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "fontWeight": "Bold",
+                   "textColor": "#ffffff",
+                   "key": "warningLabel"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 45.4,
+                   "leftMargin": 16.1,
+                   "width": 1302,
+                   "fontSize": 35,
+                   "height": 116
+                   }
+                   },
+                   "text": "",
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "borderWidth": 4,
+                   "borderColor": "#ffffff",
+                   "key": "borderLabel"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 45.4,
+                   "leftMargin": 16.1,
+                   "width": 1302,
+                   "fontSize": 35,
+                   "height": 116
+                   }
+                   },
+                   "text": "The following content is rated:",
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "fontWeight": "SemiBoldItalic",
+                   "textColor": "#ffffff",
+                   "key": "ratingLabel"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 56.8,
+                   "leftMargin": 39.7,
+                   "width": 394,
+                   "fontSize": 28,
+                   "height": 38
+                   }
+                   },
+                   "text": "Viewer Discretion is Advised",
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "fontWeight": "Bold",
+                   "textColor": "#7f7f7f",
+                   "key": "viewerDiscretion"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "topMargin": 88.4,
+                   "leftMargin": 8.5,
+                   "width": 1592,
+                   "height": 16
+                   }
+                   },
+                   "progressColor": "008EE0",
+                   "unprogressColor": "0A151C",
+                   "type": "progressView",
+                   "key": "progressView"
+                   }
+                   ]
+}]

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SiteId</key>
+	<string>6ea6f2a0-451c-4d87-8060-051f8c07db23</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>Apptentive Key</key>
+	<string>89e71da95909aa0b487c59fa8b490d5fd681263205c149b893467becadcadf77</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-FAILARMY-cde9cc31e23d</string>
+	<key>Apptentive AppSignature</key>
+	<string>3e35561b8d65c47e7f6a3b4b22e27396</string>
+	<key>Apptentive AppId</key>
+	<string>1015527860</string>
+	<key>AppSecretKey</key>
+	<string>jbNA1dr2bn1CshPLWxTsXRclfLrkpHcpcOC1il90</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+</dict>
+</plist>

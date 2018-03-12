@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.001554">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001157">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: slack_train_start" time="0.00132">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: Switch to ios slackSendMessage lane" time="0.001017">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: slack" time="0.559205">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: slack_train" time="0.395263">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: slack_train" time="0.390178">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Cleaning the Project' 48 0" time="0.50283">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: slack_train" time="0.39512">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating The Development and Distribution Provisioning Profile' 50 0" time="0.556706">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: slack_train" time="0.384685">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: cert" time="6.330421">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: slack_train" time="0.41898">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating The Development and Distribution Provisioning Profile' 55 0" time="0.659372">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: sigh" time="7.028301">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="15: slack_train" time="0.488193">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="16: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Invoking and Installing Provisioning Profiles' 60 0" time="0.51475">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="17: get_certificates" time="5.5492">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="18: get_provisioning_profile" time="7.9358">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="19: slack_train" time="0.422879">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="20: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Updating the Info List with the Bundle Indentifier' 65 0" time="0.691247">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="21: update_info_plist" time="1.430473">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="22: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Updating the Developer Team Id' 70 0" time="0.512589">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="23: update_project_team" time="0.024858">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="24: slack_train" time="0.406325">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="25: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Setting the Path of the Provisioning Profile for the Build' 75 0" time="0.541294">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="26: update_project_provisioning" time="4.202516">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="27: update_project_provisioning" time="3.634544">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="28: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Increementing the Build Number of the Build' 80 0" time="0.516798">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="29: increment_build_number_in_plist" time="16.10043">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="30: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing Screenshots of the Build and Running the Unit Test Cases' 82 0" time="0.591006">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="31: slack_train" time="0.53449">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="32: capture_ios_screenshots" time="427.125014">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="33: increment_build_number_in_plist" time="18.012779">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="34: slack_train" time="1.426036">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="35: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Release build and packaging the Build with Secure Keys' 85 0" time="0.649853">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="36: gym" time="367.516754">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="37: get_build_number_from_plist" time="9.288198">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="38: slack_train" time="0.671143">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="39: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Build Uploading to the S3 Bucket' 90 47" time="0.602792">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="40: ./PostUpdateLink.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Connecting to the Itunes and Uploading the Build' 90 47 /Users/piyush/Music/ios/ios/AppCMS/builds/Snagfilms.ipa 3f5e193b-2e51-4853-839e-618e62896deb http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/appcms/ios/build/apk/link" time="34.977076">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="41: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'SUCCESS_S3_BUCKET' 'NO ERROR' 'Build Uploading to the S3 Bucket' 92 47" time="0.538425">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="42: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'UPLOADING_PLAY_STORE' 'NO ERROR' 'Connecting to App Store Uploading the Screenshots and Metadata on App Store and TestFlight.' 95 47" time="0.508421">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="43: deliver" time="85.135214">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="44: slack_train" time="0.626014">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="45: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'UPLOADING_PLAY_STORE' 'NO ERROR' 'Connected Successfully to the Itunes and Testflight for Uploading the Build. Uploading the build on TestFlight and Appstore. This will take some time as build is under uploading on  App Store and Testflight' 95 47" time="0.52263">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="46: Switch to ios slackSendMessage lane" time="0.002565">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="47: slack" time="0.517458">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="48: pilot" time="123.720909">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="49: Switch to ios slackSendMessage lane" time="0.001858">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="50: slack" time="0.520805">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="51: ./PostBuildStatus.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'UPLOADING_PLAY_STORE' 'NO ERROR' 'Build is under Review. Successfully Uploaded the Build to App Store and TestFLight. We are running WatchBuild as Build is currently under processing by Appstore. You will be notified once the build gets completely process by Testflight and Appstore and will be ready to publish' 99 47" time="0.712772">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="52: ./watchBuildShell.sh 82 http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status 'com.viewlift.testplatform' 47 piyushaggarwal.incedo@gmail.com" time="0.091881">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

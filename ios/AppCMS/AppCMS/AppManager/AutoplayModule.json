@@ -1,0 +1,416 @@
+{
+    "moduleList": [
+                   {
+                   "id": "0f549f5b-1158-4221-a0c4-65556d6b8b55",
+                   "settings": {},
+                   "view": "AC AutoPlay 01",
+                   "type": "AC AutoPlay 01",
+                   "alpha": 0.75,
+                    "value" : 15,
+                   "layout": {
+                   "tabletLandscape": {
+                   "xAxis" : 0,
+                   "height":704,
+                   "width": 563,
+                   "yAxis": 64
+                   },
+                   "tabletPortrait": {
+                   "xAxis" : 0,
+                   "height":960,
+                   "width": 563,
+                   "yAxis": 64
+                   },
+                   "mobile": {
+                   "xAxis" : 0,
+                   "width":375,
+                   "height": 667,
+                   "yAxis": 64
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "fontWeight": "Semibold",
+                                  "text": "Finished! Up next is:",
+                                  "numberOfLines": 1,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height":18,
+                                  "rightMargin": 0,
+                                  "leftMargin": 0,
+                                  "fontSize": 16,
+                                  "topMargin": 8.09
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 24,
+                                  "rightMargin": 0,
+                                  "leftMargin": 0,
+                                  "fontSize": 18,
+                                  "topMargin": 5.9
+                                  },
+                                  "mobile": {
+                                  "height": 24,
+                                  "rightMargin": 1.46,
+                                  "leftMargin": 1.46,
+                                  "fontSize": 16,
+                                  "topMargin": 8.62,
+                                  
+                                  }
+                                  },
+                                  "textAlignment": "center",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "finishedUptitle"
+                                  },
+                                  {
+                                  "fontWeight": "Bold",
+                                  "text": "Movie Name",
+                                  "numberOfLines": 2,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 32,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.1,
+                                  "fontSize": 23,
+                                  "topMargin": 13.7
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 32,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.11,
+                                  "fontSize": 23,
+                                  "topMargin": 13.7
+                                  },
+                                  "mobile": {
+                                  "height": 32,
+                                  "rightMargin": 0,
+                                  "leftMargin": 2.93,
+                                  "fontSize": 21,
+                                  "topMargin": 14.9
+                                  }
+                                  },
+                                  "textAlignment": "left",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "movieNameTitle"
+                                  },
+                                  {
+                                  "fontWeight": "Semibold",
+                                  "numberOfLines": 1,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 14,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.1,
+                                  "fontSize": 10,
+                                  "topMargin": 17.75
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 14,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.11,
+                                  "fontSize": 10,
+                                  "topMargin": 16.75
+                                  },
+                                  "mobile": {
+                                  "height": 14,
+                                  "rightMargin": 37.2,
+                                  "leftMargin": 2.93,
+                                  "fontSize": 9,
+                                  "topMargin": 20.15
+                                  }
+                                  },
+                                  "textAlignment": "left",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "movieNameSubheading"
+                                  },
+                                  {
+                                  "numberOfLines": 0,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 108,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.11,
+                                  "fontSize": 12,
+                                  "topMargin": 21.1
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 108,
+                                  "rightMargin": 0.35,
+                                  "leftMargin": 45.11,
+                                  "fontSize": 12,
+                                  "topMargin": 19.1
+                                  },
+                                  "mobile": {
+                                  "height": 90,
+                                  "rightMargin": 2.6,
+                                  "leftMargin": 2.93,
+                                  "fontSize": 12,
+                                  "topMargin": 22.58
+                                  }
+                                  },
+                                  "textAlignment": "left",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "movieDescription"
+                                  },
+                                  {
+                                  "view": "AC StarView 01",
+                                  "type": "starRating",
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "topMargin": 37.9,
+                                  "height": 35,
+                                  "width": 275,
+                                  "leftMargin":45.1
+                                  },
+                                  "tabletPortrait": {
+                                  "topMargin": 32.5,
+                                  "height": 35,
+                                  "width": 275,
+                                  "leftMargin": 45.1
+                                  },
+                                  "mobile": {
+                                  "topMargin": 41.53,
+                                  "height": 21,
+                                  "width": 275,
+                                  "xAxis": 11
+                                  }
+                                  },
+                                  "star-margin": 24
+                                  },
+                                  {
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 24,
+                                  "rightMargin": 4.84,
+                                  "width": 33,
+                                  "fontSize": 18,
+                                  "topMargin": 37.9
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 24,
+                                  "rightMargin": 4.84,
+                                  "width": 33,
+                                  "fontSize": 18,
+                                  "topMargin": 32.5
+                                  },
+                                  "mobile": {
+                                  "height": 28,
+                                  "rightMargin": 2.6,
+                                  "width": 31,
+                                  "fontSize": 12,
+                                  "topMargin": 41.53
+                                  }
+                                  },
+                                  "textAlignment": "right",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "parentalRating"
+                                  },
+                                  {
+                                  "textColor": "#ffffff",
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 170,
+                                  "leftMargin": 45.1,
+                                   "fontSizeValue" : 14,
+                                  "fontSizeKey" : 13,
+                                  "width": 281,
+                                  "topMargin": 43.6
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 40,
+                                  "leftMargin": 45.1,
+                                  "fontSizeValue" : 14,
+                                  "fontSizeKey" : 13,
+                                  "width": 280,
+                                  "topMargin":38.6
+                                  },
+                                  "mobile": {
+                                  "height": 0,
+                                  "leftMargin": 0,
+                                  "fontSizeValue" : 0,
+                                  "fontSizeKey" : 0,
+                                  "width": 0,
+                                  "topMargin":0
+                                  }
+                                  },
+                                  "fontFamilyKey" : "OpenSans-Extrabold",
+                                  "fontFamilyValue" : "OpenSans",
+                                  "type": "castView",
+                                  "key": "castview"
+                                  },
+                                  {
+                                  "backgroundColor": "008ee0",
+                                  "textColor": "ffffff",
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 317,
+                                  "width": 214,
+                                  "leftMargin": 5.39,
+                                  "fontSize": 18,
+                                  "yAxis": 101
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 317,
+                                  "width": 214,
+                                  "leftMargin": 5.39,
+                                  "fontSize": 18,
+                                  "yAxis": 121
+                                  },
+                                  "mobile": {
+                                  "height": 225,
+                                  "rightMargin":53.2,
+                                  "leftMargin": 2.93,
+                                  "fontSize": 18,
+                                  "yAxis": 305
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "movieImage"
+                                  },
+                                  {
+                                  "backgroundColor": "#F81004",
+                                  "fontWeight" : "Semibold",
+                                  "fontFamily" : "OpenSans",
+                                  "text" : "PLAY",
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 40,
+                                  "leftMargin": 18.8,
+                                  "fontSize": 12,
+                                  "width": 173,
+                                  "bottomMargin":1.42
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 40,
+                                  "leftMargin": 18.8,
+                                  "width": 173,
+                                  "fontSize": 12,
+                                  "bottomMargin":1.42
+                                  },
+                                  "mobile": {
+                                  "height": 40,
+                                  "leftMargin": 2.6,
+                                  "fontSize": 12,
+                                  "width": 173,
+                                  "bottomMargin":1.65
+                                  }
+                                  },
+                                  "action": "play",
+                                  "type": "button",
+                                  "key": "playButton"
+                                  },
+                                  {
+                                  "backgroundColor": "#0A151C",
+                                  "borderWidth" : 1.0,
+                                   "fontWeight" : "Semibold",
+                                  "fontFamily" : "OpenSans",
+                                  "borderColor" : "#ffffff",
+                                  "text" : "CANCEL",
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 40,
+                                  "rightMargin": 18.11,
+                                  "width": 173,
+                                  "fontSize": 12,
+                                  "bottomMargin":1.42
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 40,
+                                  "rightMargin": 18.11,
+                                  "width": 173,
+                                  "fontSize": 12,
+                                  "bottomMargin":1.42
+                                  },
+                                  "mobile": {
+                                  "height": 40,
+                                  "rightMargin": 2.6,
+                                  "width": 173,
+                                  "fontSize": 12,
+                                  "bottomMargin":1.42
+                                  }
+                                  },
+                                  "action": "cancel",
+                                  "type": "button",
+                                  "key": "cancelButton"
+                                  },
+                                  {
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Semibold",
+                                   "text": "Playing in",
+                                  "numberOfLines": 1,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 22,
+                                   "rightMargin": 42.8,
+                                  "leftMargin": 41.8,
+                                  "fontSize": 16,
+                                  "bottomMargin": 14.34
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 22,
+                                  "rightMargin": 42.8,
+                                  "leftMargin": 41.8,
+                                  "fontSize": 18,
+                                  "bottomMargin": 10.5
+                                  },
+                                  "mobile": {
+                                  "height": 22,
+                                   "width": 85,
+                                  "rightMargin": 15.4,
+                                  "fontSize": 16,
+                                  "bottomMargin": 31.1
+                                  }
+                                  },
+                                  "textAlignment": "center",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "playInLabel"
+                                  },
+                                  {
+                                  "fontWeight": "Bold",
+                                  "textColor": "#ffffff",
+                                  "numberOfLines": 1,
+                                  "layout": {
+                                  "tabletLandscape": {
+                                  "height": 24,
+                                  "rightMargin": 39.7,
+                                  "leftMargin": 39.7,
+                                  "fontSize": 18,
+                                  "bottomMargin": 10.9
+                                  },
+                                  "tabletPortrait": {
+                                  "height": 24,
+                                   "leftMargin": 40.7,
+                                  "rightMargin": 40.7,
+                                  "fontSize": 18,
+                                  "bottomMargin": 8.02
+                                  },
+                                  "mobile": {
+                                  "height": 24,
+                                  "width": 120,
+                                  "rightMargin": 11,
+                                  "fontSize": 20,
+                                  "bottomMargin": 27.1
+                                  }
+                                  },
+                                  "textAlignment": "center",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "timerLabel"
+                                  }
+                                  ]
+                   },
+                   {
+                   "id": "a2b8f56b-a15a-4d12-8ef2-66ff388957ee",
+                   "settings": {},
+                   "view": "AC Footer 01",
+                   "type": "AC Footer 01",
+                   "layout": {},
+                   "components": []
+                   }
+                   ],
+    
+}

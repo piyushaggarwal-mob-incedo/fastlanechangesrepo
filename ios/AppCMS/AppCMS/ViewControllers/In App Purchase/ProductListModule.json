@@ -1,0 +1,2649 @@
+{
+  "moduleList": [
+    {
+      "id": "04fd1213-a9ec-4e67-a60e-a1cda98bb9ad",
+      "settings": {},
+      "view": "AC Masthead 01",
+      "type": "AC Masthead 01",
+      "layout": {},
+      "components": []
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC TitleLabel 01",
+      "type": "AC TitleLabel 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "trayTitle"
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "landscape"
+      },
+      "view": "AC ListView 01",
+      "type": "AC ListView 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 30,
+          "height": 694,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 30,
+          "height": 950,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 593,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "backGroundColor": "#008EE0",
+          "borderNormalColor": "#008EE0",
+          "borderSelectedColor": "#008EE0",
+          "borderWidth": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            }
+          },
+          "type": "AC Product View",
+          "key": "AC Product View",
+          "components": [
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "planTitle"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "planSubTitle"
+            },
+            {
+              "type": "Plan Detail 01",
+              "key": "Plan Detail 01",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail01"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image01"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 02",
+              "key": "Plan Detail 02",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail02"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image02"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 03",
+              "key": "Plan Detail 03",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail03"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image03"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 04",
+              "key": "Plan Detail 04",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail04"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image04"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 05",
+              "key": "Plan Detail 05",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail051"
+                },
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail052"
+                }
+              ]
+            },
+            {
+              "fontWeight": "Semibold",
+              "buttonTitleNormalColor": "#008EE0",
+              "buttonTitleSelectedColor": "#008EE0",
+              "buttonNormalColor": "#008EE0",
+              "buttonSelectedColor": "#008EE0",
+              "buttonBorderNormalColor": "#008EE0",
+              "buttonBorderSelectedColor": "#008EE0",
+              "action": "purchasePlan",
+              "buttonNormalText": "START YOUR FREE TRIAL",
+              "buttonSelectedText": "CONTINUE WITH SELECTION",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "button",
+              "key": "purchasePlan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC AppInfo",
+      "type": "AC AppInfo",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "view": "AC AppInfo 01",
+          "type": "AC AppInfo 01",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image01"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle01"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle01"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 02",
+          "type": "AC AppInfo 02",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image02"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle02"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle02"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 03",
+          "type": "AC AppInfo 03",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image03"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle03"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle03"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 04",
+          "type": "AC AppInfo 04",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image04"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle04"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC TermsView 01",
+      "type": "AC TermsView 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "termsLabel1"
+        },
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "termsLabel2"
+        }
+      ]
+    },
+    {
+      "id": "5faf8556-34ae-485f-990c-4e23fe8707a6",
+      "settings": {},
+      "view": "AC Footer 01",
+      "type": "AC Footer 01",
+      "layout": {},
+      "components": []
+    }
+  ],
+  "version": "0.322.0"
+}{
+  "moduleList": [
+    {
+      "id": "04fd1213-a9ec-4e67-a60e-a1cda98bb9ad",
+      "settings": {},
+      "view": "AC Masthead 01",
+      "type": "AC Masthead 01",
+      "layout": {},
+      "components": []
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC TitleLabel 01",
+      "type": "AC TitleLabel 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "trayTitle"
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "landscape"
+      },
+      "view": "AC ListView 01",
+      "type": "AC ListView 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 30,
+          "height": 694,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 30,
+          "height": 950,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 593,
+          "rightMargin": 0,
+          "leftMargin": 0,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "backGroundColor": "#008EE0",
+          "borderNormalColor": "#008EE0",
+          "borderSelectedColor": "#008EE0",
+          "borderWidth": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 0,
+              "rightMargin": 0,
+              "fontSize": 0,
+              "leftMargin": 0
+            }
+          },
+          "type": "AC Product View",
+          "key": "AC Product View",
+          "components": [
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "planTitle"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "planSubTitle"
+            },
+            {
+              "type": "Plan Detail 01",
+              "key": "Plan Detail 01",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail01"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image01"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 02",
+              "key": "Plan Detail 02",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail02"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image02"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 03",
+              "key": "Plan Detail 03",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail03"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image03"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 04",
+              "key": "Plan Detail 04",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail04"
+                },
+                {
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "imageName": "tick",
+                  "type": "image",
+                  "key": "image04"
+                }
+              ]
+            },
+            {
+              "type": "Plan Detail 05",
+              "key": "Plan Detail 05",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "components": [
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail051"
+                },
+                {
+                  "fontWeight": "Semibold",
+                  "textColor": "#008EE0",
+                  "numberOfLines": 1,
+                  "textAlignment": "left",
+                  "layout": {
+                    "tabletLandscape": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "tabletPortrait": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    },
+                    "mobile": {
+                      "yAxis": 0,
+                      "height": 0,
+                      "rightMargin": 0,
+                      "fontSize": 0,
+                      "leftMargin": 0
+                    }
+                  },
+                  "fontFamily": "OpenSans",
+                  "type": "label",
+                  "key": "detail052"
+                }
+              ]
+            },
+            {
+              "fontWeight": "Semibold",
+              "buttonTitleNormalColor": "#008EE0",
+              "buttonTitleSelectedColor": "#008EE0",
+              "buttonNormalColor": "#008EE0",
+              "buttonSelectedColor": "#008EE0",
+              "buttonBorderNormalColor": "#008EE0",
+              "buttonBorderSelectedColor": "#008EE0",
+              "action": "purchasePlan",
+              "buttonNormalText": "START YOUR FREE TRIAL",
+              "buttonSelectedText": "CONTINUE WITH SELECTION",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "button",
+              "key": "purchasePlan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC AppInfo",
+      "type": "AC AppInfo",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "view": "AC AppInfo 01",
+          "type": "AC AppInfo 01",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image01"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle01"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle01"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 02",
+          "type": "AC AppInfo 02",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image02"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle02"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle02"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 03",
+          "type": "AC AppInfo 03",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image03"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle03"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle03"
+            }
+          ]
+        },
+        {
+          "view": "AC AppInfo 04",
+          "type": "AC AppInfo 04",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 30,
+              "rightMargin": 10,
+              "leftMargin": 10,
+              "xAxis": 0
+            }
+          },
+          "components": [
+            {
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 0,
+                  "rightMargin": 0,
+                  "fontSize": 0,
+                  "leftMargin": 0
+                }
+              },
+              "imageName": "appInfo1",
+              "type": "image",
+              "key": "image04"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoTitle04"
+            },
+            {
+              "fontWeight": "Semibold",
+              "textColor": "#008EE0",
+              "numberOfLines": 1,
+              "textAlignment": "left",
+              "layout": {
+                "tabletLandscape": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 10,
+                  "leftMargin": 10
+                },
+                "tabletPortrait": {
+                  "yAxis": 0,
+                  "height": 33,
+                  "rightMargin": 10,
+                  "fontSize": 24,
+                  "leftMargin": 10
+                },
+                "mobile": {
+                  "yAxis": 0,
+                  "height": 24,
+                  "rightMargin": 10,
+                  "fontSize": 18,
+                  "leftMargin": 10
+                }
+              },
+              "fontFamily": "OpenSans",
+              "type": "label",
+              "key": "infoSubTitle04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "741e4ee1-e723-4e9b-a340-53071481f3e0",
+      "settings": {
+        "loop": true,
+        "infoHover": false,
+        "thumbnailType": "Potrait"
+      },
+      "view": "AC TermsView 01",
+      "type": "AC TermsView 01",
+      "layout": {
+        "tabletLandscape": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "tabletPortrait": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        },
+        "mobile": {
+          "yAxis": 0,
+          "height": 30,
+          "rightMargin": 10,
+          "leftMargin": 10,
+          "xAxis": 0
+        }
+      },
+      "components": [
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "termsLabel1"
+        },
+        {
+          "fontWeight": "Semibold",
+          "textColor": "#008EE0",
+          "numberOfLines": 1,
+          "textAlignment": "left",
+          "layout": {
+            "tabletLandscape": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 10,
+              "leftMargin": 10
+            },
+            "tabletPortrait": {
+              "yAxis": 0,
+              "height": 33,
+              "rightMargin": 10,
+              "fontSize": 24,
+              "leftMargin": 10
+            },
+            "mobile": {
+              "yAxis": 0,
+              "height": 24,
+              "rightMargin": 10,
+              "fontSize": 18,
+              "leftMargin": 10
+            }
+          },
+          "fontFamily": "OpenSans",
+          "type": "label",
+          "key": "termsLabel2"
+        }
+      ]
+    },
+    {
+      "id": "5faf8556-34ae-485f-990c-4e23fe8707a6",
+      "settings": {},
+      "view": "AC Footer 01",
+      "type": "AC Footer 01",
+      "layout": {},
+      "components": []
+    }
+  ],
+  "version": "0.322.0"
+}

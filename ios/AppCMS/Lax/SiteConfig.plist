@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SiteId</key>
+	<string>0000014c-edbe-da12-a1fc-fdbe2f120000</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>AppSecretKey</key>
+	<string>WyiuqpyCzT3yWfark4UIa4zPTRkXaWYp3W6kAXax</string>
+	<key>TemplateType</key>
+	<string>Sports</string>
+	<key>Apptentive Key</key>
+	<string>c5fdbcb6284324f7dacf8528f074bfa0634b1067750056886ad93e51c359ff99</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-LAX-SPORTS-NETWORK</string>
+	<key>Apptentive AppSignature</key>
+	<string>f22e6e1e805eecd68d115967e553fe1e</string>
+	<key>Apptentive AppId</key>
+	<string>1052696562</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+	<key>isPIPRequired</key>
+	<true/>
+</dict>
+</plist>

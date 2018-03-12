@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppSecretKey</key>
+	<string>uuEibitmrf8Nr7BpWJm2MYitNfs6t7N2n0cV5274</string>
+	<key>Apptentive AppId</key>
+	<string>1328457969</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-PEOPLE-ARE-AWESOME</string>
+	<key>Apptentive AppSignature</key>
+	<string>1c6e0aadc41ddf9d04e68a26ee085256</string>
+	<key>Apptentive Key</key>
+	<string>56fc661a7c55a31b20d4949f84a10302bda21b9d7a4619cb67d9a21f25943817</string>
+	<key>SiteId</key>
+	<string>65a190c3-65d7-4e72-9c80-f42be9294025</string>
+	<key>TemplateType</key>
+	<string>ENTERTAINMENT</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+</dict>
+</plist>

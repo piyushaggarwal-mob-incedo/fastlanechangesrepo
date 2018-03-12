@@ -1,0 +1,161 @@
+{
+    "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+    "settings": {},
+    "view": "AC SelectPlan 02",
+    "type": "AC SelectPlan 02",
+    "layout": {
+        "appletv": {
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "topMargin": 0,
+            "height": 1100
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 10.36,
+                   "rightMargin": 65.07,
+                   "topMargin": 14.63,
+                   "height": 129
+                   }
+                   },
+                   "imageName": "appLogo",
+                   "type": "image",
+                   "key": "subscriptionLogoImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 10.36,
+                   "rightMargin": 65.07,
+                   "topMargin": 30.18,
+                   "fontSize": 39,
+                   "height": 53
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "textColor": "#000000",
+                   "key": "confirmPurchase",
+                   "fontWeight": "Semibold",
+                   "letterSpacing": 3.7,
+                   "text": "SELECT YOUR PLAN"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 10.36,
+                   "rightMargin": 67.24,
+                   "topMargin": 51.54,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderWidth": 4,
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "action": "cancel",
+                   "text": "BACK",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "cancelButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "gridHeight": 146,
+                   "trayPadding": 100,
+                   "gridWidth": 539,
+                   "leftMargin": 40.50,
+                   "rightMargin": 11.42,
+                   "topMargin": 13,
+                   "height": 514
+                   }
+                   },
+                   "trayClickAction": "selectPlan",
+                   "isHorizontalScroll": true,
+                   "type": "collectionGrid",
+                   "supportPagination": false,
+                   "key": "collectionGrid",
+                   "cornerRadius": 0,
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 10.27,
+                                  "leftMargin": 50,
+                                  "rightMargin": 5.19,
+                                  "fontSize": 22,
+                                  "height": 30
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "right",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Extrabold",
+                                  "key": "planTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  
+                                  "appletv": {
+                                  "topMargin": 10.27,
+                                  "leftMargin": 5.38,
+                                  "rightMargin": 50,
+                                  "fontSize": 30,
+                                  "height": 30
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Extrabold",
+                                  "key": "planPriceInfo"
+                                  },
+                                  {
+                                  "layout": {
+                                  
+                                  "appletv": {
+                                  "topMargin": 35.61,
+                                  "leftMargin": 5.38,
+                                  "rightMargin": 5.38,
+                                  "fontSize": 26,
+                                  "height": 84
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 0,
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "planDescription"
+                                  },
+                                  {
+                                  "layout": {
+                                  
+                                  "appletv": {
+                                  "leftMargin": 2.11,
+                                  "topMargin": 35,
+                                  "rightMargin": 2.11,
+                                  "height": 1
+                                  }
+                                  },
+                                  "backgroundColor": "#FFFFFF",
+                                  "opacity": 46,
+                                  "type": "separatorView"
+                                  }
+                                  ]
+                   }
+                   ]
+}

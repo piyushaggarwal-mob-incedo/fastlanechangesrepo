@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="13529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kew-Mc-Tny" customClass="TopBannerSubscriptionModule" customModule="AppCMS_tvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4T-IX-62r">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="                                            START FREE TRIAL NOW"/>
+                    <connections>
+                        <action selector="startFreeTrialClicked:" destination="kew-Mc-Tny" eventType="primaryActionTriggered" id="rNh-PW-EQz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WATCH LIVE GAMES - START FREE TRIAL NOW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-4B-1B6">
+                    <rect key="frame" x="0.0" y="-2" width="1920" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-Ev-lTq">
+                    <rect key="frame" x="950" y="33" width="266" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="4oH-qL-Zli"/>
+            <connections>
+                <outlet property="highlighterView" destination="xBB-Ev-lTq" id="dHE-8j-keq"/>
+                <outlet property="startFreeTrialButton" destination="S4T-IX-62r" id="CE9-0s-n4a"/>
+                <outlet property="watchNowLabel" destination="CPC-4B-1B6" id="pb8-MK-CBJ"/>
+            </connections>
+            <point key="canvasLocation" x="-5195" y="-1846.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlanAdditionTextCell" rowHeight="232" id="KGk-i7-Jjw" customClass="SFPlanAdditionalTextCell" customModule="AppCMS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="231.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbU-Wn-DwP">
+                        <rect key="frame" x="100" y="54" width="569" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <string key="text">* Upon cancellation, service access and use will end upon the compeletion of paid monthly or annual terms. Service access will end immediately upon cancellation during the free trial period.</string>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="** Annual plan costs and is charged annually. There is no refund for early termination of annual plan." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe9-bj-xSm">
+                        <rect key="frame" x="100" y="119" width="569" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-EP-1H7">
+                        <rect key="frame" x="100" y="166" width="569" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="See" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6S-DK-KMB">
+                                <rect key="frame" x="0.0" y="3" width="26" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-da-jEI">
+                                <rect key="frame" x="30" y="3" width="88" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="terms of use"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qaz-sz-Sa4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1k-h7-aPV">
+                                <rect key="frame" x="125" y="3" width="25" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McM-W6-7mi">
+                                <rect key="frame" x="155" y="3" width="89" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="privacy policy"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q7g-Xx-hpR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="for more details." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-ct-A9z">
+                                <rect key="frame" x="251" y="3" width="114" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQG-LF-JBD">
+                        <rect key="frame" x="244.5" y="4" width="279" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already paid?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-CV-QRY">
+                                <rect key="frame" x="38" y="8" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-f2-Ts9">
+                                <rect key="frame" x="128" y="8" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="Restore Purchase">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HQv-f4-2hR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="279" id="dHo-hk-d8n"/>
+                            <constraint firstAttribute="height" constant="37" id="rg8-Oz-gEI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xQG-LF-JBD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="WkP-UG-sWp"/>
+                    <constraint firstItem="xQG-LF-JBD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="lfc-lF-E7q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="planPriceContainerView" destination="FQj-EP-1H7" id="42v-z4-zAS"/>
+                <outlet property="planPriceText" destination="Qe9-bj-xSm" id="DHA-iC-h77"/>
+                <outlet property="privacyPolicyButton" destination="McM-W6-7mi" id="Lap-dN-s4A"/>
+                <outlet property="restorePurchaseButton" destination="Dmf-f2-Ts9" id="BHG-e1-mhy"/>
+                <outlet property="termsOfUseButton" destination="cQm-da-jEI" id="GED-dz-IoA"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="-145"/>
+        </tableViewCell>
+    </objects>
+</document>
