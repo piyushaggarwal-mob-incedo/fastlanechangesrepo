@@ -41,7 +41,7 @@
 		<key>FailArmy_tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>72</integer>
+			<integer>73</integer>
 		</dict>
 		<key>Hoichoi_iOS.xcscheme_^#shared#^_</key>
 		<dict>
@@ -51,12 +51,12 @@
 		<key>JukinVideo_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>80</integer>
+			<integer>79</integer>
 		</dict>
 		<key>JukinVideo_tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>79</integer>
+			<integer>80</integer>
 		</dict>
 		<key>Lax_iOS.xcscheme</key>
 		<dict>
@@ -81,22 +81,22 @@
 		<key>PeopleAreAwesome_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>73</integer>
+			<integer>75</integer>
 		</dict>
 		<key>PeopleAreAwesome_tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>76</integer>
+			<integer>77</integer>
 		</dict>
 		<key>PetCollective_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>78</integer>
+			<integer>76</integer>
 		</dict>
 		<key>PetCollective_tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>77</integer>
+			<integer>78</integer>
 		</dict>
 		<key>SnagfilmsUITests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -111,12 +111,12 @@
 		<key>SportsIllustrated_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>74</integer>
+			<integer>72</integer>
 		</dict>
 		<key>SportsIllustrated_tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>75</integer>
+			<integer>74</integer>
 		</dict>
 		<key>TampaBay_iOS.xcscheme</key>
 		<dict>

@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SnagfilmsUITests/SnagfilmsUITests.swift"
-            timestampString = "542507781.869105"
+            timestampString = "542606111.320442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SnagfilmsUITests/SnagfilmsUITests.swift"
-            timestampString = "542507781.869234"
+            timestampString = "542606111.320572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SnagfilmsUITests/SnagfilmsUITests.swift"
-            timestampString = "542507781.869289"
+            timestampString = "542606111.320652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -102,27 +102,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppCMS/AppManager/AppConfigManager.swift"
-            timestampString = "542293318.999034"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AppCMS/AppManager/AppConfigManager.swift"
-            timestampString = "542293318.999485"
+            timestampString = "542631164.336584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "647"
@@ -131,14 +115,14 @@
             landmarkType = "0">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Snagfilms.AppConfigManager.downloadConfigFilesInBackground() -&gt; ()"
-                  moduleName = "Snagfilms"
+                  symbolName = "FailArmy.AppConfigManager.downloadConfigFilesInBackground() -&gt; ()"
+                  moduleName = "FailArmy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/piyush/Music/ios/ios/AppCMS/AppCMS/AppManager/AppConfigManager.swift"
-                  timestampString = "542294454.856293"
+                  timestampString = "542631117.140946"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "647"
@@ -146,14 +130,14 @@
                   offsetFromSymbolStart = "2953">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Bool) -&gt; () in Snagfilms.AppConfigManager.downloadConfigFilesInBackground() -&gt; ()"
-                  moduleName = "Snagfilms"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Bool) -&gt; () in FailArmy.AppConfigManager.downloadConfigFilesInBackground() -&gt; ()"
+                  moduleName = "FailArmy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/piyush/Music/ios/ios/AppCMS/AppCMS/AppManager/AppConfigManager.swift"
-                  timestampString = "542294454.861141"
+                  timestampString = "542631117.1431119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "642"
@@ -170,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SnagfilmsUITests/SnagfilmsUITests.swift"
-            timestampString = "542507781.869387"
+            timestampString = "542606111.320796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -186,13 +170,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SnagfilmsUITests/SnagfilmsUITests.swift"
-            timestampString = "542507781.8694381"
+            timestampString = "542606111.320874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
             endingLineNumber = "9"
             landmarkName = "unknown"
             landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCMS/AppManager/AppConfigManager.swift"
+            timestampString = "542631164.337021"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FailArmy.AppConfigManager.updateFilesInApplicationFolder() -&gt; ()"
+                  moduleName = "FailArmy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Music/ios/ios/AppCMS/AppCMS/AppManager/AppConfigManager.swift"
+                  timestampString = "542631117.149963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "2900">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Bool) -&gt; () in FailArmy.AppConfigManager.updateFilesInApplicationFolder() -&gt; ()"
+                  moduleName = "FailArmy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Music/ios/ios/AppCMS/AppCMS/AppManager/AppConfigManager.swift"
+                  timestampString = "542631117.152189"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

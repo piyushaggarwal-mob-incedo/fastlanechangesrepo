@@ -40,24 +40,41 @@ downloadFile(){ #url, output, buildid, posturl
     fi
 }
 
-if [ "'$1'" = "'3f5e193b-2e51-4853-839e-618e62896deb'" ]
+if [ "'$1'" = "'00000149-86ec-d4f3-a7e9-e6fe760d0000'" ]
 then
    cp ./Apps/Snagfilms/colors.xml ./AppCMS/src/main/res/values/colors.xml
    echo "Default Snagfilms.xml"
 
-elif [ "'$1'" = "57e4b76f-6168-41af-bdd8-c76a2e5bf798" ]
+elif [ "'$1'" = "'7fa0ea9a-9799-4417-99f5-cbb5343c551d'" ]
 then
    cp ./Apps/Hoichoi/colors.xml ./AppCMS/src/main/res/values/colors.xml
    echo "Default hoichoi.xml"
 
-elif [ "'$1'" = "3f6f15c7-8454-462f-917e-2c427c95fa1d" ]
+elif [ "'$1'" = "'00000151-11b4-d29b-a17d-55fdb2b80000'" ]
+then
+   cp ./Apps/MonumentalSports/colors.xml ./AppCMS/src/main/res/values/colors.xml
+   echo "Default Monumental.xml"
+
+elif [ "'$1'" = "'6ea6f2a0-451c-4d87-8060-051f8c07db23'" ]
+then
+   cp ./Apps/FailArmy/colors.xml ./AppCMS/src/main/res/values/colors.xml
+   echo "Default FailArmy.xml"
+
+elif [ "'$1'" = "'0000014c-edbe-da12-a1fc-fdbe2f120000'"]
+then
+   cp ./Apps/LSN/colors.xml ./AppCMS/src/main/res/values/colors.xml
+   echo "Default TampaBay.xml"
+
+elif [ "'$1'" = "'3f6f15c7-8454-462f-917e-2c427c95fa1d'" ]
 then
    cp ./Apps/TampaBay/colors.xml ./AppCMS/src/main/res/values/colors.xml
    echo "Default TampaBay.xml"
 
 else
    echo "Default Colors.xml"
+   cp ./Apps/Snagfilms/colors.xml ./AppCMS/src/main/res/values/colors.xml
 fi
+
 
 postBuildStatus ${13} $POST_URL "STARTED" "No ERROR" "Build Successfully Started" 5 false 0
 

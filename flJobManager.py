@@ -33,6 +33,8 @@ print 'FastlaneJobManager:PATH='+os.getcwd()
 jobPlistFileName = 'Job.plist'
 # Create SQS client
 sqs = boto3.client('sqs')
+
+# queue_url='https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_Production_queue.fifo'
 queue_url = 'https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_staging_queue.fifo'
 #queue_url = 'https://queue.amazonaws.com/053866237477/Fastlane_Dev_queue.fifo'
 

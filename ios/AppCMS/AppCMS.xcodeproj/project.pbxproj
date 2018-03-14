@@ -139,7 +139,7 @@
 		010B36481FE108F9002F83D0 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		010B36491FE108F9002F83D0 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		010B364A1FE108F9002F83D0 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		010B364B1FE108F9002F83D0 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		010B364B1FE108F9002F83D0 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		010B364C1FE108F9002F83D0 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		010B364D1FE108F9002F83D0 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		010B364E1FE108F9002F83D0 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -262,7 +262,7 @@
 		010B36C41FE108F9002F83D0 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		010B36C51FE108F9002F83D0 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		010B36C61FE108F9002F83D0 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		010B36C71FE108F9002F83D0 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		010B36C71FE108F9002F83D0 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		010B36C81FE108F9002F83D0 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		010B36C91FE108F9002F83D0 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		010B36CA1FE108F9002F83D0 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -283,7 +283,7 @@
 		010B36DA1FE108F9002F83D0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		010B36DB1FE108F9002F83D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		010B36DC1FE108F9002F83D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		010B36E11FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		010B36E11FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		010B36E71FE108F9002F83D0 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		010B37031FE108F9002F83D0 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		010B37051FE108F9002F83D0 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -303,11 +303,11 @@
 		010B37471FE108F9002F83D0 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		010B374A1FE108F9002F83D0 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		010B37501FE108F9002F83D0 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		010B37511FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		010B37511FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		010B37551FE108F9002F83D0 /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1A1FBD0F8A000CBD81 /* Fullscreen.png */; };
 		010B37581FE108F9002F83D0 /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
 		010B375C1FE108F9002F83D0 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		010B37631FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		010B37631FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		010B37661FE108F9002F83D0 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		010B37681FE108F9002F83D0 /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		010B376A1FE108F9002F83D0 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
@@ -321,9 +321,9 @@
 		010B37AC1FE108F9002F83D0 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		010B37AE1FE108F9002F83D0 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		010B37B01FE108F9002F83D0 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		010B37B81FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		010B37BF1FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		010B37CB1FE108F9002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		010B37B81FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		010B37BF1FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		010B37CB1FE108F9002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		010B37D31FE108F9002F83D0 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		010B37D51FE108F9002F83D0 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 33EE9F721F3C63AC0006A347 /* container */; };
 		010B37D61FE108F9002F83D0 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -334,7 +334,7 @@
 		010B37EF1FE10906002F83D0 /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		010B37F01FE10906002F83D0 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		010B37F11FE10906002F83D0 /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		010B37F21FE10906002F83D0 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		010B37F21FE10906002F83D0 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		010B37F31FE10906002F83D0 /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		010B37F41FE10906002F83D0 /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		010B37F51FE10906002F83D0 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -639,7 +639,7 @@
 		010B394F1FE10906002F83D0 /* Carousel_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E866D31F41C6F600CEE6E1 /* Carousel_AppleTV.json */; };
 		010B39501FE10906002F83D0 /* Season_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 333089FA1FA0A91A00EC9092 /* Season_AppleTV.json */; };
 		010B39531FE10906002F83D0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D480921ED379DF00C9E962 /* play.png */; };
-		010B39541FE10906002F83D0 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		010B39541FE10906002F83D0 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		010B39551FE10906002F83D0 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 778D7A911FC5A9EE005579AF /* Lato-BlackItalic.ttf */; };
 		010B39571FE10906002F83D0 /* FAQ_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A22303DA1F456FDD00977FA2 /* FAQ_AppleTV.json */; };
 		010B395A1FE10906002F83D0 /* Grid_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D8315B1F8B7D2B0042D7AD /* Grid_AppleTV.json */; };
@@ -1095,7 +1095,7 @@
 		013A0C541FEA93FD0040B8D3 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		013A0C551FEA93FD0040B8D3 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		013A0C561FEA93FD0040B8D3 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		013A0C571FEA93FD0040B8D3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		013A0C571FEA93FD0040B8D3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		013A0C581FEA93FD0040B8D3 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		013A0C591FEA93FD0040B8D3 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		013A0C5A1FEA93FD0040B8D3 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -1218,7 +1218,7 @@
 		013A0CD01FEA93FD0040B8D3 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		013A0CD11FEA93FD0040B8D3 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		013A0CD21FEA93FD0040B8D3 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		013A0CD31FEA93FD0040B8D3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		013A0CD31FEA93FD0040B8D3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		013A0CD41FEA93FD0040B8D3 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		013A0CD51FEA93FD0040B8D3 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		013A0CD61FEA93FD0040B8D3 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -1239,7 +1239,7 @@
 		013A0CE61FEA93FD0040B8D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		013A0CE71FEA93FD0040B8D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		013A0CE81FEA93FD0040B8D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		013A0CED1FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		013A0CED1FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		013A0CF31FEA93FD0040B8D3 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		013A0D101FEA93FD0040B8D3 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		013A0D121FEA93FD0040B8D3 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -1259,11 +1259,11 @@
 		013A0D551FEA93FD0040B8D3 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		013A0D581FEA93FD0040B8D3 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		013A0D5E1FEA93FD0040B8D3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		013A0D5F1FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		013A0D5F1FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		013A0D631FEA93FD0040B8D3 /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1A1FBD0F8A000CBD81 /* Fullscreen.png */; };
 		013A0D661FEA93FD0040B8D3 /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
 		013A0D6A1FEA93FD0040B8D3 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		013A0D711FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		013A0D711FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		013A0D741FEA93FD0040B8D3 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		013A0D761FEA93FD0040B8D3 /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		013A0D781FEA93FD0040B8D3 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
@@ -1277,9 +1277,9 @@
 		013A0DBB1FEA93FD0040B8D3 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		013A0DBD1FEA93FD0040B8D3 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		013A0DBF1FEA93FD0040B8D3 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		013A0DC81FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		013A0DCF1FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		013A0DDB1FEA93FD0040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		013A0DC81FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		013A0DCF1FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		013A0DDB1FEA93FD0040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		013A0DE31FEA93FD0040B8D3 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		013A0DE51FEA93FD0040B8D3 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 33EE9F721F3C63AC0006A347 /* container */; };
 		013A0DE61FEA93FD0040B8D3 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -1505,7 +1505,7 @@
 		013A0FBA1FEA9D930040B8D3 /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		013A0FBB1FEA9D930040B8D3 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		013A0FBC1FEA9D930040B8D3 /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		013A0FBD1FEA9D930040B8D3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		013A0FBD1FEA9D930040B8D3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		013A0FBE1FEA9D930040B8D3 /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		013A0FBF1FEA9D930040B8D3 /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		013A0FC01FEA9D930040B8D3 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -1810,7 +1810,7 @@
 		013A111A1FEA9D930040B8D3 /* Carousel_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E866D31F41C6F600CEE6E1 /* Carousel_AppleTV.json */; };
 		013A111B1FEA9D930040B8D3 /* Season_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 333089FA1FA0A91A00EC9092 /* Season_AppleTV.json */; };
 		013A111E1FEA9D930040B8D3 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D480921ED379DF00C9E962 /* play.png */; };
-		013A111F1FEA9D930040B8D3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		013A111F1FEA9D930040B8D3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		013A11201FEA9D930040B8D3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 778D7A911FC5A9EE005579AF /* Lato-BlackItalic.ttf */; };
 		013A11221FEA9D930040B8D3 /* FAQ_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A22303DA1F456FDD00977FA2 /* FAQ_AppleTV.json */; };
 		013A11251FEA9D930040B8D3 /* Grid_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D8315B1F8B7D2B0042D7AD /* Grid_AppleTV.json */; };
@@ -2009,7 +2009,7 @@
 		0153A7B21FEBB459006BD7A3 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		0153A7B31FEBB459006BD7A3 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		0153A7B41FEBB459006BD7A3 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		0153A7B51FEBB459006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153A7B51FEBB459006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153A7B61FEBB459006BD7A3 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		0153A7B71FEBB459006BD7A3 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		0153A7B81FEBB459006BD7A3 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -2133,7 +2133,7 @@
 		0153A82F1FEBB459006BD7A3 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		0153A8301FEBB459006BD7A3 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		0153A8311FEBB459006BD7A3 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		0153A8321FEBB459006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153A8321FEBB459006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153A8331FEBB459006BD7A3 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		0153A8341FEBB459006BD7A3 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		0153A8351FEBB459006BD7A3 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -2154,7 +2154,7 @@
 		0153A8451FEBB459006BD7A3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		0153A8461FEBB459006BD7A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		0153A8471FEBB459006BD7A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		0153A8501FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153A8501FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153A8521FEBB459006BD7A3 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		0153A8761FEBB459006BD7A3 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		0153A8781FEBB459006BD7A3 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -2174,11 +2174,11 @@
 		0153A8C01FEBB459006BD7A3 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		0153A8C31FEBB459006BD7A3 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		0153A8C71FEBB459006BD7A3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		0153A8CA1FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153A8CA1FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153A8CF1FEBB459006BD7A3 /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1A1FBD0F8A000CBD81 /* Fullscreen.png */; };
 		0153A8D21FEBB459006BD7A3 /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
 		0153A8D31FEBB459006BD7A3 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		0153A8D61FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153A8D61FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153A8DC1FEBB459006BD7A3 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		0153A8DE1FEBB459006BD7A3 /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		0153A8E01FEBB459006BD7A3 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
@@ -2192,9 +2192,9 @@
 		0153A9251FEBB459006BD7A3 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		0153A9261FEBB459006BD7A3 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		0153A9291FEBB459006BD7A3 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		0153A9311FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0153A9371FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0153A9421FEBB459006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153A9311FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0153A9371FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0153A9421FEBB459006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153A9461FEBB459006BD7A3 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		0153A9471FEBB459006BD7A3 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 33EE9F721F3C63AC0006A347 /* container */; };
 		0153A94D1FEBB459006BD7A3 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -2206,7 +2206,7 @@
 		0153A9641FEBB45C006BD7A3 /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		0153A9651FEBB45C006BD7A3 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		0153A9661FEBB45C006BD7A3 /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		0153A9671FEBB45C006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153A9671FEBB45C006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153A9681FEBB45C006BD7A3 /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		0153A9691FEBB45C006BD7A3 /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		0153A96A1FEBB45C006BD7A3 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -2512,7 +2512,7 @@
 		0153AAC61FEBB45C006BD7A3 /* Carousel_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E866D31F41C6F600CEE6E1 /* Carousel_AppleTV.json */; };
 		0153AAC71FEBB45C006BD7A3 /* Season_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 333089FA1FA0A91A00EC9092 /* Season_AppleTV.json */; };
 		0153AAC81FEBB45C006BD7A3 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D480921ED379DF00C9E962 /* play.png */; };
-		0153AACA1FEBB45C006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153AACA1FEBB45C006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153AACE1FEBB45C006BD7A3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 778D7A911FC5A9EE005579AF /* Lato-BlackItalic.ttf */; };
 		0153AAD11FEBB45C006BD7A3 /* FAQ_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A22303DA1F456FDD00977FA2 /* FAQ_AppleTV.json */; };
 		0153AAD41FEBB45C006BD7A3 /* Grid_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D8315B1F8B7D2B0042D7AD /* Grid_AppleTV.json */; };
@@ -2918,7 +2918,7 @@
 		0153ADA81FEBD33D006BD7A3 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		0153ADA91FEBD33D006BD7A3 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		0153ADAA1FEBD33D006BD7A3 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		0153ADAB1FEBD33D006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153ADAB1FEBD33D006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153ADAC1FEBD33D006BD7A3 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		0153ADAD1FEBD33D006BD7A3 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		0153ADAE1FEBD33D006BD7A3 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -3042,7 +3042,7 @@
 		0153AE251FEBD33D006BD7A3 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		0153AE261FEBD33D006BD7A3 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		0153AE271FEBD33D006BD7A3 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		0153AE281FEBD33D006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153AE281FEBD33D006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153AE291FEBD33D006BD7A3 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		0153AE2B1FEBD33D006BD7A3 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
 		0153AE2C1FEBD33D006BD7A3 /* SFBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793A23A1FBCA68000B08B11 /* SFBannerView.swift */; };
@@ -3062,7 +3062,7 @@
 		0153AE3B1FEBD33D006BD7A3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		0153AE3C1FEBD33D006BD7A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		0153AE3D1FEBD33D006BD7A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		0153AE421FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153AE421FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153AE481FEBD33D006BD7A3 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		0153AE641FEBD33D006BD7A3 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		0153AE661FEBD33D006BD7A3 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -3082,11 +3082,11 @@
 		0153AEAA1FEBD33D006BD7A3 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		0153AEAD1FEBD33D006BD7A3 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		0153AEB31FEBD33D006BD7A3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		0153AEB41FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153AEB41FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153AEB81FEBD33D006BD7A3 /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1A1FBD0F8A000CBD81 /* Fullscreen.png */; };
 		0153AEBB1FEBD33D006BD7A3 /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
 		0153AEBE1FEBD33D006BD7A3 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		0153AEC51FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153AEC51FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153AEC81FEBD33D006BD7A3 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		0153AECA1FEBD33D006BD7A3 /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		0153AECC1FEBD33D006BD7A3 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
@@ -3100,9 +3100,9 @@
 		0153AF0C1FEBD33D006BD7A3 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		0153AF0E1FEBD33D006BD7A3 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		0153AF101FEBD33D006BD7A3 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		0153AF1A1FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0153AF211FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		0153AF2C1FEBD33D006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153AF1A1FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0153AF211FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		0153AF2C1FEBD33D006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153AF341FEBD33D006BD7A3 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		0153AF361FEBD33D006BD7A3 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 33EE9F721F3C63AC0006A347 /* container */; };
 		0153AF371FEBD33D006BD7A3 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -3114,7 +3114,7 @@
 		0153AF521FEBD340006BD7A3 /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		0153AF531FEBD340006BD7A3 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		0153AF541FEBD340006BD7A3 /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		0153AF551FEBD340006BD7A3 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		0153AF551FEBD340006BD7A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0153AF561FEBD340006BD7A3 /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		0153AF571FEBD340006BD7A3 /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		0153AF581FEBD340006BD7A3 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -3380,7 +3380,7 @@
 		0153B06A1FEBD340006BD7A3 /* tickIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 331758DF1FCFDF92001950AD /* tickIcon.png */; };
 		0153B06C1FEBD340006BD7A3 /* moreTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A3DB721EE1EFC80054BCAF /* moreTabIcon.png */; };
 		0153B06E1FEBD340006BD7A3 /* TOS_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A27A39221F41899400B43A1B /* TOS_AppleTV.json */; };
-		0153B06F1FEBD340006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153B06F1FEBD340006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153B0701FEBD340006BD7A3 /* About_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A27A39261F41BB9800B43A1B /* About_AppleTV.json */; };
 		0153B0721FEBD340006BD7A3 /* SFPlanAdditionalTextView_Sports_tvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7700BEF01FCD7CA9002632DD /* SFPlanAdditionalTextView_Sports_tvOS.xib */; };
 		0153B0731FEBD340006BD7A3 /* Tray_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77659C291F21CDCF00458134 /* Tray_AppleTV.json */; };
@@ -3421,7 +3421,7 @@
 		0153B0B31FEBD340006BD7A3 /* Carousel_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E866D31F41C6F600CEE6E1 /* Carousel_AppleTV.json */; };
 		0153B0B41FEBD340006BD7A3 /* Season_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 333089FA1FA0A91A00EC9092 /* Season_AppleTV.json */; };
 		0153B0B71FEBD340006BD7A3 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D480921ED379DF00C9E962 /* play.png */; };
-		0153B0B81FEBD340006BD7A3 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		0153B0B81FEBD340006BD7A3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		0153B0B91FEBD340006BD7A3 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 778D7A911FC5A9EE005579AF /* Lato-BlackItalic.ttf */; };
 		0153B0BB1FEBD340006BD7A3 /* FAQ_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A22303DA1F456FDD00977FA2 /* FAQ_AppleTV.json */; };
 		0153B0BE1FEBD340006BD7A3 /* Grid_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D8315B1F8B7D2B0042D7AD /* Grid_AppleTV.json */; };
@@ -3791,7 +3791,7 @@
 		01FD6BB01FD7D81B0083BA11 /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		01FD6BB11FD7D81B0083BA11 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		01FD6BB21FD7D81B0083BA11 /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		01FD6BB31FD7D81B0083BA11 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		01FD6BB31FD7D81B0083BA11 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		01FD6BB41FD7D81B0083BA11 /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		01FD6BB51FD7D81B0083BA11 /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		01FD6BB61FD7D81B0083BA11 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -4208,12 +4208,12 @@
 		2846E81D1F2B0DBC000EDF74 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		2846E81E1F2B0DBC000EDF74 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		286360E41F3864BD008614B7 /* SFSubTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286360E31F3864BD008614B7 /* SFSubTitle.swift */; };
-		28EB84C91F29E601009A137A /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		28EB84CE1F29E610009A137A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		28EB84CF1F29E610009A137A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		28EB84D01F29E610009A137A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		28EB84D11F29E610009A137A /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		28EB84D31F29E62B009A137A /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		28EB84C91F29E601009A137A /* (null) in Sources */ = {isa = PBXBuildFile; };
+		28EB84CE1F29E610009A137A /* (null) in Resources */ = {isa = PBXBuildFile; };
+		28EB84CF1F29E610009A137A /* (null) in Resources */ = {isa = PBXBuildFile; };
+		28EB84D01F29E610009A137A /* (null) in Resources */ = {isa = PBXBuildFile; };
+		28EB84D11F29E610009A137A /* (null) in Resources */ = {isa = PBXBuildFile; };
+		28EB84D31F29E62B009A137A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2A88ACA242E15B7C93B5C663 /* Pods_iON_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B2D9570A80254796910402 /* Pods_iON_tvOS.framework */; };
 		2C21D1161F5529E000BAC50F /* BeaconDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21D1131F5529E000BAC50F /* BeaconDBManager.swift */; };
 		2C21D1171F5529E000BAC50F /* BeaconQueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C21D1141F5529E000BAC50F /* BeaconQueryManager.swift */; };
@@ -4387,8 +4387,8 @@
 		33A9D0191F8B9C940048323A /* ShowDetailViewModule_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A9D0181F8B9C940048323A /* ShowDetailViewModule_tvOS.swift */; };
 		33A9D01C1F8B9CA40048323A /* ModuleViewModel_ShowDetailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A9D01B1F8B9CA40048323A /* ModuleViewModel_ShowDetailHandler.swift */; };
 		33B34F361F8DFD8200BA2A24 /* ShowDetail_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 33B34F351F8DF29A00BA2A24 /* ShowDetail_AppleTV.json */; };
-		33C482B71F3AF004008B5E86 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		33C482B91F3AF00B008B5E86 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		33C482B71F3AF004008B5E86 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		33C482B91F3AF00B008B5E86 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		33C482BF1F3AF0F1008B5E86 /* CastTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C482BD1F3AF0F1008B5E86 /* CastTutorialViewController.swift */; };
 		33C482C01F3AF0F1008B5E86 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
 		33C7BB4B1F29D8D5003A8D2F /* CastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C7BB4A1F29D8D5003A8D2F /* CastController.swift */; };
@@ -4448,6 +4448,8 @@
 		3408261ACAEDD9E9F0F6AEB0 /* Pods_AgendaTV_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D3F7703B09FE2ECFE82205B /* Pods_AgendaTV_iOS.framework */; };
 		4B57D79A205157F50010EDD3 /* SnagfilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57D799205157F50010EDD3 /* SnagfilmsUITests.swift */; };
 		4B57D7A22051584C0010EDD3 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57D7A12051584B0010EDD3 /* SnapshotHelper.swift */; };
+		4BD951112057E5AE00014359 /* SiteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6811FB60375006D6BC1 /* SiteConfig.plist */; };
+		4BD951122057E5B800014359 /* SiteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE73A1FB60376006D6BC1 /* SiteConfig.plist */; };
 		5375C89F20055EE000099554 /* UrbanAirshipEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375C89E20055EE000099554 /* UrbanAirshipEvent.swift */; };
 		5375C8A020055EE000099554 /* UrbanAirshipEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375C89E20055EE000099554 /* UrbanAirshipEvent.swift */; };
 		5375C8A120055EE000099554 /* UrbanAirshipEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375C89E20055EE000099554 /* UrbanAirshipEvent.swift */; };
@@ -4853,7 +4855,7 @@
 		777E50001FD3FB5B000824D5 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
 		777E50011FD3FB62000824D5 /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
 		778315591FBF0DE3002DB99C /* TopBannerSubscriptionModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 778315581FBF0DE3002DB99C /* TopBannerSubscriptionModule.xib */; };
-		7783E3D61FE0005700837633 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		7783E3D61FE0005700837633 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		77853DFB1FC40E3D00B486D4 /* SubMenu_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77853DFA1FC40E3C00B486D4 /* SubMenu_AppleTV.json */; };
 		77853DFC1FC40EFF00B486D4 /* SubMenu_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77853DFA1FC40E3C00B486D4 /* SubMenu_AppleTV.json */; };
 		7789FAB51F628172007ECB74 /* SFSwitchView_tvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7789FAB41F628172007ECB74 /* SFSwitchView_tvOS.xib */; };
@@ -5423,7 +5425,7 @@
 		F704D9F41FEC2501009B13FD /* LoadingSplashViewController_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77368A001F03C9F700EE958E /* LoadingSplashViewController_tvOS.swift */; };
 		F704D9F51FEC2501009B13FD /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F704D9F61FEC2501009B13FD /* AppConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542845771F0568EE0055A61D /* AppConfigManager.swift */; };
-		F704D9F71FEC2501009B13FD /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F704D9F71FEC2501009B13FD /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F704D9F81FEC2501009B13FD /* Alamofire+IgnoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772CBFD01F5589500090E442 /* Alamofire+IgnoreCache.swift */; };
 		F704D9F91FEC2501009B13FD /* FeatureListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD1C831F16D2FB00395212 /* FeatureListModel.swift */; };
 		F704D9FA1FEC2501009B13FD /* PreviewEndEnforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777E4FFE1FD3ECA3000824D5 /* PreviewEndEnforcer.swift */; };
@@ -5689,7 +5691,7 @@
 		F704DB061FEC2501009B13FD /* tickIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 331758DF1FCFDF92001950AD /* tickIcon.png */; };
 		F704DB071FEC2501009B13FD /* moreTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A3DB721EE1EFC80054BCAF /* moreTabIcon.png */; };
 		F704DB081FEC2501009B13FD /* TOS_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A27A39221F41899400B43A1B /* TOS_AppleTV.json */; };
-		F704DB0A1FEC2501009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DB0A1FEC2501009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DB0D1FEC2501009B13FD /* About_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A27A39261F41BB9800B43A1B /* About_AppleTV.json */; };
 		F704DB0F1FEC2501009B13FD /* SFPlanAdditionalTextView_Sports_tvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7700BEF01FCD7CA9002632DD /* SFPlanAdditionalTextView_Sports_tvOS.xib */; };
 		F704DB111FEC2501009B13FD /* Tray_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77659C291F21CDCF00458134 /* Tray_AppleTV.json */; };
@@ -5730,7 +5732,7 @@
 		F704DB5C1FEC2501009B13FD /* Carousel_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E866D31F41C6F600CEE6E1 /* Carousel_AppleTV.json */; };
 		F704DB5D1FEC2501009B13FD /* Season_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 333089FA1FA0A91A00EC9092 /* Season_AppleTV.json */; };
 		F704DB5F1FEC2501009B13FD /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D480921ED379DF00C9E962 /* play.png */; };
-		F704DB611FEC2501009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DB611FEC2501009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DB631FEC2501009B13FD /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 778D7A911FC5A9EE005579AF /* Lato-BlackItalic.ttf */; };
 		F704DB661FEC2501009B13FD /* FAQ_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = A22303DA1F456FDD00977FA2 /* FAQ_AppleTV.json */; };
 		F704DB671FEC2501009B13FD /* Grid_AppleTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 77D8315B1F8B7D2B0042D7AD /* Grid_AppleTV.json */; };
@@ -5882,7 +5884,7 @@
 		F704DC181FEC3332009B13FD /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F704DC191FEC3332009B13FD /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F704DC1A1FEC3332009B13FD /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F704DC1B1FEC3332009B13FD /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F704DC1B1FEC3332009B13FD /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F704DC1C1FEC3332009B13FD /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F704DC1D1FEC3332009B13FD /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F704DC1E1FEC3332009B13FD /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -6006,7 +6008,7 @@
 		F704DC951FEC3332009B13FD /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F704DC961FEC3332009B13FD /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F704DC971FEC3332009B13FD /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F704DC981FEC3332009B13FD /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F704DC981FEC3332009B13FD /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F704DC991FEC3332009B13FD /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F704DC9B1FEC3332009B13FD /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
 		F704DC9C1FEC3332009B13FD /* SFBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793A23A1FBCA68000B08B11 /* SFBannerView.swift */; };
@@ -6026,7 +6028,7 @@
 		F704DCAB1FEC3332009B13FD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F704DCAC1FEC3332009B13FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F704DCAD1FEC3332009B13FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F704DCB31FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DCB31FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DCB61FEC3332009B13FD /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F704DCBE1FEC3332009B13FD /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F704DCCA1FEC3332009B13FD /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -6046,11 +6048,11 @@
 		F704DD201FEC3332009B13FD /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F704DD301FEC3332009B13FD /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F704DD371FEC3332009B13FD /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F704DD381FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DD381FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DD391FEC3332009B13FD /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1A1FBD0F8A000CBD81 /* Fullscreen.png */; };
 		F704DD3E1FEC3332009B13FD /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
 		F704DD431FEC3332009B13FD /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F704DD441FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DD441FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DD461FEC3332009B13FD /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F704DD4B1FEC3332009B13FD /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		F704DD501FEC3332009B13FD /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
@@ -6064,9 +6066,9 @@
 		F704DD781FEC3332009B13FD /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F704DD7D1FEC3332009B13FD /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F704DD811FEC3332009B13FD /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F704DD841FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F704DD8C1FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F704DD981FEC3332009B13FD /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F704DD841FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F704DD8C1FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F704DD981FEC3332009B13FD /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F704DD9B1FEC3332009B13FD /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F704DDA31FEC3332009B13FD /* container in Resources */ = {isa = PBXBuildFile; fileRef = 33EE9F721F3C63AC0006A347 /* container */; };
 		F704DDAE1FEC3332009B13FD /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -6472,7 +6474,7 @@
 		F70ED1A51FB5FEA4006D6BC1 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F70ED1A61FB5FEA4006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F70ED1A71FB5FEA4006D6BC1 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F70ED1A81FB5FEA4006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED1A81FB5FEA4006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED1A91FB5FEA4006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F70ED1AA1FB5FEA4006D6BC1 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F70ED1AB1FB5FEA4006D6BC1 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -6583,7 +6585,7 @@
 		F70ED2141FB5FEA4006D6BC1 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F70ED2151FB5FEA4006D6BC1 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F70ED2161FB5FEA4006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F70ED2171FB5FEA4006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED2171FB5FEA4006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED2181FB5FEA4006D6BC1 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F70ED2191FB5FEA4006D6BC1 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F70ED21A1FB5FEA4006D6BC1 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -6603,7 +6605,7 @@
 		F70ED2291FB5FEA4006D6BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F70ED22A1FB5FEA4006D6BC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F70ED22B1FB5FEA4006D6BC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F70ED22F1FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED22F1FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED2351FB5FEA4006D6BC1 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F70ED24E1FB5FEA4006D6BC1 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F70ED2501FB5FEA4006D6BC1 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -6623,9 +6625,9 @@
 		F70ED28D1FB5FEA4006D6BC1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F70ED2901FB5FEA4006D6BC1 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F70ED2961FB5FEA4006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F70ED2971FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED2971FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED29E1FB5FEA4006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F70ED2A41FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED2A41FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED2A71FB5FEA4006D6BC1 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F70ED2AA1FB5FEA4006D6BC1 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F70ED2B11FB5FEA4006D6BC1 /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -6634,9 +6636,9 @@
 		F70ED2DB1FB5FEA4006D6BC1 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F70ED2DD1FB5FEA4006D6BC1 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F70ED2DF1FB5FEA4006D6BC1 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F70ED2E61FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED2EB1FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED2F41FB5FEA4006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED2E61FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED2EB1FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED2F41FB5FEA4006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED2FC1FB5FEA4006D6BC1 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F70ED2FF1FB5FEA4006D6BC1 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
 		F70ED3131FB5FEB2006D6BC1 /* BeaconQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E236E1F3450970035F884 /* BeaconQueryManager.m */; };
@@ -6761,7 +6763,7 @@
 		F70ED38C1FB5FEB2006D6BC1 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F70ED38D1FB5FEB2006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F70ED38E1FB5FEB2006D6BC1 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F70ED38F1FB5FEB2006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED38F1FB5FEB2006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED3901FB5FEB2006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F70ED3911FB5FEB2006D6BC1 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F70ED3921FB5FEB2006D6BC1 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -6872,7 +6874,7 @@
 		F70ED3FB1FB5FEB2006D6BC1 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F70ED3FC1FB5FEB2006D6BC1 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F70ED3FD1FB5FEB2006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F70ED3FE1FB5FEB2006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED3FE1FB5FEB2006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED3FF1FB5FEB2006D6BC1 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F70ED4001FB5FEB2006D6BC1 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F70ED4011FB5FEB2006D6BC1 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -6892,7 +6894,7 @@
 		F70ED4101FB5FEB2006D6BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F70ED4111FB5FEB2006D6BC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F70ED4121FB5FEB2006D6BC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F70ED4161FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED4161FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED41C1FB5FEB2006D6BC1 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F70ED4351FB5FEB2006D6BC1 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F70ED4371FB5FEB2006D6BC1 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -6912,9 +6914,9 @@
 		F70ED4741FB5FEB2006D6BC1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F70ED4771FB5FEB2006D6BC1 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F70ED47D1FB5FEB2006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F70ED47E1FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED47E1FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED4851FB5FEB2006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F70ED48B1FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED48B1FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED48E1FB5FEB2006D6BC1 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F70ED4911FB5FEB2006D6BC1 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F70ED4981FB5FEB2006D6BC1 /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -6923,9 +6925,9 @@
 		F70ED4C21FB5FEB2006D6BC1 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F70ED4C41FB5FEB2006D6BC1 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F70ED4C61FB5FEB2006D6BC1 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F70ED4CD1FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED4D21FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED4DB1FB5FEB2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED4CD1FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED4D21FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED4DB1FB5FEB2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED4E31FB5FEB2006D6BC1 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F70ED4E61FB5FEB2006D6BC1 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
 		F70ED4FA1FB5FEC2006D6BC1 /* BeaconQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E236E1F3450970035F884 /* BeaconQueryManager.m */; };
@@ -7050,7 +7052,7 @@
 		F70ED5731FB5FEC2006D6BC1 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F70ED5741FB5FEC2006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F70ED5751FB5FEC2006D6BC1 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F70ED5761FB5FEC2006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED5761FB5FEC2006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED5771FB5FEC2006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F70ED5781FB5FEC2006D6BC1 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F70ED5791FB5FEC2006D6BC1 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -7161,7 +7163,7 @@
 		F70ED5E21FB5FEC2006D6BC1 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F70ED5E31FB5FEC2006D6BC1 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F70ED5E41FB5FEC2006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F70ED5E51FB5FEC2006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED5E51FB5FEC2006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED5E61FB5FEC2006D6BC1 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F70ED5E71FB5FEC2006D6BC1 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F70ED5E81FB5FEC2006D6BC1 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -7181,7 +7183,7 @@
 		F70ED5F71FB5FEC2006D6BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F70ED5F81FB5FEC2006D6BC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F70ED5F91FB5FEC2006D6BC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F70ED5FD1FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED5FD1FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED6031FB5FEC2006D6BC1 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F70ED61C1FB5FEC2006D6BC1 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F70ED61E1FB5FEC2006D6BC1 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -7201,9 +7203,9 @@
 		F70ED65B1FB5FEC2006D6BC1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F70ED65E1FB5FEC2006D6BC1 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F70ED6641FB5FEC2006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F70ED6651FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED6651FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED66C1FB5FEC2006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F70ED6721FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED6721FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED6751FB5FEC2006D6BC1 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F70ED6781FB5FEC2006D6BC1 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F70ED67F1FB5FEC2006D6BC1 /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -7212,9 +7214,9 @@
 		F70ED6A91FB5FEC2006D6BC1 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F70ED6AB1FB5FEC2006D6BC1 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F70ED6AD1FB5FEC2006D6BC1 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F70ED6B41FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED6B91FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED6C21FB5FEC2006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED6B41FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED6B91FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED6C21FB5FEC2006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED6CA1FB5FEC2006D6BC1 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F70ED6CD1FB5FEC2006D6BC1 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
 		F70ED6E11FB5FED9006D6BC1 /* BeaconQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E236E1F3450970035F884 /* BeaconQueryManager.m */; };
@@ -7339,7 +7341,7 @@
 		F70ED75A1FB5FED9006D6BC1 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F70ED75B1FB5FED9006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F70ED75C1FB5FED9006D6BC1 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F70ED75D1FB5FED9006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED75D1FB5FED9006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED75E1FB5FED9006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F70ED75F1FB5FED9006D6BC1 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F70ED7601FB5FED9006D6BC1 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -7450,7 +7452,7 @@
 		F70ED7C91FB5FED9006D6BC1 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F70ED7CA1FB5FED9006D6BC1 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F70ED7CB1FB5FED9006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F70ED7CC1FB5FED9006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70ED7CC1FB5FED9006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70ED7CD1FB5FED9006D6BC1 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F70ED7CE1FB5FED9006D6BC1 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F70ED7CF1FB5FED9006D6BC1 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -7470,7 +7472,7 @@
 		F70ED7DE1FB5FED9006D6BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F70ED7DF1FB5FED9006D6BC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F70ED7E01FB5FED9006D6BC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F70ED7E41FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED7E41FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED7EA1FB5FED9006D6BC1 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F70ED8031FB5FED9006D6BC1 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F70ED8051FB5FED9006D6BC1 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -7490,9 +7492,9 @@
 		F70ED8421FB5FED9006D6BC1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F70ED8451FB5FED9006D6BC1 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F70ED84B1FB5FED9006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F70ED84C1FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED84C1FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED8531FB5FED9006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F70ED8591FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED8591FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED85C1FB5FED9006D6BC1 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F70ED85F1FB5FED9006D6BC1 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F70ED8661FB5FED9006D6BC1 /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -7501,9 +7503,9 @@
 		F70ED8901FB5FED9006D6BC1 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F70ED8921FB5FED9006D6BC1 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F70ED8941FB5FED9006D6BC1 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F70ED89B1FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED8A01FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70ED8A91FB5FED9006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70ED89B1FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED8A01FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70ED8A91FB5FED9006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70ED8B11FB5FED9006D6BC1 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F70ED8B41FB5FED9006D6BC1 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
 		F70EDAAF1FB5FF2D006D6BC1 /* BeaconQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E236E1F3450970035F884 /* BeaconQueryManager.m */; };
@@ -7628,7 +7630,7 @@
 		F70EDB281FB5FF2D006D6BC1 /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F70EDB291FB5FF2D006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F70EDB2A1FB5FF2D006D6BC1 /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F70EDB2B1FB5FF2D006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70EDB2B1FB5FF2D006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70EDB2C1FB5FF2D006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F70EDB2D1FB5FF2D006D6BC1 /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F70EDB2E1FB5FF2D006D6BC1 /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -7739,7 +7741,7 @@
 		F70EDB971FB5FF2D006D6BC1 /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F70EDB981FB5FF2D006D6BC1 /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F70EDB991FB5FF2D006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F70EDB9A1FB5FF2D006D6BC1 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F70EDB9A1FB5FF2D006D6BC1 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F70EDB9B1FB5FF2D006D6BC1 /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F70EDB9C1FB5FF2D006D6BC1 /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F70EDB9D1FB5FF2D006D6BC1 /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -7759,7 +7761,7 @@
 		F70EDBAC1FB5FF2D006D6BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F70EDBAD1FB5FF2D006D6BC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F70EDBAE1FB5FF2D006D6BC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F70EDBB21FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70EDBB21FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70EDBB81FB5FF2D006D6BC1 /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F70EDBD11FB5FF2D006D6BC1 /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F70EDBD31FB5FF2D006D6BC1 /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -7779,9 +7781,9 @@
 		F70EDC101FB5FF2D006D6BC1 /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F70EDC131FB5FF2D006D6BC1 /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F70EDC191FB5FF2D006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F70EDC1A1FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70EDC1A1FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70EDC211FB5FF2D006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F70EDC271FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70EDC271FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70EDC2A1FB5FF2D006D6BC1 /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F70EDC2D1FB5FF2D006D6BC1 /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F70EDC341FB5FF2D006D6BC1 /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -7790,9 +7792,9 @@
 		F70EDC5E1FB5FF2D006D6BC1 /* icon_cc_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E81A1F2B0DBC000EDF74 /* icon_cc_enable@2x.png */; };
 		F70EDC601FB5FF2D006D6BC1 /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F70EDC621FB5FF2D006D6BC1 /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
-		F70EDC691FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70EDC6E1FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F70EDC771FB5FF2D006D6BC1 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F70EDC691FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70EDC6E1FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F70EDC771FB5FF2D006D6BC1 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F70EDC7F1FB5FF2D006D6BC1 /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F70EDC821FB5FF2D006D6BC1 /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
 		F70EEAAE1FB60387006D6BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70EE67B1FB60375006D6BC1 /* Assets.xcassets */; };
@@ -7964,7 +7966,6 @@
 		F70EEC101FB60440006D6BC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE5C01FB60374006D6BC1 /* GoogleService-Info.plist */; };
 		F70EEC111FB60444006D6BC1 /* GTM-NBRPMGQ.json in Resources */ = {isa = PBXBuildFile; fileRef = F70EE5C21FB60374006D6BC1 /* GTM-NBRPMGQ.json */; };
 		F70EEC131FB60491006D6BC1 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6801FB60375006D6BC1 /* AirshipConfig.plist */; };
-		F70EEC141FB60491006D6BC1 /* SiteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6811FB60375006D6BC1 /* SiteConfig.plist */; };
 		F70EEC161FB60491006D6BC1 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6841FB60375006D6BC1 /* Icon-29.png */; };
 		F70EEC171FB60491006D6BC1 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6851FB60375006D6BC1 /* Icon-76@2x.png */; };
 		F70EEC181FB60491006D6BC1 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE6861FB60375006D6BC1 /* Icon-40@2x.png */; };
@@ -8104,7 +8105,6 @@
 		F70EECBF1FB60491006D6BC1 /* videoImagePlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE7331FB60375006D6BC1 /* videoImagePlaceholder@2x.png */; };
 		F70EECC01FB60491006D6BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70EE7341FB60375006D6BC1 /* Assets.xcassets */; };
 		F70EECC21FB604D5006D6BC1 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE7391FB60376006D6BC1 /* AirshipConfig.plist */; };
-		F70EECC31FB604D5006D6BC1 /* SiteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70EE73A1FB60376006D6BC1 /* SiteConfig.plist */; };
 		F70EECDE1FB604D5006D6BC1 /* icon-search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE7581FB60376006D6BC1 /* icon-search@3x.png */; };
 		F70EECDF1FB604D5006D6BC1 /* showPlayIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE7591FB60376006D6BC1 /* showPlayIcon@3x.png */; };
 		F70EECE01FB604D5006D6BC1 /* SplashLogo_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F70EE75A1FB60376006D6BC1 /* SplashLogo_iPad.png */; };
@@ -9390,7 +9390,7 @@
 		F778BE382007DF72002B066F /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F778BE392007DF72002B066F /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F778BE3A2007DF72002B066F /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F778BE3B2007DF72002B066F /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F778BE3B2007DF72002B066F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F778BE3C2007DF72002B066F /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F778BE3D2007DF72002B066F /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F778BE3E2007DF72002B066F /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -9514,7 +9514,7 @@
 		F778BEB52007DF72002B066F /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F778BEB62007DF72002B066F /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F778BEB72007DF72002B066F /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F778BEB82007DF72002B066F /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F778BEB82007DF72002B066F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F778BEB92007DF72002B066F /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F778BEBA2007DF72002B066F /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F778BEBB2007DF72002B066F /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -9535,7 +9535,7 @@
 		F778BECB2007DF72002B066F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F778BECC2007DF72002B066F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F778BECD2007DF72002B066F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F778BED22007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F778BED22007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F778BED32007DF72002B066F /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F778BED42007DF72002B066F /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F778BED92007DF72002B066F /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -9557,9 +9557,9 @@
 		F778BF522007DF72002B066F /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F778BF582007DF72002B066F /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F778BF602007DF72002B066F /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F778BF612007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F778BF612007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F778BF692007DF72002B066F /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F778BF6B2007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F778BF6B2007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F778BF6E2007DF72002B066F /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F778BF702007DF72002B066F /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F778BF7D2007DF72002B066F /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -9570,9 +9570,9 @@
 		F778BF8A2007DF72002B066F /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F778BF982007DF72002B066F /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
 		F778BFA92007DF72002B066F /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
-		F778BFB02007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F778BFB12007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F778BFB32007DF72002B066F /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F778BFB02007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F778BFB12007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F778BFB32007DF72002B066F /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F778BFB62007DF72002B066F /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F778BFBB2007DF72002B066F /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		F778BFBE2007DF72002B066F /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -10341,7 +10341,7 @@
 		F7AC06D71FFD5D760084FBBA /* JumbotronModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76FB3B41E817D6800ADA267 /* JumbotronModuleParser.swift */; };
 		F7AC06D81FFD5D760084FBBA /* AppDelegate+PageDeepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1796A1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift */; };
 		F7AC06D91FFD5D760084FBBA /* ModuleAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757791EB7EBC900421B3B /* ModuleAPIParser.swift */; };
-		F7AC06DA1FFD5D760084FBBA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F7AC06DA1FFD5D760084FBBA /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F7AC06DB1FFD5D760084FBBA /* SFVideoDetailModuleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74A925B1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift */; };
 		F7AC06DC1FFD5D760084FBBA /* DownloadProgresser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A1E6491F2BEF39007DABDE /* DownloadProgresser.swift */; };
 		F7AC06DD1FFD5D760084FBBA /* SFCountryDialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54734C8E1F5770D00075DF51 /* SFCountryDialModel.swift */; };
@@ -10465,7 +10465,7 @@
 		F7AC07541FFD5D760084FBBA /* Date+StringComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4E35F1FB02A1F0086FD3D /* Date+StringComponents.swift */; };
 		F7AC07551FFD5D760084FBBA /* SFJumbotronObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F22911ED624A500C219BA /* SFJumbotronObject.swift */; };
 		F7AC07561FFD5D760084FBBA /* SFVerticalCollectionGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77AAA8A1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift */; };
-		F7AC07571FFD5D760084FBBA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		F7AC07571FFD5D760084FBBA /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F7AC07581FFD5D760084FBBA /* SFProductListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7310F951F157A3300A41D13 /* SFProductListObject.swift */; };
 		F7AC07591FFD5D760084FBBA /* ModuleUIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D757771EB7EBBC00421B3B /* ModuleUIParser.swift */; };
 		F7AC075A1FFD5D760084FBBA /* SFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542B18FF1EE08EB300D1FAC0 /* SFImage.swift */; };
@@ -10486,7 +10486,7 @@
 		F7AC076A1FFD5D760084FBBA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E883A1E92F1CC0011E4F9 /* libz.tbd */; };
 		F7AC076B1FFD5D760084FBBA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73E88381E92F1BC0011E4F9 /* SystemConfiguration.framework */; };
 		F7AC076C1FFD5D760084FBBA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75174881E8D7B6D0062AF8E /* CoreData.framework */; };
-		F7AC07721FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F7AC07721FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F7AC07731FFD5D760084FBBA /* currentPage_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3931E817B8300ADA267 /* currentPage_iPad.png */; };
 		F7AC07741FFD5D760084FBBA /* currentPage_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3941E817B8300ADA267 /* currentPage_iPad@2x.png */; };
 		F7AC07791FFD5D760084FBBA /* CastTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C482BE1F3AF0F1008B5E86 /* CastTutorialViewController.xib */; };
@@ -10508,9 +10508,9 @@
 		F7AC07F21FFD5D760084FBBA /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA117E1EF49358003B9194 /* Pause.png */; };
 		F7AC07F81FFD5D760084FBBA /* Pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11801EF49358003B9194 /* Pause@3x.png */; };
 		F7AC08001FFD5D760084FBBA /* SFPlanAdditionalTextCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4091F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib */; };
-		F7AC08011FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F7AC08011FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F7AC08091FFD5D760084FBBA /* SFPlanAdditionalTextCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76EF4031F1D1E1700AB8233 /* SFPlanAdditionalTextCell_iPhone.xib */; };
-		F7AC080B1FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F7AC080B1FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F7AC080E1FFD5D760084FBBA /* mediaPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11811EF49358003B9194 /* mediaPlay.png */; };
 		F7AC08101FFD5D760084FBBA /* mediaPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11821EF49358003B9194 /* mediaPlay@2x.png */; };
 		F7AC081D1FFD5D760084FBBA /* page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3961E817B8300ADA267 /* page@2x.png */; };
@@ -10521,9 +10521,9 @@
 		F7AC082A1FFD5D760084FBBA /* icon_cc_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 2846E8191F2B0DBC000EDF74 /* icon_cc_enable.png */; };
 		F7AC08381FFD5D760084FBBA /* currentPage.png in Resources */ = {isa = PBXBuildFile; fileRef = F76FB3911E817B8300ADA267 /* currentPage.png */; };
 		F7AC08491FFD5D760084FBBA /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1C1FBD0F8A000CBD81 /* Fullscreen@3x.png */; };
-		F7AC08501FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F7AC08511FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		F7AC08531FFD5D760084FBBA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		F7AC08501FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F7AC08511FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F7AC08531FFD5D760084FBBA /* (null) in Resources */ = {isa = PBXBuildFile; };
 		F7AC08561FFD5D760084FBBA /* mediaPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AA11831EF49358003B9194 /* mediaPlay@3x.png */; };
 		F7AC085B1FFD5D760084FBBA /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54499A1B1FBD0F8A000CBD81 /* Fullscreen@2x.png */; };
 		F7AC085E1FFD5D760084FBBA /* StarView.json in Resources */ = {isa = PBXBuildFile; fileRef = 542845791F0568EE0055A61D /* StarView.json */; };
@@ -23758,7 +23758,7 @@
 			files = (
 				010B3AA21FE1098D002F83D0 /* icon-menu@2x.png in Resources */,
 				010B3A781FE1098D002F83D0 /* play@3x.png in Resources */,
-				010B36E11FE108F9002F83D0 /* BuildFile in Resources */,
+				010B36E11FE108F9002F83D0 /* (null) in Resources */,
 				010B3A9F1FE1098D002F83D0 /* icon-home@2x.png in Resources */,
 				010B3A8E1FE1098D002F83D0 /* clientnavlogo@3x.png in Resources */,
 				010B3A991FE1098D002F83D0 /* icon-live@2x.png in Resources */,
@@ -23881,7 +23881,7 @@
 				010B3AD81FE1098E002F83D0 /* icon-cast-identified.png in Resources */,
 				010B3AD41FE1098E002F83D0 /* OK_UpsideDown@2x.png in Resources */,
 				010B37501FE108F9002F83D0 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				010B37511FE108F9002F83D0 /* BuildFile in Resources */,
+				010B37511FE108F9002F83D0 /* (null) in Resources */,
 				010B3B111FE1098E002F83D0 /* OpenSans-Light.ttf in Resources */,
 				010B3AEA1FE1098E002F83D0 /* iOS7_Chromecast_Image-(iPhone).png in Resources */,
 				010B3AB61FE1098D002F83D0 /* clientnavlogo.png in Resources */,
@@ -23896,7 +23896,7 @@
 				010B375C1FE108F9002F83D0 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				010B3AD21FE1098E002F83D0 /* gridDownload.png in Resources */,
 				010B3B211FE1098E002F83D0 /* Knob.png in Resources */,
-				010B37631FE108F9002F83D0 /* BuildFile in Resources */,
+				010B37631FE108F9002F83D0 /* (null) in Resources */,
 				010B3A9D1FE1098D002F83D0 /* icon-live@3x.png in Resources */,
 				010B3A5A1FE1098D002F83D0 /* AppStoreIcon-1024.png in Resources */,
 				010B37661FE108F9002F83D0 /* mediaPlay.png in Resources */,
@@ -23977,7 +23977,7 @@
 				010B3AC31FE1098E002F83D0 /* icon_download_enque@2x.png in Resources */,
 				010B3A831FE1098D002F83D0 /* download.png in Resources */,
 				010B3AD31FE1098E002F83D0 /* ChromeCast_PauseButton_CastPlayer.png in Resources */,
-				010B37B81FE108F9002F83D0 /* BuildFile in Resources */,
+				010B37B81FE108F9002F83D0 /* (null) in Resources */,
 				010B3AF01FE1098E002F83D0 /* movieTabIcon@2x.png in Resources */,
 				010B3A631FE1098D002F83D0 /* Icon-29@2x.png in Resources */,
 				010B3B1F1FE1098E002F83D0 /* videoImagePlaceholder@2x.png in Resources */,
@@ -23989,7 +23989,7 @@
 				010B3A761FE1098D002F83D0 /* gridOptions.png in Resources */,
 				010B3B1E1FE1098E002F83D0 /* videoImagePlaceholder@3x.png in Resources */,
 				010B3AA71FE1098D002F83D0 /* icon-experience.png in Resources */,
-				010B37BF1FE108F9002F83D0 /* BuildFile in Resources */,
+				010B37BF1FE108F9002F83D0 /* (null) in Resources */,
 				010B3AFA1FE1098E002F83D0 /* gridOptions@3x.png in Resources */,
 				010B3AB91FE1098E002F83D0 /* resume.png in Resources */,
 				010B3B1C1FE1098E002F83D0 /* posterImagePlaceholder@2x.png in Resources */,
@@ -23998,7 +23998,7 @@
 				010B3AB81FE1098E002F83D0 /* cancelIcon@2x.png in Resources */,
 				010B3A601FE1098D002F83D0 /* Icon-50@2x.png in Resources */,
 				010B3A921FE1098D002F83D0 /* videoDetailPlayIcon_iPad.png in Resources */,
-				010B37CB1FE108F9002F83D0 /* BuildFile in Resources */,
+				010B37CB1FE108F9002F83D0 /* (null) in Resources */,
 				010B3B1D1FE1098E002F83D0 /* videoImagePlaceholder.png in Resources */,
 				010B3B8C1FE109B2002F83D0 /* SiteConfig.plist in Resources */,
 				010B3B221FE1098E002F83D0 /* LaunchScreen.storyboard in Resources */,
@@ -24131,7 +24131,7 @@
 				010B3BED1FE117FC002F83D0 /* Lato-BlackItalic.ttf in Resources */,
 				010B3B7E1FE109AA002F83D0 /* arrowDownUnfocused.png in Resources */,
 				010B39531FE10906002F83D0 /* play.png in Resources */,
-				010B39541FE10906002F83D0 /* BuildFile in Resources */,
+				010B39541FE10906002F83D0 /* (null) in Resources */,
 				010B3B801FE109AA002F83D0 /* swipeToRevealMenuAppLogo.png in Resources */,
 				010B3BDF1FE117F3002F83D0 /* OpenSans-Regular.ttf in Resources */,
 				010B39551FE10906002F83D0 /* Lato-BlackItalic.ttf in Resources */,
@@ -24180,7 +24180,7 @@
 				013A0EFD1FEA94280040B8D3 /* SplashLogo.png in Resources */,
 				013A0F0A1FEA94280040B8D3 /* tickIcon.png in Resources */,
 				542109B72009269D0037A7B2 /* Forward@3x.png in Resources */,
-				013A0CED1FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0CED1FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0EFB1FEA94280040B8D3 /* play@3x.png in Resources */,
 				013A0CF31FEA93FD0040B8D3 /* currentPage_iPad.png in Resources */,
 				013A0F871FEA94290040B8D3 /* Lato-Thin.ttf in Resources */,
@@ -24302,7 +24302,7 @@
 				013A0D5E1FEA93FD0040B8D3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
 				013A0F891FEA94290040B8D3 /* Lato-Bold.ttf in Resources */,
 				013A0F571FEA94280040B8D3 /* radio-unfilled@3x.png in Resources */,
-				013A0D5F1FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0D5F1FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0F5E1FEA94280040B8D3 /* icon-cast-identified.png in Resources */,
 				013A0F6D1FEA94290040B8D3 /* ChromeCast_Animate-1_iOS.png in Resources */,
 				013A0F071FEA94280040B8D3 /* tickIcon@3x.png in Resources */,
@@ -24312,7 +24312,7 @@
 				013A0D6A1FEA93FD0040B8D3 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				013A0F501FEA94280040B8D3 /* SplashLogo@3x.png in Resources */,
 				013A0F261FEA94280040B8D3 /* icon-home@3x.png in Resources */,
-				013A0D711FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0D711FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0F4F1FEA94280040B8D3 /* icon-user@2x.png in Resources */,
 				013A0F651FEA94290040B8D3 /* icon-cast-identified@2x.png in Resources */,
 				013A0F9E1FEA94290040B8D3 /* OpenSans-Regular.ttf in Resources */,
@@ -24400,13 +24400,13 @@
 				013A0F051FEA94280040B8D3 /* moreTabIcon@3x.png in Resources */,
 				013A0F0B1FEA94280040B8D3 /* removeFromWatchlistIcon@3x.png in Resources */,
 				013A0F221FEA94280040B8D3 /* icon-live@3x.png in Resources */,
-				013A0DC81FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0DC81FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0F2D1FEA94280040B8D3 /* icon-menu@3x.png in Resources */,
 				013A0F2A1FEA94280040B8D3 /* icon-live.png in Resources */,
 				013A0F901FEA94290040B8D3 /* Lato-Semibold.ttf in Resources */,
 				013A0F471FEA94280040B8D3 /* SplashLogo_iPad@2x.png in Resources */,
 				013A0F381FEA94280040B8D3 /* videoDetailPlayIcon_iPhone@2x.png in Resources */,
-				013A0DCF1FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0DCF1FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0F5F1FEA94280040B8D3 /* OK@2x.png in Resources */,
 				013A0F131FEA94280040B8D3 /* showPlayIcon@2x.png in Resources */,
 				013A0F241FEA94280040B8D3 /* icon-home@2x.png in Resources */,
@@ -24417,7 +24417,7 @@
 				013A0F781FEA94290040B8D3 /* downloaded@2x.png in Resources */,
 				013A0EDB1FEA94280040B8D3 /* AirshipConfig.plist in Resources */,
 				013A0EFF1FEA94280040B8D3 /* videoDetailPlayIcon_iPad@2x.png in Resources */,
-				013A0DDB1FEA93FD0040B8D3 /* BuildFile in Resources */,
+				013A0DDB1FEA93FD0040B8D3 /* (null) in Resources */,
 				013A0F551FEA94280040B8D3 /* gridOptions@2x.png in Resources */,
 				013A0F1D1FEA94280040B8D3 /* download@3x.png in Resources */,
 				013A0F281FEA94280040B8D3 /* icon-music.png in Resources */,
@@ -24543,7 +24543,7 @@
 				013A111B1FEA9D930040B8D3 /* Season_AppleTV.json in Resources */,
 				013A111E1FEA9D930040B8D3 /* play.png in Resources */,
 				01539B8B1FEB981B006BD7A3 /* splashBackground.png in Resources */,
-				013A111F1FEA9D930040B8D3 /* BuildFile in Resources */,
+				013A111F1FEA9D930040B8D3 /* (null) in Resources */,
 				01539BAE1FEB981B006BD7A3 /* SearchPageModuleEnterTainment_tvOS.json in Resources */,
 				01539BAB1FEB981B006BD7A3 /* toggleOverlay.png in Resources */,
 				01539B981FEB981B006BD7A3 /* icon-gear.png in Resources */,
@@ -24591,7 +24591,7 @@
 				0153ABF01FEBBAA2006BD7A3 /* Icon-60@3x.png in Resources */,
 				0153AC661FEBBAA2006BD7A3 /* OK_UpsideDown@2x.png in Resources */,
 				F704E0DE1FEC353F009B13FD /* SearchPageModule.json in Resources */,
-				0153A8501FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A8501FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC561FEBBAA2006BD7A3 /* SplashLogo_iPad@3x.png in Resources */,
 				0153AC0B1FEBBAA2006BD7A3 /* videoDetailPlayIcon_iPad@2x.png in Resources */,
 				0153ACB31FEBBAA2006BD7A3 /* Knob.png in Resources */,
@@ -24672,7 +24672,7 @@
 				0153AC461FEBBAA2006BD7A3 /* crossIcon@2x.png in Resources */,
 				0153A8C71FEBB459006BD7A3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
 				0153AC5E1FEBBAA2006BD7A3 /* deleteIcon@3x.png in Resources */,
-				0153A8CA1FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A8CA1FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC641FEBBAA2006BD7A3 /* gridDownload.png in Resources */,
 				0153AC041FEBBAA2006BD7A3 /* SplashLogo_iPad.png in Resources */,
 				0153AC3C1FEBBAA2006BD7A3 /* icon-movies@3x.png in Resources */,
@@ -24702,7 +24702,7 @@
 				0153AC151FEBBAA2006BD7A3 /* Back@3x.png in Resources */,
 				0153AC721FEBBAA2006BD7A3 /* OK_Left@2x.png in Resources */,
 				0153ACA41FEBBAA2006BD7A3 /* OpenSans-Italic.ttf in Resources */,
-				0153A8D61FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A8D61FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC971FEBBAA2006BD7A3 /* Lato-SemiboldItalic.ttf in Resources */,
 				0153A8DC1FEBB459006BD7A3 /* mediaPlay.png in Resources */,
 				0153AC0A1FEBBAA2006BD7A3 /* removeFromWatchlistIcon@2x.png in Resources */,
@@ -24796,13 +24796,13 @@
 				0153AC6D1FEBBAA2006BD7A3 /* ChromeCast_Animate-3_iOS@2x.png in Resources */,
 				0153AC6B1FEBBAA2006BD7A3 /* OK@2x.png in Resources */,
 				0153AC071FEBBAA2006BD7A3 /* play@3x.png in Resources */,
-				0153A9311FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A9311FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC4F1FEBBAA2006BD7A3 /* icon-user@3x.png in Resources */,
-				0153A9371FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A9371FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC3A1FEBBAA2006BD7A3 /* icon-music@3x.png in Resources */,
 				0153ABFB1FEBBAA2006BD7A3 /* Icon-50.png in Resources */,
 				0153AC2C1FEBBAA2006BD7A3 /* icon-experience@3x.png in Resources */,
-				0153A9421FEBB459006BD7A3 /* BuildFile in Resources */,
+				0153A9421FEBB459006BD7A3 /* (null) in Resources */,
 				0153AC5B1FEBBAA2006BD7A3 /* icon-user@2x.png in Resources */,
 				0153AC361FEBBAA2006BD7A3 /* icon-live.png in Resources */,
 				0153ACA81FEBBAA2006BD7A3 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -24953,7 +24953,7 @@
 				0153AAC81FEBB45C006BD7A3 /* play.png in Resources */,
 				0153ACFD1FEBBD3C006BD7A3 /* appLogoPlansPage.png in Resources */,
 				0153AD131FEBBD3C006BD7A3 /* menuSwipeUpNotification.png in Resources */,
-				0153AACA1FEBB45C006BD7A3 /* BuildFile in Resources */,
+				0153AACA1FEBB45C006BD7A3 /* (null) in Resources */,
 				0153AACE1FEBB45C006BD7A3 /* Lato-BlackItalic.ttf in Resources */,
 				0153B30A1FEBD4B7006BD7A3 /* OpenSans-ExtraBold.ttf in Resources */,
 				0153AAD11FEBB45C006BD7A3 /* FAQ_AppleTV.json in Resources */,
@@ -25009,7 +25009,7 @@
 				0153B2C11FEBD49A006BD7A3 /* downloaded@3x.png in Resources */,
 				F704E0DB1FEC3527009B13FD /* SearchPageModule.json in Resources */,
 				0153B2CD1FEBD49A006BD7A3 /* Lato-LightItalic.ttf in Resources */,
-				0153AE421FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AE421FEBD33D006BD7A3 /* (null) in Resources */,
 				0153B2DA1FEBD49A006BD7A3 /* Lato-BoldItalic.ttf in Resources */,
 				0153B2661FEBD49A006BD7A3 /* icon-experience@2x.png in Resources */,
 				542109B9200926A00037A7B2 /* Forward@3x.png in Resources */,
@@ -25143,7 +25143,7 @@
 				0153B2B61FEBD49A006BD7A3 /* ChromeCast_StopButton_CastPlayer@2x.png in Resources */,
 				0153B2861FEBD49A006BD7A3 /* shareIcon@2x.png in Resources */,
 				0153AEB31FEBD33D006BD7A3 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				0153AEB41FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AEB41FEBD33D006BD7A3 /* (null) in Resources */,
 				0153AEB81FEBD33D006BD7A3 /* Fullscreen.png in Resources */,
 				0153B29B1FEBD49A006BD7A3 /* moreTabIcon.png in Resources */,
 				0153B2AF1FEBD49A006BD7A3 /* ChromeCast_PauseButton_CastPlayer@2x.png in Resources */,
@@ -25154,7 +25154,7 @@
 				0153B2671FEBD49A006BD7A3 /* icon-experience@3x.png in Resources */,
 				0153B24E1FEBD49A006BD7A3 /* tickIcon@3x.png in Resources */,
 				0153AEBE1FEBD33D006BD7A3 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
-				0153AEC51FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AEC51FEBD33D006BD7A3 /* (null) in Resources */,
 				0153B23F1FEBD49A006BD7A3 /* SplashLogo_iPad.png in Resources */,
 				0153AEC81FEBD33D006BD7A3 /* mediaPlay.png in Resources */,
 				0153B2701FEBD49A006BD7A3 /* icon-shows@2x.png in Resources */,
@@ -25219,7 +25219,7 @@
 				0153AF101FEBD33D006BD7A3 /* currentPage.png in Resources */,
 				0153B2561FEBD49A006BD7A3 /* offline_pause.png in Resources */,
 				0153B2811FEBD49A006BD7A3 /* crossIcon@2x.png in Resources */,
-				0153AF1A1FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AF1A1FEBD33D006BD7A3 /* (null) in Resources */,
 				0153B22A1FEBD49A006BD7A3 /* Icon-83.5@2x.png in Resources */,
 				0153B2441FEBD49A006BD7A3 /* SplashLogo.png in Resources */,
 				0153B2DB1FEBD49A006BD7A3 /* Lato-Light.ttf in Resources */,
@@ -25227,7 +25227,7 @@
 				0153B2E81FEBD49A006BD7A3 /* posterImagePlaceholder@3x.png in Resources */,
 				0153B2631FEBD49A006BD7A3 /* icon-search@2x.png in Resources */,
 				0153B2401FEBD49A006BD7A3 /* gridOptions.png in Resources */,
-				0153AF211FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AF211FEBD33D006BD7A3 /* (null) in Resources */,
 				0153B23B1FEBD49A006BD7A3 /* iTunesArtwork in Resources */,
 				0153B29A1FEBD49A006BD7A3 /* offline_pause@3x.png in Resources */,
 				0153B2B51FEBD49A006BD7A3 /* ChromeCast_HeaderTitle_iOS@2x.png in Resources */,
@@ -25239,7 +25239,7 @@
 				0153B2B01FEBD49A006BD7A3 /* ChromeCast_SenderCastConnected_iOS.png in Resources */,
 				0153B2E11FEBD49A006BD7A3 /* OpenSans-LightItalic.ttf in Resources */,
 				0153B2AC1FEBD49A006BD7A3 /* icon-cast-identified@2x.png in Resources */,
-				0153AF2C1FEBD33D006BD7A3 /* BuildFile in Resources */,
+				0153AF2C1FEBD33D006BD7A3 /* (null) in Resources */,
 				0153B2A91FEBD49A006BD7A3 /* ChromeCast_Normal_Off.png in Resources */,
 				0153B2391FEBD49A006BD7A3 /* Icon-57@2x.png in Resources */,
 				0153AF341FEBD33D006BD7A3 /* mediaPlay@3x.png in Resources */,
@@ -25288,7 +25288,7 @@
 				0153B06A1FEBD340006BD7A3 /* tickIcon.png in Resources */,
 				0153B06C1FEBD340006BD7A3 /* moreTabIcon.png in Resources */,
 				0153B06E1FEBD340006BD7A3 /* TOS_AppleTV.json in Resources */,
-				0153B06F1FEBD340006BD7A3 /* BuildFile in Resources */,
+				0153B06F1FEBD340006BD7A3 /* (null) in Resources */,
 				0153B32E1FEBD4E2006BD7A3 /* SiteConfig.plist in Resources */,
 				0153B37E1FEBD66B006BD7A3 /* teams.png in Resources */,
 				0153B0701FEBD340006BD7A3 /* About_AppleTV.json in Resources */,
@@ -25376,7 +25376,7 @@
 				0153B37A1FEBD66B006BD7A3 /* home.png in Resources */,
 				0153B0B71FEBD340006BD7A3 /* play.png in Resources */,
 				0153B3801FEBD66B006BD7A3 /* carousel_background.png in Resources */,
-				0153B0B81FEBD340006BD7A3 /* BuildFile in Resources */,
+				0153B0B81FEBD340006BD7A3 /* (null) in Resources */,
 				0153B38B1FEBD66B006BD7A3 /* swipeToRevealMenuImage.png in Resources */,
 				0153B0B91FEBD340006BD7A3 /* Lato-BlackItalic.ttf in Resources */,
 				0153B36A1FEBD66B006BD7A3 /* footerGradientImage.png in Resources */,
@@ -25564,7 +25564,7 @@
 			files = (
 				F7D480941ED379DF00C9E962 /* play.png in Resources */,
 				F799CD831FBF7F0300ABB9CE /* icon-experience@2x.png in Resources */,
-				28EB84D01F29E610009A137A /* BuildFile in Resources */,
+				28EB84D01F29E610009A137A /* (null) in Resources */,
 				F7F4F9321EE0CAED00FE1347 /* play@2x.png in Resources */,
 				F77812E11F2BF75D000BB83E /* download@3x.png in Resources */,
 				F7413F9A1EE22C5500CA70E4 /* videoDetailPlayIcon_iPad@3x.png in Resources */,
@@ -25683,7 +25683,7 @@
 				54B751441E7C8E39001475AD /* LaunchScreen.storyboard in Resources */,
 				F7F4F92E1EE0CAED00FE1347 /* cancelIcon@3x.png in Resources */,
 				F76EF40A1F1D22F300AB8233 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				33C482B71F3AF004008B5E86 /* BuildFile in Resources */,
+				33C482B71F3AF004008B5E86 /* (null) in Resources */,
 				F7254A2A1FB3B3D0009A4EDD /* Lato-Medium.ttf in Resources */,
 				F7D73E192012899A0040BC0F /* articleGridOptions@2x.png in Resources */,
 				F799CD841FBF7F0300ABB9CE /* icon-experience@3x.png in Resources */,
@@ -25701,7 +25701,7 @@
 				F7C15F581ED8C1DE00747C1B /* OpenSans-LightItalic.ttf in Resources */,
 				F765C6741FBF84C500E07E1C /* icon-movies@2x.png in Resources */,
 				F78ED1491F60547E00DAA06A /* Icon-72.png in Resources */,
-				33C482B91F3AF00B008B5E86 /* BuildFile in Resources */,
+				33C482B91F3AF00B008B5E86 /* (null) in Resources */,
 				F77812ED1F2BF75D000BB83E /* offline_pause@3x.png in Resources */,
 				F7254A2E1FB3B3D0009A4EDD /* Lato-HeavyItalic.ttf in Resources */,
 				54AA11911EF49358003B9194 /* mediaPlay.png in Resources */,
@@ -25789,14 +25789,14 @@
 				F799CD861FBF7F0300ABB9CE /* icon-home.png in Resources */,
 				F78ED1451F60547E00DAA06A /* Icon-50@2x.png in Resources */,
 				33C7BB7D1F29DACB003A8D2F /* icon-cast-identified@2x.png in Resources */,
-				28EB84D11F29E610009A137A /* BuildFile in Resources */,
+				28EB84D11F29E610009A137A /* (null) in Resources */,
 				F7CAE9B11EC38B4700B9173E /* Icon-40@3x.png in Resources */,
 				F7254A291FB3B3D0009A4EDD /* Lato-MediumItalic.ttf in Resources */,
 				33C7BB811F29DACB003A8D2F /* OK@2x.png in Resources */,
 				18B153A91FCD880700BEC5A1 /* Back@2x.png in Resources */,
 				F799CD8C1FBF7F0300ABB9CE /* icon-experience.png in Resources */,
 				33C7BB721F29DACB003A8D2F /* ChromeCast_HeaderTitle_iOS.png in Resources */,
-				28EB84CF1F29E610009A137A /* BuildFile in Resources */,
+				28EB84CF1F29E610009A137A /* (null) in Resources */,
 				F74857261F0404C000893E08 /* removeFromWatchlistIcon.png in Resources */,
 				F7B7F0371EE1CDD900A884E4 /* movieTabIcon@2x.png in Resources */,
 				F799CD901FBF7F0300ABB9CE /* icon-music@2x.png in Resources */,
@@ -25807,7 +25807,7 @@
 				F77812EB1F2BF75D000BB83E /* offline_pause.png in Resources */,
 				F7A3DB5A1EE1ED050054BCAF /* clientnavlogo@2x.png in Resources */,
 				F799CD8E1FBF7F0300ABB9CE /* icon-music@3x.png in Resources */,
-				28EB84CE1F29E610009A137A /* BuildFile in Resources */,
+				28EB84CE1F29E610009A137A /* (null) in Resources */,
 				F70C4EAB1F1D71DB000364BB /* crossIcon@2x.png in Resources */,
 				773090311FAB493C0050DC70 /* Lato-LightItalic.ttf in Resources */,
 				F7A1B65F1EFD845C005FE032 /* deleteIcon.png in Resources */,
@@ -25998,7 +25998,7 @@
 				331758E21FCFDF92001950AD /* tickIcon.png in Resources */,
 				33525D441FE929A8003A1FF2 /* RawTextView_AppleTV.json in Resources */,
 				771F91A61F4EE9A500D8D018 /* arrowDownFocused.png in Resources */,
-				7783E3D61FE0005700837633 /* BuildFile in Resources */,
+				7783E3D61FE0005700837633 /* (null) in Resources */,
 				A2180A6C1EF013770030110B /* moreTabIcon.png in Resources */,
 				77659C321F22011E00458134 /* posterImagePlaceholder.png in Resources */,
 				A27A39241F41899400B43A1B /* TOS_AppleTV.json in Resources */,
@@ -26129,7 +26129,7 @@
 				F704DB081FEC2501009B13FD /* TOS_AppleTV.json in Resources */,
 				F7C741EF1FEC36D40081E3E9 /* Lato-BoldItalic.ttf in Resources */,
 				F704E0CD1FEC34B3009B13FD /* splashBackground.png in Resources */,
-				F704DB0A1FEC2501009B13FD /* BuildFile in Resources */,
+				F704DB0A1FEC2501009B13FD /* (null) in Resources */,
 				F704DB0D1FEC2501009B13FD /* About_AppleTV.json in Resources */,
 				F704DB0F1FEC2501009B13FD /* SFPlanAdditionalTextView_Sports_tvOS.xib in Resources */,
 				F7C741E21FEC36D40081E3E9 /* Lato-LightItalic.ttf in Resources */,
@@ -26205,7 +26205,7 @@
 				F704DB5C1FEC2501009B13FD /* Carousel_AppleTV.json in Resources */,
 				F704DB5D1FEC2501009B13FD /* Season_AppleTV.json in Resources */,
 				F704DB5F1FEC2501009B13FD /* play.png in Resources */,
-				F704DB611FEC2501009B13FD /* BuildFile in Resources */,
+				F704DB611FEC2501009B13FD /* (null) in Resources */,
 				F704E0AD1FEC347C009B13FD /* SearchPageModuleEnterTainment_tvOS.json in Resources */,
 				F704DB631FEC2501009B13FD /* Lato-BlackItalic.ttf in Resources */,
 				F704DB661FEC2501009B13FD /* FAQ_AppleTV.json in Resources */,
@@ -26261,7 +26261,7 @@
 				F704E0681FEC3411009B13FD /* ChromeCast_Normal_Off@2x.png in Resources */,
 				F704E0611FEC3411009B13FD /* OK_Right@2x.png in Resources */,
 				F704E0161FEC33FB009B13FD /* searchIcon@2x.png in Resources */,
-				F704DCB31FEC3332009B13FD /* BuildFile in Resources */,
+				F704DCB31FEC3332009B13FD /* (null) in Resources */,
 				F704DCB61FEC3332009B13FD /* currentPage_iPad.png in Resources */,
 				F704DFDE1FEC33D0009B13FD /* Icon-29.png in Resources */,
 				F704E01B1FEC33FB009B13FD /* crossIcon@3x.png in Resources */,
@@ -26392,7 +26392,7 @@
 				F704E0371FEC3407009B13FD /* deleteIcon.png in Resources */,
 				F704DD371FEC3332009B13FD /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
 				F704E00F1FEC33FB009B13FD /* icon-search.png in Resources */,
-				F704DD381FEC3332009B13FD /* BuildFile in Resources */,
+				F704DD381FEC3332009B13FD /* (null) in Resources */,
 				F704E0841FEC341F009B13FD /* OpenSans-Semibold.ttf in Resources */,
 				F704DD391FEC3332009B13FD /* Fullscreen.png in Resources */,
 				F704E09E1FEC341F009B13FD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -26407,7 +26407,7 @@
 				F704E06A1FEC3411009B13FD /* ChromeCast_SenderCastConnected_iOS.png in Resources */,
 				F704DD431FEC3332009B13FD /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F704E0311FEC3407009B13FD /* icon-movies@3x.png in Resources */,
-				F704DD441FEC3332009B13FD /* BuildFile in Resources */,
+				F704DD441FEC3332009B13FD /* (null) in Resources */,
 				F704E02D1FEC3407009B13FD /* icon-experience.png in Resources */,
 				F704E0971FEC341F009B13FD /* Lato-ThinItalic.ttf in Resources */,
 				F704DD461FEC3332009B13FD /* mediaPlay.png in Resources */,
@@ -26466,9 +26466,9 @@
 				F704DD811FEC3332009B13FD /* currentPage.png in Resources */,
 				F704E0941FEC341F009B13FD /* Lato-BoldItalic.ttf in Resources */,
 				F704E0231FEC3407009B13FD /* icon-live@3x.png in Resources */,
-				F704DD841FEC3332009B13FD /* BuildFile in Resources */,
+				F704DD841FEC3332009B13FD /* (null) in Resources */,
 				F704E0461FEC3407009B13FD /* downloaded.png in Resources */,
-				F704DD8C1FEC3332009B13FD /* BuildFile in Resources */,
+				F704DD8C1FEC3332009B13FD /* (null) in Resources */,
 				F704E0A61FEC342B009B13FD /* videoImagePlaceholder@2x.png in Resources */,
 				F704E0321FEC3407009B13FD /* icon-movies@2x.png in Resources */,
 				F704E06D1FEC3411009B13FD /* ChromeCast_SenderCastConnected_iOS@2x.png in Resources */,
@@ -26480,7 +26480,7 @@
 				F704E05C1FEC3411009B13FD /* OK_Right.png in Resources */,
 				F704E0861FEC341F009B13FD /* Lato-Italic.ttf in Resources */,
 				F704E0271FEC3407009B13FD /* icon-home@3x.png in Resources */,
-				F704DD981FEC3332009B13FD /* BuildFile in Resources */,
+				F704DD981FEC3332009B13FD /* (null) in Resources */,
 				F704E03A1FEC3407009B13FD /* radio-filled.png in Resources */,
 				F704DFFF1FEC33FB009B13FD /* removeFromWatchlistIcon@2x.png in Resources */,
 				F704E0541FEC3407009B13FD /* offline_pause@3x.png in Resources */,
@@ -26526,7 +26526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F70ED22F1FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED22F1FB5FEA4006D6BC1 /* (null) in Resources */,
 				F70ED2351FB5FEA4006D6BC1 /* currentPage_iPad.png in Resources */,
 				0153AB001FEBB7A0006BD7A3 /* iTunesArtwork in Resources */,
 				F70EEBF71FB60427006D6BC1 /* Lato-Light.ttf in Resources */,
@@ -26578,10 +26578,10 @@
 				F70EEBFD1FB60427006D6BC1 /* OpenSans-LightItalic.ttf in Resources */,
 				F70EEBF81FB60427006D6BC1 /* Lato-Medium.ttf in Resources */,
 				F70ED2961FB5FEA4006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				F70ED2971FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED2971FB5FEA4006D6BC1 /* (null) in Resources */,
 				F70ED29E1FB5FEA4006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				0153AB011FEBB7A0006BD7A3 /* iTunesArtwork@2x in Resources */,
-				F70ED2A41FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED2A41FB5FEA4006D6BC1 /* (null) in Resources */,
 				F70EEC101FB60440006D6BC1 /* GoogleService-Info.plist in Resources */,
 				F70ED2A71FB5FEA4006D6BC1 /* mediaPlay.png in Resources */,
 				F70ED2AA1FB5FEA4006D6BC1 /* mediaPlay@2x.png in Resources */,
@@ -26602,11 +26602,11 @@
 				F70EEBEE1FB60427006D6BC1 /* Lato-SemiboldItalic.ttf in Resources */,
 				F70EEBE81FB60427006D6BC1 /* Lato-Italic.ttf in Resources */,
 				F70EEBFA1FB60427006D6BC1 /* OpenSans-Light.ttf in Resources */,
-				F70ED2E61FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED2E61FB5FEA4006D6BC1 /* (null) in Resources */,
 				54499A221FBD0F9C000CBD81 /* Fullscreen.png in Resources */,
-				F70ED2EB1FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED2EB1FB5FEA4006D6BC1 /* (null) in Resources */,
 				F7A3D0BF1FB6212D0005D5ED /* LaunchScreen.storyboard in Resources */,
-				F70ED2F41FB5FEA4006D6BC1 /* BuildFile in Resources */,
+				F70ED2F41FB5FEA4006D6BC1 /* (null) in Resources */,
 				F70ED2FC1FB5FEA4006D6BC1 /* mediaPlay@3x.png in Resources */,
 				F70EEBF11FB60427006D6BC1 /* Lato-Hairline.ttf in Resources */,
 				542109A4200926800037A7B2 /* Forward@2x.png in Resources */,
@@ -26620,7 +26620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54499A231FBD0F9D000CBD81 /* Fullscreen.png in Resources */,
-				F70ED4161FB5FEB2006D6BC1 /* BuildFile in Resources */,
+				F70ED4161FB5FEB2006D6BC1 /* (null) in Resources */,
 				F799CD3A1FBF7ED300ABB9CE /* icon-home@2x.png in Resources */,
 				F70EED761FB604EC006D6BC1 /* Icon-83.5@2x.png in Resources */,
 				F70ED41C1FB5FEB2006D6BC1 /* currentPage_iPad.png in Resources */,
@@ -26659,7 +26659,6 @@
 				F70EED061FB604D5006D6BC1 /* videoDetailPlayIcon_iPhone@2x.png in Resources */,
 				F70EED451FB604D5006D6BC1 /* downloaded@3x.png in Resources */,
 				F70EED391FB604D5006D6BC1 /* ChromeCast_HeaderTitle_iOS@2x.png in Resources */,
-				F70EECC31FB604D5006D6BC1 /* SiteConfig.plist in Resources */,
 				F70EED1A1FB604D5006D6BC1 /* gridDownload@3x.png in Resources */,
 				F70EED4C1FB604D5006D6BC1 /* OpenSans-Semibold.ttf in Resources */,
 				F7A3CFBB1FB61F1F0005D5ED /* Lato-HeavyItalic.ttf in Resources */,
@@ -26757,7 +26756,7 @@
 				F70EED6E1FB604D5006D6BC1 /* videoImagePlaceholder@2x.png in Resources */,
 				F70ED47D1FB5FEB2006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
 				F70EED7E1FB604EC006D6BC1 /* Icon-60@2x.png in Resources */,
-				F70ED47E1FB5FEB2006D6BC1 /* BuildFile in Resources */,
+				F70ED47E1FB5FEB2006D6BC1 /* (null) in Resources */,
 				F70EECE41FB604D5006D6BC1 /* radio-filled@2x.png in Resources */,
 				F7A3CFC21FB61F1F0005D5ED /* Lato-SemiboldItalic.ttf in Resources */,
 				F70EED121FB604D5006D6BC1 /* downloaded.png in Resources */,
@@ -26768,7 +26767,7 @@
 				F70ED4851FB5FEB2006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F70EED011FB604D5006D6BC1 /* videoDetailPlayIcon_iPhone@3x.png in Resources */,
 				F70EED7F1FB604EC006D6BC1 /* Icon-20@3x.png in Resources */,
-				F70ED48B1FB5FEB2006D6BC1 /* BuildFile in Resources */,
+				F70ED48B1FB5FEB2006D6BC1 /* (null) in Resources */,
 				F70EED171FB604D5006D6BC1 /* SplashLogo_iPad@3x.png in Resources */,
 				F7A3CFC61FB61F1F0005D5ED /* Lato-BlackItalic.ttf in Resources */,
 				F726C9FF1FCCDC2200C71A65 /* icon-dropDown@3x.png in Resources */,
@@ -26845,11 +26844,12 @@
 				F70EED601FB604D5006D6BC1 /* OpenSans-Light.ttf in Resources */,
 				F70EECDF1FB604D5006D6BC1 /* showPlayIcon@3x.png in Resources */,
 				F70EED261FB604D5006D6BC1 /* OK_Right.png in Resources */,
-				F70ED4CD1FB5FEB2006D6BC1 /* BuildFile in Resources */,
-				F70ED4D21FB5FEB2006D6BC1 /* BuildFile in Resources */,
-				F70ED4DB1FB5FEB2006D6BC1 /* BuildFile in Resources */,
+				F70ED4CD1FB5FEB2006D6BC1 /* (null) in Resources */,
+				F70ED4D21FB5FEB2006D6BC1 /* (null) in Resources */,
+				F70ED4DB1FB5FEB2006D6BC1 /* (null) in Resources */,
 				F70EED3A1FB604D5006D6BC1 /* ChromeCast_StopButton_CastPlayer@2x.png in Resources */,
 				F70ED4E31FB5FEB2006D6BC1 /* mediaPlay@3x.png in Resources */,
+				4BD951112057E5AE00014359 /* SiteConfig.plist in Resources */,
 				F7A3CFCD1FB61F1F0005D5ED /* Lato-ThinItalic.ttf in Resources */,
 				F7A3CFC91FB61F1F0005D5ED /* Lato-Heavy.ttf in Resources */,
 				F70EED111FB604D5006D6BC1 /* gridDownload@2x.png in Resources */,
@@ -26870,7 +26870,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F70ED5FD1FB5FEC2006D6BC1 /* BuildFile in Resources */,
+				F70ED5FD1FB5FEC2006D6BC1 /* (null) in Resources */,
 				F70ED6031FB5FEC2006D6BC1 /* currentPage_iPad.png in Resources */,
 				F765C66F1FBF836100E07E1C /* icon-movies@3x.png in Resources */,
 				18BEE1321FC58F2800413108 /* play_light@2x.png in Resources */,
@@ -27008,7 +27008,7 @@
 				F70EEE0E1FB606AE006D6BC1 /* play.png in Resources */,
 				F70EEE341FB606AE006D6BC1 /* videoImagePlaceholder@2x.png in Resources */,
 				F70ED6641FB5FEC2006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				F70ED6651FB5FEC2006D6BC1 /* BuildFile in Resources */,
+				F70ED6651FB5FEC2006D6BC1 /* (null) in Resources */,
 				F70EEDAA1FB606AE006D6BC1 /* radio-filled@2x.png in Resources */,
 				F70EED8C1FB606AE006D6BC1 /* Icon-76@2x.png in Resources */,
 				F70EEDD81FB606AE006D6BC1 /* downloaded.png in Resources */,
@@ -27019,7 +27019,7 @@
 				F70ED66C1FB5FEC2006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F799CD6B1FBF7EE700ABB9CE /* icon-music.png in Resources */,
 				F70EEDC71FB606AE006D6BC1 /* videoDetailPlayIcon_iPhone@3x.png in Resources */,
-				F70ED6721FB5FEC2006D6BC1 /* BuildFile in Resources */,
+				F70ED6721FB5FEC2006D6BC1 /* (null) in Resources */,
 				F70EEDDD1FB606AE006D6BC1 /* SplashLogo_iPad@3x.png in Resources */,
 				F765C66D1FBF836100E07E1C /* icon-movies.png in Resources */,
 				F7A3D0941FB61F6B0005D5ED /* Lato-Medium.ttf in Resources */,
@@ -27095,12 +27095,12 @@
 				F70EEDA51FB606AE006D6BC1 /* showPlayIcon@3x.png in Resources */,
 				18B153A51FCD87E400BEC5A1 /* Back@3x.png in Resources */,
 				F70EEDEC1FB606AE006D6BC1 /* OK_Right.png in Resources */,
-				F70ED6B41FB5FEC2006D6BC1 /* BuildFile in Resources */,
-				F70ED6B91FB5FEC2006D6BC1 /* BuildFile in Resources */,
+				F70ED6B41FB5FEC2006D6BC1 /* (null) in Resources */,
+				F70ED6B91FB5FEC2006D6BC1 /* (null) in Resources */,
 				F799CD711FBF7EE700ABB9CE /* icon-music@2x.png in Resources */,
 				F726C9F71FCCDC0200C71A65 /* icon-dropDown.png in Resources */,
 				F799CD6F1FBF7EE700ABB9CE /* icon-music@3x.png in Resources */,
-				F70ED6C21FB5FEC2006D6BC1 /* BuildFile in Resources */,
+				F70ED6C21FB5FEC2006D6BC1 /* (null) in Resources */,
 				F70EEE001FB606AE006D6BC1 /* ChromeCast_StopButton_CastPlayer@2x.png in Resources */,
 				54499A331FBD0FB1000CBD81 /* NoKnob.png in Resources */,
 				F70ED6CA1FB5FEC2006D6BC1 /* mediaPlay@3x.png in Resources */,
@@ -27123,7 +27123,7 @@
 			files = (
 				F7A3CE2F1FB61E670005D5ED /* Lato-Heavy.ttf in Resources */,
 				F7A3CE2E1FB61E670005D5ED /* Lato-MediumItalic.ttf in Resources */,
-				F70ED7E41FB5FED9006D6BC1 /* BuildFile in Resources */,
+				F70ED7E41FB5FED9006D6BC1 /* (null) in Resources */,
 				F70ED7EA1FB5FED9006D6BC1 /* currentPage_iPad.png in Resources */,
 				F70ED8031FB5FED9006D6BC1 /* currentPage_iPad@2x.png in Resources */,
 				F70EECB21FB60491006D6BC1 /* OpenSans-Italic.ttf in Resources */,
@@ -27163,7 +27163,6 @@
 				F70EEC961FB60491006D6BC1 /* downloaded@3x.png in Resources */,
 				F70EEC8A1FB60491006D6BC1 /* ChromeCast_HeaderTitle_iOS@2x.png in Resources */,
 				F726CA161FCCDC4B00C71A65 /* icon-dropDown.png in Resources */,
-				F70EEC141FB60491006D6BC1 /* SiteConfig.plist in Resources */,
 				F70EEC6B1FB60491006D6BC1 /* gridDownload@3x.png in Resources */,
 				F70EEC9D1FB60491006D6BC1 /* OpenSans-Semibold.ttf in Resources */,
 				18BEE12D1FC58F2800413108 /* play_light.png in Resources */,
@@ -27271,7 +27270,7 @@
 				F70EEC991FB60491006D6BC1 /* play.png in Resources */,
 				F70EECBF1FB60491006D6BC1 /* videoImagePlaceholder@2x.png in Resources */,
 				F70ED84B1FB5FED9006D6BC1 /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				F70ED84C1FB5FED9006D6BC1 /* BuildFile in Resources */,
+				F70ED84C1FB5FED9006D6BC1 /* (null) in Resources */,
 				F70EEC351FB60491006D6BC1 /* radio-filled@2x.png in Resources */,
 				F70EEC171FB60491006D6BC1 /* Icon-76@2x.png in Resources */,
 				F70EEC631FB60491006D6BC1 /* downloaded.png in Resources */,
@@ -27282,11 +27281,12 @@
 				F70EEC291FB60491006D6BC1 /* Icon-20@2x.png in Resources */,
 				F70ED8531FB5FED9006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F70EEC521FB60491006D6BC1 /* videoDetailPlayIcon_iPhone@3x.png in Resources */,
-				F70ED8591FB5FED9006D6BC1 /* BuildFile in Resources */,
+				F70ED8591FB5FED9006D6BC1 /* (null) in Resources */,
 				F70EEC681FB60491006D6BC1 /* SplashLogo_iPad@3x.png in Resources */,
 				F70EEC781FB60491006D6BC1 /* ChromeCast_Animate-1_iOS@2x.png in Resources */,
 				F70ED85C1FB5FED9006D6BC1 /* mediaPlay.png in Resources */,
 				F7A3CE291FB61E670005D5ED /* Lato-HairlineItalic.ttf in Resources */,
+				4BD951122057E5B800014359 /* SiteConfig.plist in Resources */,
 				F70ED85F1FB5FED9006D6BC1 /* mediaPlay@2x.png in Resources */,
 				F70EEC891FB60491006D6BC1 /* ChromeCast_Animate-1_iOS.png in Resources */,
 				F70EEC651FB60491006D6BC1 /* SplashLogo_iPad@2x.png in Resources */,
@@ -27351,10 +27351,10 @@
 				18B153971FCD87AF00BEC5A1 /* Back@2x.png in Resources */,
 				F70EEC301FB60491006D6BC1 /* showPlayIcon@3x.png in Resources */,
 				F70EEC771FB60491006D6BC1 /* OK_Right.png in Resources */,
-				F70ED89B1FB5FED9006D6BC1 /* BuildFile in Resources */,
-				F70ED8A01FB5FED9006D6BC1 /* BuildFile in Resources */,
+				F70ED89B1FB5FED9006D6BC1 /* (null) in Resources */,
+				F70ED8A01FB5FED9006D6BC1 /* (null) in Resources */,
 				18BEE1331FC58F2800413108 /* play_light@2x.png in Resources */,
-				F70ED8A91FB5FED9006D6BC1 /* BuildFile in Resources */,
+				F70ED8A91FB5FED9006D6BC1 /* (null) in Resources */,
 				F70EEC8B1FB60491006D6BC1 /* ChromeCast_StopButton_CastPlayer@2x.png in Resources */,
 				F7A3CE2C1FB61E670005D5ED /* Lato-BlackItalic.ttf in Resources */,
 				F70ED8B11FB5FED9006D6BC1 /* mediaPlay@3x.png in Resources */,
@@ -27387,7 +27387,7 @@
 				F70EEAFB1FB603BB006D6BC1 /* deleteIcon@2x.png in Resources */,
 				F799CCE41FBF7E9900ABB9CE /* icon-menu@3x.png in Resources */,
 				F799CCDC1FBF7E9900ABB9CE /* icon-live@3x.png in Resources */,
-				F70EDBB21FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDBB21FB5FF2D006D6BC1 /* (null) in Resources */,
 				18B1538C1FCD875E00BEC5A1 /* Back@3x.png in Resources */,
 				F70EDBB81FB5FF2D006D6BC1 /* currentPage_iPad.png in Resources */,
 				F70EEB361FB603C5006D6BC1 /* radio-unfilled@2x.png in Resources */,
@@ -27516,7 +27516,7 @@
 				F70EEAEA1FB603BB006D6BC1 /* videoDetailPlayIcon_iPad.png in Resources */,
 				F799CCDD1FBF7E9900ABB9CE /* icon-home.png in Resources */,
 				F70EEB131FB603C5006D6BC1 /* OK_Right.png in Resources */,
-				F70EDC1A1FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDC1A1FB5FF2D006D6BC1 /* (null) in Resources */,
 				F799CCE21FBF7E9900ABB9CE /* icon-live.png in Resources */,
 				F799CCE11FBF7E9900ABB9CE /* icon-music.png in Resources */,
 				F70EEAD01FB603BB006D6BC1 /* play@3x.png in Resources */,
@@ -27533,7 +27533,7 @@
 				F70EDC211FB5FF2D006D6BC1 /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F70EEB021FB603BB006D6BC1 /* icon_download_enque@2x.png in Resources */,
 				F70EEB251FB603C5006D6BC1 /* ChromeCast_Animate-1_iOS.png in Resources */,
-				F70EDC271FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDC271FB5FF2D006D6BC1 /* (null) in Resources */,
 				F70EDC2A1FB5FF2D006D6BC1 /* mediaPlay.png in Resources */,
 				F70EEAD11FB603BB006D6BC1 /* radio-filled@2x.png in Resources */,
 				F70EEAF21FB603BB006D6BC1 /* cancelIcon.png in Resources */,
@@ -27582,7 +27582,7 @@
 				F70EEB1E1FB603C5006D6BC1 /* OK_Left@2x.png in Resources */,
 				F70EDC621FB5FF2D006D6BC1 /* currentPage.png in Resources */,
 				F70EEAC81FB603AA006D6BC1 /* iTunesArtwork@3x in Resources */,
-				F70EDC691FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDC691FB5FF2D006D6BC1 /* (null) in Resources */,
 				F70EEAB81FB6039F006D6BC1 /* Icon-83.5@2x.png in Resources */,
 				F70EEB581FB603E0006D6BC1 /* posterImagePlaceholder@2x.png in Resources */,
 				F70EEB281FB603C5006D6BC1 /* iOS7_Chromecast_Image-(iPhone).png in Resources */,
@@ -27593,11 +27593,11 @@
 				F70EEAFF1FB603BB006D6BC1 /* downloaded.png in Resources */,
 				F70EEAE11FB603BB006D6BC1 /* offline_pause.png in Resources */,
 				F70EEB0E1FB603BB006D6BC1 /* gridOptions@2x.png in Resources */,
-				F70EDC6E1FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDC6E1FB5FF2D006D6BC1 /* (null) in Resources */,
 				F70EEAE31FB603BB006D6BC1 /* clientnavlogo@3x.png in Resources */,
 				F765C6521FBF830100E07E1C /* icon-movies.png in Resources */,
 				F793A2331FBC9EF100B08B11 /* Lato-Semibold.ttf in Resources */,
-				F70EDC771FB5FF2D006D6BC1 /* BuildFile in Resources */,
+				F70EDC771FB5FF2D006D6BC1 /* (null) in Resources */,
 				F70EEAED1FB603BB006D6BC1 /* crossIcon@3x.png in Resources */,
 				F70EEAF51FB603BB006D6BC1 /* crossIcon@2x.png in Resources */,
 				F70EDC7F1FB5FF2D006D6BC1 /* mediaPlay@3x.png in Resources */,
@@ -27779,7 +27779,7 @@
 				F7D390162007E78200116419 /* videoImagePlaceholder@3x.png in Resources */,
 				F7D38F452007E74100116419 /* Knob@3x.png in Resources */,
 				F7D38F582007E78200116419 /* Icon-72@2x.png in Resources */,
-				F778BED22007DF72002B066F /* BuildFile in Resources */,
+				F778BED22007DF72002B066F /* (null) in Resources */,
 				F7D390132007E78200116419 /* posterImagePlaceholder@3x.png in Resources */,
 				F7D38F462007E74100116419 /* Assets.xcassets in Resources */,
 				F7D38FB72007E78200116419 /* movieTabIcon.png in Resources */,
@@ -27872,7 +27872,7 @@
 				F778BF602007DF72002B066F /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
 				F7D38F822007E78200116419 /* shareIcon@3x.png in Resources */,
 				F7D390092007E78200116419 /* OpenSans-Light.ttf in Resources */,
-				F778BF612007DF72002B066F /* BuildFile in Resources */,
+				F778BF612007DF72002B066F /* (null) in Resources */,
 				F778BF692007DF72002B066F /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F7D38F672007E78200116419 /* play@3x.png in Resources */,
 				F7D38FB82007E78200116419 /* SplashLogo_iPad@2x.png in Resources */,
@@ -27881,7 +27881,7 @@
 				F7D38FE02007E78200116419 /* ChromeCast_HeaderTitle_iOS@2x.png in Resources */,
 				F7D390042007E78200116419 /* Lato-Heavy.ttf in Resources */,
 				F7D38F802007E78200116419 /* shareIcon.png in Resources */,
-				F778BF6B2007DF72002B066F /* BuildFile in Resources */,
+				F778BF6B2007DF72002B066F /* (null) in Resources */,
 				F7D38FA42007E78200116419 /* download@2x.png in Resources */,
 				F7D38FC12007E78200116419 /* SplashLogo@3x.png in Resources */,
 				F7D38FFD2007E78200116419 /* Lato-SemiboldItalic.ttf in Resources */,
@@ -27957,7 +27957,7 @@
 				F7D38FCA2007E78200116419 /* gridDownload.png in Resources */,
 				F778BFA92007DF72002B066F /* Fullscreen@3x.png in Resources */,
 				F7D38F902007E78200116419 /* icon-home.png in Resources */,
-				F778BFB02007DF72002B066F /* BuildFile in Resources */,
+				F778BFB02007DF72002B066F /* (null) in Resources */,
 				F7D38FAC2007E78200116419 /* clientnavlogo.png in Resources */,
 				F7D390032007E78200116419 /* Lato-MediumItalic.ttf in Resources */,
 				F7D38FB52007E78200116419 /* gridDownload@2x.png in Resources */,
@@ -27965,9 +27965,9 @@
 				F7D38F712007E78200116419 /* moreTabIcon@3x.png in Resources */,
 				F7D38F912007E78200116419 /* icon-home@2x.png in Resources */,
 				F7D38F502007E78200116419 /* Icon-29.png in Resources */,
-				F778BFB12007DF72002B066F /* BuildFile in Resources */,
+				F778BFB12007DF72002B066F /* (null) in Resources */,
 				F7D390072007E78200116419 /* Lato-Medium.ttf in Resources */,
-				F778BFB32007DF72002B066F /* BuildFile in Resources */,
+				F778BFB32007DF72002B066F /* (null) in Resources */,
 				F7D38F882007E78200116419 /* icon-grid@2x.png in Resources */,
 				F7D38FC32007E78200116419 /* deleteIcon@3x.png in Resources */,
 				F7D38FCC2007E78200116419 /* OK_UpsideDown@2x.png in Resources */,
@@ -28189,7 +28189,7 @@
 				F7AC0ADE1FFD72FE0084FBBA /* crossIcon@3x.png in Resources */,
 				F7AC0B231FFD72FE0084FBBA /* OK_UpsideDown@2x.png in Resources */,
 				F7AC0AFB1FFD72FE0084FBBA /* download@2x.png in Resources */,
-				F7AC07721FFD5D760084FBBA /* BuildFile in Resources */,
+				F7AC07721FFD5D760084FBBA /* (null) in Resources */,
 				F76312DA1FFE8B1B0024726E /* icon-movies.png in Resources */,
 				F7AC07731FFD5D760084FBBA /* currentPage_iPad.png in Resources */,
 				F7AC0B501FFD73100084FBBA /* Lato-Thin.ttf in Resources */,
@@ -28334,7 +28334,7 @@
 				F7AC0AF91FFD72FE0084FBBA /* pipCross.png in Resources */,
 				542109BB200926A30037A7B2 /* Forward@3x.png in Resources */,
 				F7AC08001FFD5D760084FBBA /* SFPlanAdditionalTextCell_iPad.xib in Resources */,
-				F7AC08011FFD5D760084FBBA /* BuildFile in Resources */,
+				F7AC08011FFD5D760084FBBA /* (null) in Resources */,
 				F7AC0AFC1FFD72FE0084FBBA /* icon-search@3x.png in Resources */,
 				F7AC0B0E1FFD72FE0084FBBA /* movieTabIcon.png in Resources */,
 				F7AC0ADB1FFD72FE0084FBBA /* videoDetailPlayIcon_iPad.png in Resources */,
@@ -28348,7 +28348,7 @@
 				F7AC08091FFD5D760084FBBA /* SFPlanAdditionalTextCell_iPhone.xib in Resources */,
 				F7AC0A9F1FFD72710084FBBA /* Knob.png in Resources */,
 				F7AC0AE51FFD72FE0084FBBA /* icon-grid.png in Resources */,
-				F7AC080B1FFD5D760084FBBA /* BuildFile in Resources */,
+				F7AC080B1FFD5D760084FBBA /* (null) in Resources */,
 				F7AC0B5B1FFD73100084FBBA /* Lato-Heavy.ttf in Resources */,
 				F7AC0B141FFD72FE0084FBBA /* addToWatchlistIcon@2x.png in Resources */,
 				F7AC080E1FFD5D760084FBBA /* mediaPlay.png in Resources */,
@@ -28414,11 +28414,11 @@
 				F7AC0AA61FFD72920084FBBA /* Icon-40@2x.png in Resources */,
 				F7D73DD1201288E40040BC0F /* articleGridOptions.png in Resources */,
 				F7AC0ABA1FFD72D30084FBBA /* iTunesArtwork in Resources */,
-				F7AC08501FFD5D760084FBBA /* BuildFile in Resources */,
-				F7AC08511FFD5D760084FBBA /* BuildFile in Resources */,
+				F7AC08501FFD5D760084FBBA /* (null) in Resources */,
+				F7AC08511FFD5D760084FBBA /* (null) in Resources */,
 				F7AC0B451FFD72FE0084FBBA /* movieTabIcon@3x.png in Resources */,
 				F7AC0B371FFD72FE0084FBBA /* ChromeCast_HeaderTitle_iOS@2x.png in Resources */,
-				F7AC08531FFD5D760084FBBA /* BuildFile in Resources */,
+				F7AC08531FFD5D760084FBBA /* (null) in Resources */,
 				F7AC0B131FFD72FE0084FBBA /* icon_download_enque@3x.png in Resources */,
 				F7AC0AFD1FFD72FE0084FBBA /* deleteIcon.png in Resources */,
 				F7AC0B5F1FFD73100084FBBA /* Lato-ThinItalic.ttf in Resources */,
@@ -31143,7 +31143,7 @@
 				010B36491FE108F9002F83D0 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				010B364A1FE108F9002F83D0 /* ModuleAPIParser.swift in Sources */,
 				F7263DFB20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				010B364B1FE108F9002F83D0 /* BuildFile in Sources */,
+				010B364B1FE108F9002F83D0 /* (null) in Sources */,
 				010B364C1FE108F9002F83D0 /* SFVideoDetailModuleParser.swift in Sources */,
 				010B364D1FE108F9002F83D0 /* DownloadProgresser.swift in Sources */,
 				010B364E1FE108F9002F83D0 /* SFCountryDialModel.swift in Sources */,
@@ -31276,7 +31276,7 @@
 				010B36C41FE108F9002F83D0 /* Date+StringComponents.swift in Sources */,
 				010B36C51FE108F9002F83D0 /* SFJumbotronObject.swift in Sources */,
 				010B36C61FE108F9002F83D0 /* SFVerticalCollectionGridCell.swift in Sources */,
-				010B36C71FE108F9002F83D0 /* BuildFile in Sources */,
+				010B36C71FE108F9002F83D0 /* (null) in Sources */,
 				010B36C81FE108F9002F83D0 /* SFProductListObject.swift in Sources */,
 				010B36C91FE108F9002F83D0 /* ModuleUIParser.swift in Sources */,
 				010B36CA1FE108F9002F83D0 /* SFImage.swift in Sources */,
@@ -31304,7 +31304,7 @@
 				010B37EF1FE10906002F83D0 /* LoadingSplashViewController_tvOS.swift in Sources */,
 				010B37F01FE10906002F83D0 /* ModuleUIParser.swift in Sources */,
 				010B37F11FE10906002F83D0 /* AppConfigManager.swift in Sources */,
-				010B37F21FE10906002F83D0 /* BuildFile in Sources */,
+				010B37F21FE10906002F83D0 /* (null) in Sources */,
 				010B37F31FE10906002F83D0 /* Alamofire+IgnoreCache.swift in Sources */,
 				010B37F41FE10906002F83D0 /* FeatureListModel.swift in Sources */,
 				010B37F51FE10906002F83D0 /* PreviewEndEnforcer.swift in Sources */,
@@ -31726,7 +31726,7 @@
 				013A0C551FEA93FD0040B8D3 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				013A0C561FEA93FD0040B8D3 /* ModuleAPIParser.swift in Sources */,
 				F7263DFC20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				013A0C571FEA93FD0040B8D3 /* BuildFile in Sources */,
+				013A0C571FEA93FD0040B8D3 /* (null) in Sources */,
 				013A0C581FEA93FD0040B8D3 /* SFVideoDetailModuleParser.swift in Sources */,
 				013A0C591FEA93FD0040B8D3 /* DownloadProgresser.swift in Sources */,
 				013A0C5A1FEA93FD0040B8D3 /* SFCountryDialModel.swift in Sources */,
@@ -31859,7 +31859,7 @@
 				013A0CD01FEA93FD0040B8D3 /* Date+StringComponents.swift in Sources */,
 				013A0CD11FEA93FD0040B8D3 /* SFJumbotronObject.swift in Sources */,
 				013A0CD21FEA93FD0040B8D3 /* SFVerticalCollectionGridCell.swift in Sources */,
-				013A0CD31FEA93FD0040B8D3 /* BuildFile in Sources */,
+				013A0CD31FEA93FD0040B8D3 /* (null) in Sources */,
 				013A0CD41FEA93FD0040B8D3 /* SFProductListObject.swift in Sources */,
 				013A0CD51FEA93FD0040B8D3 /* ModuleUIParser.swift in Sources */,
 				013A0CD61FEA93FD0040B8D3 /* SFImage.swift in Sources */,
@@ -31887,7 +31887,7 @@
 				013A0FBA1FEA9D930040B8D3 /* LoadingSplashViewController_tvOS.swift in Sources */,
 				013A0FBB1FEA9D930040B8D3 /* ModuleUIParser.swift in Sources */,
 				013A0FBC1FEA9D930040B8D3 /* AppConfigManager.swift in Sources */,
-				013A0FBD1FEA9D930040B8D3 /* BuildFile in Sources */,
+				013A0FBD1FEA9D930040B8D3 /* (null) in Sources */,
 				013A0FBE1FEA9D930040B8D3 /* Alamofire+IgnoreCache.swift in Sources */,
 				013A0FBF1FEA9D930040B8D3 /* FeatureListModel.swift in Sources */,
 				013A0FC01FEA9D930040B8D3 /* PreviewEndEnforcer.swift in Sources */,
@@ -32309,7 +32309,7 @@
 				0153A7B31FEBB459006BD7A3 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				0153A7B41FEBB459006BD7A3 /* ModuleAPIParser.swift in Sources */,
 				F7263DFD20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				0153A7B51FEBB459006BD7A3 /* BuildFile in Sources */,
+				0153A7B51FEBB459006BD7A3 /* (null) in Sources */,
 				0153A7B61FEBB459006BD7A3 /* SFVideoDetailModuleParser.swift in Sources */,
 				0153A7B71FEBB459006BD7A3 /* DownloadProgresser.swift in Sources */,
 				0153A7B81FEBB459006BD7A3 /* SFCountryDialModel.swift in Sources */,
@@ -32442,7 +32442,7 @@
 				0153A82F1FEBB459006BD7A3 /* Date+StringComponents.swift in Sources */,
 				0153A8301FEBB459006BD7A3 /* SFJumbotronObject.swift in Sources */,
 				0153A8311FEBB459006BD7A3 /* SFVerticalCollectionGridCell.swift in Sources */,
-				0153A8321FEBB459006BD7A3 /* BuildFile in Sources */,
+				0153A8321FEBB459006BD7A3 /* (null) in Sources */,
 				0153A8331FEBB459006BD7A3 /* SFProductListObject.swift in Sources */,
 				0153A8341FEBB459006BD7A3 /* ModuleUIParser.swift in Sources */,
 				0153A8351FEBB459006BD7A3 /* SFImage.swift in Sources */,
@@ -32470,7 +32470,7 @@
 				0153A9641FEBB45C006BD7A3 /* LoadingSplashViewController_tvOS.swift in Sources */,
 				0153A9651FEBB45C006BD7A3 /* ModuleUIParser.swift in Sources */,
 				0153A9661FEBB45C006BD7A3 /* AppConfigManager.swift in Sources */,
-				0153A9671FEBB45C006BD7A3 /* BuildFile in Sources */,
+				0153A9671FEBB45C006BD7A3 /* (null) in Sources */,
 				0153A9681FEBB45C006BD7A3 /* Alamofire+IgnoreCache.swift in Sources */,
 				0153A9691FEBB45C006BD7A3 /* FeatureListModel.swift in Sources */,
 				0153A96A1FEBB45C006BD7A3 /* PreviewEndEnforcer.swift in Sources */,
@@ -32893,7 +32893,7 @@
 				0153ADAA1FEBD33D006BD7A3 /* ModuleAPIParser.swift in Sources */,
 				F7263DFE20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
 				7762D3171FED271A003F72C7 /* ModuleUIParser.swift in Sources */,
-				0153ADAB1FEBD33D006BD7A3 /* BuildFile in Sources */,
+				0153ADAB1FEBD33D006BD7A3 /* (null) in Sources */,
 				0153ADAC1FEBD33D006BD7A3 /* SFVideoDetailModuleParser.swift in Sources */,
 				0153ADAD1FEBD33D006BD7A3 /* DownloadProgresser.swift in Sources */,
 				0153ADAE1FEBD33D006BD7A3 /* SFCountryDialModel.swift in Sources */,
@@ -33026,7 +33026,7 @@
 				0153AE251FEBD33D006BD7A3 /* Date+StringComponents.swift in Sources */,
 				0153AE261FEBD33D006BD7A3 /* SFJumbotronObject.swift in Sources */,
 				0153AE271FEBD33D006BD7A3 /* SFVerticalCollectionGridCell.swift in Sources */,
-				0153AE281FEBD33D006BD7A3 /* BuildFile in Sources */,
+				0153AE281FEBD33D006BD7A3 /* (null) in Sources */,
 				0153AE291FEBD33D006BD7A3 /* SFProductListObject.swift in Sources */,
 				0153AE2B1FEBD33D006BD7A3 /* SFImage.swift in Sources */,
 				0153AE2C1FEBD33D006BD7A3 /* SFBannerView.swift in Sources */,
@@ -33053,7 +33053,7 @@
 				0153AF521FEBD340006BD7A3 /* LoadingSplashViewController_tvOS.swift in Sources */,
 				0153AF531FEBD340006BD7A3 /* ModuleUIParser.swift in Sources */,
 				0153AF541FEBD340006BD7A3 /* AppConfigManager.swift in Sources */,
-				0153AF551FEBD340006BD7A3 /* BuildFile in Sources */,
+				0153AF551FEBD340006BD7A3 /* (null) in Sources */,
 				0153AF561FEBD340006BD7A3 /* Alamofire+IgnoreCache.swift in Sources */,
 				0153AF571FEBD340006BD7A3 /* FeatureListModel.swift in Sources */,
 				0153AF581FEBD340006BD7A3 /* PreviewEndEnforcer.swift in Sources */,
@@ -33339,7 +33339,7 @@
 				01FD6BB01FD7D81B0083BA11 /* LoadingSplashViewController_tvOS.swift in Sources */,
 				01FD6BB11FD7D81B0083BA11 /* ModuleUIParser.swift in Sources */,
 				01FD6BB21FD7D81B0083BA11 /* AppConfigManager.swift in Sources */,
-				01FD6BB31FD7D81B0083BA11 /* BuildFile in Sources */,
+				01FD6BB31FD7D81B0083BA11 /* (null) in Sources */,
 				01FD6BB41FD7D81B0083BA11 /* Alamofire+IgnoreCache.swift in Sources */,
 				01FD6BB51FD7D81B0083BA11 /* FeatureListModel.swift in Sources */,
 				01FD6BB61FD7D81B0083BA11 /* PreviewEndEnforcer.swift in Sources */,
@@ -33769,7 +33769,7 @@
 				F7D1796B1F7EB791000A37FB /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F7D7577A1EB7EBC900421B3B /* ModuleAPIParser.swift in Sources */,
 				F7263DF520093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				28EB84C91F29E601009A137A /* BuildFile in Sources */,
+				28EB84C91F29E601009A137A /* (null) in Sources */,
 				F74A925C1ED4A0E00073F3E3 /* SFVideoDetailModuleParser.swift in Sources */,
 				F7A1E65A1F2BEF39007DABDE /* DownloadProgresser.swift in Sources */,
 				54734C8F1F5770D00075DF51 /* SFCountryDialModel.swift in Sources */,
@@ -33902,7 +33902,7 @@
 				77F4E3601FB02A1F0086FD3D /* Date+StringComponents.swift in Sources */,
 				F73F22921ED624A500C219BA /* SFJumbotronObject.swift in Sources */,
 				F77AAA8B1F6C90DF006F9668 /* SFVerticalCollectionGridCell.swift in Sources */,
-				28EB84D31F29E62B009A137A /* BuildFile in Sources */,
+				28EB84D31F29E62B009A137A /* (null) in Sources */,
 				F7310F991F157A3300A41D13 /* SFProductListObject.swift in Sources */,
 				F7D757781EB7EBBC00421B3B /* ModuleUIParser.swift in Sources */,
 				542B19001EE08EB300D1FAC0 /* SFImage.swift in Sources */,
@@ -34498,7 +34498,7 @@
 				F704D9F41FEC2501009B13FD /* LoadingSplashViewController_tvOS.swift in Sources */,
 				F704D9F51FEC2501009B13FD /* ModuleUIParser.swift in Sources */,
 				F704D9F61FEC2501009B13FD /* AppConfigManager.swift in Sources */,
-				F704D9F71FEC2501009B13FD /* BuildFile in Sources */,
+				F704D9F71FEC2501009B13FD /* (null) in Sources */,
 				F704D9F81FEC2501009B13FD /* Alamofire+IgnoreCache.swift in Sources */,
 				F704D9F91FEC2501009B13FD /* FeatureListModel.swift in Sources */,
 				F704D9FA1FEC2501009B13FD /* PreviewEndEnforcer.swift in Sources */,
@@ -34921,7 +34921,7 @@
 				F704DC191FEC3332009B13FD /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F7263DFF20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
 				F704DC1A1FEC3332009B13FD /* ModuleAPIParser.swift in Sources */,
-				F704DC1B1FEC3332009B13FD /* BuildFile in Sources */,
+				F704DC1B1FEC3332009B13FD /* (null) in Sources */,
 				F704DC1C1FEC3332009B13FD /* SFVideoDetailModuleParser.swift in Sources */,
 				F704DC1D1FEC3332009B13FD /* DownloadProgresser.swift in Sources */,
 				F704DC1E1FEC3332009B13FD /* SFCountryDialModel.swift in Sources */,
@@ -35054,7 +35054,7 @@
 				F704DC951FEC3332009B13FD /* Date+StringComponents.swift in Sources */,
 				F704DC961FEC3332009B13FD /* SFJumbotronObject.swift in Sources */,
 				F704DC971FEC3332009B13FD /* SFVerticalCollectionGridCell.swift in Sources */,
-				F704DC981FEC3332009B13FD /* BuildFile in Sources */,
+				F704DC981FEC3332009B13FD /* (null) in Sources */,
 				F704DC991FEC3332009B13FD /* SFProductListObject.swift in Sources */,
 				F704DC9B1FEC3332009B13FD /* SFImage.swift in Sources */,
 				F704DC9C1FEC3332009B13FD /* SFBannerView.swift in Sources */,
@@ -35218,7 +35218,7 @@
 				F70ED1A61FB5FEA4006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F70ED1A71FB5FEA4006D6BC1 /* ModuleAPIParser.swift in Sources */,
 				F7263DF620093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F70ED1A81FB5FEA4006D6BC1 /* BuildFile in Sources */,
+				F70ED1A81FB5FEA4006D6BC1 /* (null) in Sources */,
 				F70ED1A91FB5FEA4006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */,
 				F70ED1AA1FB5FEA4006D6BC1 /* DownloadProgresser.swift in Sources */,
 				F70ED1AB1FB5FEA4006D6BC1 /* SFCountryDialModel.swift in Sources */,
@@ -35351,7 +35351,7 @@
 				F70ED2141FB5FEA4006D6BC1 /* Date+StringComponents.swift in Sources */,
 				F70ED2151FB5FEA4006D6BC1 /* SFJumbotronObject.swift in Sources */,
 				F70ED2161FB5FEA4006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */,
-				F70ED2171FB5FEA4006D6BC1 /* BuildFile in Sources */,
+				F70ED2171FB5FEA4006D6BC1 /* (null) in Sources */,
 				F70ED2181FB5FEA4006D6BC1 /* SFProductListObject.swift in Sources */,
 				F70ED2191FB5FEA4006D6BC1 /* ModuleUIParser.swift in Sources */,
 				F70ED21A1FB5FEA4006D6BC1 /* SFImage.swift in Sources */,
@@ -35516,7 +35516,7 @@
 				F70ED38D1FB5FEB2006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F70ED38E1FB5FEB2006D6BC1 /* ModuleAPIParser.swift in Sources */,
 				F7263DF720093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F70ED38F1FB5FEB2006D6BC1 /* BuildFile in Sources */,
+				F70ED38F1FB5FEB2006D6BC1 /* (null) in Sources */,
 				F70ED3901FB5FEB2006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */,
 				F70ED3911FB5FEB2006D6BC1 /* DownloadProgresser.swift in Sources */,
 				F70ED3921FB5FEB2006D6BC1 /* SFCountryDialModel.swift in Sources */,
@@ -35649,7 +35649,7 @@
 				F70ED3FB1FB5FEB2006D6BC1 /* Date+StringComponents.swift in Sources */,
 				F70ED3FC1FB5FEB2006D6BC1 /* SFJumbotronObject.swift in Sources */,
 				F70ED3FD1FB5FEB2006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */,
-				F70ED3FE1FB5FEB2006D6BC1 /* BuildFile in Sources */,
+				F70ED3FE1FB5FEB2006D6BC1 /* (null) in Sources */,
 				F70ED3FF1FB5FEB2006D6BC1 /* SFProductListObject.swift in Sources */,
 				F70ED4001FB5FEB2006D6BC1 /* ModuleUIParser.swift in Sources */,
 				F70ED4011FB5FEB2006D6BC1 /* SFImage.swift in Sources */,
@@ -35812,7 +35812,7 @@
 				F70ED5741FB5FEC2006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F70ED5751FB5FEC2006D6BC1 /* ModuleAPIParser.swift in Sources */,
 				F7263DF820093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F70ED5761FB5FEC2006D6BC1 /* BuildFile in Sources */,
+				F70ED5761FB5FEC2006D6BC1 /* (null) in Sources */,
 				F70ED5771FB5FEC2006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */,
 				F70ED5781FB5FEC2006D6BC1 /* DownloadProgresser.swift in Sources */,
 				F70ED5791FB5FEC2006D6BC1 /* SFCountryDialModel.swift in Sources */,
@@ -35941,7 +35941,7 @@
 				F70ED5E21FB5FEC2006D6BC1 /* Date+StringComponents.swift in Sources */,
 				F70ED5E31FB5FEC2006D6BC1 /* SFJumbotronObject.swift in Sources */,
 				F70ED5E41FB5FEC2006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */,
-				F70ED5E51FB5FEC2006D6BC1 /* BuildFile in Sources */,
+				F70ED5E51FB5FEC2006D6BC1 /* (null) in Sources */,
 				F772D856201A9A4200FB08E3 /* SFVerticalArticleMetadataObject.swift in Sources */,
 				F70ED5E61FB5FEC2006D6BC1 /* SFProductListObject.swift in Sources */,
 				F70ED5E71FB5FEC2006D6BC1 /* ModuleUIParser.swift in Sources */,
@@ -36107,7 +36107,7 @@
 				F70ED75B1FB5FED9006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F70ED75C1FB5FED9006D6BC1 /* ModuleAPIParser.swift in Sources */,
 				F7263DF920093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F70ED75D1FB5FED9006D6BC1 /* BuildFile in Sources */,
+				F70ED75D1FB5FED9006D6BC1 /* (null) in Sources */,
 				F70ED75E1FB5FED9006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */,
 				F70ED75F1FB5FED9006D6BC1 /* DownloadProgresser.swift in Sources */,
 				F70ED7601FB5FED9006D6BC1 /* SFCountryDialModel.swift in Sources */,
@@ -36240,7 +36240,7 @@
 				F70ED7C91FB5FED9006D6BC1 /* Date+StringComponents.swift in Sources */,
 				F70ED7CA1FB5FED9006D6BC1 /* SFJumbotronObject.swift in Sources */,
 				F70ED7CB1FB5FED9006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */,
-				F70ED7CC1FB5FED9006D6BC1 /* BuildFile in Sources */,
+				F70ED7CC1FB5FED9006D6BC1 /* (null) in Sources */,
 				F70ED7CD1FB5FED9006D6BC1 /* SFProductListObject.swift in Sources */,
 				F70ED7CE1FB5FED9006D6BC1 /* ModuleUIParser.swift in Sources */,
 				F70ED7CF1FB5FED9006D6BC1 /* SFImage.swift in Sources */,
@@ -36405,7 +36405,7 @@
 				F70EDB291FB5FF2D006D6BC1 /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F70EDB2A1FB5FF2D006D6BC1 /* ModuleAPIParser.swift in Sources */,
 				F7263DFA20093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F70EDB2B1FB5FF2D006D6BC1 /* BuildFile in Sources */,
+				F70EDB2B1FB5FF2D006D6BC1 /* (null) in Sources */,
 				F70EDB2C1FB5FF2D006D6BC1 /* SFVideoDetailModuleParser.swift in Sources */,
 				F70EDB2D1FB5FF2D006D6BC1 /* DownloadProgresser.swift in Sources */,
 				F70EDB2E1FB5FF2D006D6BC1 /* SFCountryDialModel.swift in Sources */,
@@ -36538,7 +36538,7 @@
 				F70EDB971FB5FF2D006D6BC1 /* Date+StringComponents.swift in Sources */,
 				F70EDB981FB5FF2D006D6BC1 /* SFJumbotronObject.swift in Sources */,
 				F70EDB991FB5FF2D006D6BC1 /* SFVerticalCollectionGridCell.swift in Sources */,
-				F70EDB9A1FB5FF2D006D6BC1 /* BuildFile in Sources */,
+				F70EDB9A1FB5FF2D006D6BC1 /* (null) in Sources */,
 				F70EDB9B1FB5FF2D006D6BC1 /* SFProductListObject.swift in Sources */,
 				F70EDB9C1FB5FF2D006D6BC1 /* ModuleUIParser.swift in Sources */,
 				F70EDB9D1FB5FF2D006D6BC1 /* SFImage.swift in Sources */,
@@ -36988,7 +36988,7 @@
 				F778BE392007DF72002B066F /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F778BE3A2007DF72002B066F /* ModuleAPIParser.swift in Sources */,
 				F7263E0120093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F778BE3B2007DF72002B066F /* BuildFile in Sources */,
+				F778BE3B2007DF72002B066F /* (null) in Sources */,
 				F778BE3C2007DF72002B066F /* SFVideoDetailModuleParser.swift in Sources */,
 				F778BE3D2007DF72002B066F /* DownloadProgresser.swift in Sources */,
 				F778BE3E2007DF72002B066F /* SFCountryDialModel.swift in Sources */,
@@ -37120,7 +37120,7 @@
 				F778BEB52007DF72002B066F /* Date+StringComponents.swift in Sources */,
 				F778BEB62007DF72002B066F /* SFJumbotronObject.swift in Sources */,
 				F778BEB72007DF72002B066F /* SFVerticalCollectionGridCell.swift in Sources */,
-				F778BEB82007DF72002B066F /* BuildFile in Sources */,
+				F778BEB82007DF72002B066F /* (null) in Sources */,
 				F778BEB92007DF72002B066F /* SFProductListObject.swift in Sources */,
 				F778BEBA2007DF72002B066F /* ModuleUIParser.swift in Sources */,
 				F778BEBB2007DF72002B066F /* SFImage.swift in Sources */,
@@ -37569,7 +37569,7 @@
 				F7AC06D81FFD5D760084FBBA /* AppDelegate+PageDeepLinking.swift in Sources */,
 				F7AC06D91FFD5D760084FBBA /* ModuleAPIParser.swift in Sources */,
 				F7263E0020093BB900C43D45 /* SFAdViewParser.swift in Sources */,
-				F7AC06DA1FFD5D760084FBBA /* BuildFile in Sources */,
+				F7AC06DA1FFD5D760084FBBA /* (null) in Sources */,
 				F7AC06DB1FFD5D760084FBBA /* SFVideoDetailModuleParser.swift in Sources */,
 				F7AC06DC1FFD5D760084FBBA /* DownloadProgresser.swift in Sources */,
 				F7AC06DD1FFD5D760084FBBA /* SFCountryDialModel.swift in Sources */,
@@ -37702,7 +37702,7 @@
 				F7AC07541FFD5D760084FBBA /* Date+StringComponents.swift in Sources */,
 				F7AC07551FFD5D760084FBBA /* SFJumbotronObject.swift in Sources */,
 				F7AC07561FFD5D760084FBBA /* SFVerticalCollectionGridCell.swift in Sources */,
-				F7AC07571FFD5D760084FBBA /* BuildFile in Sources */,
+				F7AC07571FFD5D760084FBBA /* (null) in Sources */,
 				F7AC07581FFD5D760084FBBA /* SFProductListObject.swift in Sources */,
 				F7AC07591FFD5D760084FBBA /* ModuleUIParser.swift in Sources */,
 				F7AC075A1FFD5D760084FBBA /* SFImage.swift in Sources */,
