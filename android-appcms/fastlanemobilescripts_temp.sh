@@ -208,25 +208,25 @@ postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading 
 
 
 
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-hdpi ./AppCMS/src/main/res/mipmap-hdpi/ --recursive
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-hdpi ./AppCMS/src/mobile/res/mipmap-hdpi/ --recursive
-postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 10 " " 0
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-hdpi ./AppCMS/src/main/res/mipmap-hdpi/ --recursive
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-hdpi ./AppCMS/src/mobile/res/mipmap-hdpi/ --recursive
+# postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 10 " " 0
 
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-mdpi ./AppCMS/src/main/res/mipmap-mdpi/ --recursive
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-mdpi ./AppCMS/src/mobile/res/mipmap-mdpi/ --recursive
-postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 11 " " 0
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-mdpi ./AppCMS/src/main/res/mipmap-mdpi/ --recursive
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-mdpi ./AppCMS/src/mobile/res/mipmap-mdpi/ --recursive
+# postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 11 " " 0
 
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xhdpi ./AppCMS/src/main/res/mipmap-xhdpi/ --recursive
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xhdpi ./AppCMS/src/mobile/res/mipmap-xhdpi/ --recursive
-postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 12 " " 0
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xhdpi ./AppCMS/src/main/res/mipmap-xhdpi/ --recursive
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xhdpi ./AppCMS/src/mobile/res/mipmap-xhdpi/ --recursive
+# postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 12 " " 0
 
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxhdpi ./AppCMS/src/main/res/mipmap-xxhdpi/ --recursive
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxhdpi ./AppCMS/src/mobile/res/mipmap-xxhdpi/ --recursive
-postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 13 " " 0
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxhdpi ./AppCMS/src/main/res/mipmap-xxhdpi/ --recursive
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxhdpi ./AppCMS/src/mobile/res/mipmap-xxhdpi/ --recursive
+# postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 13 " " 0
 
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxxhdpi ./AppCMS/src/main/res/mipmap-xxxhdpi/ --recursive
-aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxxhdpi ./AppCMS/src/mobile/res/mipmap-xxxhdpi/ --recursive
-postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 14 " " 0
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxxhdpi ./AppCMS/src/main/res/mipmap-xxxhdpi/ --recursive
+# aws s3 cp s3://${19}/$1/build/android/resource/mipmap-xxxhdpi ./AppCMS/src/mobile/res/mipmap-xxxhdpi/ --recursive
+# postBuildStatus ${17} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the build mipmap resources" 14 " " 0
 
 rm -rf ./fastlane/metadata
 
