@@ -16,8 +16,9 @@ fastlane_version "2.47.0"
 default_platform :android
 
 platform :android do
+
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+      ENV["SLACK_URL"]="https://hooks.slack.com/services/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"
   end
 
   desc "Runs all the tests"
@@ -47,16 +48,16 @@ platform :android do
 
      lane :buildLane do |options|
 
-         # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
 
-         # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-         ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
 
+         puts "******************************************************************"
+         puts options[:mySlackUrl]
+         puts "******************************************************************"
 
          myslackMessageOne = "SNAGFILMS ANDROID BUILD LANE STARTED"
 
          slack_train_start(distance: 11)
-         slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name])
+         slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
          
          slack_train()
          progress = 30
@@ -138,7 +139,7 @@ platform :android do
 
          slack_train()
 
-         slackSendMessage(my_slack_msg:"ANDROID BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name])
+         slackSendMessage(my_slack_msg:"ANDROID BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
     end
 
@@ -148,11 +149,11 @@ platform :android do
      lane :tvbeta do |options|
 
          # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-         ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+         # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
 
          slack_train_start(distance: 8)
 
-         slackSendMessage(my_slack_msg:"FIRETV BUILD LANE STARTED",my_user_name:options[:my_user_name])
+         slackSendMessage(my_slack_msg:"FIRETV BUILD LANE STARTED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
          slack_train()
 
@@ -233,7 +234,7 @@ platform :android do
           slack_train()
 
 
-          slackSendMessage(my_slack_msg:"FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name])
+          slackSendMessage(my_slack_msg:"FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
     end
 
@@ -241,9 +242,9 @@ platform :android do
     lane :supply_onplaystore do |options|
 
      # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-     ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
 
-     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE STARTED",my_user_name:options[:my_user_name])
+     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE STARTED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
      progress = 90
      value =0 
@@ -260,7 +261,7 @@ platform :android do
            apk: options[:apk_path]
          )
 
-     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE COMPLETED",my_user_name:options[:my_user_name])
+     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE COMPLETED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
 
      progress = 100
@@ -337,19 +338,26 @@ platform :android do
     desc "Send Messages on Slack"
         lane :slackSendMessage do |options|
           #ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-          ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-
+          viewliftSlackUrl="https://hooks.slack.com/services/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"
+          begin
+              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
+              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:viewliftSlackUrl)
+              rescue => ex
+                 UI.error("Something went wrong: #{ex}")
+          end         
           puts options[:my_slack_msg]
-
-          slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg")
     end
 
+  
     desc "Send Failed Messages on Slack"
         lane :buildFailedLane do |options|
-          # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-          ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-
-          slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:lane],icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg")
+          viewliftSlackUrl = "https://hooks.slack.com/services/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"
+          begin
+              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:lane],icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
+              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:viewliftSlackUrl)
+              rescue => ex
+              UI.error("Something went wrong: #{ex}")
+          end  
     end
 
     lane :updateTheVersion do |options|

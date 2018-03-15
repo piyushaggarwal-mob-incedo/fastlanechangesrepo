@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>JobBuildId</key>
-	<integer>82</integer>
+	<integer>17</integer>
 	<key>JobBuildPlatform</key>
-	<string>ios</string>
+	<string>android</string>
 	<key>JobBuildStatus</key>
 	<true/>
 	<key>JobExecutionInProgress</key>
-	<false/>
+	<true/>
 </dict>
 </plist>

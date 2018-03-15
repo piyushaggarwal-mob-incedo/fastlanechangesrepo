@@ -6,30 +6,27 @@ import requests
 import json
 
 fileDirPath = os.path.dirname(os.path.abspath(__file__))
-
 platform = sys.argv[1];
-
 print platform
-
 url = sys.argv[2];
-
 print url
 
+
+url="https://appcmsprod.viewlift.com/00000149-86ec-d4f3-a7e9-e6fe760d0000/build/android/build.json"
 response = urllib.urlopen(url)
 data = json.loads(response.read(), object_pairs_hook=OrderedDict)
 
+
 file = open(fileDirPath + '/AppCMS/src/main/assets/version.properties', 'w')
 file.close()
-
 param = ""
-
 siteName = sys.argv[3]
 buildId = sys.argv[4]
 uploadHostName = sys.argv[5]
-
 print('Upload Host Name --> ' + uploadHostName)
-
 bucketName = sys.argv[6]
+myEmailId=sys.argv[7]
+sampleSlackWebHookUrl="https://hooks.slack.com/services/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"
 
 siteId = ""
 baseUrl = ""
@@ -67,8 +64,6 @@ whatsNew = ""
 keyval = ""
 googleCredentialsFile = "googleCredentialsFile"
 
-
-
 def getKeyStorePassword():
     url = uploadHostName + '/appcms/build/data'
 
@@ -79,7 +74,7 @@ def getKeyStorePassword():
         'fieldName' : 'keystorePassword'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
+    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
     r = requests.post(url, data=json.dumps(payload), headers=headers)
     print(r.json()["data"])
     keystorePass = r.json()["data"]
@@ -97,7 +92,7 @@ def getServicesFile():
         'fieldName' : 'googleServicesFile'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
+    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
     r = requests.post(url, data=json.dumps(payload), headers=headers)
     print(r.json()["data"])
     credentailsData = r.json()["data"]
@@ -126,7 +121,9 @@ def getCredentailsFile():
         'fieldName' : 'googleCredentialFile'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
+    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
+
+    # headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
     r = requests.post(url, data=json.dumps(payload), headers=headers)
     print(r.json()["data"])
     credentailsData = r.json()["data"]
@@ -278,6 +275,11 @@ for k in data.keys():
     elif k == "whatsnew":
         keyval = "WhatsNew" + ":" + data[k]
         whatsNew = data[k]
+
+    elif k == "slackWebHook":
+        sampleSlackWebHookUrl = data[k]
+
+        
         # with open(fileDirPath + "/fastlane/metadata/android/en-US/changelogs/" + appVersionCode + ".txt","w") as myfile:
         #      myfile.write(whatsNew.encode("utf-8") + "\n")
             # else:
@@ -341,8 +343,8 @@ whatsNew = whatsNew.replace(" ", "_")
 if platform == "android":
     param = siteId + " " \
         + baseUrl + " " \
-        + appVersionName + " " \
-        + appName + " " \
+        + appVersionName + " '" \
+        + appName + "' " \
         + str(appVersionCode) + " " \
         + appPackageName + " " \
         + appResourcePath + " " \
@@ -358,15 +360,18 @@ if platform == "android":
         + str(buildId) + " " \
         + uploadHostName + " " \
         + bucketName + " " \
-        + keystorePass + " " \
-        + shortDescription + " " \
-        + whatsNew + " " \
+        + keystorePass + " '" \
+        + shortDescription + "' '" \
+        + whatsNew + "' '" \
+        + myEmailId + "' " \
+        + "sampleSlackWebHookUrl"
+
 
 elif platform == "fireTv":
      param = siteId + " " \
         + baseUrl + " " \
-        + appVersionName + " " \
-        + appName + " " \
+        + appVersionName + " '" \
+        + appName + "' " \
         + str(appVersionCode) + " " \
         + appPackageName + " " \
         + appResourcePath + " " \
@@ -378,11 +383,11 @@ elif platform == "fireTv":
         + str(buildId) + " " \
         + uploadHostName + " " \
         + bucketName + " " \
-        + keystorePass + " " \
-
+        + keystorePass + " '" \
+        + myEmailId + "' " \
+        + "sampleSlackWebHookUrl"
 
 print param
-
 
 if platform == "android":
     subprocess.call("sh " + fileDirPath + "/fastlanemobilescripts_temp.sh " + param, shell=True)

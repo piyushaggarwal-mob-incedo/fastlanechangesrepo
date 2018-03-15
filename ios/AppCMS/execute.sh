@@ -100,16 +100,13 @@ appReviewEmail)  appReviewEmail=${VALUE} ;;
 appReviewNotes)  appReviewNotes=${VALUE} ;;
 
 releaseType)  releaseType=${VALUE} ;;
-
 rating)  rating=${VALUE} ;;
-
 
 SiteName)     SiteName=${VALUE} ;;
 appShortName)  appShortName=${VALUE} ;;
 
 # itunesConnectUserName)     itunesConnectUserName=${VALUE} ;;
 # itunesConnectPassword)  itunesConnectPassword=${VALUE} ;;
-
 
 *)
 esac

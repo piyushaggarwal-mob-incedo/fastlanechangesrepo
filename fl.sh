@@ -8,5 +8,5 @@ do
     python flJobManager.py
 
     echo "Press [CTRL+C] to stop.."
-    sleep 30
+    sleep 10
 done

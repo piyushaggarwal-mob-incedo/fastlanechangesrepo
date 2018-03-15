@@ -34,8 +34,8 @@ jobPlistFileName = 'Job.plist'
 # Create SQS client
 sqs = boto3.client('sqs')
 
-# queue_url='https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_Production_queue.fifo'
-queue_url = 'https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_staging_queue.fifo'
+queue_url='https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_Production_queue.fifo'
+# queue_url = 'https://sqs.us-east-1.amazonaws.com/053866237477/Fastlane_staging_queue.fifo'
 #queue_url = 'https://queue.amazonaws.com/053866237477/Fastlane_Dev_queue.fifo'
 
 info_filename = os.path.join(os.getcwd(), jobPlistFileName)
@@ -88,7 +88,8 @@ if os.path.isfile(info_filename):
             buildId = bodyInfo['buildId']
             hostname = bodyInfo['serverBaseUrl']
             bucketName = bodyInfo['bucketName']
-            myEmail = bodyInfo['userName']
+            # myEmail = bodyInfo['userName']
+            myEmail="viewlift@gmail.com"
 
             info['JobBuildId'] = buildId
             info['JobBuildPlatform'] = platform
@@ -104,7 +105,7 @@ if os.path.isfile(info_filename):
                 subprocess.call('python ./ios/AppCMS/fastlane.py '+ platform + ' ' +  jsonURL + ' ' + siteName + ' ' + str(buildId) + ' ' + hostname + ' ' + bucketName + ' ' + myEmail, shell=True)
                 info['JobBuildStatus'] = True
             elif platform == 'android' or platform == 'fireTv':
-                subprocess.call('python ./android-appcms/fastlanedemo.py '+ platform + ' ' +  jsonURL + ' ' + siteName + ' ' + str(buildId) + ' ' + hostname + ' ' + bucketName, shell=True)
+                subprocess.call('python ./android-appcms/fastlanedemo.py '+ platform + ' ' +  jsonURL + ' ' + siteName + ' ' + str(buildId) + ' ' + hostname + ' ' + bucketName+ ' ' + myEmail, shell=True)
                 print 'Changing the build status'
                 info['JobBuildStatus'] = True
             else:

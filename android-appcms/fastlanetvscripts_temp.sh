@@ -89,7 +89,7 @@ postBuildStatus ${13} $POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading 
 
 postBuildStatus ${13} $POST_URL "BUILD_PROGRESS" "No ERROR" "Build is In Progress." 25 " " 0
 
-fastlane android tvbeta app_package_name:$6 buildid:${13} app_apk_path:./AppCMS/build/outputs/apk/tv/debug/AppCMS-tv-debug.apk tests_apk_path:./AppCMS/build/outputs/apk/androidTest/tv/debug/AppCMS-tv-debug-androidTest.apk posturl:$POST_URL keystore_path:$8 alias:${9} storepass:${16} apk_path:./AppCMS/build/outputs/apk/tv/release/AppCMS-tv-release-unsigned.apk
+fastlane android tvbeta app_package_name:$6 buildid:${13} app_apk_path:./AppCMS/build/outputs/apk/tv/debug/AppCMS-tv-debug.apk tests_apk_path:./AppCMS/build/outputs/apk/androidTest/tv/debug/AppCMS-tv-debug-androidTest.apk posturl:$POST_URL keystore_path:$8 alias:${9} storepass:${16} apk_path:./AppCMS/build/outputs/apk/tv/release/AppCMS-tv-release-unsigned.apk mySlackUrl:"{18}"
 
 IS_APP_SUCCESS="$?"
 
