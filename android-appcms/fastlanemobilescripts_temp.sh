@@ -54,8 +54,8 @@ downloadFile(){ #url, output, buildid, posturl
 }
 
 
-base64 --decode ./AppCMS/crfile.txt > ./AppCMS/google-services.json
-base64 --decode ./credentialfile.txt > ./googleplay_android.json
+# base64 --decode ./AppCMS/crfile.txt > ./AppCMS/google-services.json
+# base64 --decode ./credentialfile.txt > ./googleplay_android.json
 
 # if [ "${16}" -eq "0" ]
 #         then
