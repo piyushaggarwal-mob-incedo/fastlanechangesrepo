@@ -307,7 +307,7 @@ keyval = "HostNameSuffix" + ":" + "http\://*.hoichoi.tv"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
-keyval = "BaseUrl" + ":" + "https\://appcms.viewlift.com/"
+keyval = "BaseUrl" + ":" + "https\://appcmsprod.viewlift.com/"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 

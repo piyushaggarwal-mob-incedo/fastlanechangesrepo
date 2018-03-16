@@ -5,114 +5,199 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.003975">
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.001902">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.002949">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001393">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: slack_train_start" time="0.003742">
+      <testcase classname="fastlane.lanes" name="02: slack_train_start" time="0.001999">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: Switch to android slackSendMessage lane" time="0.002965">
+      <testcase classname="fastlane.lanes" name="03: Switch to android slackSendMessage lane" time="0.001288">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: slack" time="0.572296">
+      <testcase classname="fastlane.lanes" name="04: slack" time="0.616816">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: slack" time="0.552406">
+      <testcase classname="fastlane.lanes" name="05: slack" time="0.4541">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: slack_train" time="0.573458">
+      <testcase classname="fastlane.lanes" name="06: slack_train" time="0.479875">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: ./PostBuildStatus.sh 19 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Cleaning the Project' 30 false 0" time="0.675223">
+      <testcase classname="fastlane.lanes" name="07: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Cleaning the Project' 30 false 0" time="0.734379">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: gradle" time="4.155829">
+      <testcase classname="fastlane.lanes" name="08: gradle" time="9.946268">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: slack_train" time="0.498538">
+      <testcase classname="fastlane.lanes" name="09: slack_train" time="0.704449">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: ./PostBuildStatus.sh 19 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Debug Build and preparing for unit test cases' 35 false 0" time="0.652348">
+      <testcase classname="fastlane.lanes" name="10: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Debug Build and preparing for unit test cases' 35 false 0" time="0.835828">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: slack_train" time="0.665275">
+      <testcase classname="fastlane.lanes" name="11: slack_train" time="0.599671">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: gradle" time="9.952227">
-        
-          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:236:in `block in execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:231:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:231:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:74:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane_manager.rb:57:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:75:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/cli_tools_distributor.rb:98:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command '/Users/piyush/Music/ios/android-appcms/gradlew assemblemobileDebug -p .' was 1 instead of 0.&#10;WARNING: DSL element 'DexOptions.incremental' is obsolete and will be removed at the end of 2018&#10;Configuration 'compile' in project ':AppCMS' is deprecated. Use 'implementation' instead.&#10;Configuration 'testCompile' in project ':AppCMS' is deprecated. Use 'testImplementation' instead.&#10;Configuration 'androidTestCompile' in project ':AppCMS' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'tvCompile' in project ':AppCMS' is deprecated. Use 'tvImplementation' instead.&#10;Configuration 'mobileCompile' in project ':AppCMS' is deprecated. Use 'mobileImplementation' instead.&#10;Configuration 'provided' in project ':AppCMS' is deprecated. Use 'compileOnly' instead.&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)&#10;Configuration 'compile' in project ':exoplayer-extension-ffmpeg' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library-core' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-library-core' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'testCompile' in project ':exoplayer-library-core' is deprecated. Use 'testImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-flac' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-extension-flac' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-testutils' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-gvr' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-ima' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-extension-ima' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-leanback' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-mediasession' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-okhttp' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-opus' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-rtmp' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-extension-vp9' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library-dash' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-library-dash' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'testCompile' in project ':exoplayer-library-dash' is deprecated. Use 'testImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library-hls' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-library-hls' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library-smoothstreaming' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':exoplayer-library-smoothstreaming' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'compile' in project ':exoplayer-library-ui' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':firetvcustomkeyboard' is deprecated. Use 'implementation' instead.&#10;Configuration 'androidTestCompile' in project ':firetvcustomkeyboard' is deprecated. Use 'androidTestImplementation' instead.&#10;Configuration 'testCompile' in project ':firetvcustomkeyboard' is deprecated. Use 'testImplementation' instead.&#10;Configuration 'compile' in project ':htmlspanner' is deprecated. Use 'implementation' instead.&#10;Configuration 'compile' in project ':library' is deprecated. Use 'implementation' instead.&#10;No version name supplied, using default (mvn-push)&#10;No version name supplied, using default (mvn-push)&#10;:AppCMS:preBuild UP-TO-DATE&#10;:exoplayer-extension-vp9:preBuild UP-TO-DATE&#10;:exoplayer-extension-vp9:preDebugBuild UP-TO-DATE&#10;:exoplayer-extension-vp9:checkDebugManifest&#10;:exoplayer-extension-vp9:processDebugManifest&#10;:exoplayer-library:preBuild UP-TO-DATE&#10;:exoplayer-library:preDebugBuild UP-TO-DATE&#10;:exoplayer-library:checkDebugManifest&#10;:exoplayer-library:processDebugManifest&#10;:exoplayer-library-core:preBuild UP-TO-DATE&#10;:exoplayer-library-core:preDebugBuild UP-TO-DATE&#10;:exoplayer-library-core:checkDebugManifest&#10;:exoplayer-library-core:processDebugManifest&#10;:exoplayer-library-dash:preBuild UP-TO-DATE&#10;:exoplayer-library-dash:preDebugBuild UP-TO-DATE&#10;:exoplayer-library-dash:checkDebugManifest&#10;:exoplayer-library-dash:processDebugManifest&#10;:exoplayer-library-hls:preBuild UP-TO-DATE&#10;:exoplayer-library-hls:preDebugBuild UP-TO-DATE&#10;:exoplayer-library-hls:checkDebugManifest&#10;:exoplayer-library-hls:processDebugManifest&#10;:exoplayer-library-smoothstreaming:preBuild UP-TO-DATE&#10;:exoplayer-library-smoothstreaming:preDebugBuild UP-TO-DATE&#10;:exoplayer-library-smoothstreaming:checkDebugManifest&#10;:exoplayer-library-smoothstreaming:processDebugManifest&#10;:exoplayer-library-ui:preBuild UP-TO-DATE&#10;:exoplayer-library-ui:preDebugBuild UP-TO-DATE&#10;:exoplayer-library-ui:checkDebugManifest&#10;:exoplayer-library-ui:processDebugManifest&#10;:htmlspanner:preBuild UP-TO-DATE&#10;:htmlspanner:preDebugBuild UP-TO-DATE&#10;:htmlspanner:checkDebugManifest&#10;:htmlspanner:processDebugManifest&#10;:library:preBuild UP-TO-DATE&#10;:library:preDebugBuild UP-TO-DATE&#10;:library:checkDebugManifest&#10;:library:processDebugManifest&#10;:AppCMS:preMobileDebugBuild&#10;:exoplayer-library-core:compileDebugAidl&#10;:exoplayer-extension-vp9:compileDebugAidl&#10;:exoplayer-library-dash:compileDebugAidl&#10;:exoplayer-library-hls:compileDebugAidl&#10;:exoplayer-library-smoothstreaming:compileDebugAidl&#10;:exoplayer-library-ui:compileDebugAidl&#10;:exoplayer-library:compileDebugAidl&#10;:htmlspanner:compileDebugAidl&#10;:library:compileDebugAidl&#10;:AppCMS:compileMobileDebugAidl&#10;:exoplayer-extension-vp9:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library-core:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library-dash:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library-hls:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library-smoothstreaming:packageDebugRenderscript NO-SOURCE&#10;:exoplayer-library-ui:packageDebugRenderscript NO-SOURCE&#10;:htmlspanner:packageDebugRenderscript NO-SOURCE&#10;:library:packageDebugRenderscript NO-SOURCE&#10;:AppCMS:compileMobileDebugRenderscript&#10;:AppCMS:checkMobileDebugManifest&#10;:AppCMS:generateMobileDebugBuildConfig&#10;:AppCMS:prepareLintJar UP-TO-DATE&#10;:AppCMS:mergeMobileDebugShaders&#10;:AppCMS:compileMobileDebugShaders&#10;:AppCMS:generateMobileDebugAssets&#10;:exoplayer-extension-vp9:mergeDebugShaders&#10;:exoplayer-extension-vp9:compileDebugShaders&#10;:exoplayer-extension-vp9:generateDebugAssets&#10;:exoplayer-extension-vp9:packageDebugAssets&#10;:exoplayer-library:mergeDebugShaders&#10;:exoplayer-library:compileDebugShaders&#10;:exoplayer-library:generateDebugAssets&#10;:exoplayer-library:packageDebugAssets&#10;:exoplayer-library-core:mergeDebugShaders&#10;:exoplayer-library-core:compileDebugShaders&#10;:exoplayer-library-core:generateDebugAssets&#10;:exoplayer-library-core:packageDebugAssets&#10;:exoplayer-library-dash:mergeDebugShaders&#10;:exoplayer-library-dash:compileDebugShaders&#10;:exoplayer-library-dash:generateDebugAssets&#10;:exoplayer-library-dash:packageDebugAssets&#10;:exoplayer-library-hls:mergeDebugShaders&#10;:exoplayer-library-hls:compileDebugShaders&#10;:exoplayer-library-hls:generateDebugAssets&#10;:exoplayer-library-hls:packageDebugAssets&#10;:exoplayer-library-smoothstreaming:mergeDebugShaders&#10;:exoplayer-library-smoothstreaming:compileDebugShaders&#10;:exoplayer-library-smoothstreaming:generateDebugAssets&#10;:exoplayer-library-smoothstreaming:packageDebugAssets&#10;:exoplayer-library-ui:mergeDebugShaders&#10;:exoplayer-library-ui:compileDebugShaders&#10;:exoplayer-library-ui:generateDebugAssets&#10;:exoplayer-library-ui:packageDebugAssets&#10;:htmlspanner:mergeDebugShaders&#10;:htmlspanner:compileDebugShaders&#10;:htmlspanner:generateDebugAssets&#10;:htmlspanner:packageDebugAssets&#10;:library:mergeDebugShaders&#10;:library:compileDebugShaders&#10;:library:generateDebugAssets&#10;:library:packageDebugAssets&#10;:AppCMS:mergeMobileDebugAssets&#10;:AppCMS:processMobileDebugGoogleServices&#10;Parsing json file: /Users/piyush/Music/ios/android-appcms/AppCMS/google-services.json&#10;:AppCMS:processMobileDebugGoogleServices FAILED&#10;&#10;FAILURE: Build failed with an exception.&#10;&#10;* What went wrong:&#10;Execution failed for task ':AppCMS:processMobileDebugGoogleServices'.&#10;&gt; No matching client found for package name 'com.viewlift.snagfilms'&#10;&#10;* Try:&#10;Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.&#10;&#10;* Get more help at https://help.gradle.org&#10;&#10;BUILD FAILED in 9s&#10;64 actionable tasks: 63 executed, 1 up-to-date&#10;" />
+      <testcase classname="fastlane.lanes" name="12: gradle" time="51.945929">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="13: Switch to android buildFailedLane lane" time="0.002503">
+      <testcase classname="fastlane.lanes" name="13: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Running the unit test cases' 40 false 0" time="0.856906">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="14: slack" time="0.470763">
+      <testcase classname="fastlane.lanes" name="14: slack_train" time="0.703892">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="15: slack" time="0.487653">
+      <testcase classname="fastlane.lanes" name="15: gradle" time="31.658654">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="16: slack_train_crash" time="0.51112">
+      <testcase classname="fastlane.lanes" name="16: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Phone screenshots' 45 false 0" time="0.718463">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="17: Switch to android buildFailedLane lane" time="0.002439">
+      <testcase classname="fastlane.lanes" name="17: slack_train" time="0.525639">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="18: slack" time="0.631945">
+      <testcase classname="fastlane.lanes" name="18: Switch to android phones_screenshots lane" time="0.003038">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="19: slack" time="0.654854">
+      <testcase classname="fastlane.lanes" name="19: adb -s emulator-5554 shell input keyevent 82" time="0.31188">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="20: ./PostBuildStatus.sh 19 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'FAILED_BUILD_ERROR' 'Build Failure. Execution failed for task :AppCMS:mergeMobileDebugResources./Users/piyush/Desktop/fastlane_android/android_fastlane/AppCMS/src/mobile/AndroidManifest.xml:27:5-67 Warning.Configuration compile in project :exoplayer-extension-rtmp is deprecated. Use implementation instead.No matching client found for package name.:AppCMS:processMobileDebugGoogleServices FAILED.exoplayer-library-smoothstreaming:packageDebugAssets.:AppCMS:mergeMobileDebugAssets' 'Build Failed' 0 false 0" time="0.777293">
+      <testcase classname="fastlane.lanes" name="20: capture_android_screenshots" time="57.715469">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="21: ./PostBuildStatus.sh 19 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'FAILED_BUILD_ERROR' &quot;Exitstatusofcommand/Users/piyush/Music/ios/android-appcms/gradlewassemblemobileDebug-p.was1insteadof0.WARNING:DSLelementDexOptions.incrementalisobsoleteandwillberemovedattheendof2018Configurationcompileinproject:AppCMSisdeprecated.Useimplementationinstead.ConfigurationtestCompileinproject:AppCMSisdeprecated.UsetestImplementationinstead.ConfigurationandroidTestCompileinproject:AppCMSisdeprecated.UseandroidTestImplementationinstead.ConfigurationtvCompileinproject:AppCMSisdeprecated.UsetvImplementationinstead.ConfigurationmobileCompileinproject:AppCMSisdeprecated.UsemobileImplementationinstead.Configurationprovidedinproject:AppCMSisdeprecated.UsecompileOnlyinstead.registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)registerResGeneratingTaskisdeprecated,useregisterGeneratedFolders(FileCollection)Configurationcompileinproject:exoplayer-extension-ffmpegisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-library-coreisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-library-coreisdeprecated.UseandroidTestImplementationinstead.ConfigurationtestCompileinproject:exoplayer-library-coreisdeprecated.UsetestImplementationinstead.Configurationcompileinproject:exoplayer-extension-flacisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-extension-flacisdeprecated.UseandroidTestImplementationinstead.Configurationcompileinproject:exoplayer-testutilsisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-gvrisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-imaisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-extension-imaisdeprecated.UseandroidTestImplementationinstead.Configurationcompileinproject:exoplayer-libraryisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-leanbackisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-mediasessionisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-okhttpisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-opusisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-rtmpisdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-extension-vp9isdeprecated.Useimplementationinstead.Configurationcompileinproject:exoplayer-library-dashisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-library-dashisdeprecated.UseandroidTestImplementationinstead.ConfigurationtestCompileinproject:exoplayer-library-dashisdeprecated.UsetestImplementationinstead.Configurationcompileinproject:exoplayer-library-hlsisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-library-hlsisdeprecated.UseandroidTestImplementationinstead.Configurationcompileinproject:exoplayer-library-smoothstreamingisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:exoplayer-library-smoothstreamingisdeprecated.UseandroidTestImplementationinstead.Configurationcompileinproject:exoplayer-library-uiisdeprecated.Useimplementationinstead.Configurationcompileinproject:firetvcustomkeyboardisdeprecated.Useimplementationinstead.ConfigurationandroidTestCompileinproject:firetvcustomkeyboardisdeprecated.UseandroidTestImplementationinstead.ConfigurationtestCompileinproject:firetvcustomkeyboardisdeprecated.UsetestImplementationinstead.Configurationcompileinproject:htmlspannerisdeprecated.Useimplementationinstead.Configurationcompileinproject:libraryisdeprecated.Useimplementationinstead.Noversionnamesupplied,usingdefault(mvn-push)Noversionnamesupplied,usingdefault(mvn-push):AppCMS:preBuildUP-TO-DATE:exoplayer-extension-vp9:preBuildUP-TO-DATE:exoplayer-extension-vp9:preDebugBuildUP-TO-DATE:exoplayer-extension-vp9:checkDebugManifest:exoplayer-extension-vp9:processDebugManifest:exoplayer-library:preBuildUP-TO-DATE:exoplayer-library:preDebugBuildUP-TO-DATE:exoplayer-library:checkDebugManifest:exoplayer-library:processDebugManifest:exoplayer-library-core:preBuildUP-TO-DATE:exoplayer-library-core:preDebugBuildUP-TO-DATE:exoplayer-library-core:checkDebugManifest:exoplayer-library-core:processDebugManifest:exoplayer-library-dash:preBuildUP-TO-DATE:exoplayer-library-dash:preDebugBuildUP-TO-DATE:exoplayer-library-dash:checkDebugManifest:exoplayer-library-dash:processDebugManifest:exoplayer-library-hls:preBuildUP-TO-DATE:exoplayer-library-hls:preDebugBuildUP-TO-DATE:exoplayer-library-hls:checkDebugManifest:exoplayer-library-hls:processDebugManifest:exoplayer-library-smoothstreaming:preBuildUP-TO-DATE:exoplayer-library-smoothstreaming:preDebugBuildUP-TO-DATE:exoplayer-library-smoothstreaming:checkDebugManifest:exoplayer-library-smoothstreaming:processDebugManifest:exoplayer-library-ui:preBuildUP-TO-DATE:exoplayer-library-ui:preDebugBuildUP-TO-DATE:exoplayer-library-ui:checkDebugManifest:exoplayer-library-ui:processDebugManifest:htmlspanner:preBuildUP-TO-DATE:htmlspanner:preDebugBuildUP-TO-DATE:htmlspanner:checkDebugManifest:htmlspanner:processDebugManifest:library:preBuildUP-TO-DATE:library:preDebugBuildUP-TO-DATE:library:checkDebugManifest:library:processDebugManifest:AppCMS:preMobileDebugBuild:exoplayer-library-core:compileDebugAidl:exoplayer-extension-vp9:compileDebugAidl:exoplayer-library-dash:compileDebugAidl:exoplayer-library-hls:compileDebugAidl:exoplayer-library-smoothstreaming:compileDebugAidl:exoplayer-library-ui:compileDebugAidl:exoplayer-library:compileDebugAidl:htmlspanner:compileDebugAidl:library:compileDebugAidl:AppCMS:compileMobileDebugAidl:exoplayer-extension-vp9:packageDebugRenderscriptNO-SOURCE:exoplayer-library:packageDebugRenderscriptNO-SOURCE:exoplayer-library-core:packageDebugRenderscriptNO-SOURCE:exoplayer-library-dash:packageDebugRenderscriptNO-SOURCE:exoplayer-library-hls:packageDebugRenderscriptNO-SOURCE:exoplayer-library-smoothstreaming:packageDebugRenderscriptNO-SOURCE:exoplayer-library-ui:packageDebugRenderscriptNO-SOURCE:htmlspanner:packageDebugRenderscriptNO-SOURCE:library:packageDebugRenderscriptNO-SOURCE:AppCMS:compileMobileDebugRenderscript:AppCMS:checkMobileDebugManifest:AppCMS:generateMobileDebugBuildConfig:AppCMS:prepareLintJarUP-TO-DATE:AppCMS:mergeMobileDebugShaders:AppCMS:compileMobileDebugShaders:AppCMS:generateMobileDebugAssets:exoplayer-extension-vp9:mergeDebugShaders:exoplayer-extension-vp9:compileDebugShaders:exoplayer-extension-vp9:generateDebugAssets:exoplayer-extension-vp9:packageDebugAssets:exoplayer-library:mergeDebugShaders:exoplayer-library:compileDebugShaders:exoplayer-library:generateDebugAssets:exoplayer-library:packageDebugAssets:exoplayer-library-core:mergeDebugShaders:exoplayer-library-core:compileDebugShaders:exoplayer-library-core:generateDebugAssets:exoplayer-library-core:packageDebugAssets:exoplayer-library-dash:mergeDebugShaders:exoplayer-library-dash:compileDebugShaders:exoplayer-library-dash:generateDebugAssets:exoplayer-library-dash:packageDebugAssets:exoplayer-library-hls:mergeDebugShaders:exoplayer-library-hls:compileDebugShaders:exoplayer-library-hls:generateDebugAssets:exoplayer-library-hls:packageDebugAssets:exoplayer-library-smoothstreaming:mergeDebugShaders:exoplayer-library-smoothstreaming:compileDebugShaders:exoplayer-library-smoothstreaming:generateDebugAssets:exoplayer-library-smoothstreaming:packageDebugAssets:exoplayer-library-ui:mergeDebugShaders:exoplayer-library-ui:compileDebugShaders:exoplayer-library-ui:generateDebugAssets:exoplayer-library-ui:packageDebugAssets:htmlspanner:mergeDebugShaders:htmlspanner:compileDebugShaders:htmlspanner:generateDebugAssets:htmlspanner:packageDebugAssets:library:mergeDebugShaders:library:compileDebugShaders:library:generateDebugAssets:library:packageDebugAssets:AppCMS:mergeMobileDebugAssets:AppCMS:processMobileDebugGoogleServicesParsingjsonfile:/Users/piyush/Music/ios/android-appcms/AppCMS/google-services.json:AppCMS:processMobileDebugGoogleServicesFAILEDFAILURE:Buildfailedwithanexception.*Whatwentwrong:Executionfailedfortask:AppCMS:processMobileDebugGoogleServices.&gt;Nomatchingclientfoundforpackagenamecom.viewlift.snagfilms*Try:Runwith--stacktraceoptiontogetthestacktrace.Runwith--infoor--debugoptiontogetmorelogoutput.*Getmorehelpathttps://help.gradle.orgBUILDFAILEDin9s64actionabletasks:63executed,1up-to-date&quot; 'Build Failed' 0 false 0" time="1.339029">
+      <testcase classname="fastlane.lanes" name="21: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Tablet Screenshots' 50 false 0" time="1.111638">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="22: slack_train" time="0.831085">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="23: Switch to android teninchtablet_screenshots lane" time="0.003014">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="24: adb -s emulator-5556 shell input keyevent 82" time="0.020836">
+        
+          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:185:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:180:in `sh'&#10;Fastfile:309:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:105:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane_manager.rb:57:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:75:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/cli_tools_distributor.rb:98:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'adb -s emulator-5556 shell input keyevent 82' was 1 instead of 0.&#10;error: device 'emulator-5556' not found&#10;" />
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="25: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Creating the Release Build' 55 false 0" time="0.686537">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="26: slack_train" time="0.558725">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="27: gradle" time="64.130526">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="28: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Signed Build with unique keystore' 62 false 0" time="0.852945">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="29: slack_train" time="0.702413">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="30: sign_apk" time="12.083147">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="31: slack_train" time="0.493281">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="32: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Optimizing and Zip Alignining the Build for reducing the Build Size' 65 false 0" time="0.661388">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="33: slack_train" time="0.50091">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="34: zipalign" time="1.501284">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="35: slack_train" time="0.50272">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="36: Switch to android slackSendMessage lane" time="0.001471">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="37: slack" time="0.526759">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="38: slack" time="0.622304">
         
       </testcase>
     

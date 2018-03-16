@@ -49,13 +49,15 @@ platform :android do
      lane :buildLane do |options|
 
 
-
          puts "******************************************************************"
          puts options[:mySlackUrl]
+         puts options[:myAppName]
+         puts options[:myAppVersion]
+         puts options[:myEmailId]
+         puts options[:buildId]
          puts "******************************************************************"
 
-         myslackMessageOne = "SNAGFILMS ANDROID BUILD LANE STARTED"
-
+         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE STARTED. BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
          slack_train_start(distance: 11)
          slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
          
@@ -139,7 +141,8 @@ platform :android do
 
          slack_train()
 
-         slackSendMessage(my_slack_msg:"ANDROID BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
+         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE COMPLETED. UPLOADING BUILD TO S3 BUCKET. BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+
 
     end
 
@@ -153,7 +156,8 @@ platform :android do
 
          slack_train_start(distance: 8)
 
-         slackSendMessage(my_slack_msg:"FIRETV BUILD LANE STARTED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
+         myslackMessageOne = options[:myAppName].to_s + " FIRETV BUILD LANE STARTED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+         slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
          slack_train()
 
@@ -233,8 +237,9 @@ platform :android do
 
           slack_train()
 
+          myslackMessageOne = options[:myAppName].to_s + " FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
 
-          slackSendMessage(my_slack_msg:"FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
+          slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
     end
 
@@ -243,8 +248,8 @@ platform :android do
 
      # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
      # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-
-     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE STARTED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
+     myslackMessageOne = options[:myAppName].to_s + " UPLOADING TO PLAY STORE LANE STARTED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+     slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
      progress = 90
      value =0 
@@ -261,7 +266,11 @@ platform :android do
            apk: options[:apk_path]
          )
 
-     slackSendMessage(my_slack_msg:"UPLOAD PLAY STORE LANE COMPLETED",my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
+
+     myslackMessageOne = options[:myAppName].to_s + " UPLOAD PLAY STORE LANE COMPLETED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+
+
+     slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
 
      progress = 100

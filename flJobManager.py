@@ -88,8 +88,7 @@ if os.path.isfile(info_filename):
             buildId = bodyInfo['buildId']
             hostname = bodyInfo['serverBaseUrl']
             bucketName = bodyInfo['bucketName']
-            # myEmail = bodyInfo['userName']
-            myEmail="snagfilms@viewlift.com"
+            myEmail = bodyInfo['userName']
 
             info['JobBuildId'] = buildId
             info['JobBuildPlatform'] = platform
