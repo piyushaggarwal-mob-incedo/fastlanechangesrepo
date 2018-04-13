@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppSecretKey</key>
-	<string>jbNA1dr2bn1CshPLWxTsXRclfLrkpHcpcOC1il90</string>
+	<string>vdTAMerEdh8t5t7xtUAa199qBKQuFLXb5cuG93ZF</string>
 	<key>Apptentive AppId</key>
 	<string>404906625</string>
 	<key>Apptentive AppKey</key>
@@ -15,12 +15,12 @@
 	<key>GoogleClientId</key>
 	<string>GT387234</string>
 	<key>SiteId</key>
-	<string>6ea6f2a0-451c-4d87-8060-051f8c07db23</string>
+	<string>9f2d30f9-b7fd-44fd-b7a6-04def72fc9e2</string>
 	<key>TemplateType</key>
 	<string>ENTERTAINMENT</string>
 	<key>UIJsonBaseUrl</key>
 	<string>https://appcms.viewlift.com</string>
 	<key>shouldPlayHlsUrlFirst</key>
-	<true/>
+	<false/>
 </dict>
 </plist>

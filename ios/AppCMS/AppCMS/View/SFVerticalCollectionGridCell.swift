@@ -373,7 +373,11 @@ class SFVerticalCollectionGridCell: UICollectionViewCell, SFButtonDelegate {
             playButton?.isHidden = false
             playButton?.buttonObject = buttonObject
             playButton?.relativeViewFrame = self.frame
-            playButton?.setImage(UIImage(named: "play"), for: .normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "play.png"))
+            
+            playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+            
             playButton?.initialiseButtonFrameFromLayout(buttonLayout: buttonLayout)
             
             playButton?.changeFrameWidth(width: (playButton?.frame.size.width)! * Utility.getBaseScreenWidthMultiplier())

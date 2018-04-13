@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <UIKit/UIKit.h>
 
@@ -82,7 +82,7 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 }
 
 - (instancetype)initWithConfig:(UAConfig *)config dataStore:(UAPreferenceDataStore *)dataStore {
-    self = [super init];
+    self = [super initWithDataStore:dataStore];
     if (self) {
         self.dataStore = dataStore;
 
@@ -117,6 +117,7 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
         self.channelRegistrar.delegate = self;
 
         self.tagGroupsAPIClient = [UATagGroupsAPIClient clientWithConfig:config];
+        self.tagGroupsAPIClient.enabled = self.componentEnabled;
 
         // Check config to see if user wants to delay channel creation
         // If channel ID exists or channel creation delay is disabled then channelCreationEnabled
@@ -172,7 +173,9 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 
         [self updateAuthorizedNotificationTypes];
 
-        self.defaultPresentationOptions = UNNotificationPresentationOptionNone;
+        if (@available(iOS 10.0, tvOS 10.0, *)) {
+            self.defaultPresentationOptions = UNNotificationPresentationOptionNone;
+        }
     }
 
     return self;
@@ -714,7 +717,7 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
         payload.quietTime = [self.quietTime copy];
     }
 
-    if ([UAirship shared].analytics.isEnabled) {
+    if ([UAirship analytics].isEnabled) {
         NSString *localeLanguage = [[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleLanguageCode];
         NSString *localeCountry = [[NSLocale autoupdatingCurrentLocale] objectForKey: NSLocaleCountryCode];
 
@@ -769,7 +772,6 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 }
 
 - (void)updateRegistration {
-
     // Update channel tag groups
     [self updateChannelTagGroups];
 
@@ -787,6 +789,10 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 }
 
 - (void)updateChannelRegistrationForcefully:(BOOL)forcefully {
+    if (!self.componentEnabled) {
+        return;
+    }
+    
     if (![NSThread isMainThread]) {
         UA_WEAKIFY(self);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -815,6 +821,10 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 }
 
 - (void)updateChannelTagGroups {
+    if (!self.componentEnabled) {
+        return;
+    }
+    
     if (![NSThread isMainThread]) {
         UA_WEAKIFY(self);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -901,6 +911,15 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 }
 
 - (void)notificationRegistrationFinishedWithOptions:(UANotificationOptions)options {
+    if (![NSThread isMainThread]) {
+        UA_WEAKIFY(self);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UA_STRONGIFY(self);
+            [self notificationRegistrationFinishedWithOptions:options];
+        });
+        return;
+    }
+    
     if (!self.deviceToken) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -983,7 +1002,7 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
 #pragma mark -
 #pragma mark Push handling
 
-- (UNNotificationPresentationOptions)presentationOptionsForNotification:(UNNotification *)notification {
+- (UNNotificationPresentationOptions)presentationOptionsForNotification:(UNNotification *)notification NS_AVAILABLE_IOS(10.0) {
     UNNotificationPresentationOptions options = UNNotificationPresentationOptionNone;
 
     id pushDelegate = self.pushNotificationDelegate;
@@ -1094,12 +1113,14 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
         } else {
             // If >= iOS 10
             if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 0, 0}]) {
-                [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                    if (settings.authorizationStatus == UNAuthorizationStatusAuthorized) {
-                        UA_LDEBUG(@"Migrating userPushNotificationEnabled to YES because application was authorized for notifications");
-                        [self.dataStore setBool:YES forKey:UAUserPushNotificationsEnabledKey];
-                    }
-                }];
+                if (@available(iOS 10.0, tvOS 10.0, *)) {
+                    [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+                        if (settings.authorizationStatus == UNAuthorizationStatusAuthorized) {
+                            UA_LDEBUG(@"Migrating userPushNotificationEnabled to YES because application was authorized for notifications");
+                            [self.dataStore setBool:YES forKey:UAUserPushNotificationsEnabledKey];
+                        }
+                    }];
+                }
             } else { // iOS 8 & 9
 #if !TARGET_OS_TV    // UIUserNotificationTypeNone, currentUserNotificationSettings not available on tvOS
                 if ([[UIApplication sharedApplication] currentUserNotificationSettings].types != UIUserNotificationTypeNone) {
@@ -1118,5 +1139,14 @@ NSString *const UAChannelUpdatedEventChannelKey = @"com.urbanairship.push.channe
     // Normalize tags for older SDK versions
     self.tags = [UATagUtils normalizeTags:self.tags];
 }
+
+- (void)onComponentEnableChange {
+    self.tagGroupsAPIClient.enabled = self.componentEnabled;
+    if (self.componentEnabled) {
+        // if component was disabled and is now enabled, register the channel
+        [self updateRegistration];
+    }
+}
+
 
 @end

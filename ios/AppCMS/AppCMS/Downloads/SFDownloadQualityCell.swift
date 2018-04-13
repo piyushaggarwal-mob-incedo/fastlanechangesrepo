@@ -68,8 +68,14 @@ class SFDownloadQualityCell: UITableViewCell {
         btnOption?.isHidden = false
         btnOption?.buttonObject = buttonObject
         btnOption?.relativeViewFrame = relativeViewFrame!
-        btnOption?.setImage(#imageLiteral(resourceName: "radio-unfilled.png"), for: .normal)
-        btnOption?.setImage(#imageLiteral(resourceName: "radio-filled.png"), for: .selected)
+        
+        let buttonImageViewSelected: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "radio-filled.png"))
+        let buttonImageViewNormal: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "radio-unfilled.png"))
+        
+        btnOption?.setImage(buttonImageViewNormal.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnOption?.setImage(buttonImageViewSelected.image?.withRenderingMode(.alwaysTemplate), for: .selected)
+        btnOption?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.themeFontColor ?? AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+
         btnOption?.isUserInteractionEnabled = false
         btnOption?.isSelected = (gridObject?.isSelected)!
     }

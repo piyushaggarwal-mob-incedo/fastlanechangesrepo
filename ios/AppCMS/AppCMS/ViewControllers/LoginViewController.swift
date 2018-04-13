@@ -136,7 +136,11 @@ class LoginViewController: UIViewController, LoginViewDelegate, UIAlertViewDeleg
         }
         else
         {
-            closeButton.setImage(#imageLiteral(resourceName: "cancelIcon.png"), for: .normal)
+            let closeButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+            
+            closeButton.setImage(closeButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            closeButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+            
             closeButton.frame = CGRect.init(x: 0, y: 0, width: 22, height: 22)
             closeButton.addTarget(self, action: #selector(closeButtonTapped(sender:)), for: .touchUpInside)
         }

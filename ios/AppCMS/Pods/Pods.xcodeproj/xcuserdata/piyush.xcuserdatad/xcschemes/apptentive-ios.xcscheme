@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CDD25C16DE7BCEA913729BE94C80579"
+               BlueprintIdentifier = "7FD50B34CFE1E82FB74A60CE865FC232"
                BuildableName = "Apptentive.framework"
                BlueprintName = "apptentive-ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4CDD25C16DE7BCEA913729BE94C80579"
+            BlueprintIdentifier = "7FD50B34CFE1E82FB74A60CE865FC232"
             BuildableName = "Apptentive.framework"
             BlueprintName = "apptentive-ios"
             ReferencedContainer = "container:Pods.xcodeproj">

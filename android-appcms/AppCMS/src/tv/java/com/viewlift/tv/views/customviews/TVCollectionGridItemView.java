@@ -14,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.viewlift.AppCMSApplication;
 import com.viewlift.R;
 import com.viewlift.models.data.appcms.api.ContentDatum;
@@ -58,6 +60,7 @@ public class TVCollectionGridItemView extends TVBaseView {
     private List<View> viewsToUpdateOnClickEvent;
     private boolean selectable;
     private CardView childrenContainer;
+    private static int mPosition = 0;
 
     @Inject
     public TVCollectionGridItemView(Context context,
@@ -160,8 +163,9 @@ public class TVCollectionGridItemView extends TVBaseView {
                           View view,
                           final ContentDatum data,
                           Map<String, AppCMSUIKeyType> jsonValueKeyMap,
-                          final TVCollectionGridItemView.OnClickHandler onClickHandler,
-                          final AppCMSUIKeyType viewTypeKey) {
+                          final OnClickHandler onClickHandler,
+                          final AppCMSUIKeyType viewTypeKey,
+                          int position) {
         AppCMSPresenter appCMSPresenter =
                 ((AppCMSApplication) context.getApplicationContext())
                         .getAppCMSPresenterComponent().appCMSPresenter();
@@ -200,8 +204,8 @@ public class TVCollectionGridItemView extends TVBaseView {
                         //Log.d(TAG, "Loading image: " + imageUrl);
                         Glide.with(context)
                                 .load(imageUrl)
-                                .override(childViewWidth, childViewHeight)
-                                .centerCrop()
+                                .apply(new RequestOptions().override(childViewWidth, childViewHeight)
+                                    .centerCrop())
                                 .into((ImageView) view);
                     }
                     bringToFront = false;
@@ -259,14 +263,15 @@ public class TVCollectionGridItemView extends TVBaseView {
                         Log.d(TAG, "Loading image: " + imageUrl);*/
                         Glide.with(context)
                                 .load(imageUrl)
-                                .override(childViewWidth, childViewHeight)
-                                .centerCrop()
+                                .apply(new RequestOptions().override(childViewWidth, childViewHeight))
+//                                .centerCrop()
                                 .into((ImageView) view);
 
                         bringToFront = false;
                         view.setFocusable(true);
-
-                        view.setBackgroundResource(R.drawable.st_menu_color_selector);
+                        view.setBackground(Utils.getMenuSelector(context, appCMSPresenter.getAppCtaBackgroundColor(),
+                                appCMSPresenter.getAppCMSMain().getBrand().getCta().getSecondary().getBorder().getColor()));
+                       // view.setBackgroundResource(R.drawable.st_menu_color_selector);
                         view.setOnClickListener(v ->
                                 {
                            // Toast.makeText(context, "Clicked on " + data.getGist().getTitle(), Toast.LENGTH_SHORT).show();
@@ -281,12 +286,13 @@ public class TVCollectionGridItemView extends TVBaseView {
                                     true,
                                    false,
                                     false);
-
+                             mPosition = position;
                             new android.os.Handler().postDelayed(() -> view.setClickable(true), 3000);
                         });
 
                     }
-
+                    if (position == mPosition)
+                        view.requestFocus();
                 }
             } else if (componentType == AppCMSUIKeyType.PAGE_BUTTON_KEY) {
                 if (componentKey == AppCMSUIKeyType.PAGE_PLAY_IMAGE_KEY) {
@@ -303,6 +309,29 @@ public class TVCollectionGridItemView extends TVBaseView {
                 }
 
             } else if (componentType == AppCMSUIKeyType.PAGE_LABEL_KEY) {
+                if (componentKey == AppCMSUIKeyType.PAGE_ICON_LABEL_KEY) {
+                    if (childComponent.getNumberOfLines() != 0) {
+                        ((TextView) view).setMaxLines(childComponent.getNumberOfLines());
+                    }
+                    ((TextView) view).setEllipsize(TextUtils.TruncateAt.END);
+                    setTypeFace(appCMSPresenter,context, jsonValueKeyMap, childComponent, ((TextView) view));
+                    view.setFocusable(false);
+                    String textCase = childComponent.getTextCase();
+                    if(textCase != null && !TextUtils.isEmpty(data.getGist().getTitle())){
+                        String title = data.getGist().getTitle();
+                        if(textCase.equalsIgnoreCase(context.getResources().getString(R.string.text_case_caps))){
+                            title = title.toUpperCase();
+                        }else if(textCase.equalsIgnoreCase(context.getResources().getString(R.string.text_case_small))){
+                            title = title.toLowerCase();
+                        }else if(textCase.equalsIgnoreCase(context.getResources().getString(R.string.text_case_sentence))){
+                            String text  = Utils.convertStringIntoCamelCase(title);
+                            if(text != null){
+                                title = text;
+                            }
+                        }
+                        ((TextView) view).setText(title);
+                    }
+                }
                 if (componentKey == AppCMSUIKeyType.PAGE_WATCHLIST_TITLE_LABEL) {
                     if (!TextUtils.isEmpty(data.getGist().getTitle())) {
                         ((TextView) view).setText(data.getGist().getTitle());
@@ -311,7 +340,7 @@ public class TVCollectionGridItemView extends TVBaseView {
                         }
                         ((TextView) view).setEllipsize(TextUtils.TruncateAt.END);
                     }
-                    setTypeFace(context, jsonValueKeyMap, childComponent, ((TextView) view));
+                    setTypeFace(appCMSPresenter,context, jsonValueKeyMap, childComponent, ((TextView) view));
                     view.setFocusable(false);
 
                 } else if (componentKey == AppCMSUIKeyType.PAGE_WATCHLIST_DESCRIPTION_LABEL) {
@@ -322,7 +351,7 @@ public class TVCollectionGridItemView extends TVBaseView {
                         }
                         ((TextView) view).setEllipsize(TextUtils.TruncateAt.END);
                     }
-                    setTypeFace(context, jsonValueKeyMap, childComponent, ((TextView) view));
+                    setTypeFace(appCMSPresenter,context, jsonValueKeyMap, childComponent, ((TextView) view));
                     view.setFocusable(false);
                 } else if (componentKey == AppCMSUIKeyType.PAGE_HISTORY_LAST_ADDED_LABEL_KEY) {
                     if (data.getUpdateDate() != 0
@@ -337,28 +366,30 @@ public class TVCollectionGridItemView extends TVBaseView {
                         ((TextView) view).setText(MessageFormat.format(fmt, days));
                     }
                 } else if (componentKey == AppCMSUIKeyType.PAGE_WATCHLIST_SUBTITLE_LABEL) {
+                        StringBuilder stringBuilder = new StringBuilder();
 
-                    StringBuilder stringBuilder = new StringBuilder();
+                        if (data.getGist() != null) {
+                            stringBuilder.append(Utils.convertSecondsToTime(data.getGist().getRuntime()));
+                        }
 
-                    if (data.getGist() != null) {
-                        stringBuilder.append(Utils.convertSecondsToTime(data.getGist().getRuntime()));
-                    }
+                        if (data.getContentDetails() != null
+                                && data.getContentDetails().getAuthor() != null) {
+                            if (stringBuilder.length() > 0) stringBuilder.append(" | ");
+                            stringBuilder.append(data.getContentDetails().getAuthor());
+                        }
 
-                    if (data.getContentDetails() != null
-                            && data.getContentDetails().getAuthor() != null) {
-                        if (stringBuilder.length() > 0) stringBuilder.append(" | ");
-                        stringBuilder.append(data.getContentDetails().getAuthor());
-                    }
-
-                    if (data.getGist() != null) {
-                        if (stringBuilder.length() > 0) stringBuilder.append(" | ");
-                        Date publishedDate = new Date(data.getGist().getPublishDate());
-                        SimpleDateFormat spf = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
-                        String date = spf.format(publishedDate);
-                        stringBuilder.append("Published on ");
-                        stringBuilder.append(date);
-                    }
-                    ((TextView) view).setText(stringBuilder);
+                        if (data.getGist() != null && data.getGist().getPublishDate() != null) {
+                            try {
+                                Date publishedDate = new Date(data.getGist().getPublishDate());
+                                SimpleDateFormat spf = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
+                                String date = spf.format(publishedDate);
+                                if (stringBuilder.length() > 0) stringBuilder.append(" | ");
+                                stringBuilder.append("Published on ");
+                                stringBuilder.append(date);
+                            } catch (Exception e) {
+                            }
+                        }
+                        ((TextView) view).setText(stringBuilder);
                 }
             } else if (componentKey == AppCMSUIKeyType.PAGE_PROGRESS_VIEW_KEY) {
                 int gridImagePadding = Integer.valueOf(

@@ -20,6 +20,20 @@
                ReferencedContainer = "container:AppCMS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "172E7D20206964850072824B"
+               BuildableName = "AppCMS_tvOSUITests.xctest"
+               BlueprintName = "AppCMS_tvOSUITests"
+               ReferencedContainer = "container:AppCMS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,6 +43,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "172E7D20206964850072824B"
+               BuildableName = "AppCMS_tvOSUITests.xctest"
+               BlueprintName = "AppCMS_tvOSUITests"
+               ReferencedContainer = "container:AppCMS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

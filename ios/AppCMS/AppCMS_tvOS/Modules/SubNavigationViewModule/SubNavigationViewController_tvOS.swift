@@ -262,15 +262,34 @@ class SubNavigationViewController_tvOS: BaseViewController ,UICollectionViewDele
     // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)
     {
-            if let previousCell = context.previouslyFocusedView as? SubNavCollectionCell_tvOS {
-                let view = previousCell.viewWithTag(MenuTitleTag) as? SFImageView
-                view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "#000000")
+        if let previousCell = context.previouslyFocusedView as? SubNavCollectionCell_tvOS {
+            let view = previousCell.viewWithTag(MenuTitleTag) as? SFImageView
+            view?.backgroundColor = UIColor.clear
+            let tag = previousCell.tag
+            let imgString = menuArray[tag].pageIcon
+            if imgString.lowercased().range(of:"http") == nil {
+                if let textColor = AppConfiguration.sharedAppConfiguration.secondaryButton.textColor {
+                    view?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    view?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                    
+                }
             }
             
-            if let nextCell = context.nextFocusedView as? SubNavCollectionCell_tvOS {
-                let view = nextCell.viewWithTag(MenuTitleTag) as? SFImageView
-                view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "#000000")
+        }
+        
+        if let nextCell = context.nextFocusedView as? SubNavCollectionCell_tvOS {
+            let view = nextCell.viewWithTag(MenuTitleTag) as? SFImageView
+            view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor ?? "#000000")
+            let tag = nextCell.tag
+            let imgString = menuArray[tag].pageIcon
+            if imgString.lowercased().range(of:"http") == nil {
+                if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.textColor {
+                    view?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    view?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                    
+                }
             }
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
@@ -579,8 +598,12 @@ class SubNavCollectionCell_tvOS : UICollectionViewCell {
                 
                 
                 
-            }else{
-                menuThumbnailImage?.image = UIImage(named: imgString.lowercased())
+            } else{
+                menuThumbnailImage?.image = UIImage(named: imgString)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                if let textColor = AppConfiguration.sharedAppConfiguration.secondaryButton.textColor {
+                    menuThumbnailImage?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    menuThumbnailImage?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                }
             }
         }
     }

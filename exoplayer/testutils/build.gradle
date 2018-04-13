@@ -22,10 +22,10 @@ android {
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
     }
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile project(modulePrefix + 'library-core')
-    compile 'org.mockito:mockito-core:' + mockitoVersion
+   implementation project(modulePrefix + 'library-core')
+   implementation 'org.mockito:mockito-core:' + mockitoVersion
 }

@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,14 +14,17 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.viewlift.AppCMSApplication;
 import com.viewlift.R;
 import com.viewlift.models.data.appcms.ui.android.AccessLevels;
@@ -36,9 +40,11 @@ import com.viewlift.views.binders.AppCMSBinder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static com.viewlift.models.data.appcms.ui.AppCMSUIKeyType.ANDROID_HISTORY_NAV_KEY;
 import static com.viewlift.models.data.appcms.ui.AppCMSUIKeyType.ANDROID_WATCHLIST_NAV_KEY;
+import static com.viewlift.models.data.appcms.ui.AppCMSUIKeyType.ANDROID_WATCHLIST_SCREEN_KEY;
 
 /**
  * Created by nitin.tyagi on 6/27/2017.
@@ -54,7 +60,6 @@ public class AppCmsSubNavigationFragment extends Fragment {
     private int bgColor = -1;
     private Typeface extraBoldTypeFace, semiBoldTypeFace;
     private Component extraBoldComp, semiBoldComp;
-    private AppCMSBinder appCmsBinder;
     private Navigation mNavigation;
     private AppCMSBinder mAppCMSBinder;
     private boolean isLoginDialogPage;
@@ -120,6 +125,7 @@ public class AppCmsSubNavigationFragment extends Fragment {
             navMenuTile.setText("Settings");
             navMenuTile.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), getActivity().getString(R.string.lato_regular)));
             navMenuTile.setVisibility(View.VISIBLE);
+            navMenuTile.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
 
             STNavigationAdapter navigationAdapter = new STNavigationAdapter(
                     getActivity(),
@@ -132,6 +138,7 @@ public class AppCmsSubNavigationFragment extends Fragment {
             setFocusable(true);
             navigationAdapter.setFocusOnSelectedPage();
             navTopLine.setVisibility(View.VISIBLE);
+            navTopLine.setBackgroundColor(Color.parseColor(Utils.getFocusColor(getActivity(),appCMSPresenter)));
         }
         return view;
     }
@@ -172,7 +179,7 @@ public class AppCmsSubNavigationFragment extends Fragment {
             if (null != navigationSubItemList && navigationSubItemList.size() > 0) {
                 for (int i = 0; i < navigationSubItemList.size(); i++) {
                     NavigationSubItem navigationSubItem = navigationSubItemList.get(i);
-                    if (navigationSubItem.pageId == mSelectedPageId) {
+                    if (Objects.equals(navigationSubItem.pageId, mSelectedPageId)) {
                         return i;
                     }
                 }
@@ -299,21 +306,23 @@ public class AppCmsSubNavigationFragment extends Fragment {
                 return;
             }*/
 
-        for (int i = 0; i < mNavigation.getNavigationFooter().size(); i++) {
-            NavigationFooter navigationFooter = mNavigation.getNavigationFooter().get(i);
-            {
-                NavigationSubItem navigationSubItem = new NavigationSubItem();
-                navigationSubItem.pageId = navigationFooter.getPageId();
-                navigationSubItem.title = navigationFooter.getTitle();
-                navigationSubItem.url = navigationFooter.getUrl();
-                navigationSubItem.icon = navigationFooter.getIcon();
-                navigationSubItem.accessLevels = navigationFooter.getAccessLevels();
-                if (null == navigationSubItemList) {
-                    navigationSubItemList = new ArrayList<>();
+            if(null != mNavigation && null != mNavigation.getNavigationFooter()) {
+                for (int i = 0; i < mNavigation.getNavigationFooter().size(); i++) {
+                    NavigationFooter navigationFooter = mNavigation.getNavigationFooter().get(i);
+                    {
+                        NavigationSubItem navigationSubItem = new NavigationSubItem();
+                        navigationSubItem.pageId = navigationFooter.getPageId();
+                        navigationSubItem.title = navigationFooter.getTitle();
+                        navigationSubItem.url = navigationFooter.getUrl();
+                        navigationSubItem.icon = navigationFooter.getIcon();
+                        navigationSubItem.accessLevels = navigationFooter.getAccessLevels();
+                        if (null == navigationSubItemList) {
+                            navigationSubItemList = new ArrayList<>();
+                        }
+                        navigationSubItemList.add(navigationSubItem);
+                    }
                 }
-                navigationSubItemList.add(navigationSubItem);
             }
-        }
         navigationSubItem1 = new NavigationSubItem();
         if (appCMSPresenter.isUserLoggedIn()) {
             navigationSubItem1.title = "SIGN OUT";
@@ -415,7 +424,9 @@ public class AppCmsSubNavigationFragment extends Fragment {
                 public void onClick(View view) {
                     NavigationSubItem navigationSubItem = navigationSubItemList.get(selectedPosition);
                     if (ANDROID_WATCHLIST_NAV_KEY.equals(mAppCMSBinder.getJsonValueKeyMap()
-                            .get(navigationSubItem.title))) {
+                            .get(navigationSubItem.title))
+                    || ANDROID_WATCHLIST_SCREEN_KEY.equals(mAppCMSBinder
+                            .getJsonValueKeyMap().get(navigationSubItem.title))) {
 
                         appCmsPresenter.showLoadingDialog(true);
                         appCmsPresenter.navigateToWatchlistPage(
@@ -548,18 +559,21 @@ public class AppCmsSubNavigationFragment extends Fragment {
             final NavigationSubItem subItem = (NavigationSubItem) getItem(holder.getAdapterPosition());
             holder.navItemView.setText(subItem.title.toUpperCase());
             holder.navItemView.setTag(R.string.item_position, holder.getAdapterPosition());
-            //Log.d("NavigationAdapter", subItem.title.toString());
 
 
             if (!mShowTeams) {
                 holder.navImageView.setPadding(0, 0, 0, 0);
                 holder.navImageView.setImageResource(subItem.icon != null
                         ? getIcon(subItem.icon) : -1);
+                if(subItem.icon != null) {
+                    holder.navImageView.getDrawable().setTint(Utils.getComplimentColor(appCMSPresenter.getGeneralBackgroundColor()));
+                    holder.navImageView.getDrawable().setTintMode(PorterDuff.Mode.MULTIPLY);
+                }
             } else {
                 holder.navImageView.setPadding(10, 10, 10, 10);
                 Glide.with(mContext)
                         .load(subItem.icon)
-                        .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                        .apply(new RequestOptions().diskCacheStrategy(DiskCacheStrategy.RESOURCE))
                         .into(holder.navImageView);
             }
 
@@ -621,8 +635,6 @@ public class AppCmsSubNavigationFragment extends Fragment {
                                         }
                                 );
                         } else {
-
-
                             if(!appCMSPresenter.isUserLoggedIn() && appCMSPresenter.isNetworkConnected()) {
                                 appCMSPresenter.setLaunchType(AppCMSPresenter.LaunchType.NAVIGATE_TO_HOME_FROM_LOGIN_DIALOG);
                                 ClearDialogFragment newFragment = Utils.getClearDialogFragment(
@@ -714,7 +726,7 @@ public class AppCmsSubNavigationFragment extends Fragment {
                             });
                         }
                     } else if (navigationSubItem.title.toUpperCase().contains("CONTACT")) {
-                        navigationVisibilityListener.showSubNavigation(false, false);
+                        //navigationVisibilityListener.showSubNavigation(false, false);
                         appCMSPresenter.navigateToTVPage(
                                 navigationSubItem.pageId,
                                 navigationSubItem.title,
@@ -766,6 +778,10 @@ public class AppCmsSubNavigationFragment extends Fragment {
                 iconResId = R.drawable.st_settings_icon_signin;
             } else if (icon.equalsIgnoreCase(getString(R.string.st_signout_icon_key))) {
                 iconResId = R.drawable.st_settings_icon_signout;
+            }else if (icon.equalsIgnoreCase(getString(R.string.st_about_us_icon_key))) {
+                iconResId = R.drawable.st_settings_icon_about_us;
+            }else if (icon.equalsIgnoreCase(getString(R.string.st_privacy_policy_icon_key))) {
+                iconResId = R.drawable.st_setting_icon_privacy_policy;
             }
             return iconResId;
         }
@@ -810,6 +826,8 @@ public class AppCmsSubNavigationFragment extends Fragment {
                 navImageView = (ImageView) itemView.findViewById(R.id.nav_item_image);
                 navItemLayout = (RelativeLayout) itemView.findViewById(R.id.nav_item_layout);
 //                navItemLayout.setBackground(Utils.getNavigationSelector(mContext, appCMSPresenter, false));
+                navItemLayout.setBackground(Utils.getMenuSelector(mContext, appCMSPresenter.getAppCtaBackgroundColor(),
+                        appCMSPresenter.getAppCMSMain().getBrand().getCta().getSecondary().getBorder().getColor()));
                 navItemView.setTextColor(Color.parseColor(Utils.getTextColor(mContext, appCMSPresenter)));
                 navItemView.setTypeface(semiBoldTypeFace);
                 navItemLayout.setOnFocusChangeListener((view, hasFocus) -> {
@@ -825,6 +843,10 @@ public class AppCmsSubNavigationFragment extends Fragment {
 
                 navItemLayout.setOnKeyListener((view, i, keyEvent) -> {
                     int keyCode = keyEvent.getKeyCode();
+                    if(keyCode == KeyEvent.KEYCODE_MENU){
+                        Toast.makeText(getActivity(),"Menu..",Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
                     int action = keyEvent.getAction();
                     if (action == KeyEvent.ACTION_DOWN) {
                         switch (keyCode) {
@@ -838,6 +860,15 @@ public class AppCmsSubNavigationFragment extends Fragment {
                                     return true;
                                 }
                                 break;
+                            case KeyEvent.KEYCODE_DPAD_DOWN:
+                            case KeyEvent.KEYCODE_DPAD_UP:
+                            case KeyEvent.KEYCODE_MENU:
+                                return true;
+                        }
+                    }else if(action == KeyEvent.ACTION_UP){
+                        switch(keyCode){
+                            case KeyEvent.KEYCODE_MENU:
+                                return true;
                         }
                     }
                     return false;

@@ -30,21 +30,21 @@ android {
         //    testCoverageEnabled = true
         // }
     }
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile project(modulePrefix + 'library-core')
-    compile 'com.android.support:support-annotations:' + supportLibraryVersion
-    androidTestCompile project(modulePrefix + 'testutils')
-    androidTestCompile 'com.google.dexmaker:dexmaker:' + dexmakerVersion
-    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:' + dexmakerVersion
-    androidTestCompile 'org.mockito:mockito-core:' + mockitoVersion
-    testCompile project(modulePrefix + 'testutils')
-    testCompile 'com.google.truth:truth:' + truthVersion
-    testCompile 'junit:junit:' + junitVersion
-    testCompile 'org.mockito:mockito-core:' + mockitoVersion
-    testCompile 'org.robolectric:robolectric:' + robolectricVersion
+   implementation project(modulePrefix + 'library-core')
+   implementation 'com.android.support:support-annotations:' + supportLibraryVersion
+    androidTestImplementation project(modulePrefix + 'testutils')
+    androidTestImplementation 'com.google.dexmaker:dexmaker:' + dexmakerVersion
+    androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:' + dexmakerVersion
+    androidTestImplementation 'org.mockito:mockito-core:' + mockitoVersion
+    testImplementation project(modulePrefix + 'testutils')
+    testImplementation 'com.google.truth:truth:' + truthVersion
+    testImplementation 'junit:junit:' + junitVersion
+    testImplementation 'org.mockito:mockito-core:' + mockitoVersion
+    testImplementation 'org.robolectric:robolectric:' + robolectricVersion
 }
 
 ext {

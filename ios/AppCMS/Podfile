@@ -27,8 +27,6 @@ def ios_pods
   pod 'KMSDK', '~> 2.2.7'
   pod 'WebViewJavascriptBridge', :git => 'https://github.com/Kiswe/WebViewJavascriptBridge.git', :commit => '80a3598c8e95d501f9cf2baeee37736f0a8d6154'
   pod 'Google-Mobile-Ads-SDK'
-  pod 'NVActivityIndicatorView'
-  pod 'Toast-Swift', '~> 3.0.1'
 end
 
 # Hoichoi target pod
@@ -96,7 +94,6 @@ target 'TampaBay_iOS' do
     ios_pods
 end
 
-
 # Apple TV pods
 def appletv_pods
     platform :tvos, '9.0'
@@ -115,7 +112,6 @@ end
 target 'AppCMS_tvOS' do
     appletv_pods
 end
-
 
 # Monumental AppleTV target pod
 target 'Monumental_tvOS' do
@@ -160,13 +156,5 @@ end
 # TampaBay_tvOS target pod
 target 'TampaBay_tvOS' do
     appletv_pods
-end
-
-target 'AppCMS_tvOSUITests' do
-    appletv_pods
-end
-
-target 'AppCMSUITests' do
-    ios_pods
 end
 

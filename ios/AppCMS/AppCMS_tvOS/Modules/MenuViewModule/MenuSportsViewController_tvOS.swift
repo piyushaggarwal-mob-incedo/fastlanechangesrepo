@@ -265,15 +265,32 @@ class MenuSportsViewController_tvOS: MenuBaseViewController_tvOS, UICollectionVi
     // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)
     {
-            if let previousCell = context.previouslyFocusedView as? MenuSportsCollectionCell_tvOS {
-                let view = previousCell.viewWithTag(MenuTitleTag) as? SFImageView
-                view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "#000000")
+        if let previousCell = context.previouslyFocusedView as? MenuSportsCollectionCell_tvOS {
+            let view = previousCell.viewWithTag(MenuTitleTag) as? SFImageView
+            view?.backgroundColor = UIColor.clear
+            let tag = previousCell.tag
+            let imgString = menuArray[tag].pageIcon
+            if imgString.lowercased().range(of:"http") == nil {
+                if let textColor = AppConfiguration.sharedAppConfiguration.secondaryButton.textColor {
+                    view?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    view?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                }
             }
             
-            if let nextCell = context.nextFocusedView as? MenuSportsCollectionCell_tvOS {
-                let view = nextCell.viewWithTag(MenuTitleTag) as? SFImageView
-                view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "#000000")
+        }
+        
+        if let nextCell = context.nextFocusedView as? MenuSportsCollectionCell_tvOS {
+            let view = nextCell.viewWithTag(MenuTitleTag) as? SFImageView
+            view?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor ?? "#000000")
+            let tag = nextCell.tag
+            let imgString = menuArray[tag].pageIcon
+            if imgString.lowercased().range(of:"http") == nil {
+                if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.textColor {
+                    view?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    view?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                }
             }
+        }
     }
 
     
@@ -399,8 +416,12 @@ class MenuSportsCollectionCell_tvOS : UICollectionViewCell {
                         imageTransition: .crossDissolve(0.2)
                     )
                 }
-            }else{
-                menuThumbnailImage?.image = UIImage(named: imgString)
+            } else{
+                menuThumbnailImage?.image = UIImage(named: imgString)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                if let textColor = AppConfiguration.sharedAppConfiguration.secondaryButton.textColor {
+                    menuThumbnailImage?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                    menuThumbnailImage?.layer.borderColor = Utility.hexStringToUIColor(hex: textColor).cgColor
+                }
             }
         }
     }

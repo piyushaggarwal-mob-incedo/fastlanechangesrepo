@@ -14,17 +14,17 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Alamofire (4.5.1)
+  - Alamofire (4.7.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
-  - AppsFlyerFramework (4.8.1)
-  - apptentive-ios (4.1.1)
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
+  - AppsFlyerFramework (4.8.3)
+  - apptentive-ios (5.0.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
+  - Bolts/Tasks (1.9.0)
   - CocoaLumberjack (3.2.1):
     - CocoaLumberjack/Default (= 3.2.1)
     - CocoaLumberjack/Extensions (= 3.2.1)
@@ -34,15 +34,15 @@ PODS:
   - CocoaLumberjack/Swift (3.2.1):
     - CocoaLumberjack/Default
   - Cosmos (11.0.3)
-  - Crashlytics (3.9.3):
-    - Fabric (~> 1.7.2)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
   - DrawerController (4.0.0):
     - DrawerController/Core (= 4.0.0)
     - DrawerController/DrawerVisualStates (= 4.0.0)
   - DrawerController/Core (4.0.0)
   - DrawerController/DrawerVisualStates (4.0.0):
     - DrawerController/Core
-  - Fabric (1.7.2)
+  - Fabric (1.7.5)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -51,9 +51,9 @@ PODS:
     - FacebookCore (~> 0.3)
     - FBSDKCoreKit (~> 4.27)
     - FBSDKLoginKit (~> 4.27)
-  - FBSDKCoreKit (4.28.0):
+  - FBSDKCoreKit (4.31.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.28.0):
+  - FBSDKLoginKit (4.31.0):
     - FBSDKCoreKit
   - Firebase/Core (3.17.0):
     - FirebaseAnalytics (= 3.9.0)
@@ -78,9 +78,9 @@ PODS:
   - Google/SignIn (3.1.0):
     - Google/Core
     - GoogleSignIn (~> 4.0)
-  - GoogleAds-IMA-iOS-SDK (3.6.1)
+  - GoogleAds-IMA-iOS-SDK (3.7.0.1)
   - GoogleAnalytics (3.17.0)
-  - GoogleSignIn (4.1.1):
+  - GoogleSignIn (4.1.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
     - GTMOAuth2 (~> 1.0)
@@ -102,14 +102,14 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GoogleUtilities (1.3.2):
     - GoogleSymbolUtilities (~> 1.1)
-  - GTMOAuth2 (1.1.5):
+  - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.12):
-    - GTMSessionFetcher/Full (= 1.1.12)
-  - GTMSessionFetcher/Core (1.1.12)
-  - GTMSessionFetcher/Full (1.1.12):
-    - GTMSessionFetcher/Core (= 1.1.12)
-  - KMSDK (2.2.8):
+  - GTMSessionFetcher (1.1.14):
+    - GTMSessionFetcher/Full (= 1.1.14)
+  - GTMSessionFetcher/Core (1.1.14)
+  - GTMSessionFetcher/Full (1.1.14):
+    - GTMSessionFetcher/Core (= 1.1.14)
+  - KMSDK (2.2.11):
     - AFNetworking (~> 3.1.0)
     - CocoaLumberjack (~> 3.2.1)
     - CocoaLumberjack/Swift (~> 3.2.1)
@@ -118,15 +118,11 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
-  - MarqueeLabel/Swift (3.1.3)
-  - NVActivityIndicatorView (4.1.1):
-    - NVActivityIndicatorView/Presenter (= 4.1.1)
-  - NVActivityIndicatorView/Presenter (4.1.1)
+  - MarqueeLabel/Swift (3.1.4)
   - ParallaxView (2.0.8)
   - SlackTextViewController (1.9.5)
   - SSKeychain (1.4.1)
-  - Toast-Swift (3.0.1)
-  - UrbanAirship-iOS-SDK (8.6.2)
+  - UrbanAirship-iOS-SDK (9.0.3)
   - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
@@ -151,10 +147,8 @@ DEPENDENCIES:
   - KMSDK (~> 2.2.7)
   - MagicalRecord
   - MarqueeLabel/Swift
-  - NVActivityIndicatorView
   - ParallaxView
   - SSKeychain
-  - Toast-Swift (~> 3.0.1)
   - UrbanAirship-iOS-SDK
   - WebViewJavascriptBridge (from `https://github.com/Kiswe/WebViewJavascriptBridge.git`, commit `80a3598c8e95d501f9cf2baeee37736f0a8d6154`)
 
@@ -170,20 +164,20 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
-  AppsFlyerFramework: 4f6fe2b018e1c2ca4f390652f3548a8ee799a610
-  apptentive-ios: 6d5f7108a509e5ce904694d4d778de1ccb8c7f95
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  AppsFlyerFramework: 243435778bedb337fbaf45cb29715b9796d94bdb
+  apptentive-ios: 2b4c640697d659cb9ef047294ba0be0a058efbc3
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
   Cosmos: eb506859929f4add2d2aec822a27efb2f718a95d
-  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   DrawerController: bad219f1535b1ff71f06ceb0f9d4339751b60af4
-  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FBSDKCoreKit: ca961e279113f691fd83dc634c0bbad9d4e3f370
-  FBSDKLoginKit: b077381c27d800f21661757e8140cf2c80a91e4a
+  FBSDKCoreKit: 54db4c581123745d25a9f7c1608020b3aeabd118
+  FBSDKLoginKit: 95a252ddffd6919c0f132a02292f0824616d8709
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
@@ -191,26 +185,24 @@ SPEC CHECKSUMS:
   Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
   google-cast-sdk: fc3728ead66150ac746e001ba03a44e4b10e359e
   Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
-  GoogleAds-IMA-iOS-SDK: 5825cb7d5f6004618527828936a077e118da556e
+  GoogleAds-IMA-iOS-SDK: 4cfa8bfa89e4922f5a3dd356f786ec28ca3f4b54
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
-  GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
+  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleTagManager: 312a9a033d224e66ceaa42f35f4c7bf893211d79
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
-  GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
-  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
-  KMSDK: ef14247f8285883240e17e97b2cf8fffd7b54a27
+  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+  GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  KMSDK: 56cad5994d8083e94306413146469efb9f49c084
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  MarqueeLabel: baa5753dcbd36dca080e1f5c589a665aa5c906f1
-  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
   ParallaxView: c2df9e49ab58cd8e0cd0b9d449a211d6f76fd53f
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
-  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
-  UrbanAirship-iOS-SDK: c33d4e95d890313e02248c58c93b787d89f72328
+  UrbanAirship-iOS-SDK: 2dca9836a46c4b3d91337e780226cd60fc4d309b
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: b50b30f624b8523d2c6d02b40ef3adf91e9abae5
+PODFILE CHECKSUM: 76a8d4a421c4f1f2d25a0040cead8928925ab58c
 
 COCOAPODS: 1.4.0

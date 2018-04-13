@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UATagGroupsAPIClient+Internal.h"
 #import "UATagGroupsMutation+Internal.h"
@@ -48,6 +48,10 @@
                         audience:(NSDictionary *)audience
                completionHandler:(void (^)(NSUInteger status))completionHandler {
 
+    if (!self.enabled) {
+        UA_LDEBUG(@"Disabled");
+        return;
+    }
 
     NSMutableDictionary *payload = [[mutation payload] mutableCopy];
     [payload setValue:audience forKey:kUATagGroupsAudienceKey];

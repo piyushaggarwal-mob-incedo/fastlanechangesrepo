@@ -257,7 +257,10 @@ class SFWatchlistAndHistoryViewModule: UIViewController, SFButtonDelegate, UITab
         containerView.addSubview(button)
         
         if type == "playButton" {
-            button.setImage(UIImage(named: "videoDetailPlayIcon_tvOS"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "videoDetailPlayIcon_tvOS")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: UIControlState.normal)
+            if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor {
+                button.imageView?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+            }
             button.contentMode = .scaleAspectFit
             button.buttonShowsAnImage = true
         }

@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <Foundation/Foundation.h>
 #import "UAApplicationMetrics.h"
@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///---------------------------------------------------------------------------------------
 
 - (void)didBecomeActive;
+- (NSString *)lastAppVersion;
 
 @end
 

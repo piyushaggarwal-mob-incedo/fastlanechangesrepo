@@ -274,8 +274,20 @@ class ModuleContainerViewController_tvOS: BaseViewController, UITableViewDataSou
         createTableView()
         
         if addBackgroundImage {
-            let backgroundImage = UIImage(named: "app_background.png")
-            self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+            //            let backgroundImage = UIImage(named: "app_background.png")
+            //            self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+            
+            if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+                self.view.backgroundColor = Utility.hexStringToUIColor(hex: backgroundColor)
+            }
+            else {
+                if AppConfiguration.sharedAppConfiguration.appTheme == .light{
+                    self.view.backgroundColor = .white
+                }
+                else{
+                    self.view.backgroundColor = .black
+                }
+            }
             if TEMPLATETYPE.uppercased() == Constants.kTemplateTypeSports {
                 let topBar = UIView(frame: CGRect(x: 0, y: 0, width: (self.view.bounds.size.width), height: 10))
                 topBar.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "#000000")

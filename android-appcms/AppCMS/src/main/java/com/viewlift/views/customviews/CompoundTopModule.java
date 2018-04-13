@@ -71,6 +71,7 @@ public class CompoundTopModule extends ModuleView {
         }
 
         parentView.addView(topComponent);
+        setBackgroundColor(Color.parseColor("#e4e4e4"));
     }
 
     private void addComponentTab(final ViewGroup parent) {
@@ -90,6 +91,7 @@ public class CompoundTopModule extends ModuleView {
             topHeadlineLP.weight = 30;
             layoutHeadline.setOrientation(LinearLayout.VERTICAL);
             topComponent.setOrientation(LinearLayout.HORIZONTAL);
+            layoutHeadline.setGravity(Gravity.CENTER);
         }else {
             crosualLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             topHeadlineLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -118,10 +120,12 @@ public class CompoundTopModule extends ModuleView {
                 case PAGE_MEDIAM_RECTANGLE_AD_MODULE_KEY:
                     if (isLandscape(mContext)) {
                         layoutHeadline.addView(moduleView);
+                        layoutHeadline.setGravity(Gravity.CENTER);
                     }else{
                         LinearLayout.LayoutParams lp= new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
                         lp.weight=50;
                         layoutHeadline.addView(moduleView,lp);
+                        layoutHeadline.setGravity(Gravity.CENTER_VERTICAL);
                     }
                     break;
             }
@@ -129,6 +133,6 @@ public class CompoundTopModule extends ModuleView {
         }
         topComponent.addView(layoutHeadline);
         parent.addView(topComponent);
-        setBackgroundColor(Color.GRAY);
+        setBackgroundColor(Color.parseColor("#e4e4e4"));
     }
 }

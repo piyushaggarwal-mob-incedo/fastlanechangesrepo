@@ -57,7 +57,7 @@ platform :android do
          puts options[:buildId]
          puts "******************************************************************"
 
-         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE STARTED. BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE STARTED. BUILD-ID --> '" + options[:myBuildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
          slack_train_start(distance: 11)
          slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
          
@@ -75,7 +75,7 @@ platform :android do
 
          gradle(
           task: "assemble",
-          flavor: "mobile",
+          flavor: "mobileNonKiswe",
           build_type: "Debug"
          )
 
@@ -84,7 +84,7 @@ platform :android do
          slack_train()
 
          gradle(
-           task: "assembleMobileDebugAndroidTest"
+           task: "assembleMobileNonkisweDebugAndroidTest"
          )
 
          progress = 45
@@ -115,7 +115,7 @@ platform :android do
 
          gradle(
           task: "assemble",
-          flavor: "mobile",
+          flavor: "mobileNonKiswe",
           build_type: "Release"
          )
 
@@ -141,7 +141,8 @@ platform :android do
 
          slack_train()
 
-         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE COMPLETED. UPLOADING BUILD TO S3 BUCKET. BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+         myslackMessageOne = options[:myAppName].to_s + " ANDROID BUILD LANE COMPLETED. UPLOADING BUILD TO S3 BUCKET. BUILD-ID --> '" + options[:buildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+         slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
 
     end
@@ -156,7 +157,7 @@ platform :android do
 
          slack_train_start(distance: 8)
 
-         myslackMessageOne = options[:myAppName].to_s + " FIRETV BUILD LANE STARTED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+         myslackMessageOne = options[:myAppName].to_s + " FIRETV BUILD LANE STARTED . BUILD-ID --> '" + options[:buildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
          slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
          slack_train()
@@ -204,7 +205,7 @@ platform :android do
 
          gradle(
           task: "assemble",
-          flavor: "tv",
+          flavor: "tvNonKiswe",
           build_type: "Release"
           )
 
@@ -213,6 +214,11 @@ platform :android do
          progress = 60
          myBuildVersion =0 
          sh "./PostBuildStatus.sh "+options[:buildid] + " "+options[:posturl] + " BUILD_PROGRESS "+ "No_ERROR " + "'Signing the Build with Secure Keystore'" + " " + progress.to_s  + " false " + myBuildVersion.to_s
+
+         puts "dasnjlasdlnasnlnaskldnklansdklnasdlknkasdnknalk"
+         puts options[:keystore_path]
+         puts options[:alias]
+         puts options[:storepass]
 
 
          sign_apk(
@@ -229,6 +235,7 @@ platform :android do
           myBuildVersion =0 
           sh "./PostBuildStatus.sh "+options[:buildid] + " "+options[:posturl] + " BUILD_PROGRESS "+ "No_ERROR " + "'Zip Aligning and Optimizing the FireTv Build'"+ " " + progress.to_s  + " false " + myBuildVersion.to_s
          
+
           zipalign(apk_path: "#{lane_context[SharedValues::SIGNED_APK_PATH]}")
 
           slack_train()
@@ -237,7 +244,7 @@ platform :android do
 
           slack_train()
 
-          myslackMessageOne = options[:myAppName].to_s + " FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+          myslackMessageOne = options[:myAppName].to_s + " FIRE TV BUILD LANE COMPLETED. UPLOADING TO S3 BUCKET . BUILD-ID --> '" + options[:buildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
 
           slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
@@ -248,7 +255,7 @@ platform :android do
 
      # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
      # ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
-     myslackMessageOne = options[:myAppName].to_s + " UPLOADING TO PLAY STORE LANE STARTED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+     myslackMessageOne = options[:myAppName].to_s + " UPLOADING TO PLAY STORE LANE STARTED . BUILD-ID --> '" + options[:buildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
      slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
 
      progress = 90
@@ -267,7 +274,7 @@ platform :android do
          )
 
 
-     myslackMessageOne = options[:myAppName].to_s + " UPLOAD PLAY STORE LANE COMPLETED . BUILD-ID --> " + options[:buildId].to_s + ". APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
+     myslackMessageOne = options[:myAppName].to_s + " UPLOAD PLAY STORE LANE COMPLETED . BUILD-ID --> '" + options[:buildId].to_s + "'. APP-VERSION-NUMBER --> " + options[:myAppVersion].to_s + ". BUILD TRIGGERED BY -->" +  options[:myEmailId].to_s
 
 
      slackSendMessage(my_slack_msg:myslackMessageOne,my_user_name:options[:my_user_name],mySlackUrl:options[:mySlackUrl])
@@ -291,7 +298,6 @@ platform :android do
       device_type: "phone",
       app_apk_path: options[:app_apk_path],
       tests_apk_path: options[:tests_apk_path],
-      reinstall_app:"true",
       specific_device:"emulator-5554"
       )
     end
@@ -299,7 +305,7 @@ platform :android do
     desc "Take seven inch tablet screenshots"
     lane :seveninchtablet_screenshots do |options|
 
-      sh("adb -s emulator-5556 shell input keyevent 82")
+      sh("adb -s emulator-5558 shell input keyevent 82")
 
       capture_android_screenshots(
       clear_previous_screenshots: true,
@@ -307,24 +313,21 @@ platform :android do
       device_type: "sevenInch",
       app_apk_path: options[:app_apk_path],
       tests_apk_path: options[:tests_apk_path],
-      reinstall_app:"true",
-      specific_device:"emulator-5556"
+      specific_device:"emulator-5558"
       )
     end
 
     desc "Take ten inch tablet screenshots"
     lane :teninchtablet_screenshots do |options|
 
-      sh("adb -s emulator-5556 shell input keyevent 82")
-
+      sh("adb -s emulator-5558 shell input keyevent 82")
       capture_android_screenshots(
       clear_previous_screenshots: true,
       app_package_name: options[:app_package_name],
       device_type: "tenInch",
       app_apk_path: options[:app_apk_path],
       tests_apk_path: options[:tests_apk_path],
-      reinstall_app:"true",
-      specific_device:"emulator-5556"
+      specific_device:"emulator-5558"
      )
     end
 
@@ -349,7 +352,7 @@ platform :android do
           #ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
           viewliftSlackUrl="https://hooks.slack.com/services/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"
           begin
-              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
+              # slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
               slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:viewliftSlackUrl)
               rescue => ex
                  UI.error("Something went wrong: #{ex}")
@@ -362,7 +365,7 @@ platform :android do
         lane :buildFailedLane do |options|
           viewliftSlackUrl = "https://hooks.slack.com/services/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"
           begin
-              slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:lane],icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
+              # slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:lane],icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:options['mySlackUrl'])
               slack(message: options[:my_slack_msg], username: options[:my_user_name], default_payloads: [:test_result], icon_url:"https://s3.amazonaws.com/mysomelogos/635593161616901137-viewliftlogo.jpg",slack_url:viewliftSlackUrl)
               rescue => ex
               UI.error("Something went wrong: #{ex}")

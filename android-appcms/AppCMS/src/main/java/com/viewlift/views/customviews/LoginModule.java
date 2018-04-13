@@ -6,8 +6,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Handler;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.PasswordTransformationMethod;
@@ -57,6 +59,8 @@ public class LoginModule extends ModuleView {
     private int underlineColor;
     private int transparentColor;
     private int bgColor;
+    private int ctaTextColor;
+    private int ctaBgColor;
     private int loginBorderPadding;
     private EditText visibleEmailInputView;
     private EditText visiblePasswordInputView;
@@ -100,7 +104,11 @@ public class LoginModule extends ModuleView {
             AppCMSMain appCMSMain = appCMSPresenter.getAppCMSMain();
             underlineColor = Color.parseColor(appCMSMain.getBrand().getGeneral().getPageTitleColor());
             transparentColor = ContextCompat.getColor(getContext(), android.R.color.transparent);
-            bgColor = Color.parseColor(appCMSMain.getBrand().getGeneral().getBackgroundColor());
+            bgColor = Color.parseColor(appCMSPresenter.getAppBackgroundColor());
+            ctaTextColor = Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand().getCta()
+                    .getPrimary().getTextColor());
+            ctaBgColor = Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand().getCta()
+                    .getPrimary().getBackgroundColor());
             int textColor = Color.parseColor(appCMSMain.getBrand().getGeneral().getTextColor());
             ViewGroup childContainer = getChildrenContainer();
             childContainer.setBackgroundColor(bgColor);
@@ -351,6 +359,8 @@ public class LoginModule extends ModuleView {
                             if (componentKey == AppCMSUIKeyType.PAGE_LOGIN_BUTTON_KEY ||
                                     (componentKey == AppCMSUIKeyType.PAGE_SIGNUP_BUTTON_KEY)) {
                                 loginInSignUpAction = component.getAction();
+                                ((TextView) componentView).setTextColor(ctaTextColor);
+                                componentView.setBackgroundColor(ctaBgColor);
                             }
 
                             componentView.setOnClickListener(v -> {
@@ -363,6 +373,7 @@ public class LoginModule extends ModuleView {
                                     String[] authData = new String[2];
                                     authData[0] = visibleEmailInputView.getText().toString();
                                     authData[1] = visiblePasswordInputView.getText().toString();
+
                                     appCMSPresenter.launchButtonSelectedAction(null,
                                             component.getAction(),
                                             null,
@@ -407,6 +418,7 @@ public class LoginModule extends ModuleView {
                                                 String[] authData = new String[2];
                                                 authData[0] = visibleEmailInputView.getText().toString();
                                                 authData[1] = visiblePasswordInputView.getText().toString();
+
                                                 appCMSPresenter.launchButtonSelectedAction(null,
                                                         loginInSignUpAction,
                                                         null,

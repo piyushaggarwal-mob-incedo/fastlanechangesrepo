@@ -69,7 +69,7 @@ extern const int kIMAAutodetectBitrate;
 @interface IMAAdsRenderingSettings : NSObject
 
 /**
- *  If specified, the SDK will prioritize the media with MIME type on the list.
+ *  If specified, the SDK will play the media with MIME type on the list.
  *  List of strings specifying the MIME types. When nil or empty, the SDK will
  *  use it's default list of MIME types supported on iOS.
  *  Example: @[ @"video/mp4", @"application/x-mpegURL" ]

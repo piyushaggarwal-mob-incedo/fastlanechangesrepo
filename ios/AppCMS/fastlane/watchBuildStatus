@@ -14,6 +14,7 @@ BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :bundleIdentifier" "${InfoPlistPat
 POST_URL=$(/usr/libexec/PlistBuddy -c "Print :posturl" "${InfoPlistPath}")
 APP_NUM=$(/usr/libexec/PlistBuddy -c "Print :appBuildNumber" "${InfoPlistPath}")
 USER_NAME=$(/usr/libexec/PlistBuddy -c "Print :username" "${InfoPlistPath}")
+USER_PASSWORD=$(/usr/libexec/PlistBuddy -c "Print :password" "${InfoPlistPath}")
 
 echo $BUNDLE_ID
 echo $BUILD_ID
@@ -21,11 +22,14 @@ echo $POST_URL
 echo $APP_NUM
 echo $USER_NAME
 
+
+export FASTLANE_PASSWORD=$USER_PASSWORD
+
 watchbuild -a $BUNDLE_ID -u piyushaggarwal.incedo@gmail.com
 
 postBuildStatus(){ #buildid, posturl, status, errormsg
 	echo "POSTING BUILD STATUS"
-    BODY_DATA="{\"buildId\":$1,\"status\":\"$3\",\"errorMessage\":\"$4\",\"message\":\"$5\",\"percentComplete\":$6,\"buildVersion\":\"$7\"}"
+    BODY_DATA="{\"buildId\":$1,\"status\":\"$3\",\"errorMessage\":\"$4\",\"message\":\"$5\",\"percentComplete\":$6,\"buildVersion\":$7}"
     echo "\n**********BUILD_STATUS_UPDATE**********\nPOST_URL=$2\nBODY_DATA=["$BODY_DATA"]\n---------------------------------------"
     curl -H 'Content-Type: application/json' -X POST -d "$BODY_DATA" $2
 }

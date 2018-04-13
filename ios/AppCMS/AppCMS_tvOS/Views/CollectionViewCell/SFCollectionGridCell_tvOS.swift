@@ -243,12 +243,12 @@ class SFCollectionGridCell_tvOS: UICollectionViewCell {
                     }
                     else{
                         backgroundImageView?.frame = CGRect(x: -10.0, y: -5.0, width: (thumbnailImage?.bounds.size.width)! + 20, height: self.bounds.size.height-5)
-                        backgroundImageView?.image = UIImage(named: "thumbnailFocusbackground.png")
+                        setGradientOnThumbnailImage()
                     }
                 }
                 else{
                     backgroundImageView?.frame = CGRect(x: -10.0, y: -5.0, width: (thumbnailImage?.bounds.size.width)! + 20, height: self.bounds.size.height-5)
-                    backgroundImageView?.image = UIImage(named: "thumbnailFocusbackground.png")
+                    setGradientOnThumbnailImage()
                 }
                 
             } else  if TEMPLATETYPE.uppercased() == Constants.kTemplateTypeEntertainment{
@@ -540,4 +540,20 @@ class SFCollectionGridCell_tvOS: UICollectionViewCell {
             }
         })
     }
+    
+    private func setGradientOnThumbnailImage() {
+        let appBackgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "ffffff")
+        let appPrimaryHover = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "000000")
+        var startColor = RGBA(red: appBackgroundColor.redValue, green: appBackgroundColor.greenValue, blue: appBackgroundColor.blueValue, alpha: appBackgroundColor.alphaValue)
+        var endColor = RGBA(red: appPrimaryHover.redValue, green: appPrimaryHover.greenValue, blue: appPrimaryHover.blueValue, alpha: appPrimaryHover.alphaValue)
+        let swapColor = startColor
+        //Invert for applications where primary hover and app text color is same as in TampaBay.
+        if (AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "000000") == (AppConfiguration.sharedAppConfiguration.appTextColor ?? "000000") {
+            startColor = endColor
+            endColor = swapColor
+        }
+        let gradientImage = UIImage.image(withRGBAGradientPoints: [GradientPoint(location: 0, color: startColor), GradientPoint(location: 1, color: endColor)], size: CGSize(width: (thumbnailImage?.bounds.size.width)! + 20, height: self.bounds.size.height-5))
+        backgroundImageView?.image = gradientImage
+    }
+    
 }

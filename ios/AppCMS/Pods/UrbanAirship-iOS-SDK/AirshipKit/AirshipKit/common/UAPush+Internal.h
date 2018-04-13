@@ -1,10 +1,11 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAPush.h"
 #import "UAirship.h"
 #import "UAChannelRegistrar+Internal.h"
 #import "UAAPNSRegistrationProtocol+Internal.h"
 #import "UAAPNSRegistration+Internal.h"
+#import "UAComponent+Internal.h"
 
 #if !TARGET_OS_TV
 #import "UALegacyAPNSRegistration+Internal.h"
@@ -297,7 +298,7 @@ extern NSString *const UAPushEnabledKey;
  * @param notification The notification.
  * @return Foreground presentation options.
  */
-- (UNNotificationPresentationOptions)presentationOptionsForNotification:(UNNotification *)notification;
+- (UNNotificationPresentationOptions)presentationOptionsForNotification:(UNNotification *)notification NS_AVAILABLE_IOS(10.0);
 
 /**
  * Called when a notification response is received.

@@ -380,7 +380,11 @@ class VideoDetailViewModule_tvOS: UIViewController, SFButtonDelegate {
             
             if buttonObject.imageName != nil {
                 button.buttonShowsAnImage = true
-                button.setImage(UIImage(named: buttonObject.imageName ?? "videoDetailPlayIcon_tvOS"), for: UIControlState.normal)
+                //button.setImage(UIImage(named: buttonObject.imageName ?? "videoDetailPlayIcon_tvOS"), for: UIControlState.normal)
+                button.imageView?.image = UIImage(named: "videoDetailPlayIcon_tvOS")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor {
+                    button.imageView?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                }
                 button.contentMode = .scaleAspectFit
                 button.alpha = 0.81
             }

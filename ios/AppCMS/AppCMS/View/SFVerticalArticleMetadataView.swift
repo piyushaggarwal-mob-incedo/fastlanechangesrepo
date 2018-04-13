@@ -185,7 +185,11 @@ class SFVerticalArticleMetadataView: UIView, SFButtonDelegate {
                 infoButton?.relativeViewFrame = self.frame
                 infoButton?.buttonDelegate = self
                 infoButton?.initialiseButtonFrameFromLayout(buttonLayout: buttonLayout)
-                infoButton?.setImage(UIImage(named: "gridOptions"), for: .normal)
+                let infoButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "icon-dropDown.png"))
+                
+                infoButton?.setImage(infoButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+                infoButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+
                 infoButton?.createButtonView()
                 break
             default:

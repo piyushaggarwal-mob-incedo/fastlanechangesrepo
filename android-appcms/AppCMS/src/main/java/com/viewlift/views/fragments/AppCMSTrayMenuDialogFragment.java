@@ -63,6 +63,9 @@ public class AppCMSTrayMenuDialogFragment extends DialogFragment implements View
         Button downloadBtn = (Button) view.findViewById(R.id.moreDialogDownloadBtn);
         Button closeBtn = (Button) view.findViewById(R.id.moreDialogCloseBtn);
 
+        addToWatchList.setText(isAdded ? "REMOVE TO WATCHLIST" : "ADD TO WATCHLIST");
+        addToWatchList.setBackgroundColor(Color.parseColor(appCMSPresenter.getAppBackgroundColor()));
+        addToWatchList.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
 
         addToWatchList.setText(isAdded ? appCMSPresenter.getCurrentActivity().getResources().getString(R.string.remove_from_watchlist) : appCMSPresenter.getCurrentActivity().getResources().getString(R.string.add_to_watchlist));
         addToWatchList.setBackgroundColor(Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand()
@@ -83,11 +86,14 @@ public class AppCMSTrayMenuDialogFragment extends DialogFragment implements View
             downloadBtn.setActivated(false);
             downloadBtn.setOnClickListener(null);
         }
+        downloadBtn.setVisibility(isDownloaded ? View.GONE : View.VISIBLE);
+        downloadBtn.setBackgroundColor(Color.parseColor(appCMSPresenter.getAppBackgroundColor()));
+        downloadBtn.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
+        closeBtn.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
 
         if (!appCMSPresenter.isDownloadable()){
             downloadBtn.setVisibility(View.GONE);
         }
-
         addToWatchList.setOnClickListener(this);
 
 

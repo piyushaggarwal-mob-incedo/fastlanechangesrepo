@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-8065773876408871780-253930",
+  "private_key_id": "6d174440d8766d8695d7540375d12c13f1e6e155",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwOkQKoXyN3iuc\nG+igv99rPmf4iD/ZVA6Pgc0654ZWthgzDJmPbopGSuVhdh6ykXyoLGcLrFnJBa8A\nbK4wgn/GZsSXy2VLb+YMzIih517NiyiGLy7GdIo/I7zVlJErXBYMFOMfDbmsx8Tl\nsvFcoca8NnuiKCNMyxgsgVFX7pHnjZ5Us+xzCkaldZCQzmJ1YmRYOIp8sBZSgQr/\nFZE9oZfVd5eJN+NV8ZbFeCIRz5osy82hY18b5xrL5+TBPBNYQGXRPFBvTAsZkGdB\nvF/TBQw5Wl2WKK3b4oMP4Hv5C5PQaidXPF4KzosmXTXMMx9d94IL0Yrs76Vm8/BZ\n+f5oORB9AgMBAAECggEACB11KUL2QBD7uh5KfPu8JC1rm6hbV4mSFOETaQOxwUfb\nLAXUnNdblIQTaJ47W9nspYPlIaz7AqsTCKmrvDEha134VJmGdxq87ovAPCn+4oEz\nfJ/3y/MggJ4HlPnYu4Hrw/x12JkigTnYljYPL+BSDTQgrYvV04EqTxy/X0i6cEqw\nidsW9l4cxhudxbCRSw+IkHfKxwrTmF9icV/cgBeZdiNvaBJ/ErS3L0IoD0N6qYtr\n49OAaditxtu1jq+vYEvAL/i7pSDdvi46XM0DWhhL3I20Do7IoWTqwbcHHWahPHzk\nDxXFwA9zhXmMlvub9N5dyTWgsr9chW/FeRmrvUbOAwKBgQDXImuOLnbGWGHtzyaM\nQwOclHuReBX3mpGxHV5PtzhHlPH79HTRzHpHuwwqZxt83M4LV2j3ipxrMbj3wKd7\nl7Qnn7l6reQUWgHE9f1wvDU3GJJkDECdJgimhYrSr5bgK92u4OMeV+r3JP2TtbRt\npjkBNG8BzqPwqDWbpq64rfaRFwKBgQDRs+EZGnhYL0CWXwYOQ+BVtLGK6veHTVE/\ntR8wOWe/hEPjZ1Y24t3MOxvsSAMnf4nMF0k/ghDfznJPqkg53fSDklkbaQ7A54wT\nt0QxaAV0m4DuXJ0jbv/TaQY31AAWLTHNo6tMlvjjZsLzrAUXUTHSPC8UK0/Hx828\nErzlIX2fiwKBgG/Cw9lDLhTwST9/g+kNz0yCnob9uXu94r3+IcaLykL1j5hycFWl\nQkkNVM6abd853hhqOm+OpJ/TXuHmRZuhPcfv5C1lNL2V3KFzoUv1mjebHkG3U8HP\nxmKrsWiuK1UdtLZqwdI7nibyIoGfvbHQzoBfuuNXdDdLSz4nI1FxnkvVAoGAbW6J\nUShXFO3TrqT37AnPz+nznKLxeVIHzE8gb3IFihPjuY/7lbjeNe3CrJMH0lzj8/VS\n7Clb1O9PB/O8rTX+m4qLpZo1cMVkfAVvOLkn36ompjz+Y7dRGWn9LLUdNnVvP/jh\nM561UzYVFkP2hCyC60ss5kGT6JWD71l36bqIa/ECgYEAw95Yo8cBGktMrFU0bS/l\n7vIZn3HXkVFnvE4Nu7ojejQLnkd3wnUoachgHRqMsjQLBc4vMpc6jFwftp6bFij8\nU6bV+Mdy0a32Z0Q33BSc3z1p5fVQMaz2k2qm/ZkC6o6QVx6i3kowZzxhtxFr1Iwe\nfvubtUC6F++yDneOo6zMps4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "snagfilmsvl@api-8065773876408871780-253930.iam.gserviceaccount.com",
+  "client_id": "112359065643194650388",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/snagfilmsvl%40api-8065773876408871780-253930.iam.gserviceaccount.com"
+}

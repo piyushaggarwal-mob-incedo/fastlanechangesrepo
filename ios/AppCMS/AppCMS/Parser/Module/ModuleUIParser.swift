@@ -130,11 +130,13 @@ class ModuleUIParser: NSObject {
             }
 
             else if typeOfModule == "AC ArticlePage 01" || typeOfModule == "AC ArticleDetail 01"{
+                #if os (iOS)
                 let articleDetailModuleParser = SFArticleDetailModuleParser()
                 let articleDetailObject = articleDetailModuleParser.parseArticleDetailJson(articleDetailDictionary: moduleDictionary as Dictionary<String, AnyObject>)
                 if articleDetailObject.layoutObjectDict.isEmpty == false {
                     modulesArray.append(articleDetailObject)
                 }
+                #endif
             }
             else if typeOfModule == "AC Tray XX"
             {

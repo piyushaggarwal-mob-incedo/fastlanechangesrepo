@@ -7,10 +7,10 @@
 //
 
 #import "ApptentiveLegacySurveyResponse.h"
-#import "ApptentiveSerialRequest.h"
-#import "Apptentive_Private.h"
 #import "ApptentiveBackend.h"
+#import "ApptentiveSerialRequest.h"
 #import "ApptentiveSurveyResponsePayload.h"
+#import "Apptentive_Private.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -39,7 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 	for (ApptentiveLegacySurveyResponse *response in unsentSurveyResponses) {
 		NSDictionary *JSON = response.apiJSON[@"survey"];
 
-		ApptentiveSurveyResponsePayload *payload = [[ApptentiveSurveyResponsePayload alloc] initWithAnswers:JSON[@"answers"] identifier:JSON[@"id"]];
+		NSDate *creationDate = [NSDate dateWithTimeIntervalSince1970:[JSON[@"client_created_at"] doubleValue]];
+		ApptentiveSurveyResponsePayload *payload = [[ApptentiveSurveyResponsePayload alloc] initWithAnswers:JSON[@"answers"] identifier:JSON[@"id"] creationDate:creationDate];
 		ApptentiveAssertNotNil(payload, @"Failed to create a survey response payload");
 
 		if (payload != nil) {

@@ -3,7 +3,6 @@ package com.viewlift.models.network.rest;
 import android.support.annotation.WorkerThread;
 import android.util.Log;
 
-import com.google.gson.Gson;
 import com.viewlift.models.data.appcms.search.AppCMSSearchResult;
 
 import java.io.IOException;
@@ -40,7 +39,7 @@ public class AppCMSSearchCall {
 
             return appCMSSearchRest.get(authHeaders, url).execute().body();
         } catch (Exception e) {
-            //Log.e(TAG, "Failed to execute search query " + url + ": " + e.toString());
+            Log.e(TAG, "Failed to execute search query " + url + ": " + e.toString());
         }
         return null;
     }

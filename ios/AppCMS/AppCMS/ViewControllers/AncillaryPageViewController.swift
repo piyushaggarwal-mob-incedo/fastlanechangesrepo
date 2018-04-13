@@ -398,7 +398,11 @@ class AncillaryPageViewController: UIViewController, SFButtonDelegate, UITableVi
         
         if button.buttonObject?.key == "closeButton"{
             
-            button.setImage(UIImage(named: "cancelIcon"), for: UIControlState.normal)
+            let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+            
+            button.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+            
         }
         else if button.buttonObject?.key == "removeAll" {
             

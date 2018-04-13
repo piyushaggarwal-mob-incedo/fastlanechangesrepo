@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <Foundation/Foundation.h>
 
@@ -25,6 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param keys The keys to migrate.
  */
 - (void)migrateUnprefixedKeys:(NSArray *)keys;
+
+/**
+ * Checks if the key exists in the preference data store
+ * @param key The preference key.
+ * @return YES if the key exists
+ */
+- (BOOL)keyExists:(NSString *)key;
 
 /**
  * Returns the object associated with the key.
@@ -91,6 +98,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @param key The preference key.
  */
 - (BOOL)boolForKey:(NSString *)key;
+
+/**
+ * Returns the BOOL associated with the key. If the key doesn't exist, return the default
+ * @param key The preference key.
+ * @param defaultValue The value to return if there is no value for the preference key.
+ */
+- (BOOL)boolForKey:(NSString *)key default:(BOOL)defaultValue;
 
 /**
  * Returns the URL associated with the key.

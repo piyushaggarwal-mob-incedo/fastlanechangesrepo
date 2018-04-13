@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAChannelCapture.h"
 #import "NSString+UALocalizationAdditions.h"
@@ -13,11 +13,10 @@ NSString *const UAChannelCaptureEnabledKey = @"UAChannelCaptureEnabled";
 
 @interface UAChannelCapture()
 
-// REVISIT: convert to UIAlertController
-@property (nonatomic, strong) UIAlertView *alertView;
 @property (nonatomic, strong) UAPush *push;
 @property (nonatomic, strong) UAConfig *config;
 @property (nonatomic, strong) UAPreferenceDataStore *dataStore;
+@property bool enableChannelCapture;
 
 @end
 
@@ -42,6 +41,7 @@ NSString *const UAChannelPlaceHolder = @"CHANNEL";
                                                      selector:@selector(didBecomeActive)
                                                          name:UIApplicationDidBecomeActiveNotification
                                                        object:nil];
+            self.enableChannelCapture = true;
         }
     }
 
@@ -61,10 +61,12 @@ NSString *const UAChannelPlaceHolder = @"CHANNEL";
 - (void)enable:(NSTimeInterval)duration {
     NSDate *date = [NSDate dateWithTimeIntervalSinceNow:duration];
     [self.dataStore setObject:date forKey:UAChannelCaptureEnabledKey];
+    self.enableChannelCapture = true;
 }
 
 - (void)disable {
     [self.dataStore removeObjectForKey:UAChannelCaptureEnabledKey];
+    self.enableChannelCapture = false;
 }
 
 - (void)didBecomeActive {
@@ -75,7 +77,7 @@ NSString *const UAChannelPlaceHolder = @"CHANNEL";
  * Checks the clipboard for the token and displays an alert if the token is available.
  */
 - (void)checkClipboard {
-    if (!self.push.channelID) {
+    if (!self.push.channelID || !self.enableChannelCapture) {
         return;
     }
 
@@ -86,8 +88,10 @@ NSString *const UAChannelPlaceHolder = @"CHANNEL";
         }
     }
 
-    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 0, 0}] && ![UIPasteboard generalPasteboard].hasStrings) {
-        return;
+    if (@available(iOS 10.0, tvOS 10.0, *)) {
+        if (![UIPasteboard generalPasteboard].hasStrings) {
+            return;
+        }
     }
     
     NSString *pasteBoardString = [UIPasteboard generalPasteboard].string;

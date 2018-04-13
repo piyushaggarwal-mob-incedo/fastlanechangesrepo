@@ -445,7 +445,11 @@ class SFTableViewCell_tvOS: UITableViewCell, SFButtonDelegate {
         else if imageObject.key != nil && imageObject.key == "playImage" {
             playImage?.imageViewObject = imageObject
             playImage?.relativeViewFrame = relativeViewFrame!
-            playImage?.image = #imageLiteral(resourceName: "videoDetailPlayIcon_tvOS.png")
+            //playImage?.image = #imageLiteral(resourceName: "videoDetailPlayIcon_tvOS.png")
+            playImage?.image = UIImage(named: "videoDetailPlayIcon_tvOS")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+            if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor {
+                playImage?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+            }
             playImage?.isHidden = false
         }
     }

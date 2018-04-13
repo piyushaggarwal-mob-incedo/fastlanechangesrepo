@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>JobBuildId</key>
-	<string>82</string>
+	<string>147</string>
 	<key>appBuildNumber</key>
-	<string>47</string>
+	<string>73</string>
 	<key>bundleIdentifier</key>
-	<string>com.viewlift.testplatform</string>
+	<string>com.ptvsport</string>
 	<key>password</key>
 	<string>Alexa@123</string>
 	<key>posturl</key>
-	<string>http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/snagfilmsdsa/ios/appcms/build/status</string>
+	<string>http://qa-tools.viewlift.com/pfl/ios/appcms/build/status</string>
 	<key>username</key>
 	<string>piyushaggarwal.incedo@gmail.com</string>
 </dict>

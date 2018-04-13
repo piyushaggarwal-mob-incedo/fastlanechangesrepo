@@ -57,6 +57,11 @@ public class AppCMSErrorActivity extends AppCompatActivity {
         presenterCloseActionReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+                if (intent != null &&
+                        intent.getStringExtra(getString(R.string.app_cms_package_name_key)) != null &&
+                        !intent.getStringExtra(getString(R.string.app_cms_package_name_key)).equals(getPackageName())) {
+                    return;
+                }
                 if (intent.getAction().equals(AppCMSPresenter.PRESENTER_CLOSE_SCREEN_ACTION) &&
                         !"Error Screen".equals(intent.getStringExtra(getString(R.string.app_cms_closing_page_name)))) {
                     finish();
@@ -73,6 +78,11 @@ public class AppCMSErrorActivity extends AppCompatActivity {
         networkConnectedReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
+                if (intent != null &&
+                        intent.getStringExtra(getString(R.string.app_cms_package_name_key)) != null &&
+                        !intent.getStringExtra(getString(R.string.app_cms_package_name_key)).equals(getPackageName())) {
+                    return;
+                }
                 NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
                 boolean isConnected = activeNetwork != null &&
                         activeNetwork.isConnectedOrConnecting();
@@ -82,9 +92,10 @@ public class AppCMSErrorActivity extends AppCompatActivity {
                                              @Override
                                              public void run() {
                                                  if (timerScheduled) {
-                                                     Intent relaunchApp = getPackageManager().getLaunchIntentForPackage(getPackageName());
+                                                     /*Intent relaunchApp = getPackageManager().getLaunchIntentForPackage(getPackageName());
                                                      relaunchApp.putExtra(getString(R.string.force_reload_from_network_key), true);
-                                                     startActivity(relaunchApp);
+                                                     startActivity(relaunchApp);*/
+                                                     AppCMSErrorActivity.this.finish();
                                                      try {
                                                          unregisterReceiver(networkConnectedReceiver);
                                                      } catch (Exception e) {

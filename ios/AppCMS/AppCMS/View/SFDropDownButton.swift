@@ -84,10 +84,14 @@ class SFDropDownButton: UIButton {
             self.titleLabel?.font = UIFont(name: fontFamily!, size: CGFloat(fontSize!))
         }
         
-        if buttonObject?.imageName != nil {
-
-            self.setImage(UIImage(named: buttonObject?.imageName ?? "icon-dropDown"), for: .normal)
+        if buttonObject?.imageName != nil
+        {
+            let dropdownButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "icon-dropDown.png"))
+            
+            self.setImage(dropdownButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            self.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
+
         
         self.contentHorizontalAlignment = .left
     }

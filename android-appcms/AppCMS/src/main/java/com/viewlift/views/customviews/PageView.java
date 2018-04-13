@@ -1,27 +1,24 @@
 package com.viewlift.views.customviews;
 
 import android.content.Context;
-import android.support.v4.widget.NestedScrollView;
+import android.graphics.Color;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import com.viewlift.R;
 import com.viewlift.models.data.appcms.api.ContentDatum;
-import com.viewlift.models.data.appcms.api.Module;
 import com.viewlift.models.data.appcms.ui.page.AppCMSPageUI;
 import com.viewlift.models.data.appcms.ui.page.Component;
 import com.viewlift.models.data.appcms.ui.page.Layout;
 import com.viewlift.models.data.appcms.ui.page.ModuleList;
 import com.viewlift.presenters.AppCMSPresenter;
 import com.viewlift.views.adapters.AppCMSBaseAdapter;
-import com.viewlift.views.adapters.AppCMSCarouselItemAdapter;
 import com.viewlift.views.adapters.AppCMSPageViewAdapter;
 
 import java.util.ArrayList;
@@ -37,6 +34,8 @@ import javax.inject.Inject;
  */
 
 public class PageView extends BaseView {
+    private static final String TAG = "PageView";
+
     private final AppCMSPageUI appCMSPageUI;
     private List<ListWithAdapter> adapterList;
     private List<ViewWithComponentId> viewsWithComponentIds;
@@ -50,6 +49,12 @@ public class PageView extends BaseView {
 
     private boolean shouldRefresh;
 
+    private boolean reparentChromecastButton;
+
+    private OnScrollChangeListener onScrollChangeListener;
+
+    private boolean ignoreScroll;
+    private FrameLayout headerView;
     @Inject
     public PageView(Context context,
                     AppCMSPageUI appCMSPageUI,
@@ -59,8 +64,9 @@ public class PageView extends BaseView {
         this.viewsWithComponentIds = new ArrayList<>();
         this.moduleViewMap = new HashMap<>();
         this.appCMSPresenter = appCMSPresenter;
-        this.appCMSPageViewAdapter = new AppCMSPageViewAdapter();
+        this.appCMSPageViewAdapter = new AppCMSPageViewAdapter(context);
         this.shouldRefresh = true;
+        this.ignoreScroll = false;
         init();
     }
 
@@ -81,12 +87,22 @@ public class PageView extends BaseView {
 
         childrenContainer.setVisibility(GONE);
         viewParent.removeView(view);
+
+        LayoutParams adjustedLayoutParams = new LayoutParams(LayoutParams.MATCH_PARENT,
+                LayoutParams.MATCH_PARENT);
+
+        view.setLayoutParams(adjustedLayoutParams);
+
         addView(view);
+
+        view.forceLayout();
+
+        Log.d(TAG, "Video Player opened in fullscreen");
     }
 
     public void closeViewFromFullScreen(View view, ViewGroup viewParent) {
         shouldRefresh = true;
-        if (fullScreenViewOriginalDimensions != null) {
+        if (view.getParent() == this && fullScreenViewOriginalDimensions != null) {
             removeView(view);
 
             view.getLayoutParams().width = fullScreenViewOriginalDimensions.width;
@@ -94,6 +110,10 @@ public class PageView extends BaseView {
 
             viewParent.addView(view);
             childrenContainer.setVisibility(VISIBLE);
+
+            getRootView().forceLayout();
+
+            Log.d(TAG, "Video Player closed out fullscreen");
         }
     }
 
@@ -104,7 +124,13 @@ public class PageView extends BaseView {
                         FrameLayout.LayoutParams.MATCH_PARENT);
         setLayoutParams(layoutParams);
         adapterList = new CopyOnWriteArrayList<>();
+        createHeaderView();
+    }
 
+    private void createHeaderView() {
+        FrameLayout.LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        headerView = new FrameLayout(getContext());
+        headerView.setLayoutParams(layoutParams);
     }
 
     public void addListWithAdapter(ListWithAdapter listWithAdapter) {
@@ -113,7 +139,6 @@ public class PageView extends BaseView {
                 adapterList.remove(listWithAdapter1);
             }
         }
-
         adapterList.add(listWithAdapter);
     }
 
@@ -172,6 +197,8 @@ public class PageView extends BaseView {
     protected ViewGroup createChildrenContainer() {
         childrenContainer = new RecyclerView(getContext());
         childrenContainer.setId(R.id.home_nested_scroll_view);
+        childrenContainer.setDescendantFocusability(RecyclerView.FOCUS_BLOCK_DESCENDANTS);
+        childrenContainer.setFocusableInTouchMode(true);
         FrameLayout.LayoutParams nestedScrollViewLayoutParams =
                 new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,
                         LayoutParams.MATCH_PARENT);
@@ -180,7 +207,28 @@ public class PageView extends BaseView {
                 LinearLayoutManager.VERTICAL,
                 false));
         ((RecyclerView) childrenContainer).setAdapter(appCMSPageViewAdapter);
+        ((RecyclerView) childrenContainer).setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (onScrollChangeListener != null &&
+                        recyclerView.isLaidOut() &&
+                        !ignoreScroll) {
+                    onScrollChangeListener.onScroll(dx, dy);
+                    int currentPosition =
+                            ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
+                    if (currentPosition < 0) {
+                        currentPosition =
+                                ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastVisibleItemPosition();
+                    }
+                    if (0 <= currentPosition) {
+                        onScrollChangeListener.setCurrentPosition(currentPosition);
+                    }
+                }
 
+                ignoreScroll = false;
+            }
+        });
         mainView = new SwipeRefreshLayout(getContext());
         SwipeRefreshLayout.LayoutParams swipeRefreshLayoutParams =
                 new SwipeRefreshLayout.LayoutParams(LayoutParams.MATCH_PARENT,
@@ -189,10 +237,12 @@ public class PageView extends BaseView {
         mainView.addView(childrenContainer);
         mainView.setOnRefreshListener(() -> {
             appCMSPresenter.setMiniPLayerVisibility(true);
-            appCMSPresenter.refreshAPIData(() -> {
-                        mainView.setRefreshing(false);
-            },
-                    true);
+            if (shouldRefresh) {
+                appCMSPresenter.clearPageAPIData(() -> {
+                            mainView.setRefreshing(false);
+                        },
+                        true);
+            }
         });
         addView(mainView);
         return childrenContainer;
@@ -227,9 +277,14 @@ public class PageView extends BaseView {
         appCMSPageViewAdapter.removeAllViews();
     }
 
-    public void addModuleViewWithModuleId(String moduleId, ModuleView moduleView) {
+    public void addModuleViewWithModuleId(String moduleId,
+                                          ModuleView moduleView,
+                                          boolean useModuleViewAsHeader) {
         moduleViewMap.put(moduleId, moduleView);
         appCMSPageViewAdapter.addView(moduleView);
+        if (useModuleViewAsHeader) {
+            addView(moduleView);
+        }
     }
 
     public ModuleView getModuleViewWithModuleId(String moduleId) {
@@ -242,6 +297,7 @@ public class PageView extends BaseView {
     public AppCMSPageUI getAppCMSPageUI() {
         return appCMSPageUI;
     }
+
     public void removeAllAddOnViews() {
         int index = 0;
         boolean removedChild = false;
@@ -255,11 +311,13 @@ public class PageView extends BaseView {
             index++;
         }
     }
+
     public void notifyAdapterDataSetChanged() {
         if (appCMSPageViewAdapter != null) {
-            appCMSPageViewAdapter.notifyDataSetChanged();
+            appCMSPageViewAdapter.notifyItemRangeChanged(1,appCMSPageViewAdapter.getItemCount());
         }
     }
+
     public View findChildViewById(int id) {
         if (appCMSPageViewAdapter != null) {
             return appCMSPageViewAdapter.findChildViewById(id);
@@ -267,8 +325,54 @@ public class PageView extends BaseView {
         return null;
     }
 
+    public boolean shouldReparentChromecastButton() {
+        return reparentChromecastButton;
+    }
+
+    public void setReparentChromecastButton(boolean reparentChromecastButton) {
+        this.reparentChromecastButton = reparentChromecastButton;
+    }
+
+    public interface OnScrollChangeListener {
+        void onScroll(int dx, int dy);
+        void setCurrentPosition(int position);
+    }
+
+    public OnScrollChangeListener getOnScrollChangeListener() {
+        return onScrollChangeListener;
+    }
+
+    public void setOnScrollChangeListener(OnScrollChangeListener onScrollChangeListener) {
+        this.onScrollChangeListener = onScrollChangeListener;
+    }
+
+    public void scrollToPosition(int dx, int dy) {
+        if (childrenContainer != null) {
+            ignoreScroll = true;
+            childrenContainer.scrollBy(dx, dy);
+        }
+    }
+
+    public void scrollToPosition(int position) {
+        if (childrenContainer != null) {
+            if (position==0) {
+                childrenContainer.scrollBy(position, position);
+            }else {
+                 ((RecyclerView) childrenContainer).smoothScrollToPosition(position);
+            }
+        }
+    }
+
     private static class ViewDimensions {
         int width;
         int height;
+    }
+
+    public void addToHeaderView(View view){
+        headerView.addView(view);
+        if(headerView.getParent() == null){
+            addView(headerView);
+            headerView.setBackgroundColor(Color.parseColor(appCMSPresenter.getAppBackgroundColor()));
+        }
     }
 }

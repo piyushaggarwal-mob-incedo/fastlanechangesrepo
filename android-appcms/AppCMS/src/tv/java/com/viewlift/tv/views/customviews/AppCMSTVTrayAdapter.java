@@ -1,6 +1,7 @@
 package com.viewlift.tv.views.customviews;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
@@ -87,11 +88,13 @@ public class AppCMSTVTrayAdapter
 
         if (null != jsonValueKeyMap.get(viewType)) {
             switch (jsonValueKeyMap.get(viewType)) {
-                case PAGE_HISTORY_MODULE_KEY:
+                case PAGE_HISTORY_01_MODULE_KEY:
+                case PAGE_HISTORY_02_MODULE_KEY:
                     this.isHistory = true;
                     break;
 
-                case PAGE_WATCHLIST_MODULE_KEY:
+                case PAGE_WATCHLIST_01_MODULE_KEY:
+                case PAGE_WATCHLIST_02_MODULE_KEY:
                     this.isWatchlist = true;
                     break;
                 default:
@@ -131,7 +134,8 @@ public class AppCMSTVTrayAdapter
                     this.parentLayout,
                     false,
                     component,
-                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+//                    ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     Utils.getFocusColor(context, appCMSPresenter));
 
@@ -193,11 +197,12 @@ public class AppCMSTVTrayAdapter
             }
             textView.setGravity(Gravity.CENTER);
             Component component1 = new Component();
-            component1.setFontFamily(context.getString(R.string.app_cms_page_font_family_key));
+            component1.setFontFamily(appCMSPresenter.getFontFamily());
             component1.setFontWeight(context.getString(R.string.app_cms_page_font_semibold_key));
             textView.setTypeface(Utils.getTypeFace(context, jsonValueKeyMap, component1));
             layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
             textView.setLayoutParams(layoutParams);
+            textView.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
             relativeLayout.addView(textView);
             return new ViewHolder(relativeLayout);
         }
@@ -207,7 +212,7 @@ public class AppCMSTVTrayAdapter
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         if (0 <= position && adapterData != null && position < adapterData.size()) {
-            bindView(holder.componentView, adapterData.get(position));
+            bindView(holder.componentView, adapterData.get(position), position);
         }
     }
 
@@ -229,7 +234,7 @@ public class AppCMSTVTrayAdapter
     }
 
     protected void bindView(TVCollectionGridItemView itemView,
-                            final ContentDatum data) throws IllegalArgumentException {
+                            final ContentDatum data, int position) throws IllegalArgumentException {
         if (onClickHandler == null) {
             onClickHandler = new TVCollectionGridItemView.OnClickHandler() {
                 @Override
@@ -287,7 +292,7 @@ public class AppCMSTVTrayAdapter
                 public void delete(Component childComponent, ContentDatum data) {
                     //Log.d(TAG, "Deleting watchlist item: " + data.getGist().getTitle());
                     if (appCMSPresenter.isNetworkConnected()) {
-                        appCMSPresenter.editWatchlist(data.getGist().getId(),
+                        appCMSPresenter.editWatchlist(data,
                                 addToWatchlistResult -> {
                                     adapterData.remove(data);
                                     View view = null;
@@ -303,9 +308,9 @@ public class AppCMSTVTrayAdapter
                                         view.setVisibility(adapterData.size() != 0 ? View.VISIBLE : View.INVISIBLE);
                                     }
                                     notifyDataSetChanged();
-                                }, false);
+                                }, false, true);
                     } else {
-                        appCMSPresenter.openErrorDialog(data.getGist().getId(),
+                        appCMSPresenter.openErrorDialog(data,
                                 true,
                                 appCMSAddToWatchlistResult -> {
                                     adapterData.remove(data);
@@ -334,7 +339,8 @@ public class AppCMSTVTrayAdapter
                     data,
                     jsonValueKeyMap,
                     onClickHandler,
-                    viewTypeKey);
+                    viewTypeKey,
+                    position);
         }
     }
 

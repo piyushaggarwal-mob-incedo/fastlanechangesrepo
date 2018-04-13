@@ -77,26 +77,11 @@ public class NavBarItemView extends LinearLayout {
         createChildren();
     }
 
-    private int getBrandPrimaryColor(){
-
-        if (appCMSPresenter!=null &&
-                appCMSPresenter.getAppCMSMain()!=null &&
-                appCMSPresenter.getAppCMSMain().getBrand() !=null &&
-                appCMSPresenter.getAppCMSMain().getBrand().getCta() !=null &&
-                appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary() !=null &&
-                appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary().getBackgroundColor() !=null
-                ) {
-            return Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary().getBackgroundColor());
-        }else {
-            return ContextCompat.getColor(getContext(), R.color.colorNavBarText);
-        }
-    }
-
     public void select(boolean hasFocus, AppCMSPageActivity.NavTabTag navigationTabBar) {
 
         this.hasFocus = hasFocus;
-        int color = appCMSPresenter.getNavBarItemDefaultColor();
-
+        Resources resources = getResources();
+        int color = ContextCompat.getColor(getContext(), R.color.colorNavBarText);
         if (hasFocus) {
             color = highlightColor;
             if (navigationTabBar.getNavigationModuleItem().isBackgroundSelectable()) {
@@ -108,8 +93,7 @@ public class NavBarItemView extends LinearLayout {
 
         for (int i = 0; i < navigationTabBar.getNavigationModuleItem().getComponents().size(); i++) {
             String type = navigationTabBar.getNavigationModuleItem().getComponents().get(i).getType();
-            if (navLabel != null && type.equalsIgnoreCase("label") ){
-                //&& navigationTabBar.getNavigationModuleItem().getComponents().get(i).isSelectable()) {
+            if (navLabel != null && type.equalsIgnoreCase("label") && navigationTabBar.getNavigationModuleItem().getComponents().get(i).isSelectable()) {
                 navLabel.setTextColor(color);
            // } else if (navImage != null && type.equalsIgnoreCase("image") &&   // Commented due to somehow  isSelectable returning false all the time
                 // navigationTabBar.getNavigationModuleItem().getComponents().get(i).isSelectable()) {
@@ -122,7 +106,7 @@ public class NavBarItemView extends LinearLayout {
     }
 
     private void setTabBg() {
-        int[] ButtonColors = {appCMSPresenter.getBrandPrimaryCtaColor(), Color.parseColor("#00000000")};
+        int[] ButtonColors = {Color.parseColor("#f4181c"), Color.parseColor("#00000000")};
         GradientDrawable gradientDrawable = new GradientDrawable(
                 GradientDrawable.Orientation.BOTTOM_TOP, ButtonColors);
         gradientDrawable.setCornerRadius(0f);
@@ -150,7 +134,6 @@ public class NavBarItemView extends LinearLayout {
                             new LinearLayout.LayoutParams(BaseView.dpToPx(R.dimen.nav_image_width, getContext()), BaseView.dpToPx(R.dimen.nav_image_height, getContext()));
                     navImageLayoutParams.gravity = Gravity.CENTER_HORIZONTAL;
                     navImage.setLayoutParams(navImageLayoutParams);
-
                     addView(navImage);
 
                     break;
@@ -164,7 +147,7 @@ public class NavBarItemView extends LinearLayout {
                     navLabel.setLayoutParams(navLabelLayoutParams);
                     navLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                             getResources().getDimension(R.dimen.nav_item_text_size));
-                    navLabel.setTextColor(colorTint);
+                    navLabel.setTextColor(ContextCompat.getColor(getContext(), R.color.colorNavBarText));
                     navLabel.setGravity(Gravity.CENTER_HORIZONTAL);
                     addView(navLabel);
 
@@ -218,11 +201,15 @@ public class NavBarItemView extends LinearLayout {
 
     public void setImage(String drawableName) {
         Resources resources = getResources();
-        int drawableId = resources.getIdentifier(drawableName,
-                "drawable",
-                getContext().getPackageName());
-        if (navImage != null) {
-            navImage.setImageDrawable(ContextCompat.getDrawable(getContext(), drawableId));
+        try {
+            int drawableId = resources.getIdentifier(drawableName,
+                    "drawable",
+                    getContext().getPackageName());
+            if (navImage != null) {
+                navImage.setImageDrawable(ContextCompat.getDrawable(getContext(), drawableId));
+            }
+        } catch (Exception e) {
+
         }
     }
 

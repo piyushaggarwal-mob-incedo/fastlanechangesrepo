@@ -12,10 +12,10 @@ import sys
 import os
 import requests
 import json
+import time
 
 fileDirPath = os.path.dirname(os.path.abspath(__file__))
 os.chdir(fileDirPath)
-
 
 PLATFORM=sys.argv[1]
 JSON_URL=sys.argv[2]
@@ -25,6 +25,8 @@ POST_URL=sys.argv[5]
 BUCKET_NAME = sys.argv[6]
 MY_EMAIL_ID = sys.argv[7]
 
+itunesConnectUserName="test"
+itunesConnectPassword="test"
 
 print 'ARGUMENT_LIST\nPLATFORM='+PLATFORM+'\nJSON_URL='+JSON_URL+'\nSITE_ID='+SITE_NAME+'\nBUILD_ID='+str(BUILD_ID)+'\nPOST_URL='+POST_URL+']'
 print
@@ -32,27 +34,17 @@ CurrentDir = os.getcwd()
 print 'PWD = ' + CurrentDir
 param = "projectPath='" + CurrentDir + "' BUILD_ID='" + str(BUILD_ID) + "'"
 
-      # "apptentiveKey": null,
-      #   "apptentiveAppSignature": null,
-      #   "cachedAPIToken": null,
-      #   "urbanAirshipProdMasterKey": null,
-      #   "urbanAirshipDevMasterKey": null,
-      #   "urbanAirshipAppSecret": null,
-      #   "appFlyerKey": "teastkey",
-      #   "appSectetKey": null,
-      #   "googleServiceInfoPlist": "data:;base6
 
-apptentiveKey = ""
-apptentiveAppSignature = ""
-cachedAPIToken = ""
-urbanAirshipProdMasterKey = ""
+
+apptentiveKey = "apptentiveKey"
+apptentiveAppSignature = "apptentiveAppSignature"
+cachedAPIToken = "cachedAPIToken"
+urbanAirshipProdMasterKey = "urbanAirshipProdMasterKey"
 urbanAirshipDevMasterKey = ""
-urbanAirshipAppSecret = ""
-appFlyerKey = ""
-appSecretKey = ""
-googleServiceInfoPlist = ""
-itunesConnectUserName=""
-itunesConnectPassword=""
+urbanAirshipAppSecret = "urbanAirshipDevMasterKey"
+appFlyerKey = "appFlyerKey"
+appSecretKey = "appSecretKey"
+googleServiceInfoPlist = "googleServiceInfoPlist"
 
 
 def getSensitiveData():
@@ -69,28 +61,50 @@ def getSensitiveData():
     print(r.json()["data"])
 
     sensitiveData = r.json()["data"]
-    apptentiveKey = sensitiveData["apptentiveKey"]
-    apptentiveAppSignature = sensitiveData["apptentiveAppSignature"]
-    cachedAPIToken = sensitiveData["cachedAPIToken"]
-    urbanAirshipProdMasterKey = sensitiveData["urbanAirshipProdMasterKey"]
-    urbanAirshipDevMasterKey = sensitiveData["urbanAirshipDevMasterKey"]
-    appFlyerKey = sensitiveData["appFlyerKey"]
-    appSecretKey = sensitiveData["appSecretKey"]
+
+    # apptentiveKey = sensitiveData["apptentiveKey"]
+    # apptentiveAppSignature = sensitiveData["apptentiveAppSignature"]
+    # cachedAPIToken = sensitiveData["cachedAPIToken"]
+    # urbanAirshipProdMasterKey = sensitiveData["urbanAirshipProdMasterKey"]
+    # urbanAirshipDevMasterKey = sensitiveData["urbanAirshipDevMasterKey"]
+    # appFlyerKey = sensitiveData["appFlyerKey"]
+    # appSecretKey = sensitiveData["appSecretKey"]
+    
+
+    global itunesConnectUserName
     itunesConnectUserName= sensitiveData["iTunesConnectUserName"]
+    global itunesConnectPassword
     itunesConnectPassword= sensitiveData["iTunesConnectPassword"]
 
 
-    credentailsData =sensitiveData["googleServiceInfoPlist"].split(",")
-    splitservices = credentailsData[1]
-    print "piyush"
-    print splitservices
-    crfile = open(CurrentDir + '/crfile.txt', 'w')
-    with open(CurrentDir + "/crfile.txt", "a") as myfile:
-        crfile.write(splitservices.encode("utf-8"))
-    crfile.close()
+    print "**************************************************************************************************"
+    print itunesConnectUserName
+    print itunesConnectPassword
+    print sensitiveData["iTunesConnectUserName"]
+    print sensitiveData["iTunesConnectPassword"]
+    myUserNameItunes=sensitiveData["iTunesConnectUserName"]
+    myPasswordItunes=sensitiveData["iTunesConnectPassword"]
+    print "**************************************************************************************************"
+    
+    # credentailsData =sensitiveData["googleServiceInfoPlist"].split(",")
+    # splitservices = credentailsData[1]
+    # print "piyush"
+    # print splitservices
+    # crfile = open(CurrentDir + '/crfile.txt', 'w')
+    # with open(CurrentDir + "/crfile.txt", "a") as myfile:
+    #     crfile.write(splitservices.encode("utf-8"))
+    # crfile.close()
 
 getSensitiveData()
 
+
+print "**************************************************************************************************"
+print itunesConnectUserName
+print itunesConnectPassword
+print "**************************************************************************************************"
+
+
+JSON_URL=JSON_URL+"?x="+str(time.time())
 response = urllib.urlopen(JSON_URL)
 data = json.loads(response.read(), object_pairs_hook=OrderedDict)
 print data

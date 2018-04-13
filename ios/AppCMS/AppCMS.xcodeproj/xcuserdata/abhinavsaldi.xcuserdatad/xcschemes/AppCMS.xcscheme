@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54B751351E7C8E39001475AD"
-               BuildableName = "Hoichoi.app"
+               BuildableName = "AppCMS.app"
                BlueprintName = "AppCMS"
                ReferencedContainer = "container:AppCMS.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54B751351E7C8E39001475AD"
-            BuildableName = "Hoichoi.app"
+            BuildableName = "AppCMS.app"
             BlueprintName = "AppCMS"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>
@@ -58,7 +58,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54B751351E7C8E39001475AD"
-            BuildableName = "Hoichoi.app"
+            BuildableName = "AppCMS.app"
             BlueprintName = "AppCMS"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54B751351E7C8E39001475AD"
-            BuildableName = "Hoichoi.app"
+            BuildableName = "AppCMS.app"
             BlueprintName = "AppCMS"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>

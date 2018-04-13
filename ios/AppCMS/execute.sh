@@ -23,6 +23,8 @@ downloadFile(){ #url, output, buildid, posturl
     fi
 }
 
+
+
 #PARSING VALUES
 for ARGUMENT in "$@"
 do
@@ -112,15 +114,36 @@ appShortName)  appShortName=${VALUE} ;;
 esac
 done
 
+
 itunesConnectUserName="piyushaggarwal.incedo@gmail.com"
 itunesConnectPassword="Alexa@123"
 
-MY_POST_URL="${POST_URL}/${SiteName}/ios/appcms/build/status"
-MY_UPLOAD_URL="${POST_URL}/${SiteName}/appcms/ios/build/apk/link"
+MY_POST_URL="${POST_URL}/${SiteName}/${toBuildPlatform}/appcms/build/status"
+MY_UPLOAD_URL="${POST_URL}/${SiteName}/appcms/${toBuildPlatform}/build/apk/link"
+
+echo "---------------------- MY_POST_URL ---------------------------"
+echo $MY_POST_URL
+echo "---------------------- MY_POST_URL ---------------------------"
+
+echo "---------------------- MY_UPLOAD_URL ---------------------------"
+echo $MY_UPLOAD_URL
+echo "---------------------- MY_UPLOAD_URL ---------------------------"
 
 
-# fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> IOS BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform" mySlackURL:$slackWebHookUrl
-fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> IOS BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+
+
+if [ "$toBuildPlatform" = "ios" ]
+then
+    # fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> IOS BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform" mySlackURL:$slackWebHookUrl
+    fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> IOS BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+fi
+
+if [ "$toBuildPlatform" = "appleTv" ]
+then
+    # fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> IOS BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform" mySlackURL:$slackWebHookUrl
+    fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> APPLE TV BUILD SUCCESSFULLY STARTED. BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+fi
+
 
 
 
@@ -275,18 +298,13 @@ then
 
     postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Fetching and Saving the Google Services Plist" 20  0
     sleep 10
-
-
     postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Build Version of the Application" 25  
-
     sleep 10
     ${PLISTBUDDY} -c "Set :CFBundleShortVersionString $CFBundleShortVersionString" $InfoPlistPath
     postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Bundle Identifier of the Application" 25  
     sleep 10
     
-
     ${PLISTBUDDY} -c "Set :CFBundleIdentifier $CFBundleIdentifier" $InfoPlistPath
-
     ${PLISTBUDDY} -c "Set :CFBundleDisplayName $CFBundleDisplayName" $InfoPlistPath
 
 
@@ -295,7 +313,6 @@ then
 
     # ${PLISTBUDDY} -c "Set :FacebookAppID $FacebookAppID" $InfoPlistPath
     # ${PLISTBUDDY} -c "Set :FacebookDisplayName $FacebookDisplayName" $InfoPlistPath
-
 
     # ${PLISTBUDDY} -c "Delete CFBundleURLTypes" $InfoPlistPath
     # ${PLISTBUDDY} -c "Add CFBundleURLTypes array" $InfoPlistPath
@@ -306,35 +323,110 @@ then
 
     # ${PLISTBUDDY} -c "Add :CFBundleURLTypes:1:CFBundleURLSchemes array" $InfoPlistPath
     # ${PLISTBUDDY} -c "Add :CFBundleURLTypes:1:CFBundleURLSchemes:0 string $GoogleBundleURLSchemes" $InfoPlistPath
-elif [ "$toBuildPlateform" = "appleTv" ]
+
+    echo "----------------------------------------IOS SET SITE ID START---------------------------------------------"
+
+    SiteConfigPath="$PROJECT_DIR_PATH/Snagfilms/Resources/Plist/SiteConfig.plist"
+    AirshipConfigPath="$PROJECT_DIR_PATH/Snagfilms/Resources/Plist/AirshipConfig.plist"
+    PojectResourcesPath="$PROJECT_DIR_PATH/Snagfilms"
+    EntitlementsPlistPath="$PROJECT_DIR_PATH/Snagfilms/Snagfilms.entitlements"
+
+    #Update:Site-plist
+    ${PLISTBUDDY} -c "Set :SiteId $SiteId" $SiteConfigPath
+
+
+    ${PLISTBUDDY} -c "Delete GoogleClientId" $SiteConfigPath
+    if [ ! -z "$GoogleClientId" -a "$GoogleClientId" != " " ]; then
+        ${PLISTBUDDY} -c "Add :GoogleClientId string $GoogleClientId" $SiteConfigPath
+    fi
+    # ${PLISTBUDDY} -c "Set :UIJsonBaseUrl $UIJsonBaseUrl" $SiteConfigPath
+    # ${PLISTBUDDY} -c "Set :AppSecretKey $AppSecretKey" $SiteConfigPath
+
+    echo "----------------------------------------IOS SET SITE ID  END---------------------------------------------"
+
+
+elif [ "$toBuildPlatform" = "appleTv" ]
 then
+
+    mainTargetSpecific="$PROJECT_DIR_PATH/AppCMS_tvOS/TargetSpecificAssets"
+    mainAssetsPath="$PROJECT_DIR_PATH/AppCMS_tvOS/TargetSpecificAssets"
+    copyLogoPath="$PROJECT_DIR_PATH/AppCMS_tvOS/TargetSpecificAssets/Logo"
+    copyPlaceHolderPath="$PROJECT_DIR_PATH/AppCMS_tvOS/TargetSpecificAssets/Placeholders"
+    ratingsPath="$PROJECT_DIR_PATH/fastlane"
     run_platform="appletvos"
     SchemeName="AppCMS_tvOS"
     #TODO::Update all resources
 
-    postBuildStatus ${BUILD_ID} $MY_POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the App Assets" 10 false 0
+
+    fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> DOWNLOADING APPLE TV RESOURCES FOR THE BUILD. APPLE TV BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+
+    postBuildStatus ${BUILD_ID} $MY_POST_URL "APPLE TV DOWNLOADING_RESOURCES" "No ERROR" "Downloading the App Assets and Logo Resources" 10 false 0
     #Downloading Assests and Copying into the Schema Folder
-    aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/AppIcon.appiconset $copyAssetsPath --recursive
+   
 
-    postBuildStatus ${BUILD_ID} $MY_POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the Build Resources" 15 false 0
-    aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/CastingImageAssets $copyCastPath --recursive
+    # aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/AppCMS/iosappcms/AppCMS/AppCMS_tvOS/TargetSpecificAssets/Logo $copyLogoPath --recursive
 
-    postBuildStatus ${BUILD_ID} $MY_POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the Image Resources and Assets" 20 false 0
-    aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/Resources $copySpashPath --recursive
+    
+    # echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
-    postBuildStatus ${BUILD_ID} $MY_POST_URL "DOWNLOADING_RESOURCES" "No ERROR" "Downloading the Application rating" 22 false 0
-    aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/itunes_rating_config.json $ratingsPath
+    # aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/AppCMS/iosappcms/AppCMS/AppCMS_tvOS/TargetSpecificAssets $mainTargetSpecific --recursive
+
+    # aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/AppCMS/iosappcms/AppCMS/AppCMS_tvOS/TargetSpecificAssets $mainTargetSpecific --recursive
+
+    # echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
+
+
+
+    fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> DOWNLOADING APPLE TV PLACEHOLDER RESOURCES FOR BUILD GENERATION. APPLE TV BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+
+    postBuildStatus ${BUILD_ID} $MY_POST_URL "APPLE TV  DOWNLOADING_RESOURCES" "No ERROR" "Downloading the Images Assets and PlaceHolders Resources" 15 false 0
+    
+
+    # aws s3 cp s3://appcms-config/$SiteId/build/$toBuildPlatform/resource/AppCMS/iosappcms/AppCMS/AppCMS_tvOS/TargetSpecificAssets/Placeholders $copyPlaceHolderPath --recursive
+
+   
 
 
     InfoPlistPath="$PROJECT_DIR_PATH/$SchemeName/Info.plist"
-    $FacebookBundleURLSchemes="fb227991737252697"
-    $GoogleBundleURLSchemes="gb227991737252697"
-    $FacebookDisplayName=$CFBundleDisplayName
+    # $FacebookBundleURLSchemes="fb227991737252697"
+    # $GoogleBundleURLSchemes="gb227991737252697"
+    # $FacebookDisplayName=$CFBundleDisplayName
+
+    fastlane ios slackSendMessage my_slack_msg:"${CFBundleDisplayName} -> CONFIGURING BUILD AND SETTING SDK KEYS. APPLE TV BUILD-ID -> ${BUILD_ID}. VERSION-NUMBER -> ${CFBundleShortVersionString}. BUILD TRIGGERED BY --> ${myEmailId}" my_user_name:"Viewlift Build Automation Platform"
+
     
     #------------------Update:Info-plist--------------------------#
+    postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Build Version of the Application" 25  
+    sleep 10
     ${PLISTBUDDY} -c "Set :CFBundleShortVersionString $CFBundleShortVersionString" $InfoPlistPath
+    postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Bundle Identifier of the Application" 25  
+    sleep 10
     ${PLISTBUDDY} -c "Set :CFBundleIdentifier $CFBundleIdentifier" $InfoPlistPath
     ${PLISTBUDDY} -c "Set :CFBundleDisplayName $CFBundleDisplayName" $InfoPlistPath
+
+    postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Facebook Library for Build" 27  0
+
+    echo "----------------------------------------APPLE TV SET SITE ID ---------------------------------------------"
+
+        SiteConfigPath="$PROJECT_DIR_PATH/AppCMS_tvOS/TargetSpecificAssets/SiteConfig/SiteConfig.plist"
+        AirshipConfigPath="$PROJECT_DIR_PATH/Snagfilms/Resources/Plist/AirshipConfig.plist"
+        PojectResourcesPath="$PROJECT_DIR_PATH/Snagfilms"
+        EntitlementsPlistPath="$PROJECT_DIR_PATH/Snagfilms/Snagfilms.entitlements"
+
+        #Update:Site-plist
+        ${PLISTBUDDY} -c "Set :SiteId $SiteId" $SiteConfigPath
+        # ${PLISTBUDDY} -c "Set :UIJsonBaseUrl $UIJsonBaseUrl" $SiteConfigPath
+        # ${PLISTBUDDY} -c "Set :AppSecretKey $AppSecretKey" $SiteConfigPath
+
+        ${PLISTBUDDY} -c "Delete GoogleClientId" $SiteConfigPath
+        if [ ! -z "$GoogleClientId" -a "$GoogleClientId" != " " ]; then
+            ${PLISTBUDDY} -c "Add :GoogleClientId string $GoogleClientId" $SiteConfigPath
+        fi
+
+    echo "----------------------------------------APPLE TV SET SITE ID ---------------------------------------------"
+
+    
 else
     run_platform="ios"
     SchemeName="AppCMS"
@@ -342,24 +434,12 @@ else
 fi
 
 
-SiteConfigPath="$PROJECT_DIR_PATH/Snagfilms/Resources/Plist/SiteConfig.plist"
-AirshipConfigPath="$PROJECT_DIR_PATH/Snagfilms/Resources/Plist/AirshipConfig.plist"
-PojectResourcesPath="$PROJECT_DIR_PATH/Snagfilms"
-EntitlementsPlistPath="$PROJECT_DIR_PATH/Snagfilms/Snagfilms.entitlements"
 
-#Update:Site-plist
-${PLISTBUDDY} -c "Set :SiteId $SiteId" $SiteConfigPath
-# ${PLISTBUDDY} -c "Set :UIJsonBaseUrl $UIJsonBaseUrl" $SiteConfigPath
-# ${PLISTBUDDY} -c "Set :AppSecretKey $AppSecretKey" $SiteConfigPath
+export FASTLANE_USER=$itunesConnectUserName
+export FASTLANE_PASSWORD=$itunesConnectPassword
 
 
-${PLISTBUDDY} -c "Delete GoogleClientId" $SiteConfigPath
-if [ ! -z "$GoogleClientId" -a "$GoogleClientId" != " " ]; then
-    ${PLISTBUDDY} -c "Add :GoogleClientId string $GoogleClientId" $SiteConfigPath
-fi
-
-
-if [ "$toBuildPlateform" = "ios" ]
+if [ "$toBuildPlatform" = "ios" ]
 then
 #     #Apptentive
       postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "'No ERROR'" "Configuring the Apptentive Library for Build" 30  0
@@ -397,95 +477,162 @@ then
 #     ${PLISTBUDDY} -c "Add com.apple.developer.associated-domains array" $EntitlementsPlistPath
 #     ${PLISTBUDDY} -c "Add :com.apple.developer.associated-domains:0 string $AssociatedDomains01" $EntitlementsPlistPath
 #     ${PLISTBUDDY} -c "Add :com.apple.developer.associated-domains:1 string $AssociatedDomains02" $EntitlementsPlistPath
+
+      
+        #This File is Deleted as it is of No use
+        rm -rf "$PROJECT_DIR_PATH/fastlane/Deliverfile"
+        echo "Cleanup temporary files..."
+        rm -rf "$PROJECT_DIR_PATH/fastlane/builds"
+        rm -rf "$PROJECT_DIR_PATH/fastlane/Certificates"
+
+        #Creating Certficates and Build Foler
+        mkdir "$PROJECT_DIR_PATH/fastlane/Certificates"
+        mkdir "$PROJECT_DIR_PATH/fastlane/builds"
+
+        postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes and Checking if Already App Exists" 42  0
+
+        fastlane deliver init --team_id $ituneTeamId --username $itunesConnectUserName --app_identifier $CFBundleIdentifier --dev_portal_team_id $devTeamId
+
+        IS_APP_ONPLAYSTORE="$?"
+
+        #Configuring Metadata for the build
+
+
+        echo "---------------DECODING---------------------------"
+        #Currenlty Disable for Apple tc
+        #Decoding the File for Google Services Plist.
+        # base64 --decode ./crfile.txt > ./GoogleService-Info.plist
+        echo "---------------DECODING---------------------------"
+
+
+        # appIconPath="$PROJECT_DIR_PATH/AppCMS_tvOS/Assets.xcassets/App Icon & Top Shelf Image.brandassets/App Icon - Large.imagestack/Back.imagestacklayer/Content.imageset/app_icon_large.png"
+        appIconPath="$PROJECT_DIR_PATH/Snagfilms/Assets.xcassets/AppIcon.appiconset/AppStoreIcon-1024.png"
+
+
+        echo $marketingUrl > ./fastlane/metadata/en-US/marketing_url.txt
+        echo $supportUrl > ./fastlane/metadata/en-US/support_url.txt
+        echo $myAppDescription > ./fastlane/metadata/en-US/description.txt
+        echo $CFBundleDisplayName > ./fastlane/metadata/en-US/name.txt
+        echo $myAppDescription > ./fastlane/metadata/en-US/keywords.txt
+        echo $supportUrl > ./fastlane/metadata/en-US/privacy_url.txt
+        echo $appReleaseNotes > ./fastlane/metadata/en-US/release_notes.txt
+
+        echo $copyright > ./fastlane/metadata/copyright.txt
+        echo $primaryCategory > ./fastlane/metadata/primary_category.txt
+        echo $primaryCategory > ./fastlane/metadata/secondary_category.txt
+
+        echo $appReviewDemoUser > ./fastlane/metadata/review_information/demo_user.txt
+        echo $appReviewDemoPassword > ./fastlane/metadata/review_information/demo_password.txt
+        echo $appReviewFirstName > ./fastlane/metadata/review_information/first_name.txt
+        echo $appReviewLastName > ./fastlane/metadata/review_information/last_name.txt
+        echo $appReviewPhoneNumber > ./fastlane/metadata/review_information/phone_number.txt
+        echo $appReviewEmail > ./fastlane/metadata/review_information/email_address.txt
+        echo $appReviewNotes > ./fastlane/metadata/review_information/notes.txt
+
+
+        if [ "$IS_APP_ONPLAYSTORE" -eq "0" ]
+                then
+                echo "App is Present on App Store"
+                postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes Connect and Updating your App" 45  0
+                sleep 20
+
+        else
+                echo "App is not Present on Play Store"
+                postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Creating your App on the Itunes Connect and Apple Developer Account" 45  0
+        fi
+
+
+        echo $IS_APP_ONPLAYSTORE
+
+        fastlane ios iosMobileBuildCreation appname:$CFBundleDisplayName skuName:$appShortName bundleIdentifier:$CFBundleIdentifier devTeamId:$devTeamId buildId:${BUILD_ID} posturl:$MY_POST_URL username:piyushaggarwal.incedo@gmail.com password:Alexa@123 baseResultPath:$PROJECT_DIR_PATH scheme:Snagfilms_iOS isAppOnStore:$IS_APP_ONPLAYSTORE appVersion:$CFBundleShortVersionString platform:$toBuildPlatform ituneTeamId:$ituneTeamId appIconPath:$appIconPath myEmailId:${myEmailId} mySiteId:${SiteId} myUploadUrl:${MY_UPLOAD_URL} ratingPath:$rating myItunesUsername:$itunesConnectUserName slackWebHookUrl:$slackWebHookUrl 
+
+        IS_SUCCESFULLY_CREATED_UPLOADED="$?"
+
+        if [ "$IS_SUCCESFULLY_CREATED_UPLOADED" -eq "0" ]
+                then
+                echo "SUCCESSFULLY BUILD"
+                # postBuildStatus ${BUILD_ID} $MY_POST_URL "FAILED_BUILD_ERROR" "Unexpected Error Occurred" " " 45  0
+        else
+                echo "BUILD  ERROR"
+        fi
+fi
+
+
+
+if [ "$toBuildPlatform" = "appleTv" ]
+then
+
+        #This File is Deleted as it is of No use
+        rm -rf "$PROJECT_DIR_PATH/fastlane/Deliverfile"
+        echo "Cleanup temporary files..."
+        rm -rf "$PROJECT_DIR_PATH/fastlane/builds"
+        rm -rf "$PROJECT_DIR_PATH/fastlane/Certificates"
+
+        #Creating Certficates and Build Foler
+        mkdir "$PROJECT_DIR_PATH/fastlane/Certificates"
+        mkdir "$PROJECT_DIR_PATH/fastlane/builds"
+
+        postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes and Checking if Already App Exists" 42  0
+
+        fastlane deliver init --team_id $ituneTeamId --username $itunesConnectUserName --app_identifier $CFBundleIdentifier --dev_portal_team_id $devTeamId
+
+        IS_APP_ONPLAYSTORE="$?"
+
+        #Configuring Metadata for the build
+
+        #Decoding the File for Google Services Plist.
+        base64 --decode ./crfile.txt > ./GoogleService-Info.plist
+
+        appIconPath="$PROJECT_DIR_PATH/Snagfilms/Assets.xcassets/AppIcon.appiconset/AppStoreIcon-1024.png"
+
+        echo $marketingUrl > ./fastlane/metadata/en-US/marketing_url.txt
+        echo $supportUrl > ./fastlane/metadata/en-US/support_url.txt
+        echo $myAppDescription > ./fastlane/metadata/en-US/description.txt
+        echo $CFBundleDisplayName > ./fastlane/metadata/en-US/name.txt
+        echo $myAppDescription > ./fastlane/metadata/en-US/keywords.txt
+        echo $supportUrl > ./fastlane/metadata/en-US/privacy_url.txt
+        echo $appReleaseNotes > ./fastlane/metadata/en-US/release_notes.txt
+
+        echo $copyright > ./fastlane/metadata/copyright.txt
+        echo $primaryCategory > ./fastlane/metadata/primary_category.txt
+        echo $primaryCategory > ./fastlane/metadata/secondary_category.txt
+
+        echo $appReviewDemoUser > ./fastlane/metadata/review_information/demo_user.txt
+        echo $appReviewDemoPassword > ./fastlane/metadata/review_information/demo_password.txt
+        echo $appReviewFirstName > ./fastlane/metadata/review_information/first_name.txt
+        echo $appReviewLastName > ./fastlane/metadata/review_information/last_name.txt
+        echo $appReviewPhoneNumber > ./fastlane/metadata/review_information/phone_number.txt
+        echo $appReviewEmail > ./fastlane/metadata/review_information/email_address.txt
+        echo $appReviewNotes > ./fastlane/metadata/review_information/notes.txt
+
+
+        if [ "$IS_APP_ONPLAYSTORE" -eq "0" ]
+                then
+                echo "App is Present on App Store"
+                postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes Connect and Updating your App" 45  0
+                
+                fastlane appletvosBuild appleTvbuild appname:$CFBundleDisplayName skuName:$appShortName bundleIdentifier:$CFBundleIdentifier devTeamId:$devTeamId buildId:${BUILD_ID} posturl:$MY_POST_URL username:piyushaggarwal.incedo@gmail.com password:Alexa@123 baseResultPath:$PROJECT_DIR_PATH scheme:AppCMS_tvOS isAppOnStore:$IS_APP_ONPLAYSTORE appVersion:$CFBundleShortVersionString platform:$toBuildPlatform ituneTeamId:$ituneTeamId appIconPath:$appIconPath myEmailId:${myEmailId} mySiteId:${SiteId} myUploadUrl:${MY_UPLOAD_URL} ratingPath:$rating myItunesUsername:$itunesConnectUserName slackWebHookUrl:$slackWebHookUrl 
+               
+                IS_SUCCESFULLY_CREATED="$?"
+                if [ "$IS_SUCCESFULLY_CREATED" -eq "0" ]
+                        then
+                        echo "SUCCESSFULLY BUILD"
+                        # postBuildStatus ${BUILD_ID} $MY_POST_URL "FAILED_BUILD_ERROR" "Unexpected Error Occurred" " " 45  0
+                else
+                        echo "BUILD  ERROR"
+                fi
+        else
+                echo "App is not Present on Play Store"
+                postBuildStatus ${BUILD_ID} $MY_POST_URL "FAILED_BUILD_ERROR" "App with Given Package Name does Not Exists on Itunes Connect" "We are not able to find any App on Itunes Connect With Given Package Name. Please Create A App on <a href='https://itunesconnect.apple.com/' target='_blank'> Itunes Connect </a>  and Application Id <a href='https://developer.apple.com/account/' target='_blank'> Apple Developer Account </a> " 45  0
+        fi
+      
 fi
 
 
 
 
-#This File is Deleted as it is of No use
-rm -rf "$PROJECT_DIR_PATH/fastlane/Deliverfile"
-echo "Cleanup temporary files..."
-rm -rf "$PROJECT_DIR_PATH/fastlane/builds"
-rm -rf "$PROJECT_DIR_PATH/fastlane/Certificates"
 
 
-
-InfoPlistPath="$PROJECT_DIR_PATH/Snagfilms/Info.plist"
-
-#------------------Update:Info-plist--------------------------#
-${PLISTBUDDY} -c "Set :CFBundleShortVersionString $CFBundleShortVersionString" $InfoPlistPath
-${PLISTBUDDY} -c "Set :CFBundleIdentifier $CFBundleIdentifier" $InfoPlistPath
-
-
-export FASTLANE_USER=$itunesConnectUserName
-export FASTLANE_PASSWORD=$itunesConnectPassword
-
-
-#Creating Certficates and Build Foler
-mkdir "$PROJECT_DIR_PATH/fastlane/Certificates"
-mkdir "$PROJECT_DIR_PATH/fastlane/builds"
-
-postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes and Checking if Already App Exists" 42  0
-
-fastlane deliver init --team_id $ituneTeamId --username $itunesConnectUserName --app_identifier $CFBundleIdentifier --dev_portal_team_id $devTeamId
-
-IS_APP_ONPLAYSTORE="$?"
-
-#Configuring Metadata for the build
-
-#Decoding the File for Google Services Plist.
-base64 --decode ./crfile.txt > ./ogleService-Info.plist
-
-appIconPath="$PROJECT_DIR_PATH/Snagfilms/Assets.xcassets/AppIcon.appiconset/AppStoreIcon-1024.png"
-
-echo $marketingUrl > ./fastlane/metadata/en-US/marketing_url.txt
-echo $supportUrl > ./fastlane/metadata/en-US/support_url.txt
-echo $myAppDescription > ./fastlane/metadata/en-US/description.txt
-echo $CFBundleDisplayName > ./fastlane/metadata/en-US/name.txt
-echo $myAppDescription > ./fastlane/metadata/en-US/keywords.txt
-echo $supportUrl > ./fastlane/metadata/en-US/privacy_url.txt
-echo $appReleaseNotes > ./fastlane/metadata/en-US/release_notes.txt
-
-
-echo $copyright > ./fastlane/metadata/copyright.txt
-echo $primaryCategory > ./fastlane/metadata/primary_category.txt
-echo $primaryCategory > ./fastlane/metadata/secondary_category.txt
-
-echo $appReviewDemoUser > ./fastlane/metadata/review_information/demo_user.txt
-echo $appReviewDemoPassword > ./fastlane/metadata/review_information/demo_password.txt
-echo $appReviewFirstName > ./fastlane/metadata/review_information/first_name.txt
-echo $appReviewLastName > ./fastlane/metadata/review_information/last_name.txt
-echo $appReviewPhoneNumber > ./fastlane/metadata/review_information/phone_number.txt
-echo $appReviewEmail > ./fastlane/metadata/review_information/email_address.txt
-echo $appReviewNotes > ./fastlane/metadata/review_information/notes.txt
-
-
-if [ "$IS_APP_ONPLAYSTORE" -eq "0" ]
-        then
-        echo "App is Present on App Store"
-        postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Connecting to the Itunes Connect and Updating your App" 45  0
-        sleep 20
-
-else
-        echo "App is not Present on Play Store"
-        postBuildStatus ${BUILD_ID} $MY_POST_URL "CONFIGURING_BUILD" "No ERROR" "Creating your App on the Itunes Connect and Apple Developer Account" 45  0
-fi
-
-
-echo $IS_APP_ONPLAYSTORE
-
-fastlane ios iosMobileBuildCreation appname:$CFBundleDisplayName skuName:$appShortName bundleIdentifier:$CFBundleIdentifier devTeamId:$devTeamId buildId:${BUILD_ID} posturl:$MY_POST_URL username:piyushaggarwal.incedo@gmail.com password:Alexa@123 baseResultPath:$PROJECT_DIR_PATH scheme:Snagfilms_iOS isAppOnStore:$IS_APP_ONPLAYSTORE appVersion:$CFBundleShortVersionString platform:$toBuildPlatform ituneTeamId:$ituneTeamId appIconPath:$appIconPath myEmailId:${myEmailId} mySiteId:${SiteId} myUploadUrl:${MY_UPLOAD_URL} ratingPath:$rating myItunesUsername:$itunesConnectUserName slackWebHookUrl:$slackWebHookUrl 
-
-IS_SUCCESFULLY_CREATED_UPLOADED="$?"
-
-if [ "$IS_SUCCESFULLY_CREATED_UPLOADED" -eq "0" ]
-        then
-        echo "SUCCESSFULLY BUILD"
-        # postBuildStatus ${BUILD_ID} $MY_POST_URL "FAILED_BUILD_ERROR" "Unexpected Error Occurred" " " 45  0
-else
-        echo "SUCCESSFULLY BUILD"
-        postBuildStatus ${BUILD_ID} $MY_POST_URL "FAILED_BUILD_ERROR" "Unexpected Error Occurred" " " 45  0
-fi
 
 
 

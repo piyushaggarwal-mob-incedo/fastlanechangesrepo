@@ -566,7 +566,10 @@ class VideoDescriptionView: UIView, SFButtonDelegate,downloadManagerDelegate, SF
         button.changeFrameHeight(height: button.frame.height * Utility.getBaseScreenHeightMultiplier())
 
         if type == closeButtonString{
-            button.setImage(UIImage(named: "cancelIcon"), for: UIControlState.normal)
+            let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+            
+            button.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
         else if type == downloadButtonString
         {
@@ -588,15 +591,24 @@ class VideoDescriptionView: UIView, SFButtonDelegate,downloadManagerDelegate, SF
         }
         else if type == shareButtonString
         {
-            button.setImage(UIImage(named: "shareIcon"), for: UIControlState.normal)
+            let shareButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "shareIcon.png"))
+            
+            button.setImage(shareButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
         else if type == playButtonString
         {
             if Constants.IPHONE {
-                button.setImage(UIImage(named: "videoDetailPlayIcon_iPhone"), for: UIControlState.normal)
+                let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "videoDetailPlayIcon_iPhone.png"))
+                
+                button.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+                button.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
             }
             else {
-                button.setImage(UIImage(named: "videoDetailPlayIcon_iPad"), for: UIControlState.normal)
+                let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "videoDetailPlayIcon_iPad.png"))
+                
+                button.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+                button.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
             }
         }
         else if type == watchlistButtonString
@@ -622,8 +634,10 @@ class VideoDescriptionView: UIView, SFButtonDelegate,downloadManagerDelegate, SF
             }
         }
         else if type == gridOptionsString {
+            let gridButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "gridOptions.png"))
             
-            button.setImage(UIImage(named: "gridOptions"), for: UIControlState.normal)
+            button.setImage(gridButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
         
         button.titleLabel?.font = UIFont(name: (button.titleLabel?.font.fontName)!, size: (button.titleLabel?.font.pointSize)! * Utility.getBaseScreenHeightMultiplier())

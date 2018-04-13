@@ -1,5 +1,5 @@
 
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAEventManager+Internal.h"
 #import "UAPreferenceDataStore+Internal.h"
@@ -54,6 +54,7 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
         self.dataStore = dataStore;
         self.client = client;
         self.queue = queue;
+        _uploadsEnabled = YES;
 
         // Set the intial delay
         self.earliestForegroundSendTime = [NSDate dateWithTimeIntervalSinceNow:InitialForegroundUploadDelay];
@@ -115,6 +116,17 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
                                        eventStore:eventStore
                                            client:client
                                             queue:queue];
+}
+
+- (void)setUploadsEnabled:(BOOL)uploadsEnabled {
+    if (_uploadsEnabled != uploadsEnabled) {
+        _uploadsEnabled = uploadsEnabled;
+        if (uploadsEnabled) {
+            [self scheduleUpload];
+        } else {
+            [self cancelUpload];
+        }
+    }
 }
 
 #pragma mark -
@@ -207,6 +219,10 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
 - (void)addEvent:(UAEvent *)event sessionID:(NSString *)sessionID {
     [self.eventStore saveEvent:event sessionID:sessionID];
 
+    if (!self.uploadsEnabled) {
+        return;
+    }
+    
     switch (event.priority) {
         case UAEventPriorityHigh:
             [self scheduleUploadWithDelay:HighPriorityUploadDelay];
@@ -245,6 +261,10 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
 }
 
 - (void)scheduleUpload {
+    if (!self.uploadsEnabled) {
+        return;
+    }
+    
     // Background time is limited, so bypass other time delays
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
         [self scheduleUploadWithDelay:BackgroundUploadDelay];
@@ -266,9 +286,19 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
 }
 
 - (void)scheduleUploadWithDelay:(NSTimeInterval)delay {
+    if (!self.uploadsEnabled) {
+        return;
+    }
+    
     UA_LDEBUG(@"Enqueuing attempt to schedule event upload with delay on main queue.");
 
+    UA_WEAKIFY(self);
     dispatch_async(dispatch_get_main_queue(), ^{
+        UA_STRONGIFY(self);
+        if (!self.uploadsEnabled) {
+            return;
+        }
+        
         UA_LDEBUG(@"Attempting to schedule event upload with delay: %f seconds.", delay);
 
         NSDate *uploadDate = [NSDate dateWithTimeIntervalSinceNow:delay];
@@ -296,6 +326,9 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
 
     UAAsyncOperation *operation = [UAAsyncOperation operationWithBlock:^(UAAsyncOperation *operation) {
         UA_STRONGIFY(self);
+        if (!self.uploadsEnabled) {
+            return;
+        }
 
         self.nextUploadDate = nil;
 
@@ -401,6 +434,5 @@ const NSTimeInterval BackgroundLowPriorityEventUploadInterval = 900;
 
     return value;
 }
-
 
 @end

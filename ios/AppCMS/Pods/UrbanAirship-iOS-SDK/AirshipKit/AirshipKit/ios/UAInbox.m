@@ -1,11 +1,11 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAInbox+Internal.h"
 #import "UAirship.h"
 #import "UAInboxMessageList.h"
-#import "UAInboxMessage.h"
-#import "UAUser.h"
 #import "UAInboxMessageList+Internal.h"
+#import "UAInboxAPIClient+Internal.h"
+#import "UAComponent+Internal.h"
 
 @implementation UAInbox
 
@@ -15,10 +15,11 @@
 }
 
 - (instancetype)initWithUser:(UAUser *)user config:(UAConfig *)config dataStore:(UAPreferenceDataStore *)dataStore {
-    self = [super init];
+    self = [super initWithDataStore:dataStore];
     if (self) {
         self.user = user;
         self.client = [UAInboxAPIClient clientWithConfig:config session:[UARequestSession sessionWithConfig:config] user:user dataStore:dataStore];
+        self.client.enabled = self.componentEnabled;
         self.messageList = [UAInboxMessageList messageListWithUser:self.user client:self.client config:config];
 
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -71,6 +72,12 @@
 
 - (void)userCreated {
     [self.messageList retrieveMessageListWithSuccessBlock:nil withFailureBlock:nil];
+}
+
+- (void)onComponentEnableChange {
+    // Disable/enable the API client and user to disable/enable the inbox
+    self.user.componentEnabled = self.componentEnabled;
+    self.client.enabled = self.componentEnabled;
 }
 
 //note: this is for deleting the UAInboxCache from disk, which is no longer in use.

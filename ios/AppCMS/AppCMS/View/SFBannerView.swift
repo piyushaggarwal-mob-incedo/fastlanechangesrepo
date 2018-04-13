@@ -81,7 +81,11 @@ class SFBannerView: UIView, SFButtonDelegate {
         
         if buttonObject.key == "gridOptions" {
             
-            button.setImage(UIImage(named: "gridOptions"), for: UIControlState.normal)
+            let optionButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "gridOptions.png"))
+            
+            button.setImage(optionButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+
         }
         
         self.addSubview(button)

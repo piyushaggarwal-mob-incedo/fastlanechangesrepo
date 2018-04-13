@@ -357,7 +357,10 @@ class VideoPlayerModule_tvOS: UIViewController, AdXMLParserDelegate, Advertiseme
             backgroundVideoImageView?.addSubview(imageOverlayAcitivityIndicator!)
             imageOverlayAcitivityIndicator?.startAnimating()
             if let appBackgroundImage = UIImage(named: "app_background") {
-                backgroundVideoImageView?.image = appBackgroundImage
+                backgroundVideoImageView?.image = appBackgroundImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                if let backGroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+                    backgroundVideoImageView?.tintColor = Utility.hexStringToUIColor(hex: backGroundColor)
+                }
             }
             videoPlayerClickGesture = UITapGestureRecognizer.init(target: self, action: #selector(VideoPlayerModule_tvOS.togglePlayerZoomAction))
             videoPlayerClickGesture?.numberOfTapsRequired = 1
@@ -370,11 +373,12 @@ class VideoPlayerModule_tvOS: UIViewController, AdXMLParserDelegate, Advertiseme
             self.view.addSubview(imageView)
             
         } else if imageObject.key == "focusHighlightImage" {
-            if let image = UIImage(named: "playerFocusbackground") {
-                imageView.image = image
-            }
-            self.view.addSubview(imageView)
+            //            if let image = UIImage(named: "playerFocusbackground") {
+            //                imageView.image = image
+            //            }
             focusHighlightImageView = imageView
+            setGradientOnFocusHighlightImage()
+            self.view.addSubview(imageView)
             focusHighlightImageView?.isHidden = true
             self.view.sendSubview(toBack: focusHighlightImageView!)
             focusHighlightImageView?.alpha = 0.0
@@ -384,6 +388,15 @@ class VideoPlayerModule_tvOS: UIViewController, AdXMLParserDelegate, Advertiseme
         swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeDownGesture?.direction = UISwipeGestureRecognizerDirection.down
 //        self.view.addGestureRecognizer(swipeDownGesture!)
+    }
+    
+    private func setGradientOnFocusHighlightImage() {
+        let appBackgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "ffffff")
+        let appPrimaryHover = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "000000")
+        let startColor = RGBA(red: appBackgroundColor.redValue, green: appBackgroundColor.greenValue, blue: appBackgroundColor.blueValue, alpha: appBackgroundColor.alphaValue)
+        let endColor = RGBA(red: appPrimaryHover.redValue, green: appPrimaryHover.greenValue, blue: appPrimaryHover.blueValue, alpha: appPrimaryHover.alphaValue)
+        let gradientImage = UIImage.image(withRGBAGradientPoints: [GradientPoint(location: 0, color: startColor), GradientPoint(location: 1, color: endColor)], size: CGSize(width: (focusHighlightImageView?.bounds.size.width ?? 0.0), height: (focusHighlightImageView?.bounds.size.height ?? 0.0)))
+        focusHighlightImageView?.image = gradientImage
     }
     
     @objc private func togglePlayerZoomAction() {
@@ -1288,7 +1301,10 @@ class VideoPlayerModule_tvOS: UIViewController, AdXMLParserDelegate, Advertiseme
         if isNetworkAvailable {
             if let backgroundImageView = backgroundVideoImageView {
                 if let appBackgroundImage = UIImage(named: "app_background") {
-                    backgroundImageView.image = appBackgroundImage
+                    backgroundImageView.image = appBackgroundImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                    if let backGroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+                        backgroundImageView.tintColor = Utility.hexStringToUIColor(hex: backGroundColor)
+                    }
                 }
                 backgroundImageView.alpha = 1.0
                 self.view.bringSubview(toFront: backgroundImageView)

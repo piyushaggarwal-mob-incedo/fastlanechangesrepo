@@ -56,7 +56,10 @@ class SFTimerLoaderView: UIView {
     /// Master constructor method.
     private func constructLoaderView() {
         self.addSubview(loaderImage)
-        loaderImage.image = UIImage(named: "LoaderImage")
+        loaderImage.image = UIImage(named: "LoaderImage")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        if let backgroundColor = AppConfiguration.sharedAppConfiguration.appTextColor {
+            loaderImage.tintColor = Utility.hexStringToUIColor(hex: backgroundColor)
+        }
         
         self.addSubview(loadTimeLabel)
         loadTimeLabel.alpha = 0.5

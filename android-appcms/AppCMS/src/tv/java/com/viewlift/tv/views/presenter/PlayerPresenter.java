@@ -80,7 +80,8 @@ public class PlayerPresenter extends Presenter {
         cardView.setBackground(Utils.getGradientTrayBorder(
                         context,
                         Utils.getPrimaryHoverColor(context, appCmsPresenter),
-                        Utils.getSecondaryHoverColor(context, appCmsPresenter)));
+                        appCmsPresenter.getAppBackgroundColor()
+                        /*Utils.getSecondaryHoverColor(context, appCmsPresenter)*/));
     }
 
     @Override
@@ -97,7 +98,8 @@ public class PlayerPresenter extends Presenter {
 
 
     public CustomTVVideoPlayerView playerView(Context context) {
-        CustomTVVideoPlayerView videoPlayerView = new CustomTVVideoPlayerView(context);
+        CustomTVVideoPlayerView videoPlayerView = new CustomTVVideoPlayerView(context,
+                appCmsPresenter);
         videoPlayerView.init(context);
         videoPlayerView.getPlayerView().hideController();
         return videoPlayerView;

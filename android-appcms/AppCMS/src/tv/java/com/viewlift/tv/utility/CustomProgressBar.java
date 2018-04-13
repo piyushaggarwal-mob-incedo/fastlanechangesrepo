@@ -5,15 +5,12 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.viewlift.R;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by nitin.tyagi on 7/6/2017.
@@ -64,9 +61,7 @@ public class CustomProgressBar {
      * @param message
      */
     public void showProgressDialog(Activity activity, String message ) {
-
-        try {
-
+        if (context instanceof Activity && !((Activity) context).isFinishing()) {
             if(dialog==null){
                 dialog = new Dialog(context, R.style.ProgressDialog);
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
@@ -81,15 +76,9 @@ public class CustomProgressBar {
                 ImageView image = (ImageView)dialog.findViewById(R.id.spinnerImageView);
                 animDrawable = (AnimationDrawable)image.getDrawable();
                 animDrawable.start();
-                if (!activity.isFinishing()) {
-                    dialog.show();
-                }
+                dialog.show();
             }
-
-        }catch (Exception e){
-
         }
-
     }
 
     public void dismissProgressDialog() {

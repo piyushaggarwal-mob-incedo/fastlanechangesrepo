@@ -93,7 +93,11 @@ class SeasonDropdownViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         backButton?.frame = CGRect.init(x: 10, y: (backButtonYAxis * Utility.getBaseScreenHeightMultiplier()), width: closeButtonDimension, height: closeButtonDimension)
-        backButton?.setImage(#imageLiteral(resourceName: "Back.png"), for: .normal)
+        let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+        
+        backButton?.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
         backButton?.addTarget(self, action: #selector(backButtonTapped(sender:)), for: .touchUpInside)
         backButton?.autoresizingMask = [.flexibleLeftMargin, .flexibleTopMargin]
         self.view.addSubview(backButton!)

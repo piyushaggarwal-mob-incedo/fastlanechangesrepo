@@ -174,12 +174,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         negativeSpacer.width = -15
         
-        let image = UIImage(named: "Back")
-        
         let backButton = UIButton(type: .custom)
         backButton.sizeToFit()
-        backButton.setImage(image, for: .normal)
-        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+        let backButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+        
+        backButton.setImage(backButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (backButtonImageView.image?.size.height)!/2)
         backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         
         let backButtonItem = UIBarButtonItem(customView: backButton)
@@ -192,14 +193,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         NotificationCenter.default.removeObserver(self)
         
-//        if TEMPLATETYPE.lowercased() == Constants.kTemplateTypeSports.lowercased() {
+        //        if TEMPLATETYPE.lowercased() == Constants.kTemplateTypeSports.lowercased() {
         
-            self.navigationController?.popViewController(animated: true)
-//        }
-//        else {
+        self.navigationController?.popViewController(animated: true)
+        //        }
+        //        else {
         
-//            self.dismiss(animated: true, completion: nil)
-//        }
+        //            self.dismiss(animated: true, completion: nil)
+        //        }
     }
     
     
@@ -208,12 +209,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.navigationItem.rightBarButtonItems = nil
         
-        let image = UIImage(named: "cancelIcon")
-        
         let searchButton = UIButton(type: .custom)
         searchButton.sizeToFit()
-        searchButton.setImage(image, for: .normal)
-        searchButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+        
+        let searchButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "searchIcon.png"))
+        
+        searchButton.setImage(searchButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        searchButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        searchButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (searchButtonImageView.image?.size.height)!/2)
         searchButton.addTarget(self, action: #selector(cancelButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         
         let searchButtonItem = UIBarButtonItem(customView: searchButton)
@@ -223,7 +227,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.navigationItem.rightBarButtonItems = [negativeSpacer, searchButtonItem]
     }
-    
     
     //MARK: Button event handler for nav bar cancel icon
     func cancelButtonClicked(sender:AnyObject) {

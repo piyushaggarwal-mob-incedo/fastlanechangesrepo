@@ -221,12 +221,12 @@ class SubscriptionView_tvOS: UIViewController, PlanCollectionGridViewDelegate, S
         imageView.initialiseImageViewFrameFromLayout(imageLayout: Utility.fetchImageLayoutDetails(imageObject: imageObject))
         imageView.updateView()
         if imageView.imageViewObject?.key == "subscriptionLogoImage"  {
-            imageView.image = UIImage(named: "appLogoPlansPage")
+            imageView.image = UIImage(named: "appLogo")
         }
         else{
             imageView.image = UIImage(named: imageObject.imageName!)
         }
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .left
         containerView.addSubview(imageView)
     }
     

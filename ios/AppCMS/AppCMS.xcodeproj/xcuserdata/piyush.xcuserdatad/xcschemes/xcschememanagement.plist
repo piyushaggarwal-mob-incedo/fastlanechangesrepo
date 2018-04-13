@@ -7,141 +7,144 @@
 		<key>AgendaTV_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>60</integer>
 		</dict>
 		<key>AppCMS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>55</integer>
 		</dict>
 		<key>AppCMSUITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>57</integer>
 		</dict>
 		<key>AppCMS_tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>AppCMS_tvOSUITests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>58</integer>
 		</dict>
 		<key>FailArmy_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>62</integer>
 		</dict>
-		<key>FailArmy_tvOS.xcscheme</key>
+		<key>FailArmy_tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>73</integer>
+			<integer>63</integer>
 		</dict>
 		<key>Hoichoi_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>59</integer>
 		</dict>
-		<key>JukinVideo_iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>79</integer>
-		</dict>
-		<key>JukinVideo_tvOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>80</integer>
-		</dict>
-		<key>Lax_iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>81</integer>
-		</dict>
-		<key>Lax_tvOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>82</integer>
-		</dict>
-		<key>Monumental_iOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>Monumental_tvOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>13</integer>
-		</dict>
-		<key>PeopleAreAwesome_iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>75</integer>
-		</dict>
-		<key>PeopleAreAwesome_tvOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>77</integer>
-		</dict>
-		<key>PetCollective_iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>76</integer>
-		</dict>
-		<key>PetCollective_tvOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>78</integer>
-		</dict>
-		<key>SnagfilmsUITests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>71</integer>
-		</dict>
-		<key>Snagfilms_iOS.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>SportsIllustrated_iOS.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>72</integer>
-		</dict>
-		<key>SportsIllustrated_tvOS.xcscheme</key>
+		<key>JukinVideo_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>74</integer>
 		</dict>
-		<key>TampaBay_iOS.xcscheme</key>
+		<key>JukinVideo_tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>83</integer>
+			<integer>73</integer>
 		</dict>
-		<key>TampaBay_tvOS.xcscheme</key>
+		<key>Lax_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>84</integer>
+			<integer>75</integer>
+		</dict>
+		<key>Lax_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>76</integer>
+		</dict>
+		<key>Monumental_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>61</integer>
+		</dict>
+		<key>Monumental_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>65</integer>
+		</dict>
+		<key>PeopleAreAwesome_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>69</integer>
+		</dict>
+		<key>PeopleAreAwesome_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>71</integer>
+		</dict>
+		<key>PetCollective_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>70</integer>
+		</dict>
+		<key>PetCollective_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>72</integer>
+		</dict>
+		<key>SnagfilmsUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>79</integer>
+		</dict>
+		<key>Snagfilms_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>56</integer>
+		</dict>
+		<key>SportsIllustrated_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>68</integer>
+		</dict>
+		<key>SportsIllustrated_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>67</integer>
+		</dict>
+		<key>TampaBay_iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>77</integer>
+		</dict>
+		<key>TampaBay_tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>78</integer>
 		</dict>
 		<key>iON_iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>64</integer>
 		</dict>
 		<key>iON_tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>66</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4B57D796205157F30010EDD3</key>
+		<key>4B6E1B5D2064013F008C6747</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4B96C8C02063D1B8002022E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54B751351E7C8E39001475AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

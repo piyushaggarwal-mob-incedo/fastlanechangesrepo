@@ -5,199 +5,191 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.001902">
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.001468">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001393">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.001169">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: slack_train_start" time="0.001999">
+      <testcase classname="fastlane.lanes" name="02: slack_train_start" time="0.001458">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: Switch to android slackSendMessage lane" time="0.001288">
+      <testcase classname="fastlane.lanes" name="03: Switch to android slackSendMessage lane" time="0.006628">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: slack" time="0.616816">
+      <testcase classname="fastlane.lanes" name="04: slack" time="0.213684">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: slack" time="0.4541">
+      <testcase classname="fastlane.lanes" name="05: slack_train" time="0.160458">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: slack_train" time="0.479875">
+      <testcase classname="fastlane.lanes" name="06: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Cleaning the Project' 30 false 0" time="0.110743">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Cleaning the Project' 30 false 0" time="0.734379">
+      <testcase classname="fastlane.lanes" name="07: gradle" time="5.332754">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: gradle" time="9.946268">
+      <testcase classname="fastlane.lanes" name="08: slack_train" time="0.16288">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: slack_train" time="0.704449">
+      <testcase classname="fastlane.lanes" name="09: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Debug Build and preparing for unit test cases' 35 false 0" time="0.074505">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Debug Build and preparing for unit test cases' 35 false 0" time="0.835828">
+      <testcase classname="fastlane.lanes" name="10: slack_train" time="0.156057">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="11: slack_train" time="0.599671">
+      <testcase classname="fastlane.lanes" name="11: gradle" time="76.895846">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="12: gradle" time="51.945929">
+      <testcase classname="fastlane.lanes" name="12: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Running the unit test cases' 40 false 0" time="0.10114">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="13: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Running the unit test cases' 40 false 0" time="0.856906">
+      <testcase classname="fastlane.lanes" name="13: slack_train" time="0.195101">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="14: slack_train" time="0.703892">
+      <testcase classname="fastlane.lanes" name="14: gradle" time="17.838657">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="15: gradle" time="31.658654">
+      <testcase classname="fastlane.lanes" name="15: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Phone screenshots' 45 false 0" time="0.079039">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="16: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Phone screenshots' 45 false 0" time="0.718463">
+      <testcase classname="fastlane.lanes" name="16: slack_train" time="0.179873">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="17: slack_train" time="0.525639">
+      <testcase classname="fastlane.lanes" name="17: Switch to android phones_screenshots lane" time="0.001759">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="18: Switch to android phones_screenshots lane" time="0.003038">
+      <testcase classname="fastlane.lanes" name="18: adb -s emulator-5554 shell input keyevent 82" time="0.233532">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="19: adb -s emulator-5554 shell input keyevent 82" time="0.31188">
+      <testcase classname="fastlane.lanes" name="19: capture_android_screenshots" time="6.354995">
+        
+          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:236:in `block in execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:231:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:231:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:295:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:96:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane_manager.rb:59:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:75:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/cli_tools_distributor.rb:107:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;No screenshots were detected 📷❌" />
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="20: capture_android_screenshots" time="57.715469">
+      <testcase classname="fastlane.lanes" name="20: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Tablet Screenshots' 50 false 0" time="0.091843">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="21: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Capturing the Tablet Screenshots' 50 false 0" time="1.111638">
+      <testcase classname="fastlane.lanes" name="21: slack_train" time="0.130677">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="22: slack_train" time="0.831085">
+      <testcase classname="fastlane.lanes" name="22: Switch to android teninchtablet_screenshots lane" time="0.001865">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="23: Switch to android teninchtablet_screenshots lane" time="0.003014">
+      <testcase classname="fastlane.lanes" name="23: adb -s emulator-5558 shell input keyevent 82" time="0.015313">
+        
+          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/fast_file.rb:185:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/fast_file.rb:180:in `sh'&#10;Fastfile:323:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:107:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/lane_manager.rb:59:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:75:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/fastlane/lib/fastlane/cli_tools_distributor.rb:107:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.90.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'adb -s emulator-5558 shell input keyevent 82' was 1 instead of 0.&#10;error: device 'emulator-5558' not found&#10;" />
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="24: adb -s emulator-5556 shell input keyevent 82" time="0.020836">
-        
-          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:185:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:180:in `sh'&#10;Fastfile:309:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/fast_file.rb:148:in `method_missing'&#10;Fastfile:105:in `block (2 levels) in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/lane_manager.rb:57:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:75:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/fastlane/lib/fastlane/cli_tools_distributor.rb:98:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.85.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'adb -s emulator-5556 shell input keyevent 82' was 1 instead of 0.&#10;error: device 'emulator-5556' not found&#10;" />
+      <testcase classname="fastlane.lanes" name="24: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Creating the Release Build' 55 false 0" time="0.084209">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="25: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Creating the Release Build' 55 false 0" time="0.686537">
+      <testcase classname="fastlane.lanes" name="25: slack_train" time="0.126736">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="26: slack_train" time="0.558725">
+      <testcase classname="fastlane.lanes" name="26: gradle" time="84.305136">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="27: gradle" time="64.130526">
+      <testcase classname="fastlane.lanes" name="27: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Signed Build with unique keystore' 62 false 0" time="0.104882">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="28: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Generating the Signed Build with unique keystore' 62 false 0" time="0.852945">
+      <testcase classname="fastlane.lanes" name="28: slack_train" time="0.267992">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="29: slack_train" time="0.702413">
+      <testcase classname="fastlane.lanes" name="29: sign_apk" time="5.069005">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="30: sign_apk" time="12.083147">
+      <testcase classname="fastlane.lanes" name="30: slack_train" time="0.160367">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="31: slack_train" time="0.493281">
+      <testcase classname="fastlane.lanes" name="31: ./PostBuildStatus.sh 143 http://qa-tools.viewlift.com/qa-arena-football/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Optimizing and Zip Alignining the Build for reducing the Build Size' 65 false 0" time="0.08298">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="32: ./PostBuildStatus.sh 35 http://tools.viewlift.com/snagfilms/android/appcms/build/status 'BUILD_PROGRESS' 'NO ERROR' 'Optimizing and Zip Alignining the Build for reducing the Build Size' 65 false 0" time="0.661388">
+      <testcase classname="fastlane.lanes" name="32: slack_train" time="0.168121">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="33: slack_train" time="0.50091">
+      <testcase classname="fastlane.lanes" name="33: zipalign" time="0.498826">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="34: zipalign" time="1.501284">
+      <testcase classname="fastlane.lanes" name="34: slack_train" time="0.165871">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="35: slack_train" time="0.50272">
+      <testcase classname="fastlane.lanes" name="35: Switch to android slackSendMessage lane" time="0.001955">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="36: Switch to android slackSendMessage lane" time="0.001471">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="37: slack" time="0.526759">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="38: slack" time="0.622304">
+      <testcase classname="fastlane.lanes" name="36: slack" time="0.17077">
         
       </testcase>
     

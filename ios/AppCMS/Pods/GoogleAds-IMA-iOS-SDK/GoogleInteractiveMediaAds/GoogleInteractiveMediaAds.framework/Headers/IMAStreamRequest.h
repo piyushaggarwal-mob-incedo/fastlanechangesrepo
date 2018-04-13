@@ -12,14 +12,9 @@
 @protocol IMAVideoDisplay;
 
 /**
- *  The inventory unit (iu).
+ *  The companion sizes parameter (ciu_szs).
  */
-extern NSString *const kIMAStreamParamIU;
-
-/**
- *  The description url (description_url).
- */
-extern NSString *const kIMAStreamParamDescriptionURL;
+extern NSString *const kIMAStreamParamCompanionSizes;
 
 /**
  *  The custom parameters (cust_params).
@@ -27,14 +22,14 @@ extern NSString *const kIMAStreamParamDescriptionURL;
 extern NSString *const kIMAStreamParamCustomParameters;
 
 /**
- *  Tag for child detection parameter (tfcd).
- */
-extern NSString *const kIMAStreamParamTFCD;
-
-/**
  *  The ad holiday parameter (dai-ah). This can be set to either 0 or 1.
  */
 extern NSString *const kIMAStreamParamAdHoliday;
+
+/**
+ *  The order variant parameter (dai-aor).
+ */
+extern NSString *const kIMAStreamParamAudioRange;
 
 /**
  *  The delivery location identifier (dai-dlid).
@@ -42,14 +37,54 @@ extern NSString *const kIMAStreamParamAdHoliday;
 extern NSString *const kIMAStreamParamDeliveryLocation;
 
 /**
- *  The order variant parameter (dai-ov).
+ *  The order variant parameter (dai-excl).
  */
-extern NSString *const kIMAStreamParamOrderVariant;
+extern NSString *const kIMAStreamParamExclude;
+
+/**
+ *  The order variant parameter (dai-os).
+ */
+extern NSString *const kIMAStreamParamOrderStart;
 
 /**
  *  The order type parameter (dai-ot).
  */
 extern NSString *const kIMAStreamParamOrderType;
+
+/**
+ *  The order variant parameter (dai-ov).
+ */
+extern NSString *const kIMAStreamParamOrderVariant;
+
+/**
+ *  The order variant parameter (dai-sr).
+ */
+extern NSString *const kIMAStreamParamVideoRange;
+
+/**
+ *  The description url (description_url).
+ */
+extern NSString *const kIMAStreamParamDescriptionURL;
+
+/**
+ *  The inventory unit (iu).
+ */
+extern NSString *const kIMAStreamParamIU;
+
+/**
+ *  The unique publisher ID (ppid).
+ */
+extern NSString *const kIMAStreamParamPublisherID;
+
+/**
+ *  The video size parameter (sz).
+ */
+extern NSString *const kIMAStreamParamSize;
+
+/**
+ *  Tag for child detection parameter (tfcd).
+ */
+extern NSString *const kIMAStreamParamTFCD;
 
 /**
  *  Data class describing the stream request.

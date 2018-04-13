@@ -16,9 +16,16 @@ class SFAccountInfoModuleSports_tvOS: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "app_background.png")
-        if let backgroundImage = backgroundImage {
-            self.view.backgroundColor = UIColor(patternImage:backgroundImage)
+        if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+            self.view.backgroundColor = Utility.hexStringToUIColor(hex: backgroundColor)
+        }
+        else {
+            if AppConfiguration.sharedAppConfiguration.appTheme == .light{
+                self.view.backgroundColor = .white
+            }
+            else{
+                self.view.backgroundColor = .black
+            }
         }
         var viewStartY: CGFloat = 0
         if TEMPLATETYPE.uppercased() == Constants.kTemplateTypeSports {
@@ -27,7 +34,7 @@ class SFAccountInfoModuleSports_tvOS: BaseViewController {
             self.view.addSubview(topBar)
             self.view.bringSubview(toFront: topBar)
             let isSubscribed = (Constants.kSTANDARDUSERDEFAULTS.value(forKey: Constants.kIsSubscribedKey) as? Bool ?? false)
-            if isSubscribed == false {
+            if isSubscribed == false && (AppConfiguration.sharedAppConfiguration.pageHeaderObject?.buttonPrefixText != nil && AppConfiguration.sharedAppConfiguration.pageHeaderObject?.buttonPrefixText != ""){
                 let startingY = 10
                 let topBannerView = UINib(nibName: "TopBannerSubscriptionModule", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TopBannerSubscriptionModule
                 topBannerView.frame = CGRect(x: 0, y: startingY, width: Int(topBannerView.bounds.size.width), height: 55)

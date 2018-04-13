@@ -458,9 +458,10 @@ class SFCollectionGridCell: UICollectionViewCell, SFButtonDelegate {
                     gridOptionImageName = "articleGridOptions"
                 }
             }
-                
-            infoButton?.setImage(UIImage(named: gridOptionImageName), for: .normal)
-
+            let infoButtonImageView: UIImageView = UIImageView.init(image: UIImage(named: gridOptionImageName))
+            
+            infoButton?.setImage(infoButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            infoButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
         }
         else if buttonObject.key != nil && buttonObject.key == "add" {
             infoButton?.isHidden = false
@@ -468,11 +469,15 @@ class SFCollectionGridCell: UICollectionViewCell, SFButtonDelegate {
             infoButton?.initialiseButtonFrameFromLayout(buttonLayout: Utility.fetchButtonLayoutDetails(buttonObject: buttonObject))
         }
         else if buttonObject.key != nil && buttonObject.key == "play" {
-
+            
             playButton?.isHidden = false
             playButton?.buttonObject = buttonObject
             playButton?.relativeViewFrame = self.frame
-            playButton?.setImage(UIImage(named: "play"), for: .normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: UIImage(named: "play"))
+            
+            playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+            
             playButton?.initialiseButtonFrameFromLayout(buttonLayout: buttonLayout)
         }
     }

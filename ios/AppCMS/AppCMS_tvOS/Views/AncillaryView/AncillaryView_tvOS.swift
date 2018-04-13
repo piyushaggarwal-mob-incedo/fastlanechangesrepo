@@ -103,17 +103,17 @@ class AncillaryView_tvOS: UIViewController, SFButtonDelegate { //UIViewControlle
         button.createButtonView()
         
         if button.buttonObject?.key == "upButton"{
-            button.setImage(UIImage(named: "arrowDownUnfocused"), for: UIControlState.normal)
-            button.setImage(UIImage(named: "arrowDownFocused"), for: UIControlState.highlighted)
-            button.setImage(UIImage(named: "arrowDownFocused"), for: UIControlState.focused)
+            button.tag = 8888
+            button.setImage(UIImage(named: "arrowDownUnfocused")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: UIControlState.normal)
+            button.imageView?.tintColor = UIColor.gray
             button.isHidden = true
             button.isUserInteractionEnabled = false
             button.buttonShowsAnImage = true
         }
         else if button.buttonObject?.key == "downButton" {
-            button.setImage(UIImage(named: "arrowUpUnfocused"), for: UIControlState.normal)
-            button.setImage(UIImage(named: "arrowUpFocused"), for: UIControlState.highlighted)
-            button.setImage(UIImage(named: "arrowUpFocused"), for: UIControlState.focused)
+            button.tag = 9999
+            button.setImage(UIImage(named: "arrowUpUnfocused")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: UIControlState.normal)
+            button.imageView?.tintColor = UIColor.gray
             button.isHidden = true
             button.isUserInteractionEnabled = false
             button.buttonShowsAnImage = true
@@ -121,6 +121,26 @@ class AncillaryView_tvOS: UIViewController, SFButtonDelegate { //UIViewControlle
         
         self.view.addSubview(button)
         updateButtonView(button: button)
+    }
+    
+    //MARK: Helper Methods.
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        
+        //Next focus views handling.
+        if context.nextFocusedView != nil && context.nextFocusedView is SFButton {
+            if context.nextFocusedView?.tag == 8888 || context.nextFocusedView?.tag == 9999{
+                let button = context.nextFocusedView as! SFButton
+                if let textColor = AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor {
+                    button.imageView?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+                }
+            }
+        }
+        //Previous focus views handling.
+        if (context.previouslyFocusedView?.tag == 8888 || context.previouslyFocusedView?.tag == 9999) &&  context.previouslyFocusedView is SFButton{
+            let button = context.previouslyFocusedView as! SFButton
+            button.imageView?.tintColor = UIColor.gray
+        }
+        
     }
     
     //method to update button view frames

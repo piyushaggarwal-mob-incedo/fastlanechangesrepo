@@ -6,9 +6,9 @@
 //  Copyright © 2016 Apptentive, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "ApptentiveSurveyQuestion.h"
 #import "ApptentiveSurveyAnswer.h"
+#import "ApptentiveSurveyQuestion.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -45,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)textOfQuestionAtIndex:(NSInteger)index;
 - (nullable NSAttributedString *)instructionTextOfQuestionAtIndex:(NSInteger)index;
 - (NSAttributedString *)placeholderTextOfAnswerAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable NSString *)accessibilityHintForQuestionAtIndexPath:(NSIndexPath *)indexPath;
 - (ATSurveyQuestionType)typeOfQuestionAtIndex:(NSInteger)index;
 - (ApptentiveSurveyAnswerType)typeOfAnswerAtIndexPath:(NSIndexPath *)indexPath;
 

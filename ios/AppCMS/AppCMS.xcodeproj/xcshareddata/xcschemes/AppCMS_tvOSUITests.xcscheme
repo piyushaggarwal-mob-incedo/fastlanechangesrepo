@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01650F911FCD85A10054C222"
+               BlueprintIdentifier = "17AEF837206988AE008805B7"
                BuildableName = "AppCMS_tvOSUITests.xctest"
                BlueprintName = "AppCMS_tvOSUITests"
                ReferencedContainer = "container:AppCMS.xcodeproj">
@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01650F911FCD85A10054C222"
+               BlueprintIdentifier = "17AEF837206988AE008805B7"
                BuildableName = "AppCMS_tvOSUITests.xctest"
                BlueprintName = "AppCMS_tvOSUITests"
                ReferencedContainer = "container:AppCMS.xcodeproj">
@@ -57,7 +57,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01650F911FCD85A10054C222"
+            BlueprintIdentifier = "17AEF837206988AE008805B7"
             BuildableName = "AppCMS_tvOSUITests.xctest"
             BlueprintName = "AppCMS_tvOSUITests"
             ReferencedContainer = "container:AppCMS.xcodeproj">
@@ -75,7 +75,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01650F911FCD85A10054C222"
+            BlueprintIdentifier = "17AEF837206988AE008805B7"
             BuildableName = "AppCMS_tvOSUITests.xctest"
             BlueprintName = "AppCMS_tvOSUITests"
             ReferencedContainer = "container:AppCMS.xcodeproj">

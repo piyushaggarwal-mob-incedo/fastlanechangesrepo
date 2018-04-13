@@ -12,7 +12,7 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
     
     private var planNameLabel:SFLabel?
     private var planPriceLabel:SFLabel?
-
+    
     private var planMetaDataView:SFPlanMetaDataView_tvOS?
     var planSelectionButton:SFButton?
     var paymentModelObject:PaymentModel?
@@ -39,7 +39,7 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
         self.contentView.addSubview(planPriceLabel!)
         planPriceLabel?.isHidden = true
         planPriceLabel?.isUserInteractionEnabled = false
-
+        
         planMetaDataView = SFPlanMetaDataView_tvOS()
         self.contentView.addSubview(planMetaDataView!)
         planMetaDataView?.isHidden = true
@@ -149,14 +149,43 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
     
     //MARK: Update plan selector button based on cell selection status
     func updatePlanSelectorButtonViewOnSelectionStatus(selectionStatus:Bool) {
+        var defaultPrimaryColor : String?
+        var defaultSecondaryColor: String?
+        if AppConfiguration.sharedAppConfiguration.appTheme == .dark {
+            defaultPrimaryColor = "000000"
+            defaultSecondaryColor = "ffffff"
+        } else {
+            defaultPrimaryColor = "ffffff"
+            defaultSecondaryColor = "000000"
+        }
         if selectionStatus {
-            self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "ffffff").cgColor
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
+            if AppConfiguration.sharedAppConfiguration.primaryButton.borderColor != nil {
+                self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.borderColor!).cgColor
+            }
+            else   {
+                self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? defaultSecondaryColor!).cgColor
+            }
+            
+            
+            if AppConfiguration.sharedAppConfiguration.primaryButton.textColor != nil {
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.textColor!), for: .normal)
+            }
+            else if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
                 planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!), for: .normal)
             }
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor != nil {
+            else{
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: defaultPrimaryColor!), for: .normal)
+            }
+            
+            if AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor != nil {
+                planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor!)
+            }
+            else if AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor != nil {
                 
                 planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor!)
+            }
+            else{
+                planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: defaultSecondaryColor!)
             }
             planSelectionButton?.setTitle(paymentModelObject?.planSelectionButtonText ?? planSelectionButton?.buttonObject?.text?.uppercased() ?? "SELECT YOUR PLAN", for: .normal)
             planSelectionButton?.layer.borderWidth = 0
@@ -169,8 +198,14 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
             if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
                 planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!).withAlphaComponent(0.38), for: .normal)
             }
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
-                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!).withAlphaComponent(0.38).cgColor
+            else{
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: defaultSecondaryColor!).withAlphaComponent(0.38), for: .normal)
+            }
+            if AppConfiguration.sharedAppConfiguration.secondaryButton.borderColor != nil {
+                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.borderColor!).withAlphaComponent(0.38).cgColor
+            }
+            else{
+                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: defaultSecondaryColor!).withAlphaComponent(0.38).cgColor
             }
             planSelectionButton?.setTitle(planSelectionButton?.buttonObject?.text?.uppercased() ?? "SELECT YOUR PLAN", for: .normal)
             planSelectionButton?.layer.borderWidth = 2
@@ -182,15 +217,45 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
     
     
     func updatePlanSelectorButtonViewForConfirmation(selectionStatus:Bool){
+        var defaultPrimaryColor : String?
+        var defaultSecondaryColor: String?
+        if AppConfiguration.sharedAppConfiguration.appTheme == .dark {
+            defaultPrimaryColor = "000000"
+            defaultSecondaryColor = "ffffff"
+        } else {
+            defaultPrimaryColor = "ffffff"
+            defaultSecondaryColor = "000000"
+        }
         if selectionStatus {
-            self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? "ffffff").cgColor
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
+            if AppConfiguration.sharedAppConfiguration.primaryButton.borderColor != nil {
+                self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.borderColor!).cgColor
+            }
+            else   {
+                self.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryHoverColor ?? defaultSecondaryColor!).cgColor
+            }
+            
+            
+            if AppConfiguration.sharedAppConfiguration.primaryButton.textColor != nil {
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.textColor!), for: .normal)
+            }
+            else if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
                 planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!), for: .normal)
             }
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor != nil {
+            else{
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: defaultPrimaryColor!), for: .normal)
+            }
+            
+            if AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor != nil {
+                planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor!)
+            }
+            else if AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor != nil {
                 
                 planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor!)
             }
+            else{
+                planSelectionButton?.backgroundColor = Utility.hexStringToUIColor(hex: defaultSecondaryColor!)
+            }
+            
             planSelectionButton?.setTitle(planSelectionButton?.buttonObject?.selectedText?.uppercased() ?? "CONFIRM", for: .normal)
             planSelectionButton?.layer.borderWidth = 0
             planSelectionButton?.layer.borderColor = UIColor.clear.cgColor
@@ -202,8 +267,14 @@ class SFProductListViewCell_tvOS: UICollectionViewCell {
             if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
                 planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!).withAlphaComponent(0.38), for: .normal)
             }
-            if AppConfiguration.sharedAppConfiguration.secondaryButton.textColor != nil {
-                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.textColor!).withAlphaComponent(0.38).cgColor
+            else{
+                planSelectionButton?.setTitleColor(Utility.hexStringToUIColor(hex: defaultSecondaryColor!).withAlphaComponent(0.38), for: .normal)
+            }
+            if AppConfiguration.sharedAppConfiguration.secondaryButton.borderColor != nil {
+                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.secondaryButton.borderColor!).withAlphaComponent(0.38).cgColor
+            }
+            else{
+                planSelectionButton?.layer.borderColor = Utility.hexStringToUIColor(hex: defaultSecondaryColor!).withAlphaComponent(0.38).cgColor
             }
             planSelectionButton?.setTitle(planSelectionButton?.buttonObject?.selectedText?.uppercased() ?? "CONFIRM", for: .normal)
             planSelectionButton?.layer.borderWidth = 2

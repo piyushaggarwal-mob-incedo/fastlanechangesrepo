@@ -136,12 +136,14 @@ class VideoDetailViewController: UIViewController, UITableViewDataSource, UITabl
         let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         negativeSpacer.width = -15
         
-        let image = UIImage(named: "Back")
-        
         let backButton = UIButton(type: .custom)
         backButton.sizeToFit()
-        backButton.setImage(image, for: .normal)
-        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+        let backButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "Back.png"))
+        
+        backButton.setImage(backButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (backButtonImageView.image?.size.height)!/2)
         backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         
         let backButtonItem = UIBarButtonItem(customView: backButton)
@@ -196,22 +198,27 @@ class VideoDetailViewController: UIViewController, UITableViewDataSource, UITabl
         
         var righBarItems:Array<UIBarButtonItem> = [negativeSpacer]
         
-        let searchImage = UIImage(named: "icon-search")
         let searchButton = UIButton(type: .custom)
         searchButton.sizeToFit()
-        searchButton.setImage(searchImage, for: .normal)
-        searchButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (searchImage?.size.height)!/2)
+        let searchButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "icon-search.png"))
+        
+        searchButton.setImage(searchButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        searchButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        searchButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (searchButtonImageView.image?.size.height)!/2)
         searchButton.addTarget(self, action: #selector(searchButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         
         let searchButtonItem = UIBarButtonItem(customView: searchButton)
         righBarItems.append(searchButtonItem)
         
-        let shareImage = UIImage(named: "shareIcon")
-        
         let shareButton = UIButton(type: .custom)
         shareButton.sizeToFit()
-        shareButton.setImage(shareImage, for: .normal)
-        shareButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (shareImage?.size.height)!/2)
+        let shareButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "shareIcon.png"))
+        
+        shareButton.setImage(shareButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        shareButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        shareButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (shareButtonImageView.image?.size.height)!/2)
         shareButton.addTarget(self, action: #selector(shareButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         
         let shareButtonItem = UIBarButtonItem(customView: shareButton)

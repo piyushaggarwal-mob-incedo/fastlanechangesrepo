@@ -25,7 +25,7 @@
       },
       "view": "AC PhotoGallery 01",
       "type": "AC PhotoGallery 01",
-      "blockName": "photoGallery01",
+      "blockName": "photoGalleryDetail01",
       "layout": {
         "mobile": {
           "yAxis": 0,
@@ -83,6 +83,7 @@
         {
           "layout": {
             "mobile": {
+              "width" : 0,
               "yAxis": 35,
               "leftMargin": 11.67,
               "rightMargin": 2.67,
@@ -90,7 +91,7 @@
               "height": 24
             },
             "tabletLandscape": {
-              "width": 160,
+              "width": 0,
               "yAxis": 50,
               "leftMargin": 11.67,
               "rightMargin": 2.67,
@@ -98,7 +99,7 @@
               "height": 50
             },
             "tabletPortrait": {
-              "width": 160,
+              "width": 0,
               "yAxis": 50,
               "leftMargin": 11.67,
               "rightMargin": 2.67,
@@ -110,72 +111,8 @@
           "numberOfLines": 1,
           "textAlignment": "left",
           "type": "label",
-          "textColor": "#008EE0",
+          "textColor": "#4e4e4e",
           "key": "trayAuthName"
-        },
-        {
-          "layout": {
-            "mobile": {
-              "xAxis": 120,
-              "yAxis": 35,
-              "leftMargin": 0,
-              "rightMargin": 2.67,
-              "fontSize": 12,
-              "height": 24
-            },
-            "tabletLandscape": {
-              "width": 120,
-              "xAxis": 170,
-              "yAxis": 50,
-              "fontSize": 20,
-              "height": 50
-            },
-            "tabletPortrait": {
-              "width": 120,
-              "xAxis": 170,
-              "yAxis": 50,
-              "fontSize": 20,
-              "height": 50
-            }
-          },
-          "fontFamily": "OpenSans",
-          "numberOfLines": 1,
-          "textAlignment": "left",
-          "type": "label",
-          "textColor": "#008EE0",
-          "key": "trayDate"
-        },
-        {
-          "layout": {
-            "mobile": {
-              "xAxis": 200,
-              "yAxis": 35,
-              "leftMargin": 0,
-              "rightMargin": 2.67,
-              "fontSize": 12,
-              "height": 24
-            },
-            "tabletLandscape": {
-              "xAxis": 300,
-              "width": 0,
-              "yAxis": 50,
-              "fontSize": 20,
-              "height": 50
-            },
-            "tabletPortrait": {
-              "xAxis": 300,
-              "width": 0,
-              "yAxis": 50,
-              "fontSize": 20,
-              "height": 50
-            }
-          },
-          "fontFamily": "OpenSans",
-          "numberOfLines": 1,
-          "textAlignment": "left",
-          "type": "label",
-          "textColor": "#008EE0",
-          "key": "trayPhotoCount"
         },
         {
           "layout": {
@@ -207,8 +144,7 @@
           "numberOfLines": 1,
           "textAlignment": "left",
           "type": "label",
-          "textColor": "#008EE0",
-          "fontWeight": "Semibold",
+          "textColor": "#808080",
           "key": "traySubTitle"
         },
         {
@@ -305,7 +241,7 @@
           "numberOfLines": 1,
           "textAlignment": "center",
           "type": "label",
-          "backgroundColor":"000000",
+          "backgroundColor": "000000",
           "textColor": "000000",
           "key": "trayImgCount"
         },
@@ -375,19 +311,19 @@
           "layout": {
             "mobile": {
               "xAxis": 0,
-              "yAxis": 400,
+              "yAxis": 380,
               "height": 144,
               "width": 375
             },
             "tabletLandscape": {
               "xAxis": 0,
-              "yAxis": 545,
+              "yAxis": 535,
               "height": 67,
               "width": 660
             },
             "tabletPortrait": {
               "xAxis": 0,
-              "yAxis": 616,
+              "yAxis": 570,
               "height": 215,
               "width": 768
             }
@@ -398,7 +334,7 @@
                 "mobile": {
                   "yAxis": 0,
                   "xAxis": 0,
-                  "rightMargin":12,
+                  "rightMargin": 12,
                   "height": 144,
                   "width": 361,
                   "gridHeight": 67,
@@ -460,27 +396,52 @@
           ],
           "type": "AC PhotoGalleryGrid 01",
           "key": "AC PhotoGalleryGrid 01"
-        },{
+        },
+        {
+          "layout": {
+            "mobile": {
+              "yAxis": 0,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "height": 0
+            },
+            "tabletLandscape": {
+              "yAxis": 170,
+              "xAxis": 679,
+              "width": 300,
+              "height": 250
+            },
+            "tabletPortrait": {
+              "yAxis": 150,
+              "xAxis": 1024,
+              "width": 0,
+              "height": 0
+            }
+          },
+          "type": "adView",
+          "key": "adView"
+        },
+        {
           "layout": {
             "mobile": {
               "yAxis": 560,
               "xAxis": 0,
-              "width": 170,
-              "rightMargin": 5,
-              "height": 30
+              "width": 135,
+              "rightMargin": 1,
+              "height": 20
             },
             "tabletLandscape": {
               "width": 160,
               "yAxis": 630,
               "xAxis": 455,
-              "height": 35
+              "height": 22
             },
             "tabletPortrait": {
-              "width": 170,
-              "yAxis": 845,
+              "width": 160,
+              "yAxis": 850,
               "xAxis": 0,
               "rightMargin": 20,
-              "height": 50
+              "height": 22
             }
           },
           "fontFamily": "OpenSans",
@@ -491,27 +452,28 @@
           "type": "label",
           "text": "NEXT GALLERY",
           "key": "nextGallery"
-        },{
+        },
+        {
           "layout": {
             "mobile": {
               "yAxis": 560,
               "xAxis": 0,
-              "width": 170,
-              "leftMargin": 5,
-              "height": 30
+              "width": 135,
+              "leftMargin": 1,
+              "height": 20
             },
             "tabletLandscape": {
               "width": 160,
               "yAxis": 630,
               "xAxis": 10,
-              "height": 35
+              "height": 22
             },
             "tabletPortrait": {
-              "width": 360,
-              "yAxis": 845,
+              "width": 160,
+              "yAxis": 850,
               "xAxis": 0,
               "leftMargin": 20,
-              "height": 50
+              "height": 22
             }
           },
           "fontFamily": "OpenSans",

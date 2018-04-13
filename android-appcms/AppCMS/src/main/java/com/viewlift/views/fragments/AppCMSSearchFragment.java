@@ -89,7 +89,7 @@ public class AppCMSSearchFragment extends DialogFragment {
                 searchManager.getSearchableInfo(getActivity().getComponentName()),
                 true);
 
-        appCMSSearchView.setQueryHint(getString(R.string.search));
+        appCMSSearchView.setQueryHint(getString(R.string.search_films));
         appCMSSearchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
         appCMSSearchView.setSuggestionsAdapter(searchSuggestionsAdapter);
         appCMSSearchView.setIconifiedByDefault(false);
@@ -115,14 +115,14 @@ public class AppCMSSearchFragment extends DialogFragment {
             @Override
             public boolean onSuggestionClick(int position) {
                 Cursor cursor = (Cursor) appCMSSearchView.getSuggestionsAdapter().getItem(position);
-                String[] searchHintResult = cursor.getString(cursor.getColumnIndex(SearchManager.SUGGEST_COLUMN_INTENT_DATA)).split(",");
+                String[] searchHintResult = cursor.getString(cursor.getColumnIndex("suggest_intent_data")).split(",");
                 appCMSPresenter.searchSuggestionClick(searchHintResult);
                 return true;
             }
         });
 
-        buttonColor=appCMSPresenter.getBrandPrimaryCtaColor();
-        textColor=appCMSPresenter.getBrandPrimaryCtaTextColor();
+        buttonColor = appCMSPresenter.getBrandPrimaryCtaColor();
+        textColor = appCMSPresenter.getBrandPrimaryCtaTextColor();
         appCMSGoButton.setBackgroundColor(0xff000000 + (int) buttonColor);
         appCMSGoButton.setTextColor(0xff000000 + (int) ViewCreator.adjustColor1(textColor, buttonColor));
 
@@ -162,7 +162,7 @@ public class AppCMSSearchFragment extends DialogFragment {
     public void onDestroyView() {
         super.onDestroyView();
 
-        if (!BaseView.isTablet(getContext())) {
+        if (BaseView.isTablet(getContext())) {
             appCMSPresenter.unrestrictPortraitOnly();
         }
 

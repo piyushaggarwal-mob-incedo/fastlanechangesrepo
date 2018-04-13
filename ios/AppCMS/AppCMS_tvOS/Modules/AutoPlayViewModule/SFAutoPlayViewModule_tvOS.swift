@@ -467,7 +467,10 @@ class SFAutoPlayViewModule_tvOS: UIViewController, SFButtonDelegate {
             imageView.blur(blurRadius: 6)
         }
         if imageView.imageViewObject?.key == "lightOverlayView" {
-            imageView.image = UIImage(named: "autoPlayOverlay.png")
+            imageView.image = UIImage(named: "autoPlayOverlay.png")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+            if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor {
+                imageView.tintColor = Utility.hexStringToUIColor(hex: backgroundColor)
+            }
         }
         self.view.addSubview(imageView)
         if imageView.imageViewObject?.key == "videoImage" {

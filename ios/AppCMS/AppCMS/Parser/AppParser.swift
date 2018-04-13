@@ -214,7 +214,7 @@ class AppParser: NSObject
                 let borderDict: Dictionary<String, AnyObject>? = appPrimaryHover["border"] as? Dictionary<String, AnyObject>
                 if let border = borderDict {
                     AppConfiguration.sharedAppConfiguration.primaryHoverColor = border["color"] as? String
-
+                    
                 }
             }
             
@@ -223,11 +223,13 @@ class AppParser: NSObject
                 plistDict["primary-button"] = primaryDict?["backgroundColor"] as? String
                 plistDict["primary-Text"] = primaryDict?["textColor"] as? String
                 
-                AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor = primaryDict?["backgroundColor"] as? String
+                AppConfiguration.sharedAppConfiguration.primaryButton.backgroundColor = primaryDict?["backgroundColor"] as? String
                 AppConfiguration.sharedAppConfiguration.primaryButton.textColor = primaryDict?["textColor"] as? String
-
+                AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor = primaryDict?["backgroundColor"] as? String
+                
                 let primaryBorderDict:Dictionary<String, AnyObject>? = primaryDict?["border"] as? Dictionary<String, AnyObject>
                 if primaryBorderDict != nil{
+                    AppConfiguration.sharedAppConfiguration.primaryButton.borderColor = primaryBorderDict?["color"] as? String
                     AppConfiguration.sharedAppConfiguration.primaryButton.borderSelectedColor = primaryBorderDict?["color"] as? String
                     AppConfiguration.sharedAppConfiguration.primaryButton.borderWidth = primaryBorderDict?["width"] as? Float
                 }
@@ -237,12 +239,13 @@ class AppParser: NSObject
             if secondaryDict != nil{
                 plistDict["secondary-button"] = secondaryDict?["blockTitleColor"] as? String
                 plistDict["secondary-Text"] = secondaryDict?["pageTitleColor"] as? String
+                AppConfiguration.sharedAppConfiguration.secondaryButton.backgroundColor = secondaryDict?["backgroundColor"] as? String
+                AppConfiguration.sharedAppConfiguration.secondaryButton.textColor = secondaryDict?["textColor"] as? String
+                AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor = secondaryDict?["backgroundColor"] as? String
                 
-                AppConfiguration.sharedAppConfiguration.secondaryButton.selectedColor = primaryDict?["backgroundColor"] as? String
-                AppConfiguration.sharedAppConfiguration.secondaryButton.textColor = primaryDict?["textColor"] as? String
-
-                let secBorderDict:Dictionary<String, AnyObject>? = plistDict["border"] as? Dictionary<String, AnyObject>
+                let secBorderDict:Dictionary<String, AnyObject>? = secondaryDict?["border"] as? Dictionary<String, AnyObject>
                 if secBorderDict != nil{
+                    AppConfiguration.sharedAppConfiguration.secondaryButton.borderColor = secBorderDict?["color"] as? String
                     AppConfiguration.sharedAppConfiguration.secondaryButton.borderSelectedColor = secBorderDict?["color"] as? String
                     AppConfiguration.sharedAppConfiguration.secondaryButton.borderWidth = secBorderDict?["width"] as? Float
                 }

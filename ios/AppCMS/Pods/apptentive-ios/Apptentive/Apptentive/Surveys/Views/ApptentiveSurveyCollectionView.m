@@ -7,6 +7,7 @@
 //
 
 #import "ApptentiveSurveyCollectionView.h"
+#import "ApptentiveSurveyCollectionViewLayout.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,9 +33,27 @@ NS_ASSUME_NONNULL_BEGIN
 		[self addSubview:collectionHeaderView];
 
 		[self addConstraints:@[
-			[NSLayoutConstraint constraintWithItem:collectionHeaderView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0],
-			[NSLayoutConstraint constraintWithItem:collectionHeaderView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0],
-			[NSLayoutConstraint constraintWithItem:collectionHeaderView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0]
+			[NSLayoutConstraint constraintWithItem:collectionHeaderView
+										 attribute:NSLayoutAttributeWidth
+										 relatedBy:NSLayoutRelationEqual
+											toItem:self
+										 attribute:NSLayoutAttributeWidth
+										multiplier:1.0
+										  constant:0.0],
+			[NSLayoutConstraint constraintWithItem:collectionHeaderView
+										 attribute:NSLayoutAttributeCenterX
+										 relatedBy:NSLayoutRelationEqual
+											toItem:self
+										 attribute:NSLayoutAttributeCenterX
+										multiplier:1.0
+										  constant:0.0],
+			[NSLayoutConstraint constraintWithItem:collectionHeaderView
+										 attribute:NSLayoutAttributeTop
+										 relatedBy:NSLayoutRelationEqual
+											toItem:self
+										 attribute:NSLayoutAttributeTop
+										multiplier:1.0
+										  constant:0.0]
 		]];
 	}
 
@@ -55,8 +74,20 @@ NS_ASSUME_NONNULL_BEGIN
 		self.footerConstraint = [NSLayoutConstraint constraintWithItem:collectionFooterView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
 
 		[self addConstraints:@[
-			[NSLayoutConstraint constraintWithItem:collectionFooterView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0],
-			[NSLayoutConstraint constraintWithItem:collectionFooterView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0],
+			[NSLayoutConstraint constraintWithItem:collectionFooterView
+										 attribute:NSLayoutAttributeWidth
+										 relatedBy:NSLayoutRelationEqual
+											toItem:self
+										 attribute:NSLayoutAttributeWidth
+										multiplier:1.0
+										  constant:0.0],
+			[NSLayoutConstraint constraintWithItem:collectionFooterView
+										 attribute:NSLayoutAttributeCenterX
+										 relatedBy:NSLayoutRelationEqual
+											toItem:self
+										 attribute:NSLayoutAttributeCenterX
+										multiplier:1.0
+										  constant:0.0],
 			self.footerConstraint
 		]];
 	}
@@ -64,23 +95,10 @@ NS_ASSUME_NONNULL_BEGIN
 	[self.collectionViewLayout invalidateLayout];
 }
 
-- (void)scrollHeaderAtIndexPathToTop:(NSIndexPath *)indexPath animated:(BOOL)animated {
-	CGRect headerFrame = [self layoutAttributesForSupplementaryElementOfKind:UICollectionElementKindSectionHeader atIndexPath:indexPath].frame;
-
-	// Make sure we don't scroll off the bottom of the content + footer
-	UIEdgeInsets contentInset = self.contentInset;
-#ifdef __IPHONE_11_0
-	if (@available(iOS 11.0, *)) {
-		contentInset = self.safeAreaInsets;
-	}
-#endif
-
-	headerFrame.origin.y = fmin(headerFrame.origin.y - contentInset.top, self.contentSize.height - CGRectGetHeight(self.bounds) + contentInset.bottom);
-
-	[self setContentOffset:headerFrame.origin animated:animated];
-}
-
 - (void)layoutSubviews {
+	// We might change the layout attributes if the header size changes. Makes sure we warn the OS. 
+	[self.collectionViewLayout invalidateLayout];
+
 	[super layoutSubviews];
 
 	UIEdgeInsets contentInset = self.contentInset;
@@ -91,7 +109,9 @@ NS_ASSUME_NONNULL_BEGIN
 #endif
 
 	CGFloat top = [self.collectionViewLayout collectionViewContentSize].height - CGRectGetHeight(self.collectionFooterView.bounds);
-	top = fmax(top, CGRectGetHeight(self.bounds) - CGRectGetHeight(self.collectionFooterView.bounds) - contentInset.top - contentInset.bottom);
+	if (((ApptentiveSurveyCollectionViewLayout *)self.collectionViewLayout).shouldExpand) {
+		top = fmax(top, CGRectGetHeight(self.bounds) - CGRectGetHeight(self.collectionFooterView.bounds) - contentInset.top - contentInset.bottom);
+	}
 
 	self.footerConstraint.constant = top;
 

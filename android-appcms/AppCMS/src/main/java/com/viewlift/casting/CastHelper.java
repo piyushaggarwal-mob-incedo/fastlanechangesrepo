@@ -149,7 +149,11 @@ public class CastHelper {
 
     public static synchronized CastHelper getInstance(Context context) {
         if (objMain == null) {
-            objMain = new CastHelper(context);
+            try {
+                objMain = new CastHelper(context);
+            } catch (Exception e) {
+
+            }
         }
         return objMain;
     }
@@ -164,6 +168,16 @@ public class CastHelper {
         initRemoteClientListeners();
         initProgressListeners();
 
+    }
+
+    public String getDeviceName() {
+        String deviceName = "";
+        mCastSession = CastContext.getSharedInstance(mAppContext).getSessionManager()
+                .getCurrentCastSession();
+        if (mCastSession != null && mCastSession.isConnected()) {
+            deviceName = mCastSession.getCastDevice().getFriendlyName();
+        }
+        return deviceName;
     }
 
 
@@ -277,7 +291,7 @@ public class CastHelper {
                 == MediaRouter.RouteInfo.CONNECTION_STATE_CONNECTED) {
             isCastDeviceConnected = true;
 
-        }else if(mSelectedDevice!=null){
+        } else if (mSelectedDevice != null) {
             isCastDeviceConnected = true;
 
         } else if (mMediaRouter.getSelectedRoute().getConnectionState()
@@ -357,6 +371,10 @@ public class CastHelper {
     public void launchTrailer(AppCMSPresenter appCMSPresenter, String filmId, AppCMSVideoPageBinder binder, long currentPosition) {
 
         Toast.makeText(mAppContext, mAppContext.getString(R.string.loading_vid_on_casting), Toast.LENGTH_SHORT).show();
+        if(binder == null || binder.getContentData() == null){
+            Toast.makeText(mAppContext, mAppContext.getString(R.string.app_cms_download_stream_info_error_title), Toast.LENGTH_SHORT).show();
+            return;
+        }
         this.appCMSPresenterComponenet = appCMSPresenter;
         if (binder.getContentData().getContentDetails() != null
                 && binder.getContentData().getContentDetails().getTrailers() != null
@@ -367,6 +385,11 @@ public class CastHelper {
             if (videoAssets.getMpeg() != null && videoAssets.getMpeg().size() > 0) {
                 videoUrl = videoAssets.getMpeg().get(videoAssets.getMpeg().size() - 1).getUrl();
             }
+        } else {
+            if (binder.getContentData().getGist() != null && binder.getContentData().getGist().getTitle() != null) {
+                title = binder.getContentData().getGist().getTitle();
+            }
+            videoUrl = CastingUtils.getPlayingUrl(binder.getContentData());
         }
 
         if (videoUrl != null && !TextUtils.isEmpty(videoUrl)) {
@@ -380,7 +403,6 @@ public class CastHelper {
         }
 
     }
-
 
 
     public void launchSingeRemoteMedia(AppCMSVideoPageBinder binder, String videoPlayUrl, String filmId, long currentPosition, boolean isTrailer) {
@@ -402,9 +424,13 @@ public class CastHelper {
         } catch (JSONException e) {
             //Log.e(TAG, "Error parsing JSON data: " + e.getMessage());
         }
+        String appPackageName = mAppContext.getPackageName();
+
         try {
             customData.put(CastingUtils.PARAM_KEY, paramLink);
             customData.put(CastingUtils.VIDEO_TITLE, title);
+            customData.put(CastingUtils.ITEM_TYPE, appPackageName + "" + CastingUtils.ITEM_TYPE_VIDEO);
+
         } catch (JSONException e) {
             //Log.e(TAG, "Error parsing JSON data: " + e.getMessage());
         }
@@ -417,11 +443,13 @@ public class CastHelper {
                     mAppContext), true, currentPosition);
             getRemoteMediaClient().addListener(remoteListener);
             onAppDisConnectCalled = false;
+            CastingUtils.isMediaQueueLoaded = true;
+
         }
 
     }
 
-    public void launchSingeRemoteMedia(String title,String paramLink,String imageUrl, String videoPlayUrl, String filmId, long currentPosition, boolean isTrailer) {
+    public void launchSingeRemoteMedia(String title, String paramLink, String imageUrl, String videoPlayUrl, String filmId, long currentPosition, boolean isTrailer) {
 
         this.paramLink = paramLink != null ? paramLink : "";
         this.imageUrl = imageUrl != null ? imageUrl : "";
@@ -433,9 +461,12 @@ public class CastHelper {
         } catch (JSONException e) {
             //Log.e(TAG, "Error parsing JSON data: " + e.getMessage());
         }
+        String appPackageName = mAppContext.getPackageName();
+
         try {
             customData.put(CastingUtils.PARAM_KEY, paramLink);
             customData.put(CastingUtils.VIDEO_TITLE, title);
+            customData.put(CastingUtils.ITEM_TYPE, appPackageName + "" + CastingUtils.ITEM_TYPE_VIDEO);
         } catch (JSONException e) {
             //Log.e(TAG, "Error parsing JSON data: " + e.getMessage());
         }
@@ -465,6 +496,7 @@ public class CastHelper {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 mActivity.startActivity(intent);
                 CastingUtils.isRemoteMediaControllerOpen = true;
+
             }
         }
     }
@@ -486,11 +518,8 @@ public class CastHelper {
                         //Log.e(TAG, e.getMessage());
                         mStreamId = CastingUtils.getRemoteMediaId(mAppContext) + appCMSPresenterComponenet.getCurrentTimeStamp();
                     }
-
-
                 }
                 updatePlaybackState();
-
             }
 
             @Override
@@ -599,6 +628,8 @@ public class CastHelper {
             }
 
             private void onApplicationDisconnected() {
+                CastingUtils.isMediaQueueLoaded = true;
+
                 OnApplicationEnded onApplicationEnded = new OnApplicationEnded();
                 onApplicationEnded.setCurrentWatchedTime(castCurrentMediaPosition);
                 onApplicationEnded.setRecommendedVideoIndex(playIndexPosition);
@@ -608,7 +639,6 @@ public class CastHelper {
                     getRemoteMediaClient().removeListener(remoteListener);
                     getRemoteMediaClient().removeProgressListener(progressListener);
                 }
-                CastingUtils.isMediaQueueLoaded = true;
 
                 onAppDisConnectCalled = false;
                 if (callBackRemoteListener != null && mActivity != null && mActivity instanceof AppCMSPlayVideoActivity && binderPlayScreen != null && !onAppDisConnectCalled) {
@@ -636,7 +666,7 @@ public class CastHelper {
                     }
 
                     binderPlayScreen.setCurrentPlayingVideoIndex(playIndexPosition);
-                    if (playIndexPosition < listCompareRelatedVideosId.size()) {
+                    if (listCompareRelatedVideosId != null && playIndexPosition < listCompareRelatedVideosId.size()) {
                         appCMSPresenterComponenet.playNextVideo(binderPlayScreen,
                                 binderPlayScreen.getCurrentPlayingVideoIndex(),
                                 castCurrentMediaPosition);
@@ -679,6 +709,11 @@ public class CastHelper {
                                 0d,
                                 0,
                                 isVideoDownloaded);
+                        appCMSPresenterComponenet.sendGaEvent(mAppContext.getResources().getString(R.string.play_video_action),
+                                mAppContext.getResources().getString(R.string.play_video_category), currentRemoteMediaId);
+
+                        appCMSPresenterComponenet.updateWatchedTime(currentRemoteMediaId,
+                                castCurrentDuration);
                     }
 
                 }
@@ -690,6 +725,8 @@ public class CastHelper {
 
 
     private void callRelatedVideoData() {
+        CastingUtils.isMediaQueueLoaded = true;
+
         String filmIds = "";
         if (listRelatedVideosId != null && listRelatedVideosId.size() >= 5) {
             List<String> subList = listRelatedVideosId.subList(0, 5);
@@ -820,7 +857,7 @@ public class CastHelper {
         }
     }
 
-    protected RemoteMediaClient getRemoteMediaClient() {
+    public RemoteMediaClient getRemoteMediaClient() {
         CastSession castSession = CastContext.getSharedInstance(mAppContext).getSessionManager()
                 .getCurrentCastSession();
         if (castSession == null || !castSession.isConnected()) {
@@ -855,7 +892,7 @@ public class CastHelper {
 
         if (!sentBeaconPlay) {
 
-            if(appCMSPresenterComponenet == null)
+            if (appCMSPresenterComponenet == null)
                 return;
             isVideoDownloaded = appCMSPresenterComponenet.isVideoDownloaded(currentRemoteMediaId);
             mStartBufferMilliSec = new Date().getTime();
@@ -876,6 +913,9 @@ public class CastHelper {
                         0,
                         isVideoDownloaded);
                 sentBeaconPlay = true;
+
+                appCMSPresenterComponenet.sendGaEvent(mAppContext.getResources().getString(R.string.play_video_action),
+                        mAppContext.getResources().getString(R.string.play_video_category), currentRemoteMediaId);
             }
         }
         switch (status) {
@@ -1026,6 +1066,8 @@ public class CastHelper {
         }
     }
 
-
+    public String getStartingFilmId() {
+        return startingFilmId;
+    }
 }
 

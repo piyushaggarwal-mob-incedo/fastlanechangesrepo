@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <UIKit/UIKit.h>
 #import "UAAnalytics+Internal.h"
@@ -35,6 +35,13 @@
 @property (nonatomic, assign) NSTimeInterval startTime;
 @end
 
+
+NSString *const UACustomEventAdded = @"UACustomEventAdded";
+NSString *const UARegionEventAdded = @"UARegionEventAdded";
+NSString *const UAScreenTracked = @"UAScreenTracked";
+NSString *const UAScreenKey = @"screen";
+NSString *const UAEventKey = @"event";
+
 @implementation UAAnalytics
 
 
@@ -43,7 +50,7 @@
 }
 
 - (instancetype)initWithConfig:(UAConfig *)airshipConfig dataStore:(UAPreferenceDataStore *)dataStore eventManager:(UAEventManager *)eventManager {
-    self = [super init];
+    self = [super initWithDataStore:dataStore];
 
     if (self) {
         // Set server to default if not specified in options
@@ -55,6 +62,8 @@
         if (![self.dataStore objectForKey:kUAAnalyticsEnabled]) {
             [self.dataStore setBool:YES forKey:kUAAnalyticsEnabled];
         }
+
+        self.eventManager.uploadsEnabled = self.isEnabled && self.componentEnabled;
 
         // Register for background notifications
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -173,22 +182,23 @@
         return;
     }
 
-    UA_LDEBUG(@"Adding %@ event %@.", event.eventType, event.eventID);
-    [self.eventManager addEvent:event sessionID:self.sessionID];
-    UA_LTRACE(@"Event added: %@.", event);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UA_LDEBUG(@"Adding %@ event %@.", event.eventType, event.eventID);
+        [self.eventManager addEvent:event sessionID:self.sessionID];
+        UA_LTRACE(@"Event added: %@.", event);
 
-    id strongDelegate = self.delegate;
-    if ([event isKindOfClass:[UACustomEvent class]]) {
-        if ([strongDelegate respondsToSelector:@selector(customEventAdded:)]) {
-            [strongDelegate customEventAdded:(UACustomEvent *)event];
+        if ([event isKindOfClass:[UACustomEvent class]]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:UACustomEventAdded
+                                                                object:self
+                                                              userInfo:@{UAEventKey: event}];
         }
-    }
 
-    if ([event isKindOfClass:[UARegionEvent class]]) {
-        if ([strongDelegate respondsToSelector:@selector(regionEventAdded:)]) {
-            [strongDelegate regionEventAdded:(UARegionEvent *)event];
+        if ([event isKindOfClass:[UARegionEvent class]]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:UARegionEventAdded
+                                                                object:self
+                                                              userInfo:@{UAEventKey: event}];
         }
-    }
+    });
 }
 
 
@@ -232,6 +242,7 @@
     }
 
     [self.dataStore setBool:enabled forKey:kUAAnalyticsEnabled];
+    self.eventManager.uploadsEnabled = self.isEnabled && self.componentEnabled;
 }
 
 - (void)associateDeviceIdentifiers:(UAAssociatedIdentifiers *)associatedIdentifiers {
@@ -251,10 +262,9 @@
         return;
     }
 
-    id strongDelegate = self.delegate;
-    if ([strongDelegate respondsToSelector:@selector(screenTracked:)]) {
-        [strongDelegate screenTracked:screen];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:UAScreenTracked
+                                                        object:self
+                                                      userInfo:screen == nil ? @{} : @{UAScreenKey: screen}];
 
     // If there's a screen currently being tracked set it's stop time and add it to analytics
     if (self.currentScreen) {
@@ -283,6 +293,17 @@
 
 - (void)scheduleUpload {
     [self.eventManager scheduleUpload];
+}
+
+- (void)onComponentEnableChange {
+    self.eventManager.uploadsEnabled = self.isEnabled && self.componentEnabled;
+    if (self.componentEnabled) {
+        // if component was disabled and is now enabled, schedule an upload just in case
+        [self scheduleUpload];
+    } else {
+        // if component was enabled and is now disabled, cancel any pending uploads
+        [self cancelUpload];
+    }
 }
 
 @end

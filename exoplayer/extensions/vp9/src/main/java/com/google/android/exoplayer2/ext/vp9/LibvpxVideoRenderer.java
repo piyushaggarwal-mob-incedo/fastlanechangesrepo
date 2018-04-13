@@ -22,6 +22,7 @@ import android.os.Looper;
 import android.os.SystemClock;
 import android.support.annotation.IntDef;
 import android.view.Surface;
+
 import com.google.android.exoplayer2.BaseRenderer;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -40,6 +41,7 @@ import com.google.android.exoplayer2.util.TraceUtil;
 import com.google.android.exoplayer2.util.Util;
 import com.google.android.exoplayer2.video.VideoRendererEventListener;
 import com.google.android.exoplayer2.video.VideoRendererEventListener.EventDispatcher;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 

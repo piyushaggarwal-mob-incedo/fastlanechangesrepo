@@ -16,12 +16,22 @@ class SearchBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
         createSearcContainerControllers()
         
-        let backgroundImage = UIImage(named: "app_background.png")
-        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
-        
+        //        let backgroundImage = UIImage(named: "app_background.png")
+        //        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+        if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+            self.view.backgroundColor = Utility.hexStringToUIColor(hex: backgroundColor)
+        }
+        else {
+            if AppConfiguration.sharedAppConfiguration.appTheme == .light{
+                self.view.backgroundColor = .white
+            }
+            else{
+                self.view.backgroundColor = .black
+            }
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(resetSearch(_:)), name: Constants.kMenuButtonTapped, object: nil)
     }
     

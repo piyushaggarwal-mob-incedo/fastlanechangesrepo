@@ -1,1 +1,1 @@
-None
+string:MZGenre.Apps.Shopping

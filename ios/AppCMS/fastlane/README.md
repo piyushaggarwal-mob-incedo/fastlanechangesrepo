@@ -41,24 +41,34 @@ Send Failed Messages on Slack
 
 ----
 
-## appletvos
-### appletvos test
+## appletvosBuild
+### appletvosBuild test
 ```
-fastlane appletvos test
+fastlane appletvosBuild test
 ```
 Runs all the tests
-### appletvos appcmsbuild
+### appletvosBuild appleTvStoreBuild
 ```
-fastlane appletvos appcmsbuild
+fastlane appletvosBuild appleTvStoreBuild
 ```
 Deploy a new version to the App Store- with custom
-### appletvos developmentbuild
+### appletvosBuild appleTvbuild
 ```
-fastlane appletvos developmentbuild
+fastlane appletvosBuild appleTvbuild
+```
+Deploy a new version to the developer with custom
+### appletvosBuild slackSendMessage
+```
+fastlane appletvosBuild slackSendMessage
 ```
 Deploy a new version to the App Store
 
-Deploy a new version to the developer with custom
+Send Messages on Slack
+### appletvosBuild buildFailedLane
+```
+fastlane appletvosBuild buildFailedLane
+```
+Send Failed Messages on Slack
 
 ----
 

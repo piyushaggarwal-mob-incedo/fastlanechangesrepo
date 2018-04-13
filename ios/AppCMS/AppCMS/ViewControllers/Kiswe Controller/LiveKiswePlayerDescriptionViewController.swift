@@ -85,11 +85,17 @@ class LiveKiswePlayerDescriptionViewController: UIViewController,SFButtonDelegat
         playButton.createButtonView()
         if Constants.IPHONE {
             playButton.frame = CGRect(x: 0, y: 0, width: 76, height: 85)
-            playButton.setImage(UIImage(named: "videoDetailPlayIcon_iPhone"), for: UIControlState.normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "videoDetailPlayIcon_iPhone.png"))
+            
+            self.playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            self.playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.themeFontColor ?? AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
         }
         else {
             playButton.frame = CGRect(x: 0, y: 0, width: 111, height: 126)
-            playButton.setImage(UIImage(named: "videoDetailPlayIcon_iPad"), for: UIControlState.normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "videoDetailPlayIcon_iPad.png"))
+            
+            self.playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            self.playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.themeFontColor ?? AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
         }
         playButton.center = self.view.center
         self.view.addSubview(playButton)

@@ -1,7 +1,6 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAInboxAPIClient+Internal.h"
-#import "UAInboxMessage.h"
 #import "UAConfig.h"
 #import "UAUser.h"
 #import "UAUtils.h"
@@ -38,6 +37,11 @@ NSString *const UALastMessageListModifiedTime = @"UALastMessageListModifiedTime.
 
 - (void)retrieveMessageListOnSuccess:(UAInboxClientMessageRetrievalSuccessBlock)successBlock
                            onFailure:(UAInboxClientFailureBlock)failureBlock {
+    
+    if (!self.enabled) {
+        successBlock(UAAPIClientStatusDisabled, nil);
+        return;
+    }
 
     UARequest *request = [UARequest requestWithBuilderBlock:^(UARequestBuilder * _Nonnull builder) {
 
@@ -120,6 +124,11 @@ NSString *const UALastMessageListModifiedTime = @"UALastMessageListModifiedTime.
                             onSuccess:(UAInboxClientSuccessBlock)successBlock
                             onFailure:(UAInboxClientFailureBlock)failureBlock {
 
+    if (!self.enabled) {
+        successBlock();
+        return;
+    }
+    
     UARequest *request = [UARequest requestWithBuilderBlock:^(UARequestBuilder * _Nonnull builder) {
         NSDictionary *data = @{@"delete" : [messageURLs valueForKeyPath:@"absoluteString"] };
 
@@ -176,6 +185,11 @@ NSString *const UALastMessageListModifiedTime = @"UALastMessageListModifiedTime.
                                    onFailure:(UAInboxClientFailureBlock)failureBlock {
 
 
+    if (!self.enabled) {
+        successBlock();
+        return;
+    }
+    
     UARequest *request = [UARequest requestWithBuilderBlock:^(UARequestBuilder * _Nonnull builder) {
         NSDictionary *data = @{@"mark_as_read" : [messageURLs valueForKeyPath:@"absoluteString"] };
 

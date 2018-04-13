@@ -162,6 +162,21 @@ class AppConfiguration: NSObject
         }
     }
     
+//    private var _appTheme:AppTheme?
+    var appTheme: AppTheme?
+//    {
+//        get {
+//            let dicRoot:NSDictionary = NSDictionary.init(contentsOfFile: Bundle.main.path(forResource: "SiteConfig", ofType: "plist")!)!
+//            let type = dicRoot["AppTheme"] as? String
+//            _appTheme = .dark
+//            if type != nil {
+//                if type?.lowercased() == "light" {
+//                    _appTheme = .light
+//                }
+//            }
+//            return _appTheme
+//        }
+//    }
     
     var pageHeaderObject:PageHeaderObject?
     var rightNavItems:Array<SFNavigationObject>?
@@ -176,19 +191,23 @@ class AppConfiguration: NSObject
     
     struct PrimaryButton
     {
-        var selectedColor: String?
-        var unselectedColor: String?
+        var backgroundColor: String?
         var textColor: String?
+        var borderColor: String?
         var borderSelectedColor: String?
         var borderUnselectedColor: String?
         var borderWidth: Float?
+        var selectedColor: String?
+        var unselectedColor: String?
     }
     
     struct SecondaryButton
     {
+        var backgroundColor: String?
+        var textColor: String?
+        var borderColor: String?
         var selectedColor: String?
         var unselectedColor: String?
-        var textColor: String?
         var borderSelectedColor: String?
         var borderUnselectedColor: String?
         var borderWidth: Float?
@@ -316,6 +335,8 @@ class AppConfiguration: NSObject
             
             backgroundColor = mainConfigDict?["backgroundColor"] as? String
             appTextColor = mainConfigDict?["textColor"] as? String
+            //Set App Theme.
+            appTheme = AppThemeProvider.getAppTheme(backgroundColorHex: backgroundColor ?? "000000")
             
             appDefaultSelectionThemeColor = mainConfigDict?["appDefaultSelectionThemeColor"] as? String
             appBlockTitleColor = mainConfigDict?["blockTitleColor"] as? String

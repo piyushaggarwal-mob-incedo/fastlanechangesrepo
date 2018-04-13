@@ -81,8 +81,19 @@ class AppSubContainerController: UIViewController, MenuViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImage(named: "app_background.png")
-        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+        //        let backgroundImage = UIImage(named: "app_background.png")
+        //        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+        if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+            self.view.backgroundColor = Utility.hexStringToUIColor(hex: backgroundColor)
+        }
+        else {
+            if AppConfiguration.sharedAppConfiguration.appTheme == .light{
+                self.view.backgroundColor = .white
+            }
+            else{
+                self.view.backgroundColor = .black
+            }
+        }
         Constants.kNOTIFICATIONCENTER.addObserver(self, selector: #selector(updateFocus), name: Constants.kToggleMenuBarNotification, object: nil)
         Constants.kNOTIFICATIONCENTER.addObserver(self, selector: #selector(fetchSubNavItems), name: Constants.kUpdateNavigationMenuItems, object: nil)
         fetchSubNavItems()

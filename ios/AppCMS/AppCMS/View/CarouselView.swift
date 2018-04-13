@@ -76,15 +76,12 @@ class CarouselView: UIView, iCarouselDelegate, iCarouselDataSource, SFButtonDele
         jumbotronView.bounces = false;
         jumbotronView.currentItemIndex = self.currentIndex
 
+        jumbotronView.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "000000")
+
         #if os(tvOS)
-            if let image = UIImage(named: "carousel_background") {
-                jumbotronView.backgroundColor = UIColor(patternImage: image)
-            }
             jumbotronView.type = .rotary
         #else
-            jumbotronView.backgroundColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.backgroundColor ?? "000000")
             jumbotronView.type = .linear
-
         #endif
 
         self.addSubview(jumbotronView)
@@ -461,7 +458,11 @@ class CarouselView: UIView, iCarouselDelegate, iCarouselDataSource, SFButtonDele
         button.changeFrameWidth(width: button.frame.width * Utility.getBaseScreenWidthMultiplier())
         if buttonObject.isVisibleForPhone! {
             
-            button.setImage(UIImage(named: "play"), for: .normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "play.png"))
+            
+            button.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+
         }
         else {
             

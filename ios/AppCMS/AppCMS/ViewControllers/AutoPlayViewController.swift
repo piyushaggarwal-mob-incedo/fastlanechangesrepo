@@ -65,11 +65,15 @@ class AutoPlayViewController: UIViewController,SFAutoPlayDelegate {
         let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         negativeSpacer.width = -15
 
-        let image = UIImage(named: "Back")
         let backButton = UIButton(type: .custom)
         backButton.setTitle("BACK", for: UIControlState.normal)
-        backButton.setImage(image, for: .normal)
-        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+        let backButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "Back.png"))
+        
+        backButton.setImage(backButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        backButton.titleLabel?.textColor = Utility.hexStringToUIColor(hex: "ffffff")
+        backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (backButtonImageView.image?.size.height)!/2)
+
         backButton.sizeToFit()
         backButton.addTarget(self, action: #selector(backButtonTapped(sender:)), for: UIControlEvents.touchUpInside)
         let backButtonItem = UIBarButtonItem(customView: backButton)

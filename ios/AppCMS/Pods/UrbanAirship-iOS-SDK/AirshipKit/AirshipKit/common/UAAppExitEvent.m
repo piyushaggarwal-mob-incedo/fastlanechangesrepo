@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAAppExitEvent+Internal.h"
 #import "UAEvent+Internal.h"
@@ -12,7 +12,7 @@
     UAAppExitEvent *event = [[self alloc] init];
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
 
-    UAAnalytics *analytics = [UAirship shared].analytics;
+    UAAnalytics *analytics = [UAirship analytics];
 
     [data setValue:analytics.conversionSendID forKey:@"push_id"];
     [data setValue:analytics.conversionPushMetadata forKey:@"metadata"];

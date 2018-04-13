@@ -4,6 +4,8 @@ import sys
 import os
 import requests
 import json
+import time;
+
 
 fileDirPath = os.path.dirname(os.path.abspath(__file__))
 platform = sys.argv[1];
@@ -12,9 +14,37 @@ url = sys.argv[2];
 print url
 
 
-url="https://appcmsprod.viewlift.com/00000149-86ec-d4f3-a7e9-e6fe760d0000/build/android/build.json"
+
+
+print "******************************************8"
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36',
+    'cache-control': 'private, max-age=0, no-cache'
+}
+
+url=url+"?x="+str(time.time())
+r = requests.get(url, headers=headers)
+
+print r.text
+
+print "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*********8"
+
+print r.json
+
+print "******************************************8"
+
+urllib.urlcleanup()
 response = urllib.urlopen(url)
-data = json.loads(response.read(), object_pairs_hook=OrderedDict)
+urllib.urlcleanup()
+
+data = json.loads(r.text, object_pairs_hook=OrderedDict)
+
+
+print (data)
+
+
+print "******************************************8"
 
 
 file = open(fileDirPath + '/AppCMS/src/main/assets/version.properties', 'w')
@@ -60,9 +90,16 @@ facebookAppId = ""
 appsFlyerDevKey = ""
 appsFlyerProdKey = ""
 whatsNew = ""
-
 keyval = ""
 googleCredentialsFile = "googleCredentialsFile"
+
+print "******************************************************"
+
+print platform
+print buildId
+print siteName
+
+print "*******************************************************"
 
 def getKeyStorePassword():
     url = uploadHostName + '/appcms/build/data'
@@ -74,7 +111,7 @@ def getKeyStorePassword():
         'fieldName' : 'keystorePassword'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
+    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
     r = requests.post(url, data=json.dumps(payload), headers=headers)
     print(r.json()["data"])
     keystorePass = r.json()["data"]
@@ -92,9 +129,16 @@ def getServicesFile():
         'fieldName' : 'googleServicesFile'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
+    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
+   
     r = requests.post(url, data=json.dumps(payload), headers=headers)
-    print(r.json()["data"])
+    print "getServicesFile"
+    print url
+    print payload
+    print headers
+    print "getServicesFile"
+
+    # print(r.json()["data"])
     credentailsData = r.json()["data"]
     credentailsData =credentailsData.split(",")
     splitservices = credentailsData[1]
@@ -121,11 +165,19 @@ def getCredentailsFile():
         'fieldName' : 'googleCredentialFile'
     }
     # Adding empty header as parameters are being sent in payload
-    headers = {"Content-Type": "application/json","secretKey" : "25db16e90345ea2bb1960ede8ee97bdb"}
+    headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
+
+    print "getCredentailsFile"
+    print url
+    print payload
+    print headers
+    print "getCredentailsFile"
+
+
 
     # headers = {"Content-Type": "application/json","secretKey" : "df0813d31adc3b10b9884f5caf57d26a"}
     r = requests.post(url, data=json.dumps(payload), headers=headers)
-    print(r.json()["data"])
+    # print(r.json()["data"])
     credentailsData = r.json()["data"]
     credentailsData =credentailsData.split(",")
     splitCredentails = credentailsData[1]
@@ -140,6 +192,14 @@ def getCredentailsFile():
     print credentailsData
 
 getCredentailsFile()
+
+
+print data
+
+
+print "********************************************"
+print data["packageName"]
+print "********************************************"
 
 
 for k in data.keys():
@@ -194,7 +254,8 @@ for k in data.keys():
 
     elif k == "keystoreFile":
         keyval = "KeystorePath" + ":" + data[k]
-        keystoreFileName = data[k]
+        keystoreFileName=data[k]
+        keystoreFileName=keystoreFileName+"?x="+str(time.time())
 
     elif k == "keystoreAliasName":
         keyval = "AliasName" + ":" + data[k]
@@ -221,39 +282,39 @@ for k in data.keys():
         #     myfile.write(appTitle.encode("utf-8") + "\n")
 
     elif k == "featureGraphic":
-        keyval = "FeatureGraphicUrl" + ":" + data[k]
+        # keyval = "FeatureGraphicUrl" + ":" + data[k]
         featureGraphic = data[k]
 
     elif k == "promoGraphic":
-        keyval = "PromoGraphicUrl" + ":" + data[k]
+        # keyval = "PromoGraphicUrl" + ":" + data[k]
         promoGraphic = data[k]
 
     elif k == "tvBanner":
-        keyval = "TvBannerUrl" + ":" + data[k]
+        # keyval = "TvBannerUrl" + ":" + data[k]
         tvBanner = data[k]
 
     elif k == "playIcon":
-        keyval = "AppIconUrl" + ":" + data[k]
+        # keyval = "AppIconUrl" + ":" + data[k]
         appIcon = data[k]
 
     elif k == "urbanAirshipDevKey":
-        keyval = "UAirshipDevelopmentAppKey" + ":" + data[k]
+        # keyval = "UAirshipDevelopmentAppKey" + ":" + data[k]
         urbanAirshipDevKey = data[k]
 
     elif k == "urbanAirshipDevSecret":
-        keyval = "UAirshipDevelopmentAppSecret" + ":" + data[k]
+        # keyval = "UAirshipDevelopmentAppSecret" + ":" + data[k]
         urbanAirshipDevSecret = data[k]
 
     elif k == "urbanAirshipProdKey":
-        keyval = "UAirshipProductionAppKey" + ":" + data[k]
+        # keyval = "UAirshipProductionAppKey" + ":" + data[k]
         urbanAirshipProdKey = data[k]
 
     elif k == "urbanAirshipProdSecret":
-        keyval = "UAirshipProductionAppSecret" + ":" + data[k]
+        # keyval = "UAirshipProductionAppSecret" + ":" + data[k]
         urbanAirshipProdSecret = data[k]
 
     elif k == "isUrbanAirshipInProduction":
-        keyval = "UAirshipInProduction" + ":" + data[k]
+        # keyval = "UAirshipInProduction" + ":" + data[k]
         isUrbanAirshipInProduction = data[k]
 
     elif k == "gcmSender":
@@ -301,17 +362,28 @@ with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as my
 
 
 
+
 #Adding Facebook AppId and GCM Sender ID and Apptentive Key And Further Details and HostName Suffix:
 
-keyval = "HostNameSuffix" + ":" + "http\://*.hoichoi.tv"
+
+
+keyval = "UseHLS" + ":" + "false"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
-keyval = "BaseUrl" + ":" + "https\://appcmsprod.viewlift.com/"
+keyval = "XAPI" + ":" + "vdTAMerEdh8t5t7xtUAa199qBKQuFLXb5cuG93ZF"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
-keyval = "ApptentiveApiKey" + ":" + "dfde9505539f2dc1d24700c09fb096b5280ed4cbed0828084540ada79a2b00f7"
+keyval = "HostNameSuffix" + ":" + "*.http\://arenafootball.viewlift.com/"
+with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
+         myfile.write(keyval.encode("utf-8") + "\n")
+
+keyval = "BaseUrl" + ":" + "https\://appcms.viewlift.com/"
+with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
+         myfile.write(keyval.encode("utf-8") + "\n")
+
+keyval = "ApptentiveApiKey" + ":" + "ANDROID-ARENA-FOOTBALL-LEAGUE"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
@@ -319,7 +391,7 @@ keyval = "AppsFlyerDevKey" + ":" + "00000000000"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
-keyval = "HostName" + ":" + "http\://www.hoichoi.tv"
+keyval = "HostName" + ":" + "http\://arenafootball.viewlift.com/"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
@@ -328,7 +400,7 @@ with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as my
          myfile.write(keyval.encode("utf-8") + "\n")
 
 
-keyval = "ApptentiveSignatureKey" + ":" + "eae409e7107d8a84977a67d4fa67b037"
+keyval = "ApptentiveSignatureKey" + ":" + "3662489474d4a82ad0f6dda0abfbb19c"
 with open(fileDirPath + "/AppCMS/src/main/assets/version.properties", "a") as myfile:
          myfile.write(keyval.encode("utf-8") + "\n")
 
@@ -339,6 +411,13 @@ appVersionCode = 1
 
 shortDescription = shortDescription.replace(" ", "_")
 whatsNew = whatsNew.replace(" ", "_")
+
+
+print ")))))))))))))))))))))))))))))))))))))))))))))))))))))))))"
+print aliasName
+print keystorePass
+print ")))))))))))))))))))))))))))))))))))))))))))))))))))))))))"
+
 
 if platform == "android":
     param = siteId + " " \
@@ -365,8 +444,6 @@ if platform == "android":
         + whatsNew + "' '" \
         + myEmailId + "' " \
         + "sampleSlackWebHookUrl"
-
-
 elif platform == "fireTv":
      param = siteId + " " \
         + baseUrl + " " \

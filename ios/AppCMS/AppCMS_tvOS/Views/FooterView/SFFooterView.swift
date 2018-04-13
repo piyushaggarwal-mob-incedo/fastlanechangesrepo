@@ -76,7 +76,7 @@ class SFFooterView: UIView {
         if logoImageView == nil{
             logoImageView = UIImageView(frame:CGRect(x: bounds.size.width - (44 + 249), y: bounds.size.height - (22 + 70), width: 249, height: 70))
             logoImageView?.image = UIImage(named: "appLogo")
-            logoImageView?.contentMode = .scaleAspectFit
+            logoImageView?.contentMode = .left
             addSubview(logoImageView!)
         }
     }

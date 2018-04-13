@@ -236,7 +236,10 @@ class SFAutoplayView: UIView,SFButtonDelegate {
         
         if type == backButtonString{
             
-            button.setImage(UIImage(named: "Back Chevron.png"), for: UIControlState.normal)
+            let backButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "Back Chevron.png"))
+            
+            button.setImage(backButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
        
         if buttonObject.key == "playButton" {

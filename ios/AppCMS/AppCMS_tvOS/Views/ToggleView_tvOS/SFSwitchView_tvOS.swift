@@ -63,6 +63,10 @@ class SFSwitchView_tvOS: UIView {
     
     /// Creates the view initlially.
     private func createView() {
+        overlayImageView?.image = UIImage(named: "toggleOverlay")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        if let textColor = AppConfiguration.sharedAppConfiguration.primaryHoverColor {
+            overlayImageView?.tintColor = Utility.hexStringToUIColor(hex: textColor)
+        }
         onLabel?.addTextSpacing(spacing: _viewObject?.letterSpacing ?? 0.0)
         offLabel?.addTextSpacing(spacing: _viewObject?.letterSpacing ?? 0.0)
         onLabel?.textColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.appTextColor ?? "#ffffff")

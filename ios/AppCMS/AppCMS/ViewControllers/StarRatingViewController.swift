@@ -116,8 +116,12 @@ class StarRatingViewController: UIViewController, SFButtonDelegate {
         button.changeFrameYAxis(yAxis: button.frame.minY * Utility.getBaseScreenHeightMultiplier())
         button.changeFrameWidth(width: button.frame.width * Utility.getBaseScreenWidthMultiplier())
         button.changeFrameHeight(height: button.frame.height * Utility.getBaseScreenHeightMultiplier())
-        if type == closeButtonString{
-            button.setImage(#imageLiteral(resourceName: "cancelIcon.png"), for: UIControlState.normal)
+        if type == closeButtonString
+        {
+            let closeButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+            
+            button.setImage(closeButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            button.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
         }
         else if type == rateItButton
         {

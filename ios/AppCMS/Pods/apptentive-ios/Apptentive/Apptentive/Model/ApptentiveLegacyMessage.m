@@ -7,17 +7,17 @@
 //
 
 #import "ApptentiveLegacyMessage.h"
-#import "Apptentive_Private.h"
-#import "ApptentiveBackend.h"
-#import "ApptentiveLegacyMessageSender.h"
-#import "ApptentiveLegacyFileAttachment.h"
-#import "ApptentiveSerialRequest.h"
 #import "ApptentiveAttachment.h"
+#import "ApptentiveBackend.h"
+#import "ApptentiveLegacyFileAttachment.h"
+#import "ApptentiveLegacyMessageSender.h"
 #import "ApptentiveMessage.h"
-#import "ApptentiveMessagePayload.h"
-#import "ApptentivePerson.h"
 #import "ApptentiveMessageManager.h"
+#import "ApptentiveMessagePayload.h"
 #import "ApptentiveMessageSender.h"
+#import "ApptentivePerson.h"
+#import "ApptentiveSerialRequest.h"
+#import "Apptentive_Private.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 				customData = [NSKeyedUnarchiver unarchiveObjectWithData:legacyMessage.customData];
 			};
 
-			ApptentiveMessage *message = [[ApptentiveMessage alloc] initWithBody:legacyMessage.body attachments:attachments automated:legacyMessage.automated.boolValue customData:customData];
+			ApptentiveMessage *message = [[ApptentiveMessage alloc] initWithBody:legacyMessage.body attachments:attachments automated:legacyMessage.automated.boolValue customData:customData creationDate:[NSDate dateWithTimeIntervalSince1970:legacyMessage.clientCreationTime.doubleValue]];
 
 			if (legacyMessage.hidden.boolValue) {
 				message.state = ApptentiveMessageStateHidden;

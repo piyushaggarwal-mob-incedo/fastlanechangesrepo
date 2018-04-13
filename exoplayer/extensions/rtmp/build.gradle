@@ -22,12 +22,12 @@ android {
         minSdkVersion 15
         targetSdkVersion project.ext.targetSdkVersion
     }
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile project(modulePrefix + 'library-core')
-    compile 'net.butterflytv.utils:rtmp-client:3.0.0'
+   compile project(modulePrefix + 'library-core')
+   compile 'net.butterflytv.utils:rtmp-client:3.0.0'
 }
 
 ext {

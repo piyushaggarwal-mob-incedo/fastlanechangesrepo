@@ -364,7 +364,11 @@ class SFShowGridCell: UICollectionViewCell, SFButtonDelegate {
             playButton?.relativeViewFrame = relativeViewFrame
             playButton?.buttonObject = buttonObject
             playButton?.initialiseButtonFrameFromLayout(buttonLayout: Utility.fetchButtonLayoutDetails(buttonObject: buttonObject))
-            playButton?.setImage(UIImage(named: "showPlayIcon"), for: .normal)
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "showPlayIcon.png"))
+            
+            playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+            
             playButton?.isUserInteractionEnabled = false
         }
         else if buttonObject.key != nil && buttonObject.key == "downloadButton" {
@@ -445,8 +449,8 @@ class SFShowGridCell: UICollectionViewCell, SFButtonDelegate {
                     fontWeight = "Black"
                 }
                 
-                attributedTitleString?.addAttributes([NSFontAttributeName: UIFont(name: "\(fontFamily)-\(fontWeight)", size: 14)!, NSForegroundColorAttributeName: Utility.hexStringToUIColor(hex: "9B9B9B")], range: (concantenatedString! as NSString).range(of: episodeNumber))
-                
+                attributedTitleString?.addAttributes([NSFontAttributeName: UIFont(name: "\(fontFamily)-\(fontWeight)", size: 14) ?? UIFont(name: "\(fontFamily)", size: 14)!, NSForegroundColorAttributeName: Utility.hexStringToUIColor(hex: "9B9B9B")], range: (concantenatedString! as NSString).range(of: episodeNumber))
+
                 attributedTitleString?.addAttributes([NSFontAttributeName: UIFont(name: "\(Utility.sharedUtility.fontFamilyForApplication())-Semibold", size: 14)!, NSForegroundColorAttributeName: Utility.hexStringToUIColor(hex: "ffffff")], range: (concantenatedString! as NSString).range(of: episodeTitle))
             }
             else {

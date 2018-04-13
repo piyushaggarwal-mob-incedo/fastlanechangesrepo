@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <CoreLocation/CoreLocation.h>
 
@@ -23,14 +23,18 @@
 #import "UANamedUser+Internal.h"
 #import "UAAutomation+Internal.h"
 #import "UAAppIntegration.h"
+#import "UARemoteDataManager+Internal.h"
+#import "UARemoteConfigManager+Internal.h"
+#import "UAComponentDisabler+Internal.h"
 
 #if !TARGET_OS_TV
 #import "UAInbox+Internal.h"
 #import "UAActionJSDelegate.h"
 #import "UAChannelCapture.h"
-#import "UADefaultMessageCenter.h"
+#import "UAMessageCenter.h"
 #import "UAInboxAPIClient+Internal.h"
-#import "UAInAppMessaging+Internal.h"
+#import "UALegacyInAppMessaging+Internal.h"
+#import "UAInAppMessageManager+Internal.h"
 #endif
 
 
@@ -99,19 +103,19 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
         self.applicationMetrics = [UAApplicationMetrics applicationMetricsWithDataStore:dataStore];
         self.actionRegistry = [UAActionRegistry defaultRegistry];
         self.sharedPush = [UAPush pushWithConfig:config dataStore:dataStore];
-        self.sharedInboxUser = [UAUser userWithPush:self.sharedPush config:config dataStore:dataStore];
         self.sharedNamedUser = [UANamedUser namedUserWithPush:self.sharedPush config:config dataStore:dataStore];
-        self.analytics = [UAAnalytics analyticsWithConfig:config dataStore:dataStore];
+        self.sharedAnalytics = [UAAnalytics analyticsWithConfig:config dataStore:dataStore];
         self.whitelist = [UAWhitelist whitelistWithConfig:config];
-        self.sharedLocation = [UALocation locationWithAnalytics:self.analytics dataStore:dataStore];
+        self.sharedLocation = [UALocation locationWithAnalytics:self.sharedAnalytics dataStore:dataStore];
         self.sharedAutomation = [UAAutomation automationWithConfig:config dataStore:dataStore];
-        self.analytics.delegate = self.sharedAutomation;
-
+        self.sharedRemoteDataManager = [UARemoteDataManager remoteDataManagerWithConfig:config dataStore:dataStore];
+        self.sharedRemoteConfigManager = [UARemoteConfigManager remoteConfigManagerWithRemoteDataManager:self.sharedRemoteDataManager componentDisabler:[[UAComponentDisabler alloc] init]];
 #if !TARGET_OS_TV
         // IAP Nib not supported on tvOS
-        self.sharedInAppMessaging = [UAInAppMessaging inAppMessagingWithAnalytics:self.analytics dataStore:dataStore];
-
+        self.sharedInAppMessageManager = [UAInAppMessageManager managerWithConfig:config remoteDataManager:self.sharedRemoteDataManager dataStore:dataStore push:self.sharedPush];
+        self.sharedLegacyInAppMessaging = [UALegacyInAppMessaging inAppMessagingWithAnalytics:self.sharedAnalytics dataStore:dataStore inAppMessageManager:self.sharedInAppMessageManager];
         // Message center not supported on tvOS
+        self.sharedInboxUser = [UAUser userWithPush:self.sharedPush config:config dataStore:dataStore];
         self.sharedInbox = [UAInbox inboxWithUser:self.sharedInboxUser config:config dataStore:dataStore];
         // Not supporting Javascript in tvOS
         self.actionJSDelegate = [[UAActionJSDelegate alloc] init];
@@ -121,7 +125,7 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
        // Only create the default message center if running iOS 8 and above
         if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){8, 0, 0}]) {
             if ([UAirship resources]) {
-                self.sharedDefaultMessageCenter = [UADefaultMessageCenter messageCenterWithConfig:self.config];
+                self.sharedMessageCenter = [UAMessageCenter messageCenterWithConfig:self.config];
             } else {
                 UA_LINFO(@"Unable to initialize default message center: AirshipResources is missing");
             }
@@ -184,7 +188,7 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
     UA_LINFO(@"UAirship Take Off! Lib Version: %@ App Key: %@ Production: %@.",
              [UAirshipVersion get], config.appKey, config.inProduction ?  @"YES" : @"NO");
 
-    
+
     // Data store
     UAPreferenceDataStore *dataStore = [UAPreferenceDataStore preferenceDataStoreWithKeyPrefix:[NSString stringWithFormat:@"com.urbanairship.%@.", config.appKey]];
     [dataStore migrateUnprefixedKeys:@[UALibraryVersion]];
@@ -259,7 +263,7 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
     if (!config.inProduction) {
         [sharedAirship_ validate];
     }
-    
+
     // Automatic setup
     if (sharedAirship_.config.automaticSetupEnabled) {
         UA_LINFO(@"Automatic setup enabled.");
@@ -300,12 +304,12 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
 
     // Required before the app init event to track conversion push ID
     if (remoteNotification) {
-        [sharedAirship_.analytics launchedFromNotification:remoteNotification];
+        [sharedAirship_.sharedAnalytics launchedFromNotification:remoteNotification];
     }
 
 #endif
     // Init event
-    [sharedAirship_.analytics addEvent:[UAAppInitEvent event]];
+    [sharedAirship_.sharedAnalytics addEvent:[UAAppInitEvent event]];
 
     // Update registration on the next run loop to allow apps to customize
     // finish custom setup
@@ -319,7 +323,7 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
     [[NSNotificationCenter defaultCenter] removeObserver:[UAirship class]  name:UIApplicationWillTerminateNotification object:nil];
 
     // Add app_exit event
-    [[UAirship shared].analytics addEvent:[UAAppExitEvent event]];
+    [UAirship.analytics addEvent:[UAAppExitEvent event]];
 
     // Land it
     [UAirship land];
@@ -331,12 +335,7 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
     }
 
     // Invalidate UAAnalytics timer and cancel all queued operations
-    [sharedAirship_.analytics cancelUpload];
-
-#if !TARGET_OS_TV
-    // Invalidate UAInAppMessaging autodisplay timer
-    [sharedAirship_.sharedInAppMessaging invalidateAutoDisplayTimer];
-#endif
+    [sharedAirship_.sharedAnalytics cancelUpload];
 
     // Finally, release the airship!
     [UAirship setSharedAirship:nil];
@@ -366,13 +365,16 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
     return sharedAirship_.sharedInboxUser;
 }
 
-
-+ (UAInAppMessaging *)inAppMessaging {
-    return sharedAirship_.sharedInAppMessaging;
++ (UALegacyInAppMessaging *)legacyInAppMessaging {
+    return sharedAirship_.sharedLegacyInAppMessaging;
 }
 
-+ (UADefaultMessageCenter *)defaultMessageCenter {
-    return sharedAirship_.sharedDefaultMessageCenter;
++ (UAInAppMessageManager *)inAppMessageManager {
+    return sharedAirship_.sharedInAppMessageManager;
+}
+
++ (UAMessageCenter *)messageCenter {
+    return sharedAirship_.sharedMessageCenter;
 }
 
 #endif
@@ -387,6 +389,18 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
 
 + (UAAutomation *)automation {
     return sharedAirship_.sharedAutomation;
+}
+
++ (UAAnalytics *)analytics {
+    return sharedAirship_.sharedAnalytics;
+}
+
+- (UAAnalytics *)analytics {
+    return self.sharedAnalytics;
+}
+
++ (UARemoteDataManager *)remoteDataManager {
+    return sharedAirship_.sharedRemoteDataManager;
 }
 
 + (NSBundle *)resources {
@@ -449,4 +463,3 @@ BOOL uaLoudImpErrorLoggingEnabled = YES;
 }
 
 @end
-

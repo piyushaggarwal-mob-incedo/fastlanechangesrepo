@@ -27,12 +27,12 @@ android {
         // See: https://github.com/square/okio/issues/58
         warning 'InvalidPackage'
     }
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile project(modulePrefix + 'library-core')
-    compile('com.squareup.okhttp3:okhttp:3.9.0') {
+   compile project(modulePrefix + 'library-core')
+   compile('com.squareup.okhttp3:okhttp:3.9.0') {
         exclude group: 'org.json'
     }
 }

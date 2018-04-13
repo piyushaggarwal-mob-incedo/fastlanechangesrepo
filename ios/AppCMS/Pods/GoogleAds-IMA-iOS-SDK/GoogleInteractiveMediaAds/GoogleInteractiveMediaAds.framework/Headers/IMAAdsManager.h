@@ -180,7 +180,7 @@
 - (void)resume;
 
 /**
- *  Skips the advertisement.
+ *  Skips the advertisement if the ad is skippable and the skip offset has been reached.
  */
 - (void)skip;
 

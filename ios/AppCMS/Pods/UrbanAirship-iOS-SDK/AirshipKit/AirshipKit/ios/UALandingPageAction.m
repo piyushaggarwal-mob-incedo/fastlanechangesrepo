@@ -1,7 +1,6 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UALandingPageAction.h"
-#import "UALandingPageOverlayController.h"
 #import "UAOverlayViewController.h"
 #import "UAURLProtocol.h"
 #import "UAirship.h"
@@ -130,15 +129,8 @@ NSString *const UALandingPageFill = @"fill";
             [headers setValue:[UAUtils appAuthHeaderString] forKey:@"Authorization"];
         }
 
-        //load the landing page
-        if (UAirship.shared.config.useWKWebView) {
-            [UAOverlayViewController showURL:landingPageURL withHeaders:headers size:landingPageSize aspectLock:aspectLock];
-        } else {
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-            [UALandingPageOverlayController showURL:landingPageURL withHeaders:headers size:landingPageSize aspectLock:aspectLock];
-#pragma GCC diagnostic pop
-        }
+        // load the landing page
+        [UAOverlayViewController showURL:landingPageURL withHeaders:headers size:landingPageSize aspectLock:aspectLock];
         completionHandler([UAActionResult resultWithValue:nil withFetchResult:UAActionFetchResultNewData]);
     }
 }
@@ -152,7 +144,17 @@ NSString *const UALandingPageFill = @"fill";
         return NO;
     }
 
-    return (BOOL)([self parseURLFromValue:arguments.value] != nil);
+    NSURL *url = [self parseURLFromValue:arguments.value];
+    if (!url) {
+        return NO;
+    }
+
+    if (![[UAirship shared].whitelist isWhitelisted:url scope:UAWhitelistScopeOpenURL]) {
+        UA_LERR(@"URL %@ not whitelisted. Unable to display landing page.", url);
+        return NO;
+    }
+
+    return YES;
 }
 
 - (void)prefetchURL:(NSURL *)landingPageURL withUsername:(NSString *)username

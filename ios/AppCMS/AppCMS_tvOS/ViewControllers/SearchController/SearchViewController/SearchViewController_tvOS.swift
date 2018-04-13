@@ -135,7 +135,11 @@ class SearchViewController_tvOS: BaseViewController, UISearchControllerDelegate,
     private func createModuleListForSearchResultsTable() {
         
         var filePath:String = ""
-        filePath = (Bundle.main.resourcePath?.appending("/SearchPageModule_tvOS.json"))!
+        if AppConfiguration.sharedAppConfiguration.templateType == Constants.kTemplateTypeSports {
+            filePath = (Bundle.main.resourcePath?.appending("/SearchPageModule_Sports_tvOS.json"))!
+        } else {
+            filePath = (Bundle.main.resourcePath?.appending("/SearchPageModule_Entertainment_tvOS.json"))!
+        }
         let jsonData:Data = FileManager.default.contents(atPath: filePath)!
         
         let responseJson:Array<Dictionary<String, AnyObject>>? = try! JSONSerialization.jsonObject(with:jsonData) as? Array<Dictionary<String, AnyObject>>

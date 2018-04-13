@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAEventData+Internal.h"
 #import "NSJSONSerialization+UAAdditions.h"
@@ -42,14 +42,15 @@ NSString *const UAEventDataEntityName = @"UAEventData";
 }
 
 - (void)addPersistentStore {
-    __weak id weakSelf = self;
+    UA_WEAKIFY(self);
     [self.managedContext addPersistentSqlStore:self.storeName completionHandler:^(BOOL success, NSError *error) {
+        UA_STRONGIFY(self)
         if (!success) {
             UA_LERR(@"Failed to create analytics persistent store: %@", error);
             return;
         }
 
-        [weakSelf migrateOldDatabase];
+        [self migrateOldDatabase];
     }];
 
 }

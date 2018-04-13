@@ -135,7 +135,14 @@ class SFProductListViewController: UIViewController, UITableViewDelegate, UITabl
         
         let cancelButton = UIButton(type: .custom)
         cancelButton.sizeToFit()
-        cancelButton.setImage(image, for: .normal)
+        
+        let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+        
+        cancelButton.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        cancelButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        cancelButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (cancelButtonImageView.image?.size.height)!/2)
+
         cancelButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
         cancelButton.addTarget(self, action: #selector(cancelButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
         

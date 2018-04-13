@@ -488,12 +488,16 @@ class PageViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if self.displayBackButton {
 
-            let image = UIImage(named: "Back")
+//            let image = UIImage(named: "Back")
             
             let backButton = UIButton(type: .custom)
             backButton.sizeToFit()
-            backButton.setImage(image, for: .normal)
-            backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+            let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "Back.png"))
+            
+            backButton.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            backButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+            
+            backButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (cancelButtonImageView.image?.size.height)!/2)
             backButton.addTarget(self, action: #selector(backButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
             
             let backButtonItem = UIBarButtonItem(customView: backButton)
@@ -502,12 +506,16 @@ class PageViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else {
             
-            let image = UIImage(named: "icon-user")
+//            let image = UIImage(named: "icon-user")
             
             let userAccountButton = UIButton(type: .custom)
             userAccountButton.sizeToFit()
-            userAccountButton.setImage(image, for: .normal)
-            userAccountButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+            let userButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "icon-user.png"))
+            
+            userAccountButton.setImage(userButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            userAccountButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+            
+            userAccountButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (userButtonImageView.image?.size.height)!/2)
             userAccountButton.addTarget(self, action: #selector(userAccountButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
             
             let userAccountButtonItem = UIBarButtonItem(customView: userAccountButton)
@@ -559,12 +567,16 @@ class PageViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var righBarItems:Array<UIBarButtonItem> = []
         
         if displayCancelIcon == true {
-            let image = UIImage(named: "cancelIcon")
+//            let image = UIImage(named: "cancelIcon")
             
             let cancelButton = UIButton(type: .custom)
             cancelButton.sizeToFit()
-            cancelButton.setImage(image, for: .normal)
-            cancelButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (image?.size.height)!/2)
+            let cancelButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+            
+            cancelButton.setImage(cancelButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            cancelButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+            cancelButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (cancelButtonImageView.image?.size.height)!/2)
+
             cancelButton.addTarget(self, action: #selector(cancelButtonClicked(sender:)), for: UIControlEvents.touchUpInside)
             
             let cancelButtonItem = UIBarButtonItem(customView: cancelButton)
@@ -630,11 +642,15 @@ class PageViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let navButton = SFButton(type: .custom)
         
-        let navImage = UIImage(named: navObject.iconName ?? "icon-search")
+//        let navImage = UIImage(named: navObject.iconName ?? "icon-search")
         navButton.sizeToFit()
-        navButton.setImage(navImage, for: .normal)
-        navButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (navImage?.size.height)!/2)
+        let searchButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "icon-search.png"))
         
+        navButton.setImage(searchButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        navButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+        navButton.changeFrameYAxis(yAxis: (self.navigationController?.navigationBar.frame.size.height)!/2 - (searchButtonImageView.image?.size.height)!/2)
+
         if navObject.pagePath == "/search" {
             
             navButton.addTarget(self, action: #selector(searchButtonClicked(sender:)), for: UIControlEvents.touchUpInside)

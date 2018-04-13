@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4B6E1B5D2064013F008C6747"
+               BuildableName = "SnagfilmsUITests.xctest"
+               BlueprintName = "SnagfilmsUITests"
+               ReferencedContainer = "container:AppCMS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -17,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4B57D796205157F30010EDD3"
+               BlueprintIdentifier = "4B6E1B5D2064013F008C6747"
                BuildableName = "SnagfilmsUITests.xctest"
                BlueprintName = "SnagfilmsUITests"
                ReferencedContainer = "container:AppCMS.xcodeproj">
@@ -27,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F70ED30E1FB5FEB2006D6BC1"
-            BuildableName = "Snagfilms.app"
-            BlueprintName = "Snagfilms_iOS"
+            BlueprintIdentifier = "4B6E1B5D2064013F008C6747"
+            BuildableName = "SnagfilmsUITests.xctest"
+            BlueprintName = "SnagfilmsUITests"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -47,16 +63,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F70ED30E1FB5FEB2006D6BC1"
-            BuildableName = "Snagfilms.app"
-            BlueprintName = "Snagfilms_iOS"
+            BlueprintIdentifier = "4B6E1B5D2064013F008C6747"
+            BuildableName = "SnagfilmsUITests.xctest"
+            BlueprintName = "SnagfilmsUITests"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -69,9 +84,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F70ED30E1FB5FEB2006D6BC1"
-            BuildableName = "Snagfilms.app"
-            BlueprintName = "Snagfilms_iOS"
+            BlueprintIdentifier = "4B6E1B5D2064013F008C6747"
+            BuildableName = "SnagfilmsUITests.xctest"
+            BlueprintName = "SnagfilmsUITests"
             ReferencedContainer = "container:AppCMS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

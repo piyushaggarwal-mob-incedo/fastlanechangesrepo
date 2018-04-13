@@ -77,7 +77,7 @@ public class AppCmsTvErrorFragment extends AbsDialogFragment {
                 ((AppCMSApplication) getActivity().getApplication()).getAppCMSPresenterComponent().appCMSPresenter();
 
         String textColor = Utils.getTextColor(getActivity(),appCMSPresenter);
-        String backGroundColor = Utils.getBackGroundColor(getActivity(),appCMSPresenter);
+        String backGroundColor = appCMSPresenter.getAppBackgroundColor();
         String focusColor = Utils.getFocusColor(getActivity(),appCMSPresenter);
 
         errorTextView.setTextColor(Color.parseColor(textColor));
@@ -92,16 +92,16 @@ public class AppCmsTvErrorFragment extends AbsDialogFragment {
 
         btnClose.setBackground(Utils.setButtonBackgroundSelector(getActivity() ,
                 Color.parseColor(focusColor),
-                btnComponent1));
+                btnComponent1 , appCMSPresenter));
 
         btnClose.setTypeface(Utils.getTypeFace(getActivity() ,appCMSPresenter.getJsonValueKeyMap(), btnComponent1));
 
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(shouldNavigateToLogin) {
+               // if(shouldNavigateToLogin) {
                     mErrorFragmentListener.onErrorScreenClose();
-                }
+                //}
                 dismiss();
             }
         });
@@ -117,7 +117,8 @@ public class AppCmsTvErrorFragment extends AbsDialogFragment {
 
         btnRetry.setBackground(Utils.setButtonBackgroundSelector(getActivity() ,
                 Color.parseColor(focusColor),
-                btnRetryComp));
+                btnRetryComp,
+                appCMSPresenter));
 
         btnRetry.setTypeface(Utils.getTypeFace(getActivity() ,appCMSPresenter.getJsonValueKeyMap(), btnRetryComp));
 
@@ -136,8 +137,8 @@ public class AppCmsTvErrorFragment extends AbsDialogFragment {
         } else {
             btnClose.setText(getResources().getString(R.string.app_cms_close_alert_dialog_button_text));
         }
-
-        //parentLayout.setBackgroundColor(Color.parseColor(backGroundColor));
+        if(null != backGroundColor)
+        parentLayout.setBackgroundColor(Color.parseColor(backGroundColor));
         return view;
     }
 

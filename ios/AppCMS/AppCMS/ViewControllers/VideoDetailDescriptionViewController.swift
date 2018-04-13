@@ -63,7 +63,12 @@ class VideoDetailDescriptionViewController: UIViewController {
         }
         
         closeButton.frame = CGRect.init(x: self.view.frame.width - closeButtonDimension - (10 * Utility.getBaseScreenHeightMultiplier()), y: (closeButtonYAxis * Utility.getBaseScreenHeightMultiplier()), width: closeButtonDimension, height: closeButtonDimension)
-        closeButton.setImage(#imageLiteral(resourceName: "cancelIcon.png"), for: .normal)
+        
+        let closeButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "cancelIcon.png"))
+        
+        closeButton.setImage(closeButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        closeButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
         closeButton.addTarget(self, action: #selector(closeButtonTapped(sender:)), for: .touchUpInside)
         self.view.addSubview(closeButton)
         

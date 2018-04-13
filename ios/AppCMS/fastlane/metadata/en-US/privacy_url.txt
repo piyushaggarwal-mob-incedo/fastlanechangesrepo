@@ -1,1 +1,1 @@
-http://viewlifttoolsupgrad-qa.us-east-1.elasticbeanstalk.com/appCmsConfig#
+http://w.w

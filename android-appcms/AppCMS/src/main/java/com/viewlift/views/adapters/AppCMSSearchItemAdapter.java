@@ -1,8 +1,12 @@
 package com.viewlift.views.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,14 +18,22 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
+import com.viewlift.Audio.playback.AudioPlaylistHelper;
 import com.viewlift.R;
 import com.viewlift.models.data.appcms.api.ContentDatum;
+import com.viewlift.models.data.appcms.api.Gist;
 import com.viewlift.models.data.appcms.search.AppCMSSearchResult;
 import com.viewlift.presenters.AppCMSPresenter;
 import com.viewlift.views.customviews.BaseView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.List;
 
 import rx.Observable;
@@ -65,6 +77,7 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
     private int textWidth = 0;
     private int textTopMargin = 0;
     private List<AppCMSSearchResult> appCMSSearchResults;
+    int placeholder = R.drawable.vid_image_placeholder_port;
 
     public AppCMSSearchItemAdapter(Context context, AppCMSPresenter appCMSPresenter,
                                    List<AppCMSSearchResult> appCMSSearchResults) {
@@ -98,31 +111,58 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             }
             if (appCMSSearchResults.get(adapterPosition).getGist() != null && appCMSSearchResults.get(adapterPosition).getGist().getMediaType() != null
                     && appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.app_cms_article_key_type).toLowerCase())) {
-                appCMSPresenter.navigateToArticlePage(appCMSSearchResults.get(adapterPosition).getGist().getId(), appCMSSearchResults.get(adapterPosition).getGist().getTitle(), false, null);
+                appCMSPresenter.setCurrentArticleIndex(-1);
+                appCMSPresenter.navigateToArticlePage(appCMSSearchResults.get(adapterPosition).getGist().getId(), appCMSSearchResults.get(adapterPosition).getGist().getTitle(), false, null,false);
+                return;
+            }else if(appCMSSearchResults.get(adapterPosition).getGist() != null && appCMSSearchResults.get(adapterPosition).getGist().getMediaType() != null
+                    && appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.app_cms_photo_gallery_key_type).toLowerCase())) {
+                appCMSPresenter.navigateToPhotoGalleryPage(appCMSSearchResults.get(adapterPosition).getGist().getId(), appCMSSearchResults.get(adapterPosition).getGist().getTitle(), null, false);
+                return;
+
+            }
+            /*get audio details on tray click item and play song*/
+            if (appCMSSearchResults.get(adapterPosition).getGist() != null &&
+                    appCMSSearchResults.get(adapterPosition).getGist().getMediaType() != null &&
+                    appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.media_type_audio).toLowerCase()) &&
+                    appCMSSearchResults.get(adapterPosition).getGist().getContentType() != null &&
+                    appCMSSearchResults.get(adapterPosition).getGist().getContentType().toLowerCase().contains(context.getString(R.string.content_type_audio).toLowerCase())) {
+                List<String> audioPlaylistId = new ArrayList<String>();
+                audioPlaylistId.add(appCMSSearchResults.get(adapterPosition).getGist().getId());
+                AudioPlaylistHelper.getInstance().setCurrentPlaylistData(null);
+                AudioPlaylistHelper.getInstance().setPlaylist(audioPlaylistId);
+                appCMSPresenter.getCurrentActivity().sendBroadcast(new Intent(AppCMSPresenter
+                        .PRESENTER_PAGE_LOADING_ACTION));
+                AudioPlaylistHelper.getInstance().playAudioOnClickItem(appCMSSearchResults.get(adapterPosition).getGist().getId(), 0);
                 return;
             }
-            String permalink = appCMSSearchResults.get(adapterPosition).getGist().getPermalink();
-            String action = viewHolder.view.getContext().getString(R.string.app_cms_action_detailvideopage_key);
-            if (permalink.contains(viewHolder.view.getContext().getString(R.string.app_cms_shows_deeplink_path_name))) {
-                action = viewHolder.view.getContext().getString(R.string.app_cms_action_showvideopage_key);
+             /*Get playlist data and open playlist page*/
+            if (appCMSSearchResults.get(adapterPosition).getGist() != null && appCMSSearchResults.get(adapterPosition).getGist().getMediaType() != null
+                    && appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.media_type_playlist).toLowerCase())) {
+                appCMSPresenter.navigateToPlaylistPage(appCMSSearchResults.get(adapterPosition).getGist().getId(), appCMSSearchResults.get(adapterPosition).getGist().getTitle(), false);
+                return;
             }
-            String title = appCMSSearchResults.get(adapterPosition).getGist().getTitle();
-            //Log.d(TAG, "Launching " + permalink + ":" + action);
-            if (!appCMSPresenter.launchButtonSelectedAction(permalink,
-                    action,
-                    title,
-                    null,
-                    null,
-                    true,
-                    0,
-                    null)) {
-//                    //Log.e(TAG, "Could not launch action: " +
-//                            " permalink: " +
-//                            permalink +
-//                            " action: " +
-//                            action);
+
+            try {
+                String permalink = appCMSSearchResults.get(adapterPosition).getGist().getPermalink();
+                String action = viewHolder.view.getContext().getString(R.string.app_cms_action_detailvideopage_key);
+                if (permalink.contains(viewHolder.view.getContext().getString(R.string.app_cms_shows_deeplink_path_name))) {
+                    action = viewHolder.view.getContext().getString(R.string.app_cms_action_showvideopage_key);
+                }
+                String title = appCMSSearchResults.get(adapterPosition).getGist().getTitle();
+
+                //Log.d(TAG, "Launching " + permalink + ":" + action);
+                if (!appCMSPresenter.launchButtonSelectedAction(permalink,
+                        action,
+                        title,
+                        null,
+                        null,
+                        true,
+                        0,
+                        null)) {
+                }
+            }catch (Exception ex){
+                ex.printStackTrace();
             }
-            //context.sendBroadcast(new Intent(AppCMSPresenter.PRESENTER_STOP_PAGE_LOADING_ACTION));
         });
 
         if (appCMSSearchResults.get(adapterPosition).getGist() != null &&
@@ -130,7 +170,21 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             viewHolder.filmTitle.setText(appCMSSearchResults.get(adapterPosition).getGist().getTitle());
         }
 
-        if (appCMSSearchResults.get(adapterPosition).getContentDetails() != null &&
+        if (appCMSSearchResults.get(adapterPosition).getGist() != null &&
+                appCMSSearchResults.get(adapterPosition).getGist().getPosterImageUrl() != null &&
+
+                !TextUtils.isEmpty(appCMSSearchResults.get(adapterPosition).getGist().getPosterImageUrl())) {
+
+            final String imageUrl = viewHolder.view.getContext().getString(R.string.app_cms_image_with_resize_query,
+                    appCMSSearchResults.get(adapterPosition).getGist().getPosterImageUrl(),
+                    imageWidth,
+                    imageHeight);
+            RequestOptions requestOptions = new RequestOptions().placeholder(placeholder);
+
+            Glide.with(viewHolder.view.getContext())
+                    .load(imageUrl).apply(requestOptions)
+                    .into(viewHolder.filmThumbnail);
+        } else if (appCMSSearchResults.get(adapterPosition).getContentDetails() != null &&
                 appCMSSearchResults.get(adapterPosition).getContentDetails().getPosterImage() != null &&
 
                 !TextUtils.isEmpty(appCMSSearchResults.get(adapterPosition).getContentDetails().getPosterImage().getUrl())) {
@@ -139,9 +193,10 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
                     appCMSSearchResults.get(adapterPosition).getContentDetails().getPosterImage().getUrl(),
                     imageWidth,
                     imageHeight);
+            RequestOptions requestOptions = new RequestOptions().placeholder(placeholder);
 
             Glide.with(viewHolder.view.getContext())
-                    .load(imageUrl)
+                    .load(imageUrl).apply(requestOptions)
                     .into(viewHolder.filmThumbnail);
         } else if (appCMSSearchResults.get(adapterPosition).getContentDetails() != null &&
                 appCMSSearchResults.get(adapterPosition).getContentDetails().getVideoImage() != null &&
@@ -149,25 +204,26 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             if (appCMSPresenter.getIsMoreOptionsAvailable()) {
                 applySportsStyleDefault(viewHolder, createEmptyBitmap());
             }
+            RequestOptions requestOptions = new RequestOptions().placeholder(placeholder).fitCenter();
 
             final String imageUrl = viewHolder.view.getContext().getString(R.string.app_cms_image_with_resize_query,
                     appCMSSearchResults.get(adapterPosition).getContentDetails().getVideoImage().getSecureUrl(),
                     imageWidth,
                     imageHeight);
             Glide.with(viewHolder.view.getContext())
+                    .asBitmap().apply(requestOptions)
                     .load(imageUrl)
-                    .asBitmap()
-                    .listener(new RequestListener<String, Bitmap>() {
+                    .listener(new RequestListener<Bitmap>() {
                         @Override
-                        public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
                             return false;
                         }
 
                         @Override
-                        public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
                             if (appCMSPresenter.getIsMoreOptionsAvailable()) {
                                 Bitmap bitmap = resource;
-                                viewHolder.filmThumbnail.setLayoutParams(new FrameLayout.LayoutParams(bitmap.getWidth(), bitmap.getHeight()));
+                                viewHolder.filmThumbnail.setLayoutParams(new RelativeLayout.LayoutParams(bitmap.getWidth(), bitmap.getHeight()));
                                 viewHolder.filmThumbnail.setImageBitmap(bitmap);
 
                                 viewHolder.titleLayout.setLayoutParams(new FrameLayout.LayoutParams(bitmap.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -178,20 +234,46 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
 
                                 viewHolder.gridOptions.setVisibility(View.VISIBLE);
                             }
-
                             return false;
                         }
                     })
                     .into(viewHolder.filmThumbnail);
 
+        } else if (appCMSSearchResults.get(adapterPosition).getGist() != null &&
+                appCMSSearchResults.get(adapterPosition).getGist().getImageGist() != null &&
+                appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_16x9() != null) {
+
+            String url = "";
+            if (appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_16x9() != null) {
+                url = appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_16x9();
+            } else if (appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_3x4() != null) {
+                url = appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_3x4();
+            } else if (appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_1x1() != null) {
+                url = appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_1x1();
+            } else if (appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_4x3() != null) {
+                url = appCMSSearchResults.get(adapterPosition).getGist().getImageGist().get_4x3();
+            }
+            final String imageUrl = viewHolder.view.getContext().getString(R.string.app_cms_image_with_resize_query,
+                    url,
+                    imageWidth,
+                    imageHeight);
+            RequestOptions requestOptions = new RequestOptions().placeholder(placeholder).fitCenter();;
+
+           Glide.with(viewHolder.view.getContext())
+                   .load(imageUrl).apply(requestOptions)
+                   .into(viewHolder.filmThumbnail);
+        } else {
+
+            viewHolder.filmThumbnail.setImageResource(placeholder);
         }
         if (appCMSSearchResults.get(adapterPosition).getGist() != null &&
                 appCMSSearchResults.get(adapterPosition).getGist().getMediaType() != null
-                && appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.app_cms_article_key_type).toLowerCase())) {
+                && (appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.app_cms_article_key_type).toLowerCase())
+                || appCMSSearchResults.get(adapterPosition).getGist().getMediaType().toLowerCase().contains(context.getString(R.string.app_cms_photo_gallery_key_type).toLowerCase()))) {
             if (appCMSPresenter.getIsMoreOptionsAvailable()) {
                 applySportsStyleDefault(viewHolder, createEmptyBitmap());
             }
-            viewHolder.gridOptions.setVisibility(View.GONE);
+            viewHolder.gridOptions.setVisibility(View.INVISIBLE);
         }
         viewHolder.gridOptions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -287,9 +369,9 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
         FrameLayout parentLayout;
         ImageView filmThumbnail;
         ImageView gridOptions;
-        TextView filmTitle;
+        TextView filmTitle,thumbnailInfo;
         RelativeLayout titleLayout;
-
+        RelativeLayout filmThumbnailLayout;
 
         public ViewHolder(View view,
                           int imageWidth,
@@ -300,12 +382,28 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             super(view);
             this.view = view;
             this.parentLayout = (FrameLayout) view.findViewById(R.id.search_result_item_view);
+            this.filmThumbnailLayout = new RelativeLayout(view.getContext());
+            this.filmThumbnailLayout.setLayoutParams(new FrameLayout.LayoutParams(imageWidth, imageHeight));
 
             this.filmThumbnail = new ImageView(view.getContext());
-            FrameLayout.LayoutParams filmImageThumbnailLayoutParams =
-                    new FrameLayout.LayoutParams(imageWidth, imageHeight);
+            RelativeLayout.LayoutParams filmImageThumbnailLayoutParams =
+                    new RelativeLayout.LayoutParams(imageWidth, imageHeight);
             this.filmThumbnail.setLayoutParams(filmImageThumbnailLayoutParams);
-            this.parentLayout.addView(this.filmThumbnail);
+
+            this.thumbnailInfo = new TextView(view.getContext());
+            this.thumbnailInfo.setTextColor(Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary().getTextColor()));
+            this.thumbnailInfo.setBackgroundColor(ContextCompat.getColor(context, R.color.apptentive_brand_red));
+            this.thumbnailInfo.setTextSize(textSize);
+            RelativeLayout.LayoutParams thumbnailInfoParams =
+                    new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT);
+            thumbnailInfoParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            this.thumbnailInfo.setLayoutParams(thumbnailInfoParams);
+
+            this.filmThumbnailLayout.addView(this.filmThumbnail);
+            this.filmThumbnailLayout.addView( this.thumbnailInfo);
+
+            this.parentLayout.addView(this.filmThumbnailLayout);
 
             this.titleLayout = new RelativeLayout(view.getContext());
             FrameLayout.LayoutParams titleLayoutParams =
@@ -321,8 +419,10 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             this.gridOptions = new ImageView(view.getContext());
             this.gridOptions.setId(View.generateViewId());
             this.gridOptions.setLayoutParams(gridLayoutParams);
-            this.gridOptions.setImageResource(R.drawable.dots_more);
-            this.gridOptions.setVisibility(View.GONE);
+            this.gridOptions.setBackground(context.getDrawable(R.drawable.dots_more));
+            this.gridOptions.getBackground().setTint(appCMSPresenter.getGeneralTextColor());
+            this.gridOptions.getBackground().setTintMode(PorterDuff.Mode.MULTIPLY);
+            this.gridOptions.setVisibility(View.INVISIBLE);
             this.titleLayout.addView(this.gridOptions);
 
             this.filmTitle = new TextView(view.getContext());
@@ -334,7 +434,7 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
             filmTitleLayoutParams.addRule(RelativeLayout.LEFT_OF, this.gridOptions.getId());
             this.filmTitle.setLayoutParams(filmTitleLayoutParams);
             this.filmTitle.setTextSize(textSize);
-            this.filmTitle.setMaxLines(1);
+            this.filmTitle.setMaxLines(2);
 
             this.filmTitle.setTextColor(Color.parseColor(appCMSPresenter.getAppCMSMain().getBrand().getGeneral().getTextColor()));
             this.filmTitle.setEllipsize(TextUtils.TruncateAt.END);
@@ -351,8 +451,8 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
     }
 
     void applySportsStyleDefault(ViewHolder viewHolder, Bitmap image) {
-        viewHolder.filmThumbnail.setLayoutParams(new FrameLayout.LayoutParams(image.getWidth(), image.getHeight()));
-
+        viewHolder.filmThumbnailLayout.setLayoutParams(new FrameLayout.LayoutParams(image.getWidth(),image.getHeight()));
+        viewHolder.filmThumbnail.setLayoutParams(new RelativeLayout.LayoutParams(image.getWidth(), image.getHeight()));
         viewHolder.titleLayout.setLayoutParams(new FrameLayout.LayoutParams(image.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT));
 
         FrameLayout.LayoutParams titleLayoutParams = (FrameLayout.LayoutParams) viewHolder.titleLayout.getLayoutParams();
@@ -360,5 +460,45 @@ public class AppCMSSearchItemAdapter extends RecyclerView.Adapter<AppCMSSearchIt
         viewHolder.titleLayout.setLayoutParams(titleLayoutParams);
 
         viewHolder.gridOptions.setVisibility(View.VISIBLE);
+        placeholder = R.drawable.vid_image_placeholder_land;
+        viewHolder.filmThumbnail.setScaleType(ImageView.ScaleType.FIT_XY);
     }
+
+    private void setThumbInfoText(View view,Gist data){
+        String thumbInfo = null;
+        if (data.getPublishDate() != null) {
+            thumbInfo = getDateFormat(Long.parseLong(data.getPublishDate()), "MMM dd");
+        }
+        if (data != null && data.getReadTime() != null) {
+            StringBuilder readTimeText = new StringBuilder()
+                    .append(data.getReadTime().trim())
+                    .append("min")
+                    .append(" read ");
+
+            if (thumbInfo != null && thumbInfo.length() > 0) {
+                readTimeText.append("|")
+                        .append(" ")
+                        .append(thumbInfo);
+            }
+            ((TextView) view).setText(readTimeText);
+        } else {
+            long runtime = data.getRuntime();
+            if (thumbInfo != null) {
+                ((TextView) view).setText(AppCMSPresenter.convertSecondsToTime(runtime) + " | " + thumbInfo);
+            } else {
+                ((TextView) view).setText(AppCMSPresenter.convertSecondsToTime(runtime));
+            }
+
+        }
+    }
+
+    private String getDateFormat(long timeMilliSeconds, String dateFormat) {
+        SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
+
+        // Create a calendar object that will convert the date and time value in milliseconds to date.
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timeMilliSeconds);
+        return formatter.format(calendar.getTime());
+    }
+
 }

@@ -86,8 +86,19 @@ class AppContainerViewController_tvOS: UIViewController , MenuViewControllerDele
         // Register to receive notification
         NotificationCenter.default.addObserver(self, selector: #selector(AppContainerViewController_tvOS.toggleUserInteractionForMenu(_ : )), name: Constants.kToggleMenuBarInteractionNotification, object: nil)
         
-        let backgroundImage = UIImage(named: "app_background.png")
-        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+        //        let backgroundImage = UIImage(named: "app_background.png")
+        //        self.view.backgroundColor =   UIColor(patternImage:backgroundImage!)
+        if let backgroundColor = AppConfiguration.sharedAppConfiguration.backgroundColor{
+            self.view.backgroundColor = Utility.hexStringToUIColor(hex: backgroundColor)
+        }
+        else {
+            if AppConfiguration.sharedAppConfiguration.appTheme == .light{
+                self.view.backgroundColor = .white
+            }
+            else{
+                self.view.backgroundColor = .black
+            }
+        }
         createBaseStructureForTheApplication()
     }
     

@@ -76,9 +76,9 @@
 @property(nonatomic) float vastLoadTimeout;
 
 /*
- *  Specifies the maximum amount of time to wait, after calling requestAds, before requesting
- *  the ad tag URL. This can be used to stagger requests during a live-stream event, in order
- *  to mitigate spikes in the number of requests.
+ *  Specifies the maximum amount of time to wait in seconds, after calling requestAds,
+ *  before requesting the ad tag URL. This can be used to stagger requests during a
+ *  live-stream event, in order to mitigate spikes in the number of requests.
  */
 @property(nonatomic) float liveStreamPrefetchSeconds;
 

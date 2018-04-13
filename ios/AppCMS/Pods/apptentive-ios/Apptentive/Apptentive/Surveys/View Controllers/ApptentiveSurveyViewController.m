@@ -7,22 +7,22 @@
 //
 
 #import "ApptentiveSurveyViewController.h"
-#import "ApptentiveSurveyViewModel.h"
 #import "ApptentiveSurveyAnswerCell.h"
 #import "ApptentiveSurveyChoiceCell.h"
-#import "ApptentiveSurveyOtherCell.h"
-#import "ApptentiveSurveySingleLineCell.h"
-#import "ApptentiveSurveyMultilineCell.h"
-#import "ApptentiveSurveyQuestionView.h"
-#import "ApptentiveSurveyQuestionFooterView.h"
 #import "ApptentiveSurveyCollectionViewLayout.h"
-#import "ApptentiveSurveyQuestionBackgroundView.h"
-#import "ApptentiveSurveySubmitButton.h"
 #import "ApptentiveSurveyGreetingView.h"
+#import "ApptentiveSurveyMultilineCell.h"
+#import "ApptentiveSurveyOtherCell.h"
+#import "ApptentiveSurveyQuestionBackgroundView.h"
+#import "ApptentiveSurveyQuestionFooterView.h"
+#import "ApptentiveSurveyQuestionView.h"
+#import "ApptentiveSurveySingleLineCell.h"
+#import "ApptentiveSurveySubmitButton.h"
+#import "ApptentiveSurveyViewModel.h"
 
 #import "ApptentiveHUDViewController.h"
-#import "Apptentive_Private.h"
 #import "ApptentiveUtilities.h"
+#import "Apptentive_Private.h"
 
 // These need to match the values from the storyboard
 #define QUESTION_HORIZONTAL_MARGIN 52.0
@@ -54,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly, nonatomic) CGFloat lineHeightOfQuestionFont;
 @property (assign, nonatomic) CGFloat toolbarInset;
+@property (assign, nonatomic) BOOL keyboardVisible;
 
 @end
 
@@ -81,6 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 	((ApptentiveSurveyCollectionView *)self.collectionView).collectionHeaderView = self.headerView;
 	((ApptentiveSurveyCollectionView *)self.collectionView).collectionFooterView = self.footerView;
+	((ApptentiveSurveyCollectionViewLayout *)self.collectionViewLayout).shouldExpand = YES;
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustForKeyboard:) name:UIKeyboardWillShowNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustForKeyboard:) name:UIKeyboardWillHideNotification object:nil];
@@ -105,13 +107,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 	self.toolbarItems = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
 		self.missingRequiredItem,
-		[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+		[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+													  target:nil
+													  action:nil]];
 
 	self.navigationController.toolbar.translucent = NO;
 	self.navigationController.toolbar.barTintColor = [style colorForStyle:ApptentiveColorFailure];
 	self.navigationController.toolbar.userInteractionEnabled = NO;
-
-	[self.collectionView layoutSubviews];
 }
 
 - (void)dealloc {
@@ -119,12 +121,9 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-	[super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-	[self.collectionViewLayout invalidateLayout];
-}
-
-- (void)viewWillLayoutSubviews {
-	[self.collectionViewLayout invalidateLayout];
+	[coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
+		[self.collectionViewLayout invalidateLayout];
+	} completion:nil];
 }
 
 - (void)sizeDidUpdate:(NSNotification *)notification {
@@ -149,9 +148,10 @@ NS_ASSUME_NONNULL_BEGIN
 		[self.viewModel submit];
 
 		UIViewController *presentingViewController = self.presentingViewController;
-		[self dismissViewControllerAnimated:YES completion:^{
-			[self.viewModel didSubmit:presentingViewController];
-		}];
+		[self dismissViewControllerAnimated:YES
+								 completion:^{
+								   [self.viewModel didSubmit:presentingViewController];
+								 }];
 
 		if (self.viewModel.showThankYou) {
 			ApptentiveHUDViewController *HUD = [[ApptentiveHUDViewController alloc] init];
@@ -171,9 +171,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (IBAction)close:(id)sender {
 	UIViewController *presentingViewController = self.presentingViewController;
-	[self dismissViewControllerAnimated:YES completion:^{
-		[self.viewModel didCancel:presentingViewController];
-	}];
+	[self dismissViewControllerAnimated:YES
+							 completion:^{
+							   [self.viewModel didCancel:presentingViewController];
+							 }];
 
 	self.interactionController = nil;
 }
@@ -236,6 +237,7 @@ NS_ASSUME_NONNULL_BEGIN
 			cell.textField.delegate = self;
 			cell.textField.tag = [self.viewModel textFieldTagForIndexPath:indexPath];
 			cell.textField.font = [self.viewModel.styleSheet fontForStyle:ApptentiveTextStyleTextInput];
+			cell.textField.accessibilityLabel = cell.textField.placeholder;
 			cell.textField.textColor = [self.viewModel.styleSheet colorForStyle:ApptentiveTextStyleTextInput];
 
 			return cell;
@@ -333,7 +335,7 @@ NS_ASSUME_NONNULL_BEGIN
 		view.textLabel.text = [self.viewModel textOfQuestionAtIndex:indexPath.section];
 		view.textLabel.font = [self.viewModel.styleSheet fontForStyle:UIFontTextStyleBody];
 		view.textLabel.textColor = [self.viewModel.styleSheet colorForStyle:UIFontTextStyleBody];
-
+		view.textLabel.accessibilityHint = [self.viewModel accessibilityHintForQuestionAtIndexPath:indexPath];
 		view.instructionsTextLabel.attributedText = [self.viewModel instructionTextOfQuestionAtIndex:indexPath.section];
 		view.instructionsTextLabel.font = [self.viewModel.styleSheet fontForStyle:ApptentiveTextStyleSurveyInstructions];
 
@@ -498,7 +500,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
 	UIEdgeInsets sectionInset = ((UICollectionViewFlowLayout *)self.collectionViewLayout).sectionInset;
-	
+
 #ifdef __IPHONE_11_0
 	if (@available(iOS 11.0, *)) {
 		sectionInset.left += self.view.safeAreaInsets.left;
@@ -551,7 +553,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)textViewDidBeginEditing:(UITextField *)textView {
 	self.editingIndexPath = [self.viewModel indexPathForTextFieldTag:textView.tag];
-	[(ApptentiveSurveyCollectionView *)self.collectionView scrollHeaderAtIndexPathToTop:self.editingIndexPath animated:YES];
 }
 
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView {
@@ -566,10 +567,10 @@ NS_ASSUME_NONNULL_BEGIN
 	cell.placeholderLabel.hidden = textView.text.length > 0;
 
 	[self.collectionView performBatchUpdates:^{
-		[self.viewModel setText:textView.text forAnswerAtIndexPath:indexPath];
-		CGPoint contentOffset = self.collectionView.contentOffset;
-		[self.collectionViewLayout invalidateLayout];
-		self.collectionView.contentOffset = contentOffset;
+	  [self.viewModel setText:textView.text forAnswerAtIndexPath:indexPath];
+	  CGPoint contentOffset = self.collectionView.contentOffset;
+	  [self.collectionViewLayout invalidateLayout];
+	  self.collectionView.contentOffset = contentOffset;
 	} completion:nil];
 }
 
@@ -581,10 +582,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
 	self.editingIndexPath = [self.viewModel indexPathForTextFieldTag:textField.tag];
-
-	if ([self.viewModel typeOfAnswerAtIndexPath:self.editingIndexPath] != ApptentiveSurveyAnswerTypeOther) {
-		[(ApptentiveSurveyCollectionView *)self.collectionView scrollHeaderAtIndexPathToTop:self.editingIndexPath animated:YES];
-	}
 }
 
 - (IBAction)textFieldChanged:(UITextField *)textField {
@@ -626,79 +623,82 @@ NS_ASSUME_NONNULL_BEGIN
 	[self maybeAnimateOtherSizeChangeAtIndexPath:indexPath];
 }
 
-#pragma mark - Keyboard adjustment for iOS 7 & 8
-
+// This gets called via the keyboard will hide/show notification, to:
+// a) Collapse the space between the last question and the submit button on short surveys (they normally expand to fill the screen).
+// b) Remove the toolbar inset added when the toolbar is hidden with the keyboard showing (see -setToolbarHidden: below).
 - (void)adjustForKeyboard:(NSNotification *)notification {
-	if (self.toolbarInset != 0) {
-		// Remove any additional inset we added for hiding the toolbar when the keyboard was visible.
-		UIEdgeInsets contentInset = self.collectionView.contentInset;
-		contentInset.bottom += self.toolbarInset;
-		self.collectionView.contentInset = contentInset;
-		self.toolbarInset = 0;
-	}
+	ApptentiveSurveyCollectionViewLayout *layout = (ApptentiveSurveyCollectionViewLayout *)self.collectionViewLayout;
+	CGRect keyboardRect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+	self.keyboardVisible = CGRectGetMinY(keyboardRect) < CGRectGetMaxY(self.collectionView.frame);
+	layout.shouldExpand = !self.keyboardVisible;
 
 	CGFloat duration = ((NSNumber *)notification.userInfo[UIKeyboardAnimationDurationUserInfoKey]).doubleValue;
-	[UIView animateWithDuration:duration animations:^{
-		CGPoint contentOffset = self.collectionView.contentOffset;
-		[self.collectionView layoutIfNeeded];
-		self.collectionView.contentOffset = contentOffset;
-		if (self.editingIndexPath && [self.viewModel typeOfAnswerAtIndexPath:self.editingIndexPath] != ApptentiveSurveyAnswerTypeOther) {
-			[(ApptentiveSurveyCollectionView *)self.collectionView scrollHeaderAtIndexPathToTop:self.editingIndexPath animated:NO];
-		}
-	}];
+	[UIView animateWithDuration:duration
+					 animations:^{
+						 // If the toolbar was hidden while the keyboard was visible, subtract off the toolbar height when the keyboard is hidden.
+						 if (!self.keyboardVisible && self.toolbarInset > 0) {
+							 UIEdgeInsets contentInset = self.collectionView.contentInset;
+							 contentInset.bottom -= self.toolbarInset;
+							 self.collectionView.contentInset = contentInset;
+							 self.toolbarInset = 0;
+						 }
+
+						 [self.collectionView layoutIfNeeded];
+					 }];
 }
 
 #pragma mark - Private
 
-// If the survey is scrolled all the way to the bottom, we want to scroll down as the toolbar animates in
-// (and scroll up when it animates out, if necessary).
-// There are a lot of pecularities related to OS version and keyboard visibility we have to deal with as well.
 - (void)setToolbarHidden:(BOOL)hidden {
-	CGFloat bottomContentInset = self.collectionView.contentInset.bottom;
-	BOOL keyboardVisible = bottomContentInset > 0;
-	CGFloat bottomContentOffset = self.collectionView.contentSize.height - CGRectGetHeight(self.collectionView.bounds) + bottomContentInset;
-	CGFloat toolbarAdjustment = (hidden ? -1 : 1) * CGRectGetHeight(self.navigationController.toolbar.bounds);
-	BOOL scrolledAllTheWayDown = self.collectionView.contentOffset.y >= bottomContentOffset - toolbarAdjustment;
+	if (hidden != self.navigationController.toolbarHidden) {
+		CGFloat toolbarHeight = CGRectGetHeight(self.navigationController.toolbar.bounds);
 
-	[UIView animateWithDuration:0.2 animations:^{
-		if (!keyboardVisible && scrolledAllTheWayDown) {
-			self.collectionView.contentOffset = CGPointMake(0, bottomContentOffset + toolbarAdjustment);
-		} else if (keyboardVisible && hidden) {
-			// If we're hiding the toolbar with the keyboard visible, we need to add in a bit more bottom inset to keep things from moving around.
-			UIEdgeInsets insets = self.collectionView.contentInset;
-			CGPoint contentOffset = self.collectionView.contentOffset;
+		[self.navigationController setToolbarHidden:hidden animated:YES];
 
-			insets.bottom -= toolbarAdjustment;
+		// Workaround for bugs around showing/hiding opaque toolbar with keyboard visible
+		[UIView animateWithDuration:0.2
+						 animations:^{
+							 CGPoint contentOffset = self.collectionView.contentOffset;
+							 UIEdgeInsets insets = self.collectionView.contentInset;
 
-			// On iOS9, we need to remember to remove that inset once the keyboard is dismissed.
-			self.toolbarInset = toolbarAdjustment;
+							 if (self.keyboardVisible && hidden) {
+								 // If we're hiding the toolbar with the keyboard visible, the OS will subtract content inset from the bottom, making it so the user can't scroll all the way down until the keyboard is hidden.
 
-			self.collectionView.contentInset = insets;
-			self.collectionView.contentOffset = contentOffset;
-		}
-	}];
+								 // Add back the toolbar height to the bottom content inset.
+								 insets.bottom += toolbarHeight;
+								 self.collectionView.contentInset = insets;
 
-	[self.navigationController setToolbarHidden:hidden animated:YES];
+								 // Remember how much we content inset added so that we can subtract it if/when the keyboard is hidden.
+								 self.toolbarInset = toolbarHeight;
+							 }
+
+							 // Scroll down to offset the OS's behavior
+							 contentOffset.y += insets.bottom + toolbarHeight;
+							 self.collectionView.contentOffset = contentOffset;
+						 }];
+	}
 }
 
 - (void)maybeAnimateOtherSizeChangeAtIndexPath:(NSIndexPath *)indexPath {
 	if ([self.viewModel typeOfAnswerAtIndexPath:indexPath] == ApptentiveSurveyAnswerTypeOther) {
 		BOOL showing = [self.viewModel answerIsSelectedAtIndexPath:indexPath];
-		[UIView animateWithDuration:0.25 animations:^{
-			[self.collectionViewLayout invalidateLayout];
-		} completion:^(BOOL finished) {
-			ApptentiveSurveyOtherCell *cell = (ApptentiveSurveyOtherCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-
-			if (showing) {
-				[cell.textField becomeFirstResponder];
-				cell.isAccessibilityElement = NO;
-				UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, cell.textField);
-			} else {
-				[cell.textField resignFirstResponder];
-				cell.isAccessibilityElement = YES;
-				UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, cell);
+		[UIView animateWithDuration:0.25
+			animations:^{
+			  [self.collectionViewLayout invalidateLayout];
 			}
-		}];
+			completion:^(BOOL finished) {
+			  ApptentiveSurveyOtherCell *cell = (ApptentiveSurveyOtherCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+
+			  if (showing) {
+				  [cell.textField becomeFirstResponder];
+				  cell.isAccessibilityElement = NO;
+				  UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, cell.textField);
+			  } else {
+				  [cell.textField resignFirstResponder];
+				  cell.isAccessibilityElement = YES;
+				  UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, cell);
+			  }
+			}];
 	}
 }
 

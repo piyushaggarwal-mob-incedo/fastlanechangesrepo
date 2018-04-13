@@ -4,3 +4,5 @@
 
 gem 'fastlane-plugin-slack_train'
 gem 'fastlane-plugin-versioning'
+gem 'fastlane-plugin-slack_train'
+gem 'fastlane-plugin-versioning_android'

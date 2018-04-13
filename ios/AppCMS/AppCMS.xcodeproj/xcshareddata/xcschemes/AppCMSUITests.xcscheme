@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -8,13 +8,13 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4B57D78120514C080010EDD3"
+               BlueprintIdentifier = "4B96C8C02063D1B8002022E5"
                BuildableName = "AppCMSUITests.xctest"
                BlueprintName = "AppCMSUITests"
                ReferencedContainer = "container:AppCMS.xcodeproj">
@@ -33,13 +33,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4B57D78120514C080010EDD3"
+               BlueprintIdentifier = "4B96C8C02063D1B8002022E5"
                BuildableName = "AppCMSUITests.xctest"
                BlueprintName = "AppCMSUITests"
                ReferencedContainer = "container:AppCMS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4B96C8C02063D1B8002022E5"
+            BuildableName = "AppCMSUITests.xctest"
+            BlueprintName = "AppCMSUITests"
+            ReferencedContainer = "container:AppCMS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -54,15 +63,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4B57D78120514C080010EDD3"
-            BuildableName = "AppCMSUITests.xctest"
-            BlueprintName = "AppCMSUITests"
-            ReferencedContainer = "container:AppCMS.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,15 +72,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4B57D78120514C080010EDD3"
-            BuildableName = "AppCMSUITests.xctest"
-            BlueprintName = "AppCMSUITests"
-            ReferencedContainer = "container:AppCMS.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

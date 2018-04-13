@@ -133,11 +133,14 @@ class SFPlanMetaDataView_tvOS: UIView {
                 
                 if subscriptionPlanMetadataObject.isCheckMarkVisible! {
                     
-                    imageView.image = UIImage(named: "tickIcon")
+                    imageView.image = UIImage(named: "tickIcon")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
                 }
                 else {
                     
-                    imageView.image = UIImage(named: "crossIcon")
+                    imageView.image = UIImage(named: "crossIcon")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                }
+                if let textColor = AppConfiguration.sharedAppConfiguration.primaryHoverColor {
+                    imageView.tintColor = Utility.hexStringToUIColor(hex: textColor)
                 }
             }
             else if subscriptionPlanMetadataObject.metaDataImageUrl != nil {

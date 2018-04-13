@@ -48,6 +48,14 @@ public class Gist implements Serializable {
     @Expose
     long runtime;
 
+    public boolean isFree() {
+        return isFree;
+    }
+
+    @SerializedName("isFree")
+    @Expose
+    boolean isFree;
+
     @SerializedName("posterImageUrl")
     @Expose
     String posterImageUrl;
@@ -112,7 +120,23 @@ public class Gist implements Serializable {
     @Expose
     String summaryText;
 
+    String artistName;
+    String directorName;
+
     String downloadStatus;
+    boolean isAudioPlaying;
+    long currentPlayingPosition;
+    Boolean isCastingConnected;
+
+    public String getLandscapeImageUrl() {
+        return landscapeImageUrl;
+    }
+
+    public void setLandscapeImageUrl(String landscapeImageUrl) {
+        this.landscapeImageUrl = landscapeImageUrl;
+    }
+
+    String landscapeImageUrl;
     /**
      * This is to store the url of the downloaded file
      */
@@ -321,22 +345,46 @@ public class Gist implements Serializable {
         this.mediaType = mediaType;
     }
 
-    public String getReadTime() {
-        return readTime;
+    public boolean isAudioPlaying() {
+        return isAudioPlaying;
     }
 
-    public void setReadTime(String readTime) {
-        this.readTime = readTime;
+    public void setAudioPlaying(boolean audioPlaying) {
+        isAudioPlaying = audioPlaying;
+    }
+
+    public long getCurrentPlayingPosition() {
+        return currentPlayingPosition;
+    }
+
+    public void setCurrentPlayingPosition(long currentPlayingPosition) {
+        this.currentPlayingPosition = currentPlayingPosition;
+    }
+
+    public Boolean getCastingConnected() {
+        return isCastingConnected;
+    }
+
+    public void setCastingConnected(Boolean castingConnected) {
+        isCastingConnected = castingConnected;
+    }
+    public String getArtistName() {
+        return artistName;
+    }
+
+    public void setArtistName(String artistName) {
+        this.artistName = artistName;
+    }
+
+    public String getDirectorName() {
+        return directorName;
+    }
+
+    public void setDirectorName(String directorName) {
+        this.directorName = directorName;
     }
 
 
-    public String getSummaryText() {
-        return summaryText;
-    }
-
-    public void setSummaryText(String summaryText) {
-        this.summaryText = summaryText;
-    }
 
     public boolean isSelectedPosition() {
         return selectedPosition;
@@ -346,4 +394,24 @@ public class Gist implements Serializable {
         this.selectedPosition = selectedPosition;
     }
 
+    public String getReadTime() {
+        return readTime;
+    }
+
+    public void setReadTime(String readTime) {
+        this.readTime = readTime;
+    }
+
+    public String getSummaryText() {
+        return summaryText;
+    }
+
+    public void setSummaryText(String summaryText) {
+        this.summaryText = summaryText;
+    }
+
+    public void setDownloadStatus(String downloadStatus) {
+        this.downloadStatus = downloadStatus;
+    }
 }
+

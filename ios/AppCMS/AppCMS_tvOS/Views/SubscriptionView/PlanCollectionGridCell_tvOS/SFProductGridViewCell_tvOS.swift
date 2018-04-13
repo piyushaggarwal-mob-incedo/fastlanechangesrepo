@@ -1,4 +1,3 @@
-
 import UIKit
 
 class SFProductGridViewCell_tvOS: UICollectionViewCell {
@@ -118,7 +117,7 @@ class SFProductGridViewCell_tvOS: UICollectionViewCell {
             planDescriptionLabel?.createLabelView()
             planDescriptionLabel?.text = paymentModelObject?.planDescription
             planDescriptionLabel?.numberOfLines = 0
-
+            
             if AppConfiguration.sharedAppConfiguration.appTextColor != nil {
                 
                 planDescriptionLabel?.textColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.appTextColor!)
@@ -164,5 +163,5 @@ class SFProductGridViewCell_tvOS: UICollectionViewCell {
         }
     }
     
-
+    
 }

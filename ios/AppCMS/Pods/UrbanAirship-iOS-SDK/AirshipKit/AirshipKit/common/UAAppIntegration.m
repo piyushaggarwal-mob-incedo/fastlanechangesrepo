@@ -1,7 +1,7 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import "UAAppIntegration.h"
-#import "UAirship.h"
+#import "UAirship+Internal.h"
 #import "UAAnalytics+Internal.h"
 #import "UAPush+Internal.h"
 
@@ -15,6 +15,7 @@
 #import "UAConfig.h"
 #import "UAActionRunner+Internal.h"
 #import "UAActionRegistry+Internal.h"
+#import "UARemoteDataManager+Internal.h"
 
 #if !TARGET_OS_TV
 #import "UAInboxUtils.h"
@@ -22,10 +23,11 @@
 #import "UADisplayInboxAction.h"
 #import "UAInbox+Internal.h"
 #import "UAInboxMessageList+Internal.h"
-#import "UAInAppMessaging+Internal.h"
+#import "UALegacyInAppMessaging+Internal.h"
 #endif
 
 #define kUANotificationActionKey @"com.urbanairship.interactive_actions"
+#define kUANotificationRefreshRemoteDataKey @"com.urbanairship.remote-data.update"
 
 @implementation UAAppIntegration
 
@@ -42,7 +44,7 @@
 + (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     UA_LINFO(@"Application registered device token: %@", [UAUtils deviceTokenStringFromDeviceToken:deviceToken]);
 
-    [[UAirship shared].analytics addEvent:[UADeviceRegistrationEvent event]];
+    [[UAirship analytics] addEvent:[UADeviceRegistrationEvent event]];
 
     [[UAirship push] application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
@@ -154,7 +156,7 @@
 #pragma mark -
 #pragma mark Notification handling
 
-+ (void)handleForegroundNotification:(UNNotification *)notification mergedOptions:(UNNotificationPresentationOptions)options withCompletionHandler:(void(^)(void))completionHandler {
++ (void)handleForegroundNotification:(UNNotification *)notification mergedOptions:(UNNotificationPresentationOptions)options withCompletionHandler:(void(^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
     BOOL foregroundPresentation = (options & UNNotificationPresentationOptionAlert) > 0;
 
     UANotificationContent *notificationContent = [UANotificationContent notificationWithUNNotification:notification];
@@ -171,15 +173,16 @@
 
     UA_LINFO(@"Received notification response: %@", response);
 
-    // Clear any in-app messages (nibs unavailable in tvOS)
+    // Clear any legacy in-app messages (nibs unavailable in tvOS)
 #if !TARGET_OS_TV
-    [[UAirship inAppMessaging] handleNotificationResponse:response];
+    [[UAirship legacyInAppMessaging] handleNotificationResponse:response];
 #endif
+    
     UASituation situation;
     NSDictionary *actionsPayload = [self actionsPayloadForNotificationContent:response.notificationContent actionIdentifier:response.actionIdentifier];
 
     if ([response.actionIdentifier isEqualToString:UANotificationDefaultActionIdentifier]) {
-        [[UAirship shared].analytics launchedFromNotification:response.notificationContent.notificationInfo];
+        [[UAirship analytics] launchedFromNotification:response.notificationContent.notificationInfo];
         situation = UASituationLaunchedFromPush;
     } else {
         UANotificationAction *notificationAction = [self notificationActionForCategory:response.notificationContent.categoryIdentifier
@@ -192,7 +195,7 @@
         }
 
         if (notificationAction.options & UANotificationActionOptionForeground) {
-            [[UAirship shared].analytics launchedFromNotification:response.notificationContent.notificationInfo];
+            [[UAirship analytics] launchedFromNotification:response.notificationContent.notificationInfo];
             situation = UASituationForegroundInteractiveButton;
         } else {
             situation = UASituationBackgroundInteractiveButton;
@@ -203,7 +206,7 @@
                                                                   notification:response.notificationContent.notificationInfo
                                                                   responseText:response.responseText];
 
-        [[UAirship shared].analytics addEvent:event];
+        [[UAirship analytics] addEvent:event];
     }
 
     NSMutableDictionary *metadata = [NSMutableDictionary dictionary];
@@ -226,10 +229,14 @@
 
     UA_LINFO(@"Received notification: %@", notificationContent);
 
-    // Process any in-app messages (nibs unavailable in tvOS)
+    // Process any legacy in-app messages (nibs unavailable in tvOS)
 #if !TARGET_OS_TV
-    [[UAirship inAppMessaging] handleRemoteNotification:notificationContent];
+    [[UAirship legacyInAppMessaging] handleRemoteNotification:notificationContent];
 #endif
+    
+    if (notificationContent.notificationInfo[kUANotificationRefreshRemoteDataKey]) {
+        [UAirship.remoteDataManager refresh];
+    }
 
     UASituation situation = [UIApplication sharedApplication].applicationState == UIApplicationStateActive ? UASituationForegroundPush : UASituationBackgroundPush;
     NSDictionary *actionsPayload = [self actionsPayloadForNotificationContent:notificationContent actionIdentifier:nil];

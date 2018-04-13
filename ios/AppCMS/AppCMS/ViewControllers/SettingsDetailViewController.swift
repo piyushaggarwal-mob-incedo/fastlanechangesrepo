@@ -355,7 +355,12 @@ class SettingsDetailViewController: UIViewController, UITextFieldDelegate, GCKUI
         self.navigationItem.titleView = editLabel
         
         let backButton: UIButton = UIButton.init(type: .custom)
-        backButton.setImage(#imageLiteral(resourceName: "Back.png"), for: .normal)
+        let backButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "Back.png"))
+        
+        backButton.setImage(backButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.imageView?.tintColor = Utility.hexStringToUIColor(hex: "ffffff")
+        
+
         backButton.frame = CGRect.init(x: 0, y: 0, width: 40, height: 22)
         backButton.tintColor = .clear
         //        backButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 50)

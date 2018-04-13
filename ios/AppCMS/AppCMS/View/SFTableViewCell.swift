@@ -451,11 +451,15 @@ class SFTableViewCell: UITableViewCell,SFButtonDelegate {
         if buttonObject.key != nil && buttonObject.key == "deleteImage" {
             deleteButton?.buttonObject = buttonObject
             deleteButton?.relativeViewFrame = relativeViewFrame!
-            deleteButton?.setImage(#imageLiteral(resourceName: "deleteIcon.png"), for: .normal)
-
+            
+            let deleteButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "deleteIcon.png"))
+            
+            deleteButton?.setImage(deleteButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            deleteButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+            
             if gridObject?.isDownloadComplete == nil || gridObject?.isDownloadComplete == true  {
                 deleteButton?.isHidden = false
-
+                
             }
             else {
                 if (self.roundProgressView != nil) {
@@ -473,7 +477,12 @@ class SFTableViewCell: UITableViewCell,SFButtonDelegate {
             playButton?.isHidden = false
             playButton?.relativeViewFrame = relativeViewFrame!
             playButton?.buttonObject = buttonObject
-            playButton?.setImage(UIImage(named: "play"), for: .normal)
+            
+            let playButtonImageView: UIImageView = UIImageView.init(image: #imageLiteral(resourceName: "play.png"))
+            
+            playButton?.setImage(playButtonImageView.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+            playButton?.imageView?.tintColor = Utility.hexStringToUIColor(hex: AppConfiguration.sharedAppConfiguration.primaryButton.selectedColor ?? "ffffff")
+            
         }
         else if buttonObject.key != nil && buttonObject.key == "cancelImage" {
             

@@ -1,4 +1,4 @@
-/* Copyright 2017 Urban Airship and Contributors */
+/* Copyright 2018 Urban Airship and Contributors */
 
 #import <Foundation/Foundation.h>
 
@@ -40,6 +40,11 @@
  * @return NSDate representing the last attempt to send analytics
  */
 @property (atomic, strong, readonly) NSDate *lastSendTime;
+
+/**
+ * Flag indicating whether evant manager uploads are enabled. Clear to disable. Default is enabled.
+ */
+@property (nonatomic, assign) BOOL uploadsEnabled;
 
 ///---------------------------------------------------------------------------------------
 /// @name Event Manager Internal Methods

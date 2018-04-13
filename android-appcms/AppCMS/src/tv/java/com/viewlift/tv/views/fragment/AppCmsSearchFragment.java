@@ -82,9 +82,9 @@ public class AppCmsSearchFragment extends Fragment {
     private LinearLayout llView;
     private boolean clrbtnFlag;
 
-    private Typeface openSansSemiBoldTypeFace;
-    private Typeface openSansExtraBoldTypeFace;
-    private Typeface openSansRegularTypeface;
+    private Typeface semiBoldTypeFace;
+    private Typeface extraBoldTypeFace;
+    private Typeface regularTypeface;
     private CustomKeyboard customKeyboard;
 
     private ProgressBar progressBar;
@@ -102,6 +102,7 @@ public class AppCmsSearchFragment extends Fragment {
         setTypeFaceValue();
         noSearchTextView = (TextView)view.findViewById(R.id.appcms_no_search_result);
         noSearchTextView.setVisibility(View.GONE);
+        noSearchTextView.setTextColor(Color.parseColor(appCMSPresenter.getAppTextColor()));
 
         llView = (LinearLayout)view.findViewById(R.id.ll_view);
         editText = (EditText)view.findViewById(R.id.appcms_et_search);
@@ -120,21 +121,37 @@ public class AppCmsSearchFragment extends Fragment {
 
         customKeyboard = (CustomKeyboard)view.findViewById(R.id.appcms_keyboard);
         customKeyboard.setFocusColor(Utils.getFocusColor(getActivity() , appCMSPresenter));
+
+        if(null != appCMSPresenter &&
+                null != appCMSPresenter.getAppCMSMain() &&
+                null != appCMSPresenter.getAppCMSMain().getBrand() &&
+                null != appCMSPresenter.getAppCMSMain().getBrand().getCta() &&
+                null != appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary()){
+            String focusStateTextColor = appCMSPresenter.getAppCMSMain().getBrand().getCta().getPrimary().getTextColor();
+            String unFocusStateTextColor = appCMSPresenter.getAppCMSMain().getBrand().getCta().getSecondary().getTextColor();
+            customKeyboard.getButtonTextColorDrawable(focusStateTextColor , unFocusStateTextColor);
+        }
         customKeyboard.requestFocus();
 
-        if(null != openSansRegularTypeface)
-            editText.setTypeface(openSansRegularTypeface);
-        if(null != openSansExtraBoldTypeFace)
-            searchPrevious.setTypeface(openSansExtraBoldTypeFace);
-        if(null != openSansSemiBoldTypeFace) {
-            noSearchTextView.setTypeface(openSansSemiBoldTypeFace);
-            searchOne.setTypeface(openSansSemiBoldTypeFace);
-            searchTwo.setTypeface(openSansSemiBoldTypeFace);
-            searchThree.setTypeface(openSansSemiBoldTypeFace);
-            btnClearHistory.setTypeface(openSansSemiBoldTypeFace);
+        if(null != regularTypeface)
+            editText.setTypeface(regularTypeface);
+        if(null != extraBoldTypeFace)
+            searchPrevious.setTypeface(extraBoldTypeFace);
+        if(null != semiBoldTypeFace) {
+            noSearchTextView.setTypeface(semiBoldTypeFace);
+            searchOne.setTypeface(semiBoldTypeFace);
+            searchTwo.setTypeface(semiBoldTypeFace);
+            searchThree.setTypeface(semiBoldTypeFace);
+            btnClearHistory.setTypeface(semiBoldTypeFace);
         }
 
-        moduleList = new GsonBuilder().create().fromJson(Utils.loadJsonFromAssets(getActivity(), "tray_ftv_component.json"), ModuleList.class);
+        if(appCMSPresenter.getTemplateType() == AppCMSPresenter.TemplateType.SPORTS) {
+            moduleList = new GsonBuilder().create().
+                    fromJson(Utils.loadJsonFromAssets(getActivity(), "tray_ftv_component_sports.json"), ModuleList.class);
+        }else {
+            moduleList = new GsonBuilder().create().
+                    fromJson(Utils.loadJsonFromAssets(getActivity(), "tray_ftv_component.json"), ModuleList.class);
+        }
 
         editText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -145,7 +162,7 @@ public class AppCmsSearchFragment extends Fragment {
             }
             @Override
             public void afterTextChanged(Editable editable) {
-                if (lastSearchedString.equals(editable.toString())) {
+                if (lastSearchedString.trim().equals(editable.toString().trim())) {
                     return;
                 }
                 if (editable.toString().trim().length() >= 3){
@@ -189,14 +206,15 @@ public class AppCmsSearchFragment extends Fragment {
 
         btnClearHistory.setBackground(Utils.setButtonBackgroundSelector(getActivity() ,
                 Color.parseColor(Utils.getFocusColor(getActivity(),appCMSPresenter)),
-                component));
+                component,
+                appCMSPresenter));
 
         btnClearHistory.setTextColor(Utils.getButtonTextColorDrawable(
                 Utils.getColor(getActivity(),Integer.toHexString(ContextCompat.getColor(getActivity() ,
                         R.color.btn_color_with_opacity)))
                 ,
                 Utils.getColor(getActivity() , Integer.toHexString(ContextCompat.getColor(getActivity() ,
-                        android.R.color.white)))
+                        android.R.color.white))),appCMSPresenter
         ));
 
         btnClearHistory.setOnKeyListener(new View.OnKeyListener() {
@@ -249,22 +267,23 @@ public class AppCmsSearchFragment extends Fragment {
     };
 
     private void setTypeFaceValue(){
-        if(null == openSansSemiBoldTypeFace) {
+
+        if(null == semiBoldTypeFace) {
             Component openSansSemiBoldComp = new Component();
-            openSansSemiBoldComp.setFontFamily(getString(R.string.app_cms_page_font_family_key));
+            openSansSemiBoldComp.setFontFamily(appCMSPresenter.getFontFamily());
             openSansSemiBoldComp.setFontWeight(getString(R.string.app_cms_page_font_semibold_key));
-            openSansSemiBoldTypeFace = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansSemiBoldComp);
+            semiBoldTypeFace = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansSemiBoldComp);
         }
-        if(null == openSansExtraBoldTypeFace) {
+        if(null == extraBoldTypeFace) {
             Component openSansExtraBoldComp = new Component();
-            openSansExtraBoldComp.setFontFamily(getString(R.string.app_cms_page_font_family_key));
+            openSansExtraBoldComp.setFontFamily(appCMSPresenter.getFontFamily());
             openSansExtraBoldComp.setFontWeight(getString(R.string.app_cms_page_font_extrabold_key));
-            openSansExtraBoldTypeFace = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansExtraBoldComp);
+            extraBoldTypeFace = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansExtraBoldComp);
         }
-        if(null == openSansRegularTypeface) {
+        if(null == regularTypeface) {
             Component openSansRegularComp = new Component();
-            openSansRegularComp.setFontFamily(getString(R.string.app_cms_page_font_family_key));
-            openSansRegularTypeface = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansRegularComp);
+            openSansRegularComp.setFontFamily(appCMSPresenter.getFontFamily());
+            regularTypeface = Utils.getTypeFace(getActivity(), appCMSPresenter.getJsonValueKeyMap(), openSansRegularComp);
         }
     }
 
@@ -631,7 +650,7 @@ public class AppCmsSearchFragment extends Fragment {
         CardPresenter trayCardPresenter = new CardPresenter(context, appCMSPresenter,
                 Integer.valueOf(component.getLayout().getTv().getHeight()),
                 Integer.valueOf(component.getLayout().getTv().getWidth()),
-                component.getTrayBackground(),
+                component,
                 jsonValueKeyMap);
         ArrayObjectAdapter trayListRowAdapter = new ArrayObjectAdapter(trayCardPresenter);
 
@@ -666,7 +685,7 @@ public class AppCmsSearchFragment extends Fragment {
                  CardPresenter trayCardPresenter = new CardPresenter(context, appCMSPresenter,
                          Integer.valueOf(component.getLayout().getTv().getHeight()),
                          Integer.valueOf(component.getLayout().getTv().getWidth()),
-                         component.getTrayBackground(),
+                         component,
                          jsonValueKeyMap
                  );
 
