@@ -1,0 +1,204 @@
+{
+    "id": "29d2cd08-1f4c-4cd6-92bb-407ceffb7431",
+    "settings": {
+        "columns": {
+            "tablet": 4,
+            "desktop": 6,
+            "mobile": 3,
+            "ott": 6
+        }
+    },
+    "view": "AC Watchlist 02",
+    "type": "AC Watchlist 02",
+    "blockName": "watchlist02",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 1070
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 35,
+                   "xAxis": 1551,
+                   "width": 250,
+                   "fontSize": 25,
+                   "height": 70
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "Lato",
+                   "borderWidth": 4,
+                   "action": "clearWatchlist",
+                   "text": "CLEAR WATCHLIST",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "removeAll"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 37,
+                   "leftMargin": 6.2,
+                   "rightMargin": 6.2,
+                   "fontSize": 48,
+                   "height": 50
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "text": "Watchlist",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "key": "pageTitle"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "trayPadding": 10,
+                   "leftMargin": 6.2,
+                   "yAxis": 153,
+                   "rightMargin": 6.2,
+                   "itemHeight": 220,
+                   "itemWidth": 1730,
+                   "height": 917
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 380,
+                                  "height": 214
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "thumbnailImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 380,
+                                  "height": 214
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "badgeImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 184,
+                                  "leftMargin": 0,
+                                  "width": 160,
+                                  "fontSize": 18,
+                                  "height": 30
+                                  }
+                                  },
+                                  "fontFamily": "Lato",
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "hugsContent": true,
+                                  "backgroundColor": "#000000",
+                                  "backgroundColorAlpha": 0.56,
+                                  "numberOfLines": 1,
+                                  "key": "durationBadgeLabel"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 1,
+                                  "xAxis": 430,
+                                  "width": 875,
+                                  "fontSize": 32,
+                                  "height": 39
+                                  }
+                                  },
+                                  "fontFamily": "Lato",
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Heavy",
+                                  "key": "titleLabel"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 40,
+                                  "xAxis": 430,
+                                  "width": 875,
+                                  "fontSize": 22,
+                                  "height": 27
+                                  }
+                                  },
+                                  "fontFamily": "Lato",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "lineHeight": 33,
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Bold",
+                                  "key": "duration"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 75,
+                                  "xAxis": 430,
+                                  "width": 1246,
+                                  "fontSize": 28,
+                                  "height": 139
+                                  }
+                                  },
+                                  "fontFamily": "Lato",
+                                  "numberOfLines": 3,
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "key": "descriptionLabel"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 15,
+                                  "xAxis": 1315,
+                                  "width": 50,
+                                  "height": 50
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "courseImage",
+                                  "image": "courseIconImage"
+                                  },
+                                  {
+                                  "view": "AC StarView 01",
+                                  "type": "starRatingView",
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 20,
+                                  "xAxis": 1464,
+                                  "width": 200,
+                                  "height": 35
+                                  }
+                                  },
+                                  "star-margin": 5,
+                                  "starSize": 35
+                                  }
+                                  ],
+                   "itemClickAction": "lectureDetailPage",
+                   "type": "tableView",
+                   "key": "tableView"
+                   }
+                   ]
+}

@@ -1,0 +1,6 @@
+framework module Pods_FailArmy_tvOS {
+  umbrella header "Pods-FailArmy_tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_TampaBay_iOS {
+  umbrella header "Pods-TampaBay_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

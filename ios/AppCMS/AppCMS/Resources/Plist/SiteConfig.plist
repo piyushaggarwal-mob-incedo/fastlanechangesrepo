@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppFlyer APPID</key>
+	<string>AppFlyerAPPID11</string>
+	<key>AppFlyer Key</key>
+	<string>5qcxTGtWfXSo746pkCDawf</string>
+	<key>AppSecretKey</key>
+	<string>vdTAMerEdh8t5t7xtUAa199qBKQuFLXb5cuG93ZF</string>
+	<key>Apptentive AppId</key>
+	<string>1188755540</string>
+	<key>Apptentive AppKey</key>
+	<string>dfde9505539f2dc1d24700c09fb096b5280ed4cbed0828084540ada79a2b00f7</string>
+	<key>Apptentive AppSignature</key>
+	<string>5192dfba45312d08e701de97fc4f982d</string>
+	<key>Apptentive Key</key>
+	<string>IOS-HOICHOI-0ed96174ddd7</string>
+	<key>GoogleClientId</key>
+	<string>525148171038-da7vav95ripsg807mp1i985rv91hf2eu.apps.googleusercontent.com</string>
+	<key>SiteId</key>
+	<string>57e4b76f-6168-41af-bdd8-c76a2e5bf798</string>
+	<key>TemplateType</key>
+	<string>ENTERTAINMENT</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcms.viewlift.com</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<false/>
+</dict>
+</plist>

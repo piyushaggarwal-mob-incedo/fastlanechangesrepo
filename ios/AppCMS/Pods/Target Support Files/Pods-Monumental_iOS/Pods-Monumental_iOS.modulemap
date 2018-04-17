@@ -1,0 +1,6 @@
+framework module Pods_Monumental_iOS {
+  umbrella header "Pods-Monumental_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

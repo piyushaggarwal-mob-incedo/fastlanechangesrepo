@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SFManagedAppWelcomeData" representedClassName=".SFManagedAppWelcomeData" syncable="YES">
+        <attribute name="appPromotionalDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appPromotionalLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appWelcomeTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isBrowserEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="welcomeDataTimeStamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="welcomeFilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="welcomeFilmItem" inverseEntity="SFManagedShow" syncable="YES"/>
+        <relationship name="welcomeImages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedImage" inverseName="welcome" inverseEntity="SFManagedImage" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedCredit" representedClassName=".SFManagedCredit" syncable="YES">
+        <attribute name="persons" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="film" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="credits" inverseEntity="SFManagedFilm" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedFilm" representedClassName=".SFManagedFilm" syncable="YES">
+        <attribute name="addedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="adTag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="durationMinutes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="durationSeconds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="episodeNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmPercentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="filmWatchedDuration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="geo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFreeVideo" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isHd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isLivestream" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="parentalRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permaLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishDate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="secondaryCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trailerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trailerURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viewerGrade" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="closedCaptions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedSubtitle" inverseName="film" inverseEntity="SFManagedSubtitle" syncable="YES"/>
+        <relationship name="credits" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedCredit" inverseName="film" inverseEntity="SFManagedCredit" syncable="YES"/>
+        <relationship name="filmUrl" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilmUrl" inverseName="film" inverseEntity="SFManagedFilmUrl" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedImage" inverseName="film" inverseEntity="SFManagedImage" syncable="YES"/>
+        <relationship name="professors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SFManagedProfessor" inverseName="professor" inverseEntity="SFManagedProfessor" syncable="YES"/>
+        <relationship name="relatedCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="courses" inverseEntity="SFManagedShow" syncable="YES"/>
+        <relationship name="relatedFilm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="relatedFilms" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="relatedFilms" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedFilm" inverseName="relatedFilm" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="season" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedSeason" inverseName="seasonEpisodes" inverseEntity="SFManagedSeason" syncable="YES"/>
+        <relationship name="seasonFilm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="seasonFilms" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="seasonFilms" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedFilm" inverseName="seasonFilm" inverseEntity="SFManagedFilm" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedFilmUrl" representedClassName=".SFManagedFilmUrl" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="film" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedFilm" inverseName="filmUrl" inverseEntity="SFManagedFilm" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedImage" representedClassName=".SFManagedImage" syncable="YES">
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="src" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="film" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="images" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="show" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="images" inverseEntity="SFManagedShow" syncable="YES"/>
+        <relationship name="trayImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedTray" inverseName="images" inverseEntity="SFManagedTray" syncable="YES"/>
+        <relationship name="welcome" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedAppWelcomeData" inverseName="welcomeImages" inverseEntity="SFManagedAppWelcomeData" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedProfessor" representedClassName=".SFManagedProfessor" syncable="YES">
+        <attribute name="affiliation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="permaLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="professorDegree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="professorPrecedence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="profilePic" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="professor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="professors" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="showProfessor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="professors" inverseEntity="SFManagedShow" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedSeason" representedClassName=".SFManagedSeason" syncable="YES">
+        <attribute name="currentEpisode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="seasonEpisodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedFilm" inverseName="season" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="show" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="seasons" inverseEntity="SFManagedShow" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedShow" representedClassName=".SFManagedShow" syncable="YES">
+        <attribute name="addedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="durationMinutes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="durationSeconds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isHD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="noOfEpisodes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="permaLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viewerGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="courses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="relatedCourses" inverseEntity="SFManagedFilm" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedImage" inverseName="show" inverseEntity="SFManagedImage" syncable="YES"/>
+        <relationship name="professors" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedProfessor" inverseName="showProfessor" inverseEntity="SFManagedProfessor" syncable="YES"/>
+        <relationship name="relatedShow" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="show" inverseEntity="SFManagedShow" syncable="YES"/>
+        <relationship name="seasons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SFManagedSeason" inverseName="show" inverseEntity="SFManagedSeason" syncable="YES"/>
+        <relationship name="show" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedShow" inverseName="relatedShow" inverseEntity="SFManagedShow" syncable="YES"/>
+        <relationship name="welcomeFilmItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedAppWelcomeData" inverseName="welcomeFilms" inverseEntity="SFManagedAppWelcomeData" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedSubtitle" representedClassName=".SFManagedSubtitle" syncable="YES">
+        <attribute name="cacheDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="cacheKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="film" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SFManagedFilm" inverseName="closedCaptions" inverseEntity="SFManagedFilm" syncable="YES"/>
+    </entity>
+    <entity name="SFManagedTray" representedClassName=".SFManagedTray" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isHd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subHeading" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trayAction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SFManagedImage" inverseName="trayImage" inverseEntity="SFManagedImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SFManagedAppWelcomeData" positionX="-11205" positionY="-9405" width="128" height="180"/>
+        <element name="SFManagedCredit" positionX="-11439" positionY="-9081" width="128" height="90"/>
+        <element name="SFManagedFilm" positionX="-11655" positionY="-9247" width="128" height="735"/>
+        <element name="SFManagedFilmUrl" positionX="-11378" positionY="-9216" width="128" height="90"/>
+        <element name="SFManagedImage" positionX="-11007" positionY="-8736" width="128" height="210"/>
+        <element name="SFManagedProfessor" positionX="-11205" positionY="-9135" width="128" height="195"/>
+        <element name="SFManagedSeason" positionX="-11421" positionY="-8646" width="128" height="105"/>
+        <element name="SFManagedShow" positionX="-10658" positionY="-9198" width="128" height="405"/>
+        <element name="SFManagedSubtitle" positionX="-11403" positionY="-9387" width="128" height="135"/>
+        <element name="SFManagedTray" positionX="-10838" positionY="-9504" width="128" height="165"/>
+    </elements>
+</model>

@@ -1,0 +1,103 @@
+{
+    "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+    "settings": {},
+    "view": "AC MenuView 01",
+    "type": "AC MenuView 01",
+    "layout": {
+        "appletv": {
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "topMargin": 0,
+            "height": 1080
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 37,
+                   "leftMargin": 10,
+                   "rightMargin": 10,
+                   "fontSize": 48,
+                   "height": 57
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "textAlignment": "center",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "key": "pageTitle",
+                   "text" : "Menu"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 286,
+                   "xAxis": 456,
+                   "width": 1010,
+                   "fontSize": 24,
+                   "height": 70
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "Lato",
+                   "borderWidth": 2,
+                   "action": "startFreeTrial",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Bold",
+                   "key": "startFreeTrial"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "gridHeight": 160,
+                   "trayPadding": 0,
+                   "leftMargin": 0,
+                   "yAxis": 0,
+                   "rightMargin": 0,
+                   "height": 160,
+                   "gridWidth": 104
+                   }
+                   },
+                   "trayClickAction": "menuClick",
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 104,
+                                  "height": 104
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "menuThumbnailImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 110,
+                                  "leftMargin": 0,
+                                  "rightMargin": 0,
+                                  "fontSize": 22,
+                                  "height": 55
+                                  }
+                                  },
+                                  "numberOfLines": 2,
+                                  "fontFamily": "Lato",
+                                  "textAlignment": "center",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "key": "menuTitle"
+                                  }
+                                  ],
+                   "isHorizontalScroll": true,
+                   "type": "collectionGrid",
+                   "supportPagination": false,
+                   "key": "collectionGrid",
+                   "cornerRadius": 0
+                   }
+                   ]
+}
+

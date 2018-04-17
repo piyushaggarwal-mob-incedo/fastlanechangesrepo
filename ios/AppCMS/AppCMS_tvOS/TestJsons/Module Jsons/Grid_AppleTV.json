@@ -1,0 +1,113 @@
+{
+    "id": "916c75d9-36e1-4676-aa76-898b3670a033",
+    "settings": {
+        "loop": true,
+        "infoHover": true,
+        "thumbnailType": "landscape"
+    },
+    "view": "AC Grid 01",
+    "type": "AC Grid 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "height": 1080
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "leftMargin": 4.8,
+                   "rightMargin": 4.8,
+                   "fontSize": 40,
+                   "height": 55
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "textColor": "#008EE0",
+                   "fontWeight": "Semibold",
+                   "letterSpacing": 4.5,
+                   "key": "trayTitle"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 60,
+                   "leftMargin": 4.4,
+                   "rightMargin": 4.4,
+                   "height": 1
+                   }
+                   },
+                   "backgroundColor": "#808080",
+                   "type": "separatorView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "gridHeight": 348,
+                   "trayPadding": 40,
+                   "leftMargin": 4.9,
+                   "yAxis": 70,
+                   "rightMargin": 4.9,
+                   "bottomMargin": 4,
+                   "gridWidth": 551
+                   }
+                   },
+                   "trayClickAction": "lectureDetailPage",
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 0,
+                                  "xAxis": 0,
+                                  "width": 551,
+                                  "height": 310
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "thumbnailImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 0,
+                                  "rightMargin": 0,
+                                  "width": 551,
+                                  "height": 310
+                                  }
+                                  },
+                                  "type": "image",
+                                  "key": "badgeImage"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 315,
+                                  "leftMargin": 0,
+                                  "rightMargin": 0,
+                                  "fontSize": 25,
+                                  "height": 34
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "thumbnailTitle"
+                                  }
+                                  ],
+                   "isHorizontalScroll": false,
+                   "type": "collectionGrid",
+                   "supportPagination": false,
+                   "key": "collectionGrid",
+                   "cornerRadius": 0
+                   }
+                   ]
+}

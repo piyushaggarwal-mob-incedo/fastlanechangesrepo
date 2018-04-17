@@ -1,0 +1,48 @@
+{
+    "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+    "settings": {},
+    "view": "AC RawHtml 01",
+    "type": "AC RawHtml 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 940
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 37,
+                   "xAxis": 200,
+                   "width": 1520,
+                   "fontSize": 40,
+                   "height": 55
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "numberOfLines": 1,
+                   "textAlignment": "center",
+                   "type": "label",
+                   "textColor": "#000000",
+                   "key": "title",
+                   "letterSpacing": 4.5,
+                   "text": "Coming Soon"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 100,
+                   "xAxis": 200,
+                   "width": 1520,
+                   "height": 844
+                   }
+                   },
+                   "type": "image",
+                   "key": "team_Logo",
+                   "imageName": "team_Logo"
+                   }
+                   ]
+}

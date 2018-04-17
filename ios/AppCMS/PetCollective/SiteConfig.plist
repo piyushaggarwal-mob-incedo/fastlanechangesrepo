@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppSecretKey</key>
+	<string>QcAIRlMt9h4p8G05ImDEl5sMbvVAwyXOayKo0MUD</string>
+	<key>Apptentive AppId</key>
+	<string>1328455951</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-THE-PET-COLLECTIVE</string>
+	<key>Apptentive AppSignature</key>
+	<string>9cae966b5ef024a130b01521a6470077</string>
+	<key>Apptentive Key</key>
+	<string>25c48c5efe518a246fa10d0f4a341fedf49d06d3a41682a6849d9e914252ffd6</string>
+	<key>SiteId</key>
+	<string>9aef62a7-0071-4c3b-95ee-a185411780be</string>
+	<key>TemplateType</key>
+	<string>ENTERTAINMENT</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+</dict>
+</plist>

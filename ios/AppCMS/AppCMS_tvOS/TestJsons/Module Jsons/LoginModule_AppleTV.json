@@ -1,0 +1,99 @@
+{
+    "id": "e55fdb65-5b68-4cb0-9545-3d4ae54df1e6",
+    "settings": {},
+    "view": "AC Authentication 01",
+    "type": "AC Authentication 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 940
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 340,
+                   "xAxis": 980,
+                   "width": 255,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderWidth": 4,
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "action": "forgotPassword",
+                   "text": "FORGOT PASSWORD",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "forgot password button"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 110,
+                   "xAxis": 330,
+                   "width": 610,
+                   "fontSize": 48,
+                   "height": 80
+                   }
+                   },
+                   "cornerRadius": 5,
+                   "backgroundColor": "#ffffff",
+                   "fontFamily": "OpenSans",
+                   "protected": false,
+                   "textAlignment": "left",
+                   "text": "Email",
+                   "opacity": 46,
+                   "type": "textfield",
+                   "textColor": "#000000",
+                   "key": "emailTextField"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 110,
+                   "xAxis": 980,
+                   "width": 610,
+                   "fontSize": 48,
+                   "height": 80
+                   }
+                   },
+                   "backgroundColor": "#ffffff",
+                   "fontFamily": "OpenSans",
+                   "protected": true,
+                   "textAlignment": "left",
+                   "text": "Password",
+                   "opacity": 46,
+                   "type": "textfield",
+                   "textColor": "#000000",
+                   "key": "passwordTextField"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 340,
+                   "xAxis": 685,
+                   "width": 255,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "borderWidth": 4,
+                   "fontFamily": "OpenSans",
+                   "action": "login",
+                   "text": "LOG IN",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "login button"
+                   }
+                   ]
+}

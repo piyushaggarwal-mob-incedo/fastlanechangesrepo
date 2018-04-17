@@ -1,0 +1,275 @@
+{
+    "id": "6532e683-b197-4977-8f95-1101b3f1255c",
+    "settings": {},
+    "view": "AC ShowDetail 01",
+    "type": "AC ShowDetail 01",
+    "blockName": "showDetail01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "height": 678
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "height": 138
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 36,
+                                  "xAxis": 95,
+                                  "maximumWidth": 1130,
+                                  "fontSize": 53,
+                                  "height": 73
+                                  }
+                                  },
+                                  "opacity": 1,
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Bold",
+                                  "key": "showTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 51,
+                                  "width": 590,
+                                  "rightMargin": 4.68,
+                                  "fontSize": 26,
+                                  "height": 36
+                                  }
+                                  },
+                                  "opacity": 0.5,
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "right",
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "key": "showSubTitle"
+                                  }
+                                  ],
+                   "textAlignment": "left",
+                   "type": "headerView",
+                   "key": "showDetailHeader"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 50,
+                   "rightMargin": 0,
+                   "yAxis": 138,
+                   "height": 540
+                   }
+                   },
+                   "type": "image",
+                   "key": "showImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 50,
+                   "rightMargin": 0,
+                   "yAxis": 138,
+                   "height": 540
+                   }
+                   },
+                   "type": "image",
+                   "key": "badgeImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 5,
+                   "rightMargin": 81.71,
+                   "yAxis": 606,
+                   "height": 60,
+                   "fontSize": 21
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "text": "WATCH NOW",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Bold",
+                   "action": "watchVideo",
+                   "key": "playButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 20.36,
+                   "rightMargin": 66.61,
+                   "yAxis": 606,
+                   "height": 60,
+                   "fontSize": 21
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "watchTrailer",
+                   "text": "WATCH TRAILER",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Bold",
+                   "key": "watchTrailer"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "fontSizeKey": 23,
+                   "yAxis": 409,
+                   "xAxis": 95,
+                   "width": 768,
+                   "height": 170,
+                   "fontSizeValue": 23
+                   }
+                   },
+                   "fontFamilyKey": "OpenSans-Extrabold",
+                   "fontFamilyValue": "OpenSans",
+                   "type": "castView",
+                   "textColor": "#ffffff",
+                   "key": "castView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 188,
+                   "xAxis": 95,
+                   "width": 768,
+                   "fontSize": 23,
+                   "height": 180
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "showDescriptionText"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 678,
+                   "leftMargin": 4.68,
+                   "rightMargin": 0,
+                   "height": 290
+                   }
+                   },
+                   "settings": {
+                   "loop": true,
+                   "infoHover": true,
+                   "thumbnailType": "landscape"
+                   },
+                   "view": "AC SeasonTray 01",
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "leftMargin": 0,
+                                  "rightMargin": 4.8,
+                                  "topMargin": 0,
+                                  "height": 55,
+                                  "fontSize": 40
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "type": "label",
+                                  "textColor": "#008EE0",
+                                  "fontWeight": "Semibold",
+                                  "key": "trayTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "leftMargin": 0,
+                                  "rightMargin": 4.8,
+                                  "topMargin": 20.3,
+                                  "height": 2
+                                  }
+                                  },
+                                  "backgroundColor": "#808080",
+                                  "type": "separatorView"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "gridHeight": 168,
+                                  "trayPadding": 40,
+                                  "leftMargin": 0,
+                                  "topMargin": 10,
+                                  "rightMargin": 2.67,
+                                  "bottomMargin": 0,
+                                  "gridWidth": 300
+                                  }
+                                  },
+                                  "trayClickAction": "lectureDetailPage",
+                                  "components": [
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 0,
+                                                 "xAxis": 0,
+                                                 "width": 300,
+                                                 "height": 168
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "thumbnailImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "leftMargin": 0,
+                                                 "width": 300,
+                                                 "topMargin": 0,
+                                                 "height": 168
+                                                 }
+                                                 },
+                                                 "type": "image",
+                                                 "key": "badgeImage"
+                                                 },
+                                                 {
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "yAxis": 175,
+                                                 "leftMargin": 0,
+                                                 "rightMargin": 0,
+                                                 "fontSize": 25,
+                                                 "height": 34
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "textAlignment": "left",
+                                                 "type": "label",
+                                                 "textColor": "#ffffff",
+                                                 "fontWeight": "Semibold",
+                                                 "key": "episodeTitle"
+                                                 }
+                                                 ],
+                                  "type": "collectionGrid",
+                                  "key": "collectionGrid"
+                                  }
+                                  ],
+                   "id": "3f255c6f-8e39-4182-9307-d1342e59fe70",
+                   "type": "AC SeasonTray 01"
+                   }
+                   ]
+}

@@ -1,0 +1,206 @@
+{
+    "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+    "settings": {},
+    "view": "AC SelectPlan 01",
+    "type": "AC SelectPlan 01",
+    "layout": {
+        "appletv": {
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "topMargin": 0,
+            "height": 1100
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 8.12,
+                   "rightMargin": 67.23,
+                   "topMargin": 14.63,
+                   "height": 129
+                   }
+                   },
+                   "imageName": "appLogo",
+                   "type": "image",
+                   "key": "subscriptionLogoImage"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 8.12,
+                   "rightMargin": 67.23,
+                   "topMargin": 30.18,
+                   "fontSize": 39,
+                   "height": 53
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "textColor": "#000000",
+                   "key": "confirmPurchase",
+                   "fontWeight": "Semibold",
+                   "letterSpacing": 3.7,
+                   "text": "SELECT YOUR PLAN"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "leftMargin": 8.12,
+                   "rightMargin": 78.00,
+                   "topMargin": 51.54,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderWidth": 4,
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "action": "cancel",
+                   "text": "BACK",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "cancelButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "gridHeight": 515,
+                   "trayPadding": 10,
+                   "gridWidth": 390,
+                   "leftMargin": 34.3,
+                   "rightMargin": 3.17,
+                   "topMargin": 13,
+                   "height": 515
+                   }
+                   },
+                   "trayClickAction": "selectPlan",
+                   "isHorizontalScroll": true,
+                   "type": "collectionGrid",
+                   "supportPagination": false,
+                   "key": "collectionGrid",
+                   "cornerRadius": 0,
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "xAxis": 24,
+                                  "width": 342,
+                                  "yAxis": 10,
+                                  "fontSize": 35,
+                                  "height": 80
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 2,
+                                  "textAlignment": "center",
+                                  "type": "label",
+                                  "lineHeight": 39,
+                                  "textColor": "#000000",
+                                  "fontWeight": "Bold",
+                                  "key": "planTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 15,
+                                  "leftMargin": 8.97,
+                                  "rightMargin": 8.97,
+                                  "fontSize": 26,
+                                  "height": 50
+                                  }
+                                  },
+                                  "fontWeight": "Italic",
+                                  "textColor": "#ffffff",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "center",
+                                  "fontFamily": "OpenSans",
+                                  "type": "label",
+                                  "key": "planPriceInfo"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 30.78,
+                                  "leftMargin": 7.0,
+                                  "rightMargin": 7.0,
+                                  "height": 250
+                                  }},
+                                  "components": [
+                                                 {
+                                                 "textColor": "#ffffff",
+                                                 "numberOfLines": 1,
+                                                 "textAlignment": "left",
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "topMargin": 1.9,
+                                                 "leftMargin": 8.38,
+                                                 "rightMargin": 0,
+                                                 "fontSize": 24,
+                                                 "height": 30
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "type": "label",
+                                                 "key": "planMetaDataTitle"
+                                                 },
+                                                 {
+                                                 "layout": { 
+                                                 "appletv": {
+                                                 "yAxis": 0,
+                                                 "xAxis": 0,
+                                                 "width": 20,
+                                                 "height": 20
+                                                 }},
+                                                 "type": "image",
+                                                 "key": "planMetaDataImage"
+                                                 },
+                                                 {
+                                                 "textColor": "#ffffff",
+                                                 "numberOfLines": 1,
+                                                 "textAlignment": "left",
+                                                 "layout": {
+                                                 "appletv": {
+                                                 "topMargin": 1.9,
+                                                 "leftMargin": 0,
+                                                 "rightMargin": 8.38,
+                                                 "fontSize": 24,
+                                                 "height": 30
+                                                 }
+                                                 },
+                                                 "fontFamily": "OpenSans",
+                                                 "type": "label",
+                                                 "key": "planMetaDataDeviceCount"
+                                                 }
+                                                 ],
+                                  "type": "planMetaDataView",
+                                  "key": "planMetaDataView"
+                                  },
+                                  {
+                                  "fontWeight": "Semibold",
+                                  "textColor": "ffffff",
+                                  "text": "SELECT YOUR PLAN",
+                                  "backgroundColor": "008EE0",
+                                  "layout": {
+                                  "appletv": {
+                                  "topMargin": 82.33,
+                                  "leftMargin": 9.23,
+                                  "rightMargin": 9.23,
+                                  "fontSize": 18,
+                                  "height": 60
+                                  }
+                                  },
+                                  "action": "purchasePlan",
+                                  "isVisibleForPhone": false,
+                                  "fontFamily": "OpenSans",
+                                  "type": "button",
+                                  "key": "planPurchaseButton"
+                                  }
+                                  ]
+                   }
+                   ]
+}

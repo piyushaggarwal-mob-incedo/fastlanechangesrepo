@@ -1,0 +1,6 @@
+framework module Pods_Hoichoi_iOS {
+  umbrella header "Pods-Hoichoi_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="13529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewEndCardViewController" customModule="AppCMS_tvOS" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="1Ng-Nl-7ne" id="yq4-Sd-n27"/>
+                <outlet property="cancelButton" destination="rEl-CB-sOK" id="DNb-ml-Vr8"/>
+                <outlet property="loginButton" destination="qYo-JW-YYe" id="j12-Qv-rmB"/>
+                <outlet property="previewEndText" destination="EAR-Ut-YHq" id="fKh-dH-YnJ"/>
+                <outlet property="startFreeTrialButton" destination="LCG-vf-cCa" id="bYD-QK-YnW"/>
+                <outlet property="topMarginLoginButton" destination="sAq-I8-Pef" id="VYH-qw-iGg"/>
+                <outlet property="topMarginStartFreeTrialButton" destination="HlV-dS-2Zj" id="Cec-MH-34Q"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-Nl-7ne">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                </imageView>
+                <view alpha="0.73999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8V7-iM-0sd">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <color key="backgroundColor" red="0.039215686274509803" green="0.082352941176470587" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.039215686274509803" green="0.082352941176470587" blue="0.10980392156862745" alpha="0.0" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEl-CB-sOK">
+                    <rect key="frame" x="835" y="510" width="250" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Wga-ZT-I6E"/>
+                        <constraint firstAttribute="height" constant="60" id="iwJ-84-CAX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="BACK"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="primaryActionTriggered" id="peq-LG-wQj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9876" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYo-JW-YYe">
+                    <rect key="frame" x="835" y="594" width="250" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Zf3-tU-0ld"/>
+                        <constraint firstAttribute="width" constant="250" id="atg-cN-TB1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="LOG IN"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="primaryActionTriggered" id="vky-uP-Xog"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCG-vf-cCa">
+                    <rect key="frame" x="835" y="678" width="250" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="1Ir-E7-B55"/>
+                        <constraint firstAttribute="width" constant="250" id="f03-K6-QUa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="START FREE TRIAL"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="primaryActionTriggered" id="SYS-pq-Goc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="EAR-Ut-YHq">
+                    <rect key="frame" x="610" y="240" width="700" height="188"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="188" id="Otd-xr-rDt"/>
+                        <constraint firstAttribute="width" constant="700" id="peL-Wy-jW2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LCG-vf-cCa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8YG-JX-N2U"/>
+                <constraint firstItem="LCG-vf-cCa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="678" id="HlV-dS-2Zj"/>
+                <constraint firstItem="qYo-JW-YYe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sre-EJ-f3J"/>
+                <constraint firstItem="1Ng-Nl-7ne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UFc-8j-cmD"/>
+                <constraint firstItem="rEl-CB-sOK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="510" id="bMO-OY-hX0"/>
+                <constraint firstItem="1Ng-Nl-7ne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="csC-KO-wit"/>
+                <constraint firstItem="EAR-Ut-YHq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="240" id="d51-0s-q6h"/>
+                <constraint firstItem="8V7-iM-0sd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="deQ-57-jAx"/>
+                <constraint firstItem="8V7-iM-0sd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gQz-Nb-xEm"/>
+                <constraint firstItem="EAR-Ut-YHq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="j9v-kh-ANc"/>
+                <constraint firstAttribute="bottom" secondItem="8V7-iM-0sd" secondAttribute="bottom" id="jJY-OS-l3q"/>
+                <constraint firstItem="rEl-CB-sOK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ofi-u8-ABi"/>
+                <constraint firstItem="qYo-JW-YYe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="594" id="sAq-I8-Pef"/>
+                <constraint firstAttribute="trailing" secondItem="1Ng-Nl-7ne" secondAttribute="trailing" id="vh5-fz-LN6"/>
+                <constraint firstAttribute="bottom" secondItem="1Ng-Nl-7ne" secondAttribute="bottom" id="vnz-s1-nTU"/>
+                <constraint firstAttribute="trailing" secondItem="8V7-iM-0sd" secondAttribute="trailing" id="yjm-qR-lwD"/>
+            </constraints>
+            <point key="canvasLocation" x="-322" y="65"/>
+        </view>
+    </objects>
+</document>

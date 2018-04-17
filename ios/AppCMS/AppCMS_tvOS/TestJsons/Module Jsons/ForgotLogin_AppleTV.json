@@ -1,0 +1,128 @@
+{
+    "id": "91399c21-1077-4efa-bff3-5472e02856c2",
+    "settings": {},
+    "view": "AC ResetPassword 01",
+    "type": "AC ResetPassword 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 940
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 258,
+                   "xAxis": 650,
+                   "width": 620,
+                   "height": 2
+                   }
+                   },
+                   "backgroundColor": "#808080",
+                   "type": "separatorView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 203,
+                   "xAxis": 655,
+                   "width": 520,
+                   "fontSize": 40,
+                   "height": 55
+                   }
+                   },
+                   "text": "FORGOT PASSWORD",
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "fontWeight": "Semibold",
+                   "letterSpacing": 4.5,
+                   "key": "forgotPasswordTitle"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 446,
+                   "xAxis": 655,
+                   "width": 610,
+                   "fontSize": 48,
+                   "height": 80
+                   }
+                   },
+                   "cornerRadius": 5,
+                   "backgroundColor": "#ffffff",
+                   "fontFamily": "OpenSans",
+                   "protected": false,
+                   "textAlignment": "left",
+                   "text": "Email",
+                   "opacity": 46,
+                   "type": "textfield",
+                   "textColor": "#000000",
+                   "key": "emailTextField"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 566,
+                   "xAxis": 655,
+                   "width": 295,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderWidth": 4,
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "action": "cancel",
+                   "text": "CANCEL",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "cancelButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 566,
+                   "xAxis": 970,
+                   "width": 295,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderWidth": 4,
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "action": "resetPassword",
+                   "text": "CONTINUE",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "resetPasswordButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 290,
+                   "xAxis": 655,
+                   "width": 610,
+                   "fontSize": 29,
+                   "height": 125
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 3,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "textColor": "#000000",
+                   "key": "detailText",
+                   "text": "Enter the email address you used to create your account and we will email you instructions on how to reset your password."
+                   }
+                   ]
+}

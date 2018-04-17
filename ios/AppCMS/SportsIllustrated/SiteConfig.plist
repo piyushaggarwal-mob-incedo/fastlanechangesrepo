@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppSecretKey</key>
+	<string>O4MJJX0GMB8n2A56BuGZeaL9VitGmV2n1S0bkwJE</string>
+	<key>Apptentive AppId</key>
+	<string>404906625</string>
+	<key>Apptentive AppKey</key>
+	<string>dfde9505539f2dc1d24700c09fb096b5280ed4cbed0828084540ada79a2b00f7</string>
+	<key>Apptentive AppSignature</key>
+	<string>0f1d8720268ce4f7c8bdadd7f7b7c64a</string>
+	<key>Apptentive Key</key>
+	<string>IOS-SNAGFILMS-FREE-MOVIES</string>
+	<key>GoogleClientId</key>
+	<string>525148171038-da7vav95ripsg807mp1i985rv91hf2eu.apps.googleusercontent.com</string>
+	<key>SiteId</key>
+	<string>dce144c4-3f04-4986-878f-0a75dfecee68</string>
+	<key>TemplateType</key>
+	<string>SPORTS</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<false/>
+</dict>
+</plist>

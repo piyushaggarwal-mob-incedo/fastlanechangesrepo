@@ -1,0 +1,169 @@
+{
+    "id": "fd948c90-efc9-469a-ae67-725d4d5ccfe9",
+    "settings": {
+        "fileType": "mp4"
+    },
+    "view": "AC VideoPlayerWithInfo 01",
+    "type": "AC VideoPlayerWithInfo 01",
+    "blockName": "videoPlayerInfo01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "leftMargin": 0,
+            "rightMargin": 0,
+            "height": 683
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 0,
+                   "leftMargin": 0,
+                   "rightMargin": 0,
+                   "height": 138
+                   }
+                   },
+                   "components": [
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 36,
+                                  "xAxis": 95,
+                                  "maximumWidth": 1130,
+                                  "fontSize": 53,
+                                  "height": 73
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "left",
+                                  "opacity": 1,
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Bold",
+                                  "key": "videoTitle"
+                                  },
+                                  {
+                                  "layout": {
+                                  "appletv": {
+                                  "yAxis": 51,
+                                  "rightMargin": 4.68,
+                                  "width": 590,
+                                  "fontSize": 26,
+                                  "height": 36
+                                  }
+                                  },
+                                  "fontFamily": "OpenSans",
+                                  "numberOfLines": 1,
+                                  "textAlignment": "right",
+                                  "opacity": 1,
+                                  "type": "label",
+                                  "textColor": "#ffffff",
+                                  "fontWeight": "Semibold",
+                                  "key": "videoSubTitle"
+                                  }
+                                  ],
+                   "textAlignment": "left",
+                   "type": "headerView",
+                   "key": "videoDetailHeader"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 606,
+                   "xAxis": 683,
+                   "width": 255,
+                   "fontSize": 21,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "watchTrailer",
+                   "text": "WATCH TRAILER",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Bold",
+                   "key": "watchTrailer"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 606,
+                   "xAxis": 389,
+                   "width": 255,
+                   "fontSize": 21,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "addToWatchlist",
+                   "text": "ADD TO WATCHLIST",
+                   "selectedStateText": "REMOVE FROM WATCHLIST",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "fontWeight": "Bold",
+                   "key": "watchlistButton"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 606,
+                   "xAxis": 95,
+                   "width": 255,
+                   "fontSize": 21,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "fontFamily": "OpenSans",
+                   "borderWidth": 4,
+                   "action": "watchVideo",
+                   "text": "START WATCHING",
+                   "type": "button",
+                   "textColor": "ffffff",
+                   "key": "playButton",
+                   "fontWeight": "Bold"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "fontSizeKey": 23,
+                   "yAxis": 409,
+                   "xAxis": 95,
+                   "width": 768,
+                   "height": 170,
+                   "fontSizeValue": 23
+                   }
+                   },
+                   "fontFamilyKey": "OpenSans-Extrabold",
+                   "fontFamilyValue": "OpenSans",
+                   "type": "castView",
+                   "textColor": "#ffffff",
+                   "key": "castView"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 188,
+                   "xAxis": 95,
+                   "width": 768,
+                   "fontSize": 23,
+                   "height": 180
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "videoDescriptionText"
+                   }
+                   ]
+}
+
+
+

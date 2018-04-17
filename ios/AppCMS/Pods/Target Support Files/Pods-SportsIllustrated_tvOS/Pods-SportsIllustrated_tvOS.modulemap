@@ -1,0 +1,6 @@
+framework module Pods_SportsIllustrated_tvOS {
+  umbrella header "Pods-SportsIllustrated_tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

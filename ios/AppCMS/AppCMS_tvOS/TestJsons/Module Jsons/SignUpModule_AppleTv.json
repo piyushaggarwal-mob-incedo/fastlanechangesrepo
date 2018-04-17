@@ -1,0 +1,117 @@
+{
+    "id": "e55fdb65-5b68-4cb0-9545-3d4ae54df1e6",
+    "settings": {},
+    "view": "AC SignUp 01",
+    "type": "AC SignUp 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 940
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 110,
+                   "xAxis": 330,
+                   "width": 610,
+                   "fontSize": 48,
+                   "height": 80
+                   }
+                   },
+                   "cornerRadius": 5,
+                   "backgroundColor": "#ffffff",
+                   "fontFamily": "OpenSans",
+                   "protected": false,
+                   "textAlignment": "left",
+                   "text": "Email",
+                   "opacity": 46,
+                   "type": "textfield",
+                   "textColor": "#000000",
+                   "key": "emailTextField"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 110,
+                   "xAxis": 980,
+                   "width": 610,
+                   "fontSize": 48,
+                   "height": 80
+                   }
+                   },
+                   "cornerRadius": 5,
+                   "backgroundColor": "#ffffff",
+                   "fontFamily": "OpenSans",
+                   "protected": true,
+                   "textAlignment": "left",
+                   "text": "Password",
+                   "opacity": 46,
+                   "type": "textfield",
+                   "textColor": "#000000",
+                   "key": "passwordTextField"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 340,
+                   "xAxis": 834,
+                   "width": 255,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "borderWidth": 4,
+                   "fontFamily": "OpenSans",
+                   "action": "signup",
+                   "text": "SIGN UP",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "login button"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 420,
+                   "xAxis": 834,
+                   "width": 255,
+                   "fontSize": 18,
+                   "height": 60
+                   }
+                   },
+                   "borderColor": "ffffff",
+                   "borderWidth": 4,
+                   "fontFamily": "OpenSans",
+                   "action": "skip",
+                   "text": "SKIP",
+                   "opacity": 100,
+                   "type": "button",
+                   "textColor": "#ffffff",
+                   "fontWeight": "Semibold",
+                   "key": "skip button"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 63,
+                   "xAxis": 490,
+                   "width": 600,
+                   "fontSize": 40,
+                   "height": 55
+                   }
+                   },
+                   "fontFamily": "OpenSans",
+                   "numberOfLines": 1,
+                   "textAlignment": "left",
+                   "type": "label",
+                   "textColor": "#000000",
+                   "key": "signupfooterview"
+                   }
+                   ]
+}

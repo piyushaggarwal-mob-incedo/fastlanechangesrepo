@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SiteId</key>
+	<string>00000151-11b4-d29b-a17d-55fdb2b80000</string>
+	<key>UIJsonBaseUrl</key>
+	<string>https://appcmsprod.viewlift.com</string>
+	<key>AppSecretKey</key>
+	<string>FJhLtOzPji2uvinKSTFNd8FLnnP0bNuw3qtXXALO</string>
+	<key>isFloodLightRequired</key>
+	<true/>
+	<key>TemplateType</key>
+	<string>Sports</string>
+	<key>isKisweRequired</key>
+	<true/>
+	<key>Apptentive Key</key>
+	<string>6720f95540a27911d6239850119c91e415125a6952ebc46d46189397cd54ff17</string>
+	<key>Apptentive AppKey</key>
+	<string>IOS-MONUMENTAL-SPORTS-ENTERTAINM</string>
+	<key>Apptentive AppSignature</key>
+	<string>f727d0e954077911c252522cf58b106d</string>
+	<key>Apptentive AppId</key>
+	<string>1082655562</string>
+	<key>shouldPlayHlsUrlFirst</key>
+	<true/>
+	<key>TypeOfPreview</key>
+	<string>COMPLETE</string>
+	<key>isPIPRequired</key>
+	<true/>
+</dict>
+</plist>

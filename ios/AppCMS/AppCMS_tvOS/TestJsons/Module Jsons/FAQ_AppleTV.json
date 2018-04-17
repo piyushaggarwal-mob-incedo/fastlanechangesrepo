@@ -1,0 +1,63 @@
+{
+  "id": "bccdacf8-25ba-406c-b133-8a6141e4f5e4",
+  "settings": {},
+  "view": "AC RichText 01",
+  "type": "AC RichText 011",
+  "layout": {
+    "appletv": {
+      "yAxis": 0,
+      "xAxis": 0,
+      "width": 1920,
+      "height": 940
+    }
+  },
+  "components": [
+    {
+      "layout": {
+        "appletv": {
+          "yAxis": 63,
+          "xAxis": 490,
+          "width": 600,
+          "fontSize": 40,
+          "height": 55
+        }
+      },
+      "fontFamily": "OpenSans",
+      "numberOfLines": 1,
+      "textAlignment": "left",
+      "type": "label",
+      "textColor": "#000000",
+      "key": "title",
+      "fontWeight": "Semibold",
+      "letterSpacing": 4.5,
+      "text": "FAQ"
+    },
+    {
+      "layout": {
+        "appletv": {
+          "yAxis": 118,
+          "xAxis": 485,
+          "width": 950,
+          "height": 2
+        }
+      },
+      "backgroundColor": "808080",
+      "type": "separatorView"
+    },
+    {
+      "layout": {
+        "appletv": {
+          "yAxis": 135,
+          "xAxis": 490,
+          "width": 942,
+          "height": 777
+        }
+      },
+      "fontFamily": "OpenSans",
+      "textAlignment": "left",
+      "type": "textView",
+      "textColor": "ffffff",
+      "key": "description"
+    }
+  ]
+}

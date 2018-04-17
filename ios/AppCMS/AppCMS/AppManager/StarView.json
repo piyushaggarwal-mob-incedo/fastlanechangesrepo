@@ -1,0 +1,182 @@
+{
+  "moduleList": [
+    {
+      "id": "b37aa702-34ba-43df-bb51-7f7e7524d7ce",
+      "settings": {},
+      "view": "AC Masthead 01",
+      "type": "AC Masthead 01",
+      "layout": {},
+      "components": []
+    },
+                 {
+                 "textColor": "ffffff",
+                 "numberOfLines": 1,
+                 "textAlignment": "center",
+                 "layout": {
+                 "tabletLandscape": {
+                 "yAxis": 345,
+                 "height": 27,
+                 "maximumWidth": 1004,
+                 "xAxis": 10,
+                 "fontSize": 20
+                 },
+                 "tabletPortrait": {
+                 "yAxis": 474,
+                 "height": 27,
+                 "maximumWidth": 748,
+                 "xAxis": 10,
+                 "fontSize": 20
+                 },
+                 "mobile": {
+                 "yAxis": 252,
+                 "height": 27,
+                 "maximumWidth": 355,
+                 "xAxis": 10,
+                 "fontSize": 20
+                 }
+                 },
+                 "fontFamily": "OpenSans",
+                 "type": "label",
+                 "key": "ratingTitle"
+                 },
+    {
+      "id": "345e3afb-d17f-46d2-8d50-18cac4675aac",
+      "settings": {},
+      "view": "AC StarView 01",
+      "type": "starRating",
+     "borderColor": "008EE0",
+     "fillColor": "008EE0",
+      "layout": {
+                 "tabletLandscape": {
+                 "yAxis": 381,
+                 "height": 35,
+                 "width": 275,
+                 "xAxis": 375
+                 },
+                 "tabletPortrait": {
+                 "yAxis": 510,
+                 "height": 35,
+                 "width": 275,
+                 "xAxis": 247
+                 },
+                 "mobile": {
+                 "yAxis": 288,
+                 "height": 35,
+                 "width": 275,
+                 "xAxis": 50
+                 }
+      },
+        "star-margin": 24
+    },
+    {
+      "id": "345e3afb-d17f-46d2-8d50-18cac4675aac",
+      "settings": {},
+      "view": "AC CloseButton 01",
+      "action": "close",
+      "type": "button",
+                 "key": "closeButton",
+      "layout": {
+                 "tabletLandscape": {
+                 "yAxis": 37,
+                 "height": 16,
+                 "width": 16,
+                 "xAxis": 997
+                 },
+                 "tabletPortrait": {
+                 "yAxis": 37,
+                 "height": 16,
+                 "width": 16,
+                 "xAxis": 739
+                 },
+                 "mobile": {
+                 "yAxis": 34,
+                 "height": 16,
+                 "width": 16,
+                 "xAxis": 350
+                 }
+                 }
+    },
+                 {
+                 "id": "345e3afb-d17f-46d2-8d50-18cac4675aac",
+                 "settings": {},
+                 "view": "AC RateButton 01",
+                 "action": "rate",
+                 "type": "button",
+                 "text": "RATE IT",
+                 "fontFamily": "OpenSans",
+                 "backgroundColor": "008ee0",
+                 "textColor": "ffffff",
+                 "key": "rateButton",
+                 "fontWeight": "Semibold",
+                 "layout": {
+                 "tabletLandscape": {
+                 "yAxis": 718,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 335,
+                 "fontSize": 12
+                 },
+                 "tabletPortrait": {
+                 "yAxis": 974,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 217,
+                 "fontSize": 12
+                 },
+                 "mobile": {
+                 "yAxis": 617,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 10,
+                 "fontSize": 12
+                 }
+                 }
+                 },
+                 {
+                 "id": "345e3afb-d17f-46d2-8d50-18cac4675aac",
+                 "settings": {},
+                 "fontWeight": "Semibold",
+                 "view": "AC CancelButton 01",
+                 "action": "close",
+                 "type": "button",
+                 "text": "CANCEL",
+                 "textColor": "ffffff",
+                 "fontFamily": "OpenSans",
+                 "key": "cancelButton",
+                 "borderWidth": 1,
+                 "borderColor": "ffffff",
+                 "layout": {
+                 "tabletLandscape": {
+                 "yAxis": 718,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 517,
+                 "fontSize": 12
+                 },
+                 "tabletPortrait": {
+                 "yAxis": 974,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 398,
+                 "fontSize": 12
+                 },
+                 "mobile": {
+                 "yAxis": 617,
+                 "height": 40,
+                 "width": 173,
+                 "xAxis": 192,
+                 "fontSize": 12
+                 }
+                 }
+                 },
+    {
+      "id": "bb70f732-080d-43f4-baf3-2c21036ccaca",
+      "settings": {},
+      "view": "AC Footer 01",
+      "type": "AC Footer 01",
+      "layout": {},
+      "components": []
+    }
+  ],
+  "version": "0.181.0"
+}

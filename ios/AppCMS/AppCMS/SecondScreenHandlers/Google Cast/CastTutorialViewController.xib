@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastTutorialViewController" customModule="Hoichoi" customModuleProvider="target">
+            <connections>
+                <outlet property="chromeCastButton" destination="QBS-KK-ggF" id="mht-9P-KdT"/>
+                <outlet property="skipButton" destination="KXv-Rp-UNh" id="AEG-pr-Koc"/>
+                <outlet property="topLayoutContstraints" destination="WAZ-yd-afc" id="sfS-Ea-qca"/>
+                <outlet property="trailingLayoutConstraints" destination="lS9-Op-VuI" id="mPo-IU-t1b"/>
+                <outlet property="tutorialBackgroundImage" destination="jCG-tk-DLj" id="9pD-uy-qPv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="seK-2A-dEs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-tk-DLj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXv-Rp-UNh">
+                    <rect key="frame" x="37" y="603" width="300" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="dSz-xG-vKM"/>
+                        <constraint firstAttribute="width" constant="300" id="ton-Hi-gXi"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="OK.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="skipTappedWithSender:" destination="-1" eventType="touchUpInside" id="xFe-SC-xrR"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch to connect and play videos on your TV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHe-Co-nCb">
+                    <rect key="frame" x="70" y="105" width="235" height="91"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="235" id="YKl-gN-sdH"/>
+                        <constraint firstAttribute="height" constant="91" id="cpZ-RR-KJz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-KK-ggF">
+                    <rect key="frame" x="322" y="7" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="6gN-ei-Lmg"/>
+                        <constraint firstAttribute="height" constant="70" id="xHL-Zv-Vmc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="ChromeCast_Normal_Off.png" backgroundImage="iOS7_Chromecast_Image (iPad).png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="chromeCastButtonTappedWithSender:" destination="-1" eventType="touchUpInside" id="OI2-S5-Orj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NHe-Co-nCb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="105" id="I4r-ze-4f6"/>
+                <constraint firstItem="QBS-KK-ggF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="WAZ-yd-afc"/>
+                <constraint firstAttribute="bottom" secondItem="KXv-Rp-UNh" secondAttribute="bottom" constant="29" id="c4C-5Y-bZE"/>
+                <constraint firstAttribute="bottom" secondItem="jCG-tk-DLj" secondAttribute="bottom" id="dU6-0y-kvN"/>
+                <constraint firstItem="NHe-Co-nCb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fBg-Ns-NuU"/>
+                <constraint firstAttribute="trailing" secondItem="jCG-tk-DLj" secondAttribute="trailing" id="gSf-8i-3fI"/>
+                <constraint firstAttribute="trailing" secondItem="QBS-KK-ggF" secondAttribute="trailing" constant="-17" id="lS9-Op-VuI"/>
+                <constraint firstItem="KXv-Rp-UNh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="or6-Fi-aPD"/>
+                <constraint firstItem="jCG-tk-DLj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w9F-q8-ioF"/>
+                <constraint firstItem="jCG-tk-DLj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ygC-lA-Q8y"/>
+            </constraints>
+            <point key="canvasLocation" x="-94.5" y="-7.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ChromeCast_Normal_Off.png" width="24" height="20"/>
+        <image name="OK.png" width="390" height="38"/>
+        <image name="iOS7_Chromecast_Image (iPad).png" width="245" height="245"/>
+    </resources>
+</document>

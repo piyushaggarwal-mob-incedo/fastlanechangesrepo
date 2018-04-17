@@ -1,0 +1,160 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+# iOS pods
+def ios_pods
+  pod 'MagicalRecord'
+  pod 'DrawerController'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'Cosmos', '11.0.3'
+  pod 'Google/Analytics'
+  pod 'apptentive-ios'
+  pod 'GoogleAds-IMA-iOS-SDK'
+  pod 'SSKeychain'
+  pod 'MarqueeLabel/Swift'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'Google/SignIn'
+  pod 'AppsFlyerFramework'
+  pod 'UrbanAirship-iOS-SDK'
+  pod 'google-cast-sdk', '3.5.0'
+  pod 'Firebase/Core'
+  pod 'GoogleTagManager'
+  pod 'KMSDK', '~> 2.2.7'
+  pod 'WebViewJavascriptBridge', :git => 'https://github.com/Kiswe/WebViewJavascriptBridge.git', :commit => '80a3598c8e95d501f9cf2baeee37736f0a8d6154'
+  pod 'Google-Mobile-Ads-SDK'
+end
+
+# Hoichoi target pod
+target 'Hoichoi_iOS' do
+    ios_pods
+end
+
+# AppCMS target pod
+target 'AppCMS' do
+    ios_pods
+end
+
+# Snagfilms target pod
+target 'Snagfilms_iOS' do
+    ios_pods
+end
+
+# Monumental target pod
+target 'Monumental_iOS' do
+    ios_pods
+end
+
+# Fail Army target pod
+target 'FailArmy_iOS' do
+    ios_pods
+end
+
+# AgendaTV target pod
+target 'AgendaTV_iOS' do
+    ios_pods
+end
+
+# iON_iOS target pod
+target 'iON_iOS' do
+    ios_pods
+end
+
+# SportsIllustrated_iOS target pod
+target 'SportsIllustrated_iOS' do
+    ios_pods
+end
+
+# PeopleAreAwesome_iOS target pod
+target 'PeopleAreAwesome_iOS' do
+    ios_pods
+end
+
+# PetCollective_iOS target pod
+target 'PetCollective_iOS' do
+    ios_pods
+end
+
+# JukinVideo_iOS target pod
+target 'JukinVideo_iOS' do
+    ios_pods
+end
+
+# Lax_iOS target pod
+target 'Lax_iOS' do
+    ios_pods
+end
+
+# TampaBay_iOS target pod
+target 'TampaBay_iOS' do
+    ios_pods
+end
+
+# Apple TV pods
+def appletv_pods
+    platform :tvos, '9.0'
+    pod 'Alamofire'
+    pod 'AlamofireImage'
+    pod 'SSKeychain'
+    pod 'ParallaxView'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    pod 'MarqueeLabel/Swift'
+    pod 'Cosmos'
+end
+
+
+# AppCMS AppleTV target pod
+target 'AppCMS_tvOS' do
+    appletv_pods
+end
+
+# Monumental AppleTV target pod
+target 'Monumental_tvOS' do
+    appletv_pods
+end
+
+# FailArmy_tvOS AppleTV target pod
+target 'FailArmy_tvOS' do
+    appletv_pods
+end
+
+# iON_tvOS AppleTV target pod
+target 'iON_tvOS' do
+    appletv_pods
+end
+
+# SportsIllustrated_tvOS AppleTV target pod
+target 'SportsIllustrated_tvOS' do
+    appletv_pods
+end
+
+# PeopleAreAwesome_tvOS AppleTV target pod
+target 'PeopleAreAwesome_tvOS' do
+    appletv_pods
+end
+
+# PetCollective_tvOS AppleTV target pod
+target 'PetCollective_tvOS' do
+    appletv_pods
+end
+
+# JukinVideo_tvOS AppleTV target pod
+target 'JukinVideo_tvOS' do
+    appletv_pods
+end
+
+# Lax_tvOS target pod
+target 'Lax_tvOS' do
+    appletv_pods
+end
+
+# TampaBay_tvOS target pod
+target 'TampaBay_tvOS' do
+    appletv_pods
+end
+

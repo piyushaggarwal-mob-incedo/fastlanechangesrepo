@@ -1,0 +1,50 @@
+{
+    "id": "cf51914e-6e65-4346-8cc7-00555be6bd19",
+    "settings": {},
+    "view": "AC UserManagement 01",
+    "type": "AC UserManagement 01",
+    "layout": {
+        "appletv": {
+            "yAxis": 0,
+            "xAxis": 0,
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "components": [
+                   {
+                   "layout": {
+                   "appletv": {
+                   "xAxis": 480,
+                   "yAxis": 514,
+                   "width": 961,
+                   "fontSize": 32,
+                   "height": 46
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "textAlignment": "center",
+                   "fontWeight": "Heavy",
+                   "text": "You are signed in as",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "key": "emailLabel"
+                   },
+                   {
+                   "layout": {
+                   "appletv": {
+                   "yAxis": 556,
+                   "xAxis": 480,
+                   "width": 961,
+                   "fontSize": 48,
+                   "height": 57
+                   }
+                   },
+                   "fontFamily": "Lato",
+                   "textAlignment": "center",
+                   "type": "label",
+                   "textColor": "#ffffff",
+                   "key": "emailLabel"
+                   }
+                   ]
+}
